@@ -1,0 +1,10 @@
+C:\Users\mic\Documents\Visual Studio 2012\Projects\WiiJoyByMic - C#\InterceptionTest\InterceptionTest\bin\Debug\InterceptionTest.exe.config
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\Debug\InterceptionTest.exe.config
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\Debug\InterceptionTest.exe
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\Debug\InterceptionTest.pdb
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.csprojResolveAssemblyReference.cache
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.Form1.resources
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.Properties.Resources.resources
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.csproj.GenerateResource.Cache
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.exe
+C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\Debug\InterceptionTest.pdb

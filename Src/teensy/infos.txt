@@ -1,0 +1,56 @@
+- Teensy 3.6 device
+- USB Port Serial + Keyboard + Mouse + Joystick
+- French Keyboard (France)
+- Teensy script SerialCommunication.ino
+- Teensyduino plugin for Arduino Windows 1.8.13 for configure device and load script
+- Mouse sensitivity to maximum and accuracy enable shall be set in mouse settings under control panel
+- For using several Teensy devices, it needs to change only Message Magic
+- All exe and DLL shall be created in release mode
+- Open CMD Dos prompt command with administrative privilege and type fsutil behavior set memoryusage 2, then restart your PC
+- It needs to connect the Joycon Left before the Joycon Right, and to not move Joycons while connecting, but in this order it needs to be fast to not move
+- The key settings for Fortnite are as following
+move = ZSQD
+jump = Space bar
+sprint = Left shift
+crouch = A
+fire = Left mouse button
+target = Right mouse button
+reload = R
+use = F
+harvesting tool = V
+weapon slot 1 = &
+weapon slot 2 = é
+weapon slot 3 = "
+weapon slot 4 = '
+weapon slot 5 = (
+wall = U
+Floor = C
+stairs = Y
+roof = X
+trap = P
+place building = Left mouse button
+change building material = Right mouse button
+building edit = E
+toggle map = Tab
+driver push = Space bar
+driver exit = A
+- The key settings for Call of Duty are as following
+move = ZSQD
+jump = Space bar
+sprint = Left shift
+fire = Left mouse button
+target = Right mouse button
+reload = R
+use = F
+cut = V
+toggle score / toggle map = Tab
+special equipement = A
+switch auto fire / shot per shot = Y
+armor = U
+tactical = T
+deadly = G
+lie down = Left Alt
+crouch = C
+switch weapon = X
+marker = Left Ctrl
+streaks = &, é, ", ', (

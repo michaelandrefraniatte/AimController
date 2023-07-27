@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\bin\Debug\MouseMove.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\bin\Debug\MouseMove.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\bin\Debug\MouseMove.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\obj\Debug\MouseMove.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\obj\Debug\MouseMove.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\obj\Debug\MouseMove.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\test\MouseMove\MouseMove\obj\Debug\MouseMove.pdb

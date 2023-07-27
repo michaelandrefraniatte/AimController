@@ -1,0 +1,6 @@
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\bin\Release\Interceptions.dll
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\bin\Release\Interceptions.pdb
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\obj\Release\Interceptions.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\obj\Release\Interceptions.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\obj\Release\Interceptions.dll
+C:\Users\micha\Documents\Perso\tool\StandardInGamingInputLowing\Src\SIGIL\Interceptions\obj\Release\Interceptions.pdb

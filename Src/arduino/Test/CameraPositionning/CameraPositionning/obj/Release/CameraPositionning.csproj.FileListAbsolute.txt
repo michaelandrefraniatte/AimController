@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\bin\Release\CameraPositionning.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\bin\Release\CameraPositionning.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\bin\Release\CameraPositionning.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\obj\Release\CameraPositionning.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\obj\Release\CameraPositionning.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\obj\Release\CameraPositionning.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\CameraPositionning\CameraPositionning\obj\Release\CameraPositionning.pdb

@@ -1,0 +1,4 @@
+Retrieve mouse id and keyboard id in case of using Interception DLL for simulate mouse and keyboard 
+Debugger blocks mouse and keyboard in InterceptionTest solution
+CMD dos command prompt for interception commande line to install with administrative privilege: install-interception.exe /install
+CMD dos command prompt for interception commande line to uninstall with administrative privilege: install-interception.exe /uninstall

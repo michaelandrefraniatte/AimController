@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\obj\Debug\ReceiveData.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\obj\Debug\ReceiveData.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\bin\Debug\ReceiveData.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\bin\Debug\ReceiveData.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\bin\Debug\ReceiveData.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\obj\Debug\ReceiveData.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\ReceiveData\ReceiveData\obj\Debug\ReceiveData.pdb

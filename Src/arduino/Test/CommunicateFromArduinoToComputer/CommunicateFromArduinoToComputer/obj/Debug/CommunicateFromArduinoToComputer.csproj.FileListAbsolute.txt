@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\bin\Debug\CommunicateFromArduinoToComputer.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\bin\Debug\CommunicateFromArduinoToComputer.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\bin\Debug\CommunicateFromArduinoToComputer.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\obj\Debug\CommunicateFromArduinoToComputer.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\obj\Debug\CommunicateFromArduinoToComputer.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\obj\Debug\CommunicateFromArduinoToComputer.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\CommunicateFromArduinoToComputer\CommunicateFromArduinoToComputer\obj\Debug\CommunicateFromArduinoToComputer.pdb

@@ -1,0 +1,14 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\bin\Release\JoyWar.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyWar\JoyWar\obj\Release\JoyWar.pdb

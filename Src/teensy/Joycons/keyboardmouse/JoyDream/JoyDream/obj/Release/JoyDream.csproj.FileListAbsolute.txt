@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\bin\Release\JoyDream.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\bin\Release\JoyDream.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\bin\Release\JoyDream.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\obj\Release\JoyDream.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\obj\Release\JoyDream.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\obj\Release\JoyDream.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Joycons\keyboardmouse\JoyDream\JoyDream\obj\Release\JoyDream.pdb

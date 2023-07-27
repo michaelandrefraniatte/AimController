@@ -1,0 +1,14 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\bin\Release\WiiRoyale.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Normal\Wiimote\joystick\WiiRoyale\WiiRoyale\obj\Release\WiiRoyale.pdb

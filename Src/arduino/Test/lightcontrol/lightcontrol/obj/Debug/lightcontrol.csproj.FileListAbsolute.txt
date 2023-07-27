@@ -1,0 +1,10 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\bin\Debug\lightcontrol.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\bin\Debug\lightcontrol.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\bin\Debug\lightcontrol.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.Form1.resources
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.Properties.Resources.resources
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.csproj.GenerateResource.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\lightcontrol\lightcontrol\obj\Debug\lightcontrol.pdb

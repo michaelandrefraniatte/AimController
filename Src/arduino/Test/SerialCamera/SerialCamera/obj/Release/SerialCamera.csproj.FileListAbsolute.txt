@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\bin\Release\SerialCamera.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\bin\Release\SerialCamera.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\bin\Release\SerialCamera.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\obj\Release\SerialCamera.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\obj\Release\SerialCamera.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\obj\Release\SerialCamera.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Test\SerialCamera\SerialCamera\obj\Release\SerialCamera.pdb

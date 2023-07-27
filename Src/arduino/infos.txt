@@ -1,0 +1,47 @@
+- 2 pcs card ATMEGA32U4 pro micro arduino devices
+- Tools set to arduino leonardo
+- mouse click or mouse move or keyboad key / type click or wheel value or type key / down or x or down / up or y or up
+- Principle for pining 2 arduinos with only 16 pins for creating a controller for arduino out using serial port for arduino in as following
+In -> slower
+int statePin = 13;     // state connected to digital pin 13
+int valstate = 0;      // variable to store the write value
+int numPin = 12;       // num connected to digital pin 12
+int valnum = 0;        // variable to store the write value
+void setup() {
+  pinMode(statePin, OUTPUT);  // sets the digital pin 13 as output
+  pinMode(numPin, OUTPUT);    // sets the digital pin 12 as output
+}
+void loop() {
+  digitalWrite(statePin, valstate);  // sets the state to the button's value
+  digitalWrite(numPin, valnum);      // sets the num to the button's value
+}
+Out -> faster
+int statePin = 7;     // pushbutton connected to digital pin 7
+int valstate = 0;     // variable to store the read value
+int numPin = 6;       // pushbutton connected to digital pin 6
+int valnum = 0;       // variable to store the read value
+void setup() {
+  pinMode(statePin, INPUT);    // sets the digital pin 7 as input
+  pinMode(numPin, INPUT);      // sets the digital pin 6 as input
+}
+void loop() {
+  valstate = digitalRead(statePin);   // read the input pin
+  valnum = digitalRead(numPin);       // read the input pin
+}
+- Principle for send and receive data of down/up buttons and analogic values :
+send ->
+= 0
++= 1
++= 10
++= 0
++= 1000
+= 1011
+Receive ->
+String value = "This is a string.";
+int startIndex = 5;
+int length = 2;
+String substring = value.Substring(startIndex, length);
+Console.WriteLine(substring);
+// The example displays the following output: is
+send analogic ->
+with * 1000 and +=

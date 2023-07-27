@@ -1,0 +1,11 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\bin\Release\AimController.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\bin\Release\AimController.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\bin\Release\AimController.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.csproj.AssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.csproj.SuggestedBindingRedirects.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.Form1.resources
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.Properties.Resources.resources
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.csproj.GenerateResource.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\AimController\AimController\obj\Release\AimController.pdb

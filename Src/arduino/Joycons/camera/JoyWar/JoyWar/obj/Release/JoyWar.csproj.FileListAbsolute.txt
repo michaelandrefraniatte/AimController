@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\bin\Release\JoyWar.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\bin\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\bin\Release\JoyWar.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\obj\Release\JoyWar.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\obj\Release\JoyWar.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\obj\Release\JoyWar.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\arduino\Joycons\camera\JoyWar\JoyWar\obj\Release\JoyWar.pdb
