@@ -10,7 +10,6 @@ using System.IO;
 using System.Threading;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
-using OpenWithSingleInstance;
 using System.Diagnostics;
 
 namespace SIGIL
@@ -23,20 +22,15 @@ namespace SIGIL
         static extern bool SetForegroundWindow(IntPtr hWnd);
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-        public Form1(string filePath)
+        public Form1()
         {
             InitializeComponent();
-            if (filePath != null)
-            {
-                onopenwith = true;
-                OpenFileWith(filePath);
-            }
         }
         private static bool closeonicon = false;
         private static DialogResult result;
         private static ContextMenu contextMenu = new ContextMenu();
         private static MenuItem menuItem;
-        private static bool justSaved = true, onopenwith = false;
+        private static bool justSaved = true;
         private static string filename = "", stringscript = "", fastColoredTextBoxSaved = "";
         public static bool runstopbool = false;
         private static Range range;
@@ -48,50 +42,6 @@ namespace SIGIL
         private Microsoft.CSharp.CSharpCodeProvider provider;
         private System.CodeDom.Compiler.CompilerParameters parameters;
         private string code;
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == MessageHelper.WM_COPYDATA)
-            {
-                COPYDATASTRUCT _dataStruct = Marshal.PtrToStructure<COPYDATASTRUCT>(m.LParam);
-                string _strMsg = Marshal.PtrToStringUni(_dataStruct.lpData, _dataStruct.cbData / 2);
-                OpenFileWith(_strMsg);
-            }
-            base.WndProc(ref m);
-        }
-        public void OpenFileWith(string filePath)
-        {
-            if (runstopbool)
-                StopProcess();
-            if (!justSaved)
-            {
-                result = MessageBox.Show("Content will be lost! Are you sure?", "Open", MessageBoxButtons.OKCancel);
-                if (result == DialogResult.OK)
-                {
-                    OpenType(Path.GetDirectoryName(filePath) + "/type/" + Path.GetFileName(filePath) + ".type");
-                    string readText = File.ReadAllText(filePath);
-                    fastColoredTextBox1.Text = readText;
-                    filename = filePath;
-                    this.Text = "SIGIL: " + Path.GetFileName(filename);
-                    fastColoredTextBoxSaved = fastColoredTextBox1.Text;
-                    justSaved = true;
-                }
-            }
-            else
-            {
-                OpenType(Path.GetDirectoryName(filePath) + "/type/" + Path.GetFileName(filePath) + ".type");
-                string readText = File.ReadAllText(filePath);
-                fastColoredTextBox1.Text = readText;
-                filename = filePath;
-                this.Text = "SIGIL: " + Path.GetFileName(filename);
-                fastColoredTextBoxSaved = fastColoredTextBox1.Text;
-                justSaved = true;
-            }
-            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
-            {
-                createdfile.WriteLine(this.Handle);
-                createdfile.WriteLine(this.Text);
-            }
-        }
         private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
         {
             if (toolStripComboBox1.Text == "WiiJoyL-XC")
@@ -14343,47 +14293,44 @@ namespace SIGIL
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
-            if (!onopenwith)
+            if (File.Exists(Application.StartupPath + @"\tempsave"))
             {
-                if (File.Exists(Application.StartupPath + @"\tempsave"))
+                using (StreamReader file = new StreamReader(Application.StartupPath + @"\tempsave"))
                 {
-                    using (StreamReader file = new StreamReader(Application.StartupPath + @"\tempsave"))
-                    {
-                        filename = file.ReadLine();
-                        runProcessAtLaunchToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
-                        startProgramAtBootToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
-                        minimizeToSystrayAtCloseToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
-                        minimizeToSystrayAtBootToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
-                        tbdsvendorid.Text = file.ReadLine();
-                        tbdsproductid.Text = file.ReadLine();
-                        tbdslabel.Text = file.ReadLine();
-                        tbds4vendorid.Text = file.ReadLine();
-                        tbds4productid.Text = file.ReadLine();
-                        tbds4label.Text = file.ReadLine();
-                        tbintkeyboardid.Text = file.ReadLine();
-                        tbintmouseid.Text = file.ReadLine();
-                    }
-                    if (filename != "" & File.Exists(filename))
-                    {
-                        OpenType(Path.GetDirectoryName(filename) + "/type/" + Path.GetFileName(filename) + ".type");
-                        string readText = File.ReadAllText(filename);
-                        fastColoredTextBox1.Text = readText;
-                        this.Text = "SIGIL: " + Path.GetFileName(filename);
-                        fastColoredTextBoxSaved = fastColoredTextBox1.Text;
-                        justSaved = true;
-                        if (runProcessAtLaunchToolStripMenuItem.Checked)
-                            StartProcess();
-                    }
+                    filename = file.ReadLine();
+                    runProcessAtLaunchToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
+                    startProgramAtBootToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
+                    minimizeToSystrayAtCloseToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
+                    minimizeToSystrayAtBootToolStripMenuItem.Checked = bool.Parse(file.ReadLine());
+                    tbdsvendorid.Text = file.ReadLine();
+                    tbdsproductid.Text = file.ReadLine();
+                    tbdslabel.Text = file.ReadLine();
+                    tbds4vendorid.Text = file.ReadLine();
+                    tbds4productid.Text = file.ReadLine();
+                    tbds4label.Text = file.ReadLine();
+                    tbintkeyboardid.Text = file.ReadLine();
+                    tbintmouseid.Text = file.ReadLine();
                 }
-                using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+                if (filename != "" & File.Exists(filename))
                 {
-                    createdfile.WriteLine(this.Handle);
-                    createdfile.WriteLine(this.Text);
+                    OpenType(Path.GetDirectoryName(filename) + "/type/" + Path.GetFileName(filename) + ".type");
+                    string readText = File.ReadAllText(filename);
+                    fastColoredTextBox1.Text = readText;
+                    this.Text = "SIGIL: " + Path.GetFileName(filename);
+                    fastColoredTextBoxSaved = fastColoredTextBox1.Text;
+                    justSaved = true;
+                    if (runProcessAtLaunchToolStripMenuItem.Checked)
+                        StartProcess();
                 }
-                if (minimizeToSystrayAtBootToolStripMenuItem.Checked)
-                {
-                    MinimzedTray();
-                }
+            }
+            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+            {
+                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(this.Text);
+            }
+            if (minimizeToSystrayAtBootToolStripMenuItem.Checked)
+            {
+                MinimzedTray();
             }
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -14423,6 +14370,7 @@ namespace SIGIL
                 createdfile.WriteLine(tbintkeyboardid.Text);
                 createdfile.WriteLine(tbintmouseid.Text);
             }
+            File.Delete(Application.StartupPath + @"\temphandle");
         }
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -2,9 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Security.Principal;
 using System.Windows.Forms;
-using OpenWithSingleInstance;
 namespace SIGIL
 {
     internal static class Program
@@ -19,14 +17,9 @@ namespace SIGIL
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
-        static void Main(params string[] args)
+        static void Main()
         {
-            if (!hasAdminRights() & !AlreadyRunning())
-            {
-                RunElevated();
-                return;
-            }
-            else if (AlreadyRunning())
+            if (AlreadyRunning())
             {
                 if (File.Exists(Application.StartupPath + @"\temphandle"))
                     using (System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + @"\temphandle"))
@@ -36,16 +29,11 @@ namespace SIGIL
                         IntPtr HWND = FindWindow(null, file.ReadLine());
                         SetForegroundWindow(HWND);
                     }
-                if (SingleInstanceHelper.CheckInstancesUsingMutex() && args.Length > 0)
-                {
-                    Process _otherInstance = SingleInstanceHelper.GetAlreadyRunningInstance();
-                    MessageHelper.SendDataMessage(_otherInstance, args[0]);
-                }
                 return;
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(args.Length > 0 ? args[0] : null));
+            Application.Run(new Form1());
         }
         private static bool AlreadyRunning()
         {
@@ -55,22 +43,6 @@ namespace SIGIL
                 return true;
             else
                 return false;
-        }
-        public static bool hasAdminRights()
-        {
-            WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-            return principal.IsInRole(WindowsBuiltInRole.Administrator);
-        }
-        public static void RunElevated()
-        {
-            try
-            {
-                ProcessStartInfo processInfo = new ProcessStartInfo();
-                processInfo.Verb = "runas";
-                processInfo.FileName = Application.ExecutablePath;
-                Process.Start(processInfo);
-            }
-            catch { }
         }
     }
 }
