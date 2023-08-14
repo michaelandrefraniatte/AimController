@@ -11,11 +11,18 @@ using System.Threading;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using OpenWithSingleInstance;
+using System.Diagnostics;
 
 namespace SIGIL
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
         public Form1(string filePath)
         {
             InitializeComponent();
@@ -78,6 +85,11 @@ namespace SIGIL
                 this.Text = "SIGIL: " + Path.GetFileName(filename);
                 fastColoredTextBoxSaved = fastColoredTextBox1.Text;
                 justSaved = true;
+            }
+            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+            {
+                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(this.Text);
             }
         }
         private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
@@ -14312,15 +14324,18 @@ namespace SIGIL
         }
         private void MinimzedTray()
         {
-            this.WindowState = FormWindowState.Minimized;
-            this.ShowInTaskbar = false;
-            this.Hide();
+            ShowWindow(Process.GetCurrentProcess().MainWindowHandle, 0);
         }
         private void MaxmizedFromTray()
         {
-            this.WindowState = FormWindowState.Normal;
-            this.ShowInTaskbar = true;
-            this.Show();
+            if (File.Exists(Application.StartupPath + @"\temphandle"))
+                using (System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + @"\temphandle"))
+                {
+                    IntPtr handle = new IntPtr(int.Parse(file.ReadLine()));
+                    ShowWindow(handle, 9);
+                    IntPtr HWND = FindWindow(null, file.ReadLine());
+                    SetForegroundWindow(HWND);
+                }
         }
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
@@ -14359,6 +14374,11 @@ namespace SIGIL
                         if (runProcessAtLaunchToolStripMenuItem.Checked)
                             StartProcess();
                     }
+                }
+                using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+                {
+                    createdfile.WriteLine(this.Handle);
+                    createdfile.WriteLine(this.Text);
                 }
                 if (minimizeToSystrayAtBootToolStripMenuItem.Checked)
                 {
@@ -14428,6 +14448,11 @@ namespace SIGIL
                 fastColoredTextBoxSaved = fastColoredTextBox1.Text;
                 justSaved = true;
             }
+            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+            {
+                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(this.Text);
+            }
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -14466,6 +14491,11 @@ namespace SIGIL
                     fastColoredTextBoxSaved = fastColoredTextBox1.Text;
                     justSaved = true;
                 }
+            }
+            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+            {
+                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(this.Text);
             }
         }
         private void OpenType(string completepath)
@@ -14526,6 +14556,11 @@ namespace SIGIL
                 filename = sf.FileName;
                 fastColoredTextBoxSaved = fastColoredTextBox1.Text;
                 justSaved = true;
+            }
+            using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
+            {
+                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(this.Text);
             }
         }
         private void SaveType(string completepath)
