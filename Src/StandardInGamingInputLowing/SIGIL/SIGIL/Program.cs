@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using OpenWithSingleInstance;
 namespace SIGIL
 {
     internal static class Program
@@ -17,7 +18,7 @@ namespace SIGIL
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(params string[] args)
         {
             if (AlreadyRunning())
             {
@@ -29,11 +30,16 @@ namespace SIGIL
                         IntPtr HWND = FindWindow(null, file.ReadLine());
                         SetForegroundWindow(HWND);
                     }
+                if (SingleInstanceHelper.CheckInstancesUsingMutex() && args.Length > 0)
+                {
+                    Process _otherInstance = SingleInstanceHelper.GetAlreadyRunningInstance();
+                    MessageHelper.SendDataMessage(_otherInstance, args[0]);
+                }
                 return;
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(args.Length > 0 ? args[0] : null));
         }
         private static bool AlreadyRunning()
         {
