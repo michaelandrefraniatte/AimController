@@ -92,6 +92,14 @@ namespace SIGIL
                 createdfile.WriteLine(this.Text);
             }
         }
+        private void associateFileExtensionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileAssociationHelper.AssociateFileExtension(".sig", "ScriptSIGILFile", "Script SIGIL File", Application.ExecutablePath);
+        }
+        private void removeFileAssociationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileAssociationHelper.RemoveFileAssociation(".sig", "ScriptSIGILFile");
+        }
         private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
         {
             if (toolStripComboBox1.Text == "WiiJoyL-XC")
@@ -14464,7 +14472,7 @@ namespace SIGIL
                 if (result == DialogResult.OK)
                 {
                     OpenFileDialog op = new OpenFileDialog();
-                    op.Filter = "All Files(*.*)|*.*";
+                    op.Filter = "Script SIGIL File(*.sig)|*.sig";
                     if (op.ShowDialog() == DialogResult.OK)
                     {
                         OpenType(Path.GetDirectoryName(op.FileName) + "/type/" + Path.GetFileName(op.FileName) + ".type");
@@ -14480,7 +14488,7 @@ namespace SIGIL
             else
             {
                 OpenFileDialog op = new OpenFileDialog();
-                op.Filter = "All Files(*.*)|*.*";
+                op.Filter = "Script SIGIL File(*.sig)|*.sig";
                 if (op.ShowDialog() == DialogResult.OK)
                 {
                     OpenType(Path.GetDirectoryName(op.FileName) + "/type/" + Path.GetFileName(op.FileName) + ".type");
@@ -14540,7 +14548,7 @@ namespace SIGIL
             if (runstopbool)
                 StopProcess();
             SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "All Files(*.*)|*.*";
+            sf.Filter = "Script SIGIL File(*.sig)|*.sig";
             if (filename != "")
                 sf.FileName = Path.GetFileName(filename);
             if (sf.ShowDialog() == DialogResult.OK)

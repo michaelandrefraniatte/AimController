@@ -79,6 +79,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.associateFileExtensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeFileAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +109,6 @@
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.fastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
             this.fastColoredTextBox1.LeftBracket = '(';
@@ -250,7 +251,9 @@
             this.runProcessAtLaunchToolStripMenuItem,
             this.startProgramAtBootToolStripMenuItem,
             this.minimizeToSystrayAtCloseToolStripMenuItem,
-            this.minimizeToSystrayAtBootToolStripMenuItem});
+            this.minimizeToSystrayAtBootToolStripMenuItem,
+            this.associateFileExtensionToolStripMenuItem,
+            this.removeFileAssociationToolStripMenuItem});
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
             this.optionToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.optionToolStripMenuItem.Text = "Option";
@@ -566,6 +569,20 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
+            // associateFileExtensionToolStripMenuItem
+            // 
+            this.associateFileExtensionToolStripMenuItem.Name = "associateFileExtensionToolStripMenuItem";
+            this.associateFileExtensionToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.associateFileExtensionToolStripMenuItem.Text = "Associate file extension";
+            this.associateFileExtensionToolStripMenuItem.Click += new System.EventHandler(this.associateFileExtensionToolStripMenuItem_Click);
+            // 
+            // removeFileAssociationToolStripMenuItem
+            // 
+            this.removeFileAssociationToolStripMenuItem.Name = "removeFileAssociationToolStripMenuItem";
+            this.removeFileAssociationToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.removeFileAssociationToolStripMenuItem.Text = "Remove file association";
+            this.removeFileAssociationToolStripMenuItem.Click += new System.EventHandler(this.removeFileAssociationToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -639,6 +656,8 @@
         private System.Windows.Forms.ToolStripTextBox tbintkeyboardid;
         private System.Windows.Forms.ToolStripMenuItem mouseIDToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox tbintmouseid;
+        private System.Windows.Forms.ToolStripMenuItem associateFileExtensionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeFileAssociationToolStripMenuItem;
     }
 }
 
