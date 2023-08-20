@@ -49,6 +49,8 @@
             this.startProgramAtBootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToSystrayAtCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToSystrayAtBootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.associateFileExtensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeFileAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendorIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,8 +81,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.associateFileExtensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeFileAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,7 @@
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.fastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
             this.fastColoredTextBox1.LeftBracket = '(';
@@ -295,6 +296,20 @@
             this.minimizeToSystrayAtBootToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.minimizeToSystrayAtBootToolStripMenuItem.Text = "Minimize to systray at boot";
             // 
+            // associateFileExtensionToolStripMenuItem
+            // 
+            this.associateFileExtensionToolStripMenuItem.Name = "associateFileExtensionToolStripMenuItem";
+            this.associateFileExtensionToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.associateFileExtensionToolStripMenuItem.Text = "Associate file extension";
+            this.associateFileExtensionToolStripMenuItem.Click += new System.EventHandler(this.associateFileExtensionToolStripMenuItem_Click);
+            // 
+            // removeFileAssociationToolStripMenuItem
+            // 
+            this.removeFileAssociationToolStripMenuItem.Name = "removeFileAssociationToolStripMenuItem";
+            this.removeFileAssociationToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.removeFileAssociationToolStripMenuItem.Text = "Remove file association";
+            this.removeFileAssociationToolStripMenuItem.Click += new System.EventHandler(this.removeFileAssociationToolStripMenuItem_Click);
+            // 
             // pSToolStripMenuItem
             // 
             this.pSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -476,6 +491,7 @@
             "DS-XC",
             "DS4-XC",
             "KM-XC",
+            "XC-XC",
             "WiiJoyL-KM",
             "WiiJoyR-KM",
             "Wii-KM",
@@ -488,6 +504,7 @@
             "DS-KM",
             "DS4-KM",
             "XC-KM",
+            "KM-KM",
             "WiiJoyL-Int",
             "WiiJoyR-Int",
             "Wii-Int",
@@ -499,7 +516,8 @@
             "FV2-Int",
             "DS-Int",
             "DS4-Int",
-            "XC-Int"});
+            "XC-Int",
+            "KM-Int"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
             this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
@@ -568,20 +586,6 @@
             this.notifyIcon1.Text = "SIGIL";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
-            // 
-            // associateFileExtensionToolStripMenuItem
-            // 
-            this.associateFileExtensionToolStripMenuItem.Name = "associateFileExtensionToolStripMenuItem";
-            this.associateFileExtensionToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.associateFileExtensionToolStripMenuItem.Text = "Associate file extension";
-            this.associateFileExtensionToolStripMenuItem.Click += new System.EventHandler(this.associateFileExtensionToolStripMenuItem_Click);
-            // 
-            // removeFileAssociationToolStripMenuItem
-            // 
-            this.removeFileAssociationToolStripMenuItem.Name = "removeFileAssociationToolStripMenuItem";
-            this.removeFileAssociationToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.removeFileAssociationToolStripMenuItem.Text = "Remove file association";
-            this.removeFileAssociationToolStripMenuItem.Click += new System.EventHandler(this.removeFileAssociationToolStripMenuItem_Click);
             // 
             // Form1
             // 
