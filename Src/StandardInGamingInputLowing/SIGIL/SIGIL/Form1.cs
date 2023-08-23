@@ -1891,7 +1891,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2-XC")
+            if (toolStripComboBox1.Text == "DI-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "controller1_send_xbox",
@@ -2122,7 +2122,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2M-XC")
+            if (toolStripComboBox1.Text == "DIM-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -2366,7 +2366,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2-KM")
+            if (toolStripComboBox1.Text == "DI-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "KeyboardMouseDriverType",
@@ -2726,7 +2726,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2M-KM")
+            if (toolStripComboBox1.Text == "DIM-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -3099,7 +3099,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2-Int")
+            if (toolStripComboBox1.Text == "DI-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "MouseDesktopX",
@@ -3513,7 +3513,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "FV2M-Int")
+            if (toolStripComboBox1.Text == "DIM-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -11466,7 +11466,7 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
                     range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
                 }
-                if (toolStripComboBox1.Text == "FV2-XC")
+                if (toolStripComboBox1.Text == "DI-XC")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
@@ -11696,7 +11696,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "FV2M-XC")
+                if (toolStripComboBox1.Text == "DIM-XC")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -11937,7 +11937,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "FV2-KM")
+                if (toolStripComboBox1.Text == "DI-KM")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
@@ -12296,7 +12296,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "FV2M-KM")
+                if (toolStripComboBox1.Text == "DIM-KM")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -12666,7 +12666,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "FV2-Int")
+                if (toolStripComboBox1.Text == "DI-Int")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
@@ -13079,7 +13079,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "FV2M-Int")
+                if (toolStripComboBox1.Text == "DIM-Int")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -19219,7 +19219,7 @@ namespace SIGIL
         }
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message = "• Input Devices : Wiimote and Joycon left, Wiimote and Joycon right, Wiimote and Nunchuck, Joycons, Joycon left, Joycon right, Switch Pro Controller, Joycon Charging Grip, Flydigi Vader 2, Dualsense, Dualshock4, Keyboard and Mouse, Xbox Controller.\n\r\n\r• Output Devices : Xbox Controller, Keyboard and Mouse.\n\r\n\r• Pairing Devices : Wiimote and Joycon left or Wiimote and Joycon right or Wiimote or Joycons or Joycon left or Joycon right need to be set in pairing mode after starting the run process, Switch Pro Controller or Joycon Charging Grip or Flydigi Vader 2 or Dualsense or Dualshock4 or Xbox Controller or Keyboard and Mouse need to be USB wired.";
+            const string message = "• Input Devices : Wiimote and Joycon left, Wiimote and Joycon right, Wiimote and Nunchuck, Joycons, Joycon left, Joycon right, Switch Pro Controller, Joycon Charging Grip, DirectInput Controller, Dualsense, Dualshock4, Keyboard and Mouse, Xbox Controller.\n\r\n\r• Output Devices : Xbox Controller, Keyboard and Mouse.\n\r\n\r• Pairing Devices : Wiimote and Joycon left or Wiimote and Joycon right or Wiimote or Joycons or Joycon left or Joycon right need to be set in pairing mode after starting the run process, Switch Pro Controller or Joycon Charging Grip or DirectInput Controller or Dualsense or Dualshock4 or Xbox Controller or Keyboard and Mouse need to be USB wired.";
             const string caption = "Help";
             MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -22868,7 +22868,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
             }
-            if (toolStripComboBox1.Text == "FV2-XC")
+            if (toolStripComboBox1.Text == "DI-XC")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -23699,7 +23699,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "FV2M-XC")
+            if (toolStripComboBox1.Text == "DIM-XC")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -24627,7 +24627,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "FV2-KM")
+            if (toolStripComboBox1.Text == "DI-KM")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -25460,7 +25460,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "FV2M-KM")
+            if (toolStripComboBox1.Text == "DIM-KM")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -26390,7 +26390,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "FV2-Int")
+            if (toolStripComboBox1.Text == "DI-Int")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -27225,7 +27225,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "FV2M-Int")
+            if (toolStripComboBox1.Text == "DIM-Int")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;

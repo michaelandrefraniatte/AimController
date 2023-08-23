@@ -109,7 +109,6 @@
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.fastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
             this.fastColoredTextBox1.LeftBracket = '(';
@@ -487,8 +486,8 @@
             "JoyR-XC",
             "SPC-XC",
             "JCG-XC",
-            "FV2-XC",
-            "FV2M-XC",
+            "DI-XC",
+            "DIM-XC",
             "DS-XC",
             "DS4-XC",
             "KM-XC",
@@ -502,8 +501,8 @@
             "JoyR-KM",
             "SPC-KM",
             "JCG-KM",
-            "FV2-KM",
-            "FV2M-KM",
+            "DI-KM",
+            "DIM-KM",
             "DS-KM",
             "DS4-KM",
             "XC-KM",
@@ -517,8 +516,8 @@
             "JoyR-Int",
             "SPC-Int",
             "JCG-Int",
-            "FV2-Int",
-            "FV2M-Int",
+            "DI-Int",
+            "DIM-Int",
             "DS-Int",
             "DS4-Int",
             "XC-Int",
