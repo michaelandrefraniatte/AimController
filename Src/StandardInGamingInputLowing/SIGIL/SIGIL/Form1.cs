@@ -1891,7 +1891,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DI-XC")
+            if (toolStripComboBox1.Text == "DIC-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "controller1_send_xbox",
@@ -2122,7 +2122,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DIM-XC")
+            if (toolStripComboBox1.Text == "DICM-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -2366,7 +2366,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DI-KM")
+            if (toolStripComboBox1.Text == "DIC-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "KeyboardMouseDriverType",
@@ -2726,7 +2726,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DIM-KM")
+            if (toolStripComboBox1.Text == "DICM-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -3099,7 +3099,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DI-Int")
+            if (toolStripComboBox1.Text == "DIC-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "MouseDesktopX",
@@ -3513,7 +3513,7 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
-            if (toolStripComboBox1.Text == "DIM-Int")
+            if (toolStripComboBox1.Text == "DICM-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
         "Mouse1Buttons0",
@@ -7928,9 +7928,336 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
+            if (toolStripComboBox1.Text == "XCM-XC")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "controller1_send_xbox",
+        "controller1_send_back",
+        "controller1_send_start",
+        "controller1_send_A",
+        "controller1_send_B",
+        "controller1_send_X",
+        "controller1_send_Y",
+        "controller1_send_up",
+        "controller1_send_left",
+        "controller1_send_down",
+        "controller1_send_right",
+        "controller1_send_leftstick",
+        "controller1_send_rightstick",
+        "controller1_send_leftbumper",
+        "controller1_send_rightbumper",
+        "controller1_send_lefttrigger",
+        "controller1_send_righttrigger",
+        "controller1_send_leftstickx",
+        "controller1_send_leftsticky",
+        "controller1_send_rightstickx",
+        "controller1_send_rightsticky",
+        "controller1_send_lefttriggerposition",
+        "controller1_send_righttriggerposition",
+        "Controller1ButtonAPressed",
+        "Controller1ButtonBPressed",
+        "Controller1ButtonXPressed",
+        "Controller1ButtonYPressed",
+        "Controller1ButtonStartPressed",
+        "Controller1ButtonBackPressed",
+        "Controller1ButtonDownPressed",
+        "Controller1ButtonUpPressed",
+        "Controller1ButtonLeftPressed",
+        "Controller1ButtonRightPressed",
+        "Controller1ButtonShoulderLeftPressed",
+        "Controller1ButtonShoulderRightPressed",
+        "Controller1ThumbpadLeftPressed",
+        "Controller1ThumbpadRightPressed",
+        "Controller1TriggerLeftPosition",
+        "Controller1TriggerRightPosition",
+        "Controller1ThumbLeftX",
+        "Controller1ThumbLeftY",
+        "Controller1ThumbRightX",
+        "Controller1ThumbRightY",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
             if (toolStripComboBox1.Text == "XC-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "KeyboardMouseDriverType",
+        "MouseMoveX",
+        "MouseMoveY",
+        "MouseAbsX",
+        "MouseAbsY",
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "SendLeftClick",
+        "SendRightClick",
+        "SendMiddleClick",
+        "SendWheelUp",
+        "SendWheelDown",
+        "SendLeft",
+        "SendRight",
+        "SendUp",
+        "SendDown",
+        "SendLButton",
+        "SendRButton",
+        "SendCancel",
+        "SendMBUTTON",
+        "SendXBUTTON1",
+        "SendXBUTTON2",
+        "SendBack",
+        "SendTab",
+        "SendClear",
+        "SendReturn",
+        "SendSHIFT",
+        "SendCONTROL",
+        "SendMENU",
+        "SendPAUSE",
+        "SendCAPITAL",
+        "SendKANA",
+        "SendHANGEUL",
+        "SendHANGUL",
+        "SendJUNJA",
+        "SendFINAL",
+        "SendHANJA",
+        "SendKANJI",
+        "SendEscape",
+        "SendCONVERT",
+        "SendNONCONVERT",
+        "SendACCEPT",
+        "SendMODECHANGE",
+        "SendSpace",
+        "SendPRIOR",
+        "SendNEXT",
+        "SendEND",
+        "SendHOME",
+        "SendLEFT",
+        "SendUP",
+        "SendRIGHT",
+        "SendDOWN",
+        "SendSELECT",
+        "SendPRINT",
+        "SendEXECUTE",
+        "SendSNAPSHOT",
+        "SendINSERT",
+        "SendDELETE",
+        "SendHELP",
+        "SendAPOSTROPHE",
+        "Send0",
+        "Send1",
+        "Send2",
+        "Send3",
+        "Send4",
+        "Send5",
+        "Send6",
+        "Send7",
+        "Send8",
+        "Send9",
+        "SendA",
+        "SendB",
+        "SendC",
+        "SendD",
+        "SendE",
+        "SendF",
+        "SendG",
+        "SendH",
+        "SendI",
+        "SendJ",
+        "SendK",
+        "SendL",
+        "SendM",
+        "SendN",
+        "SendO",
+        "SendP",
+        "SendQ",
+        "SendR",
+        "SendS",
+        "SendT",
+        "SendU",
+        "SendV",
+        "SendW",
+        "SendX",
+        "SendY",
+        "SendZ",
+        "SendLWIN",
+        "SendRWIN",
+        "SendAPPS",
+        "SendSLEEP",
+        "SendNUMPAD0",
+        "SendNUMPAD1",
+        "SendNUMPAD2",
+        "SendNUMPAD3",
+        "SendNUMPAD4",
+        "SendNUMPAD5",
+        "SendNUMPAD6",
+        "SendNUMPAD7",
+        "SendNUMPAD8",
+        "SendNUMPAD9",
+        "SendMULTIPLY",
+        "SendADD",
+        "SendSEPARATOR",
+        "SendSUBTRACT",
+        "SendDECIMAL",
+        "SendDIVIDE",
+        "SendF1",
+        "SendF2",
+        "SendF3",
+        "SendF4",
+        "SendF5",
+        "SendF6",
+        "SendF7",
+        "SendF8",
+        "SendF9",
+        "SendF10",
+        "SendF11",
+        "SendF12",
+        "SendF13",
+        "SendF14",
+        "SendF15",
+        "SendF16",
+        "SendF17",
+        "SendF18",
+        "SendF19",
+        "SendF20",
+        "SendF21",
+        "SendF22",
+        "SendF23",
+        "SendF24",
+        "SendNUMLOCK",
+        "SendSCROLL",
+        "SendLeftShift",
+        "SendRightShift",
+        "SendLeftControl",
+        "SendRightControl",
+        "SendLMENU",
+        "SendRMENU",
+        "Controller1ButtonAPressed",
+        "Controller1ButtonBPressed",
+        "Controller1ButtonXPressed",
+        "Controller1ButtonYPressed",
+        "Controller1ButtonStartPressed",
+        "Controller1ButtonBackPressed",
+        "Controller1ButtonDownPressed",
+        "Controller1ButtonUpPressed",
+        "Controller1ButtonLeftPressed",
+        "Controller1ButtonRightPressed",
+        "Controller1ButtonShoulderLeftPressed",
+        "Controller1ButtonShoulderRightPressed",
+        "Controller1ThumbpadLeftPressed",
+        "Controller1ThumbpadRightPressed",
+        "Controller1TriggerLeftPosition",
+        "Controller1TriggerRightPosition",
+        "Controller1ThumbLeftX",
+        "Controller1ThumbLeftY",
+        "Controller1ThumbRightX",
+        "Controller1ThumbRightY",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
+            if (toolStripComboBox1.Text == "XCM-KM")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
         "KeyboardMouseDriverType",
         "MouseMoveX",
         "MouseMoveY",
@@ -8728,6 +9055,289 @@ namespace SIGIL
             if (toolStripComboBox1.Text == "XC-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "int_1_deltaX",
+        "int_1_deltaY",
+        "int_1_x",
+        "int_1_y",
+        "int_1_SendLeftClick",
+        "int_1_SendRightClick",
+        "int_1_SendMiddleClick",
+        "int_1_SendWheelUp",
+        "int_1_SendWheelDown",
+        "int_1_SendCANCEL",
+        "int_1_SendBACK",
+        "int_1_SendTAB",
+        "int_1_SendCLEAR",
+        "int_1_SendRETURN",
+        "int_1_SendSHIFT",
+        "int_1_SendCONTROL",
+        "int_1_SendMENU",
+        "int_1_SendCAPITAL",
+        "int_1_SendESCAPE",
+        "int_1_SendSPACE",
+        "int_1_SendPRIOR",
+        "int_1_SendNEXT",
+        "int_1_SendEND",
+        "int_1_SendHOME",
+        "int_1_SendLEFT",
+        "int_1_SendUP",
+        "int_1_SendRIGHT",
+        "int_1_SendDOWN",
+        "int_1_SendSNAPSHOT",
+        "int_1_SendINSERT",
+        "int_1_SendNUMPADDEL",
+        "int_1_SendNUMPADINSERT",
+        "int_1_SendHELP",
+        "int_1_SendAPOSTROPHE",
+        "int_1_SendBACKSPACE",
+        "int_1_SendPAGEDOWN",
+        "int_1_SendPAGEUP",
+        "int_1_SendFIN",
+        "int_1_SendMOUSE",
+        "int_1_SendA",
+        "int_1_SendB",
+        "int_1_SendC",
+        "int_1_SendD",
+        "int_1_SendE",
+        "int_1_SendF",
+        "int_1_SendG",
+        "int_1_SendH",
+        "int_1_SendI",
+        "int_1_SendJ",
+        "int_1_SendK",
+        "int_1_SendL",
+        "int_1_SendM",
+        "int_1_SendN",
+        "int_1_SendO",
+        "int_1_SendP",
+        "int_1_SendQ",
+        "int_1_SendR",
+        "int_1_SendS",
+        "int_1_SendT",
+        "int_1_SendU",
+        "int_1_SendV",
+        "int_1_SendW",
+        "int_1_SendX",
+        "int_1_SendY",
+        "int_1_SendZ",
+        "int_1_SendLWIN",
+        "int_1_SendRWIN",
+        "int_1_SendAPPS",
+        "int_1_SendDELETE",
+        "int_1_SendNUMPAD0",
+        "int_1_SendNUMPAD1",
+        "int_1_SendNUMPAD2",
+        "int_1_SendNUMPAD3",
+        "int_1_SendNUMPAD4",
+        "int_1_SendNUMPAD5",
+        "int_1_SendNUMPAD6",
+        "int_1_SendNUMPAD7",
+        "int_1_SendNUMPAD8",
+        "int_1_SendNUMPAD9",
+        "int_1_SendMULTIPLY",
+        "int_1_SendADD",
+        "int_1_SendSUBTRACT",
+        "int_1_SendDECIMAL",
+        "int_1_SendPRINTSCREEN",
+        "int_1_SendDIVIDE",
+        "int_1_SendF1",
+        "int_1_SendF2",
+        "int_1_SendF3",
+        "int_1_SendF4",
+        "int_1_SendF5",
+        "int_1_SendF6",
+        "int_1_SendF7",
+        "int_1_SendF8",
+        "int_1_SendF9",
+        "int_1_SendF10",
+        "int_1_SendF11",
+        "int_1_SendF12",
+        "int_1_SendNUMLOCK",
+        "int_1_SendSCROLLLOCK",
+        "int_1_SendLEFTSHIFT",
+        "int_1_SendRIGHTSHIFT",
+        "int_1_SendLEFTCONTROL",
+        "int_1_SendRIGHTCONTROL",
+        "int_1_SendLEFTALT",
+        "int_1_SendRIGHTALT",
+        "int_1_SendBROWSER_BACK",
+        "int_1_SendBROWSER_FORWARD",
+        "int_1_SendBROWSER_REFRESH",
+        "int_1_SendBROWSER_STOP",
+        "int_1_SendBROWSER_SEARCH",
+        "int_1_SendBROWSER_FAVORITES",
+        "int_1_SendBROWSER_HOME",
+        "int_1_SendVOLUME_MUTE",
+        "int_1_SendVOLUME_DOWN",
+        "int_1_SendVOLUME_UP",
+        "int_1_SendMEDIA_NEXT_TRACK",
+        "int_1_SendMEDIA_PREV_TRACK",
+        "int_1_SendMEDIA_STOP",
+        "int_1_SendMEDIA_PLAY_PAUSE",
+        "int_1_SendLAUNCH_MAIL",
+        "int_1_SendLAUNCH_MEDIA_SELECT",
+        "int_1_SendLAUNCH_APP1",
+        "int_1_SendLAUNCH_APP2",
+        "int_1_SendOEM_1",
+        "int_1_SendOEM_PLUS",
+        "int_1_SendOEM_COMMA",
+        "int_1_SendOEM_MINUS",
+        "int_1_SendOEM_PERIOD",
+        "int_1_SendOEM_2",
+        "int_1_SendOEM_3",
+        "int_1_SendOEM_4",
+        "int_1_SendOEM_5",
+        "int_1_SendOEM_6",
+        "int_1_SendOEM_7",
+        "int_1_SendOEM_8",
+        "int_1_SendOEM_102",
+        "int_1_SendEREOF",
+        "int_1_SendZOOM",
+        "int_1_SendEscape",
+        "int_1_SendOne",
+        "int_1_SendTwo",
+        "int_1_SendThree",
+        "int_1_SendFour",
+        "int_1_SendFive",
+        "int_1_SendSix",
+        "int_1_SendSeven",
+        "int_1_SendEight",
+        "int_1_SendNine",
+        "int_1_SendZero",
+        "int_1_SendDashUnderscore",
+        "int_1_SendPlusEquals",
+        "int_1_SendBackspace",
+        "int_1_SendTab",
+        "int_1_SendOpenBracketBrace",
+        "int_1_SendCloseBracketBrace",
+        "int_1_SendEnter",
+        "int_1_SendControl",
+        "int_1_SendSemicolonColon",
+        "int_1_SendSingleDoubleQuote",
+        "int_1_SendTilde",
+        "int_1_SendLeftShift",
+        "int_1_SendBackslashPipe",
+        "int_1_SendCommaLeftArrow",
+        "int_1_SendPeriodRightArrow",
+        "int_1_SendForwardSlashQuestionMark",
+        "int_1_SendRightShift",
+        "int_1_SendRightAlt",
+        "int_1_SendSpace",
+        "int_1_SendCapsLock",
+        "int_1_SendUp",
+        "int_1_SendDown",
+        "int_1_SendRight",
+        "int_1_SendLeft",
+        "int_1_SendHome",
+        "int_1_SendEnd",
+        "int_1_SendDelete",
+        "int_1_SendPageUp",
+        "int_1_SendPageDown",
+        "int_1_SendInsert",
+        "int_1_SendPrintScreen",
+        "int_1_SendNumLock",
+        "int_1_SendScrollLock",
+        "int_1_SendMenu",
+        "int_1_SendWindowsKey",
+        "int_1_SendNumpadDivide",
+        "int_1_SendNumpadAsterisk",
+        "int_1_SendNumpad7",
+        "int_1_SendNumpad8",
+        "int_1_SendNumpad9",
+        "int_1_SendNumpad4",
+        "int_1_SendNumpad5",
+        "int_1_SendNumpad6",
+        "int_1_SendNumpad1",
+        "int_1_SendNumpad2",
+        "int_1_SendNumpad3",
+        "int_1_SendNumpad0",
+        "int_1_SendNumpadDelete",
+        "int_1_SendNumpadEnter",
+        "int_1_SendNumpadPlus",
+        "int_1_SendNumpadMinus",
+        "Controller1ButtonAPressed",
+        "Controller1ButtonBPressed",
+        "Controller1ButtonXPressed",
+        "Controller1ButtonYPressed",
+        "Controller1ButtonStartPressed",
+        "Controller1ButtonBackPressed",
+        "Controller1ButtonDownPressed",
+        "Controller1ButtonUpPressed",
+        "Controller1ButtonLeftPressed",
+        "Controller1ButtonRightPressed",
+        "Controller1ButtonShoulderLeftPressed",
+        "Controller1ButtonShoulderRightPressed",
+        "Controller1ThumbpadLeftPressed",
+        "Controller1ThumbpadRightPressed",
+        "Controller1TriggerLeftPosition",
+        "Controller1TriggerRightPosition",
+        "Controller1ThumbLeftX",
+        "Controller1ThumbLeftY",
+        "Controller1ThumbRightX",
+        "Controller1ThumbRightY",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
+            if (toolStripComboBox1.Text == "XCM-Int")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
         "MouseDesktopX",
         "MouseDesktopY",
         "int_1_deltaX",
@@ -11466,7 +12076,7 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
                     range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
                 }
-                if (toolStripComboBox1.Text == "DI-XC")
+                if (toolStripComboBox1.Text == "DIC-XC")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
@@ -11696,7 +12306,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "DIM-XC")
+                if (toolStripComboBox1.Text == "DICM-XC")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -11937,7 +12547,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "DI-KM")
+                if (toolStripComboBox1.Text == "DIC-KM")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
@@ -12296,7 +12906,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "DIM-KM")
+                if (toolStripComboBox1.Text == "DICM-KM")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -12666,7 +13276,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "DI-Int")
+                if (toolStripComboBox1.Text == "DIC-Int")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
@@ -13079,7 +13689,7 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
-                if (toolStripComboBox1.Text == "DIM-Int")
+                if (toolStripComboBox1.Text == "DICM-Int")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
@@ -17466,8 +18076,329 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "XCM-XC")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_start"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_A"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_B"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_X"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_Y"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_up"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_left"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_down"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_right"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttriggerposition"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttriggerposition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonAPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonXPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonYPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonStartPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBackPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonDownPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonUpPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerLeftPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerRightPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftY"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightY"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "XC-KM")
                 {
+                    range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCancel"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMBUTTON"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendBack"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendClear"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendReturn"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGEUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJUNJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendFINAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANJI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNONCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendACCEPT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMODECHANGE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRINT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEXECUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send0"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send1"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send2"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send3"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send4"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send5"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send6"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send7"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send8"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSLEEP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSEPARATOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF13"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF14"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF15"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF16"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF17"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF18"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF19"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF20"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF21"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF22"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF23"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF24"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSCROLL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRMENU"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonAPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonXPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonYPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonStartPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBackPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonDownPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonUpPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerLeftPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerRightPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftY"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightY"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
+                if (toolStripComboBox1.Text == "XCM-KM")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
                     range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveY"));
@@ -18525,6 +19456,286 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "XCM-Int")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_x"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_y"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCANCEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTAB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCLEAR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRETURN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendESCAPE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADDEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACKSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMOUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRINTSCREEN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSCROLLLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_BACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FORWARD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_REFRESH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_SEARCH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FAVORITES"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_HOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_MUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_DOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_UP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_NEXT_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PREV_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PLAY_PAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MAIL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MEDIA_SELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PLUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_COMMA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_MINUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PERIOD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_102"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEREOF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZOOM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOne"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTwo"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendThree"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFour"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFive"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSix"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSeven"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNine"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZero"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDashUnderscore"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPlusEquals"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackspace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOpenBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCloseBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSemicolonColon"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSingleDoubleQuote"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTilde"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackslashPipe"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCommaLeftArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPeriodRightArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendForwardSlashQuestionMark"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightAlt"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCapsLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHome"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnd"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendInsert"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPrintScreen"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendScrollLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMenu"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWindowsKey"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDivide"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadAsterisk"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadPlus"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadMinus"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonAPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonXPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonYPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonStartPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonBackPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonDownPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonUpPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ButtonShoulderRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadLeftPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbpadRightPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerLeftPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1TriggerRightPosition"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbLeftY"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightX"));
+                    range.SetStyle(InputStyle, new Regex(@"Controller1ThumbRightY"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "KM-Int")
                 {
                     range.SetStyle(InputStyle, new Regex(@"Keyboard1KeyEscape"));
@@ -19219,7 +20430,7 @@ namespace SIGIL
         }
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message = "• Input Devices : Wiimote and Joycon left, Wiimote and Joycon right, Wiimote and Nunchuck, Joycons, Joycon left, Joycon right, Switch Pro Controller, Joycon Charging Grip, DirectInput Controller, Dualsense, Dualshock4, Keyboard and Mouse, Xbox Controller.\n\r\n\r• Output Devices : Xbox Controller, Keyboard and Mouse.\n\r\n\r• Pairing Devices : Wiimote and Joycon left or Wiimote and Joycon right or Wiimote or Joycons or Joycon left or Joycon right need to be set in pairing mode after starting the run process, Switch Pro Controller or Joycon Charging Grip or DirectInput Controller or Dualsense or Dualshock4 or Xbox Controller or Keyboard and Mouse need to be USB wired.";
+            const string message = "• Input Devices : Wiimote and Joycon left (WiiJoyL), Wiimote and Joycon right (WiiJoyR), Wiimote and Nunchuck (Wii), Joycons (Joys), Joycon left (JoyL), Joycon right (JoyR), Switch Pro Controller (SPC), Joycon Charging Grip (JCG), DirectInput Controller (DIC), DirectInput Controller and Mouse (DICM), Dualsense (DS), Dualshock4 (DS4), Keyboard and Mouse (KM), Mouse and Joycon left (MJoyL), Xbox Controller (XC), Xbox Controller and Mouse (XCM).\n\r\n\r• Output Devices : Xbox Controller (XC), Keyboard and Mouse (KM), Interception (Int).\n\r\n\r• Pairing Devices : Wiimote and Joycon left or Wiimote and Joycon right or Wiimote or Joycons or Joycon left or Joycon right need to be set in pairing mode after starting the run process, Switch Pro Controller or Joycon Charging Grip or DirectInput Controller or Dualsense or Dualshock4 or Xbox Controller or Keyboard and Mouse need to be USB wired.";
             const string caption = "Help";
             MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -22868,7 +24079,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
             }
-            if (toolStripComboBox1.Text == "DI-XC")
+            if (toolStripComboBox1.Text == "DIC-XC")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -23699,7 +24910,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "DIM-XC")
+            if (toolStripComboBox1.Text == "DICM-XC")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -24627,7 +25838,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "DI-KM")
+            if (toolStripComboBox1.Text == "DIC-KM")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -25460,7 +26671,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "DIM-KM")
+            if (toolStripComboBox1.Text == "DICM-KM")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -26390,7 +27601,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "DI-Int")
+            if (toolStripComboBox1.Text == "DIC-Int")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -27225,7 +28436,7 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
-            if (toolStripComboBox1.Text == "DIM-Int")
+            if (toolStripComboBox1.Text == "DICM-Int")
             {
                 code = @"
                 using Microsoft.Win32.SafeHandles;
@@ -37184,6 +38395,344 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
+            if (toolStripComboBox1.Text == "XCM-XC")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX.XInput;
+                using SharpDX;
+                using controllers;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        DirectInput directInput = new DirectInput();
+                        private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
+                        private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            ScpBus.LoadController();
+                            MouseInputHookConnect();
+                            XInputHookConnect();
+                            Task.Run(() => taskX());
+                        }
+                        private void taskX()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                ControllerProcess();
+                                funct_driver
+                                ScpBus.SetController(controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition, controller1_send_xbox);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                ScpBus.UnLoadController();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                        private static Controller[] controller = new Controller[] { null };
+                        private static SharpDX.XInput.State xistate;
+                        private static int xinum = 0;
+                        public static bool Controller1ButtonAPressed;
+                        public static bool Controller1ButtonBPressed;
+                        public static bool Controller1ButtonXPressed;
+                        public static bool Controller1ButtonYPressed;
+                        public static bool Controller1ButtonStartPressed;
+                        public static bool Controller1ButtonBackPressed;
+                        public static bool Controller1ButtonDownPressed;
+                        public static bool Controller1ButtonUpPressed;
+                        public static bool Controller1ButtonLeftPressed;
+                        public static bool Controller1ButtonRightPressed;
+                        public static bool Controller1ButtonShoulderLeftPressed;
+                        public static bool Controller1ButtonShoulderRightPressed;
+                        public static bool Controller1ThumbpadLeftPressed;
+                        public static bool Controller1ThumbpadRightPressed;
+                        public static double Controller1TriggerLeftPosition;
+                        public static double Controller1TriggerRightPosition;
+                        public static double Controller1ThumbLeftX;
+                        public static double Controller1ThumbLeftY;
+                        public static double Controller1ThumbRightX;
+                        public static double Controller1ThumbRightY;
+                        public bool XInputHookConnect()
+                        {
+                            try
+                            {
+                                controller = new Controller[] { null };
+                                xinum = 0;
+                                var controllers = new[] { new Controller(UserIndex.One) };
+                                foreach (var selectControler in controllers)
+                                {
+                                    if (selectControler.IsConnected)
+                                    {
+                                        controller[xinum] = selectControler;
+                                        xinum++;
+                                        if (xinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (controller[0] == null)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                return true;
+                            }
+                        }
+                        private void ControllerProcess()
+                        {
+                            for (int inc = 0; inc < xinum; inc++)
+                            {
+                                xistate = controller[inc].GetState();
+                                if (inc == 0)
+                                {
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.A))
+                                        Controller1ButtonAPressed = true;
+                                    else
+                                        Controller1ButtonAPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.B))
+                                        Controller1ButtonBPressed = true;
+                                    else
+                                        Controller1ButtonBPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.X))
+                                        Controller1ButtonXPressed = true;
+                                    else
+                                        Controller1ButtonXPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Y))
+                                        Controller1ButtonYPressed = true;
+                                    else
+                                        Controller1ButtonYPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Start))
+                                        Controller1ButtonStartPressed = true;
+                                    else
+                                        Controller1ButtonStartPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Back))
+                                        Controller1ButtonBackPressed = true;
+                                    else
+                                        Controller1ButtonBackPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadDown))
+                                        Controller1ButtonDownPressed = true;
+                                    else
+                                        Controller1ButtonDownPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadUp))
+                                        Controller1ButtonUpPressed = true;
+                                    else
+                                        Controller1ButtonUpPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadLeft))
+                                        Controller1ButtonLeftPressed = true;
+                                    else
+                                        Controller1ButtonLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadRight))
+                                        Controller1ButtonRightPressed = true;
+                                    else
+                                        Controller1ButtonRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftShoulder))
+                                        Controller1ButtonShoulderLeftPressed = true;
+                                    else
+                                        Controller1ButtonShoulderLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightShoulder))
+                                        Controller1ButtonShoulderRightPressed = true;
+                                    else
+                                        Controller1ButtonShoulderRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftThumb))
+                                        Controller1ThumbpadLeftPressed = true;
+                                    else
+                                        Controller1ThumbpadLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightThumb))
+                                        Controller1ThumbpadRightPressed = true;
+                                    else
+                                        Controller1ThumbpadRightPressed = false;
+                                    Controller1TriggerLeftPosition = xistate.Gamepad.LeftTrigger;
+                                    Controller1TriggerRightPosition = xistate.Gamepad.RightTrigger;
+                                    Controller1ThumbLeftX = xistate.Gamepad.LeftThumbX;
+                                    Controller1ThumbLeftY = xistate.Gamepad.LeftThumbY;
+                                    Controller1ThumbRightX = xistate.Gamepad.RightThumbX;
+                                    Controller1ThumbRightY = xistate.Gamepad.RightThumbY;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.XInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
             if (toolStripComboBox1.Text == "XC-KM")
             {
                 code = @"
@@ -37420,6 +38969,346 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.XInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
+            if (toolStripComboBox1.Text == "XCM-KM")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX.XInput;
+                using SharpDX;
+                using keyboards;
+                using mouses;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        DirectInput directInput = new DirectInput();
+                        private static int width, height;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            MouseInputHookConnect();
+                            XInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                ControllerProcess();
+                                funct_driver
+                                SendKeyboard.SetKM(KeyboardMouseDriverType, SendLeftClick, SendRightClick, SendMiddleClick, SendWheelUp, SendWheelDown, SendLeft, SendRight, SendUp, SendDown, SendLButton, SendRButton, SendCancel, SendMBUTTON, SendXBUTTON1, SendXBUTTON2, SendBack, SendTab, SendClear, SendReturn, SendSHIFT, SendCONTROL, SendMENU, SendPAUSE, SendCAPITAL, SendKANA, SendHANGEUL, SendHANGUL, SendJUNJA, SendFINAL, SendHANJA, SendKANJI, SendEscape, SendCONVERT, SendNONCONVERT, SendACCEPT, SendMODECHANGE, SendSpace, SendPRIOR, SendNEXT, SendEND, SendHOME, SendLEFT, SendUP, SendRIGHT, SendDOWN, SendSELECT, SendPRINT, SendEXECUTE, SendSNAPSHOT, SendINSERT, SendDELETE, SendHELP, SendAPOSTROPHE, Send0, Send1, Send2, Send3, Send4, Send5, Send6, Send7, Send8, Send9, SendA, SendB, SendC, SendD, SendE, SendF, SendG, SendH, SendI, SendJ, SendK, SendL, SendM, SendN, SendO, SendP, SendQ, SendR, SendS, SendT, SendU, SendV, SendW, SendX, SendY, SendZ, SendLWIN, SendRWIN, SendAPPS, SendSLEEP, SendNUMPAD0, SendNUMPAD1, SendNUMPAD2, SendNUMPAD3, SendNUMPAD4, SendNUMPAD5, SendNUMPAD6, SendNUMPAD7, SendNUMPAD8, SendNUMPAD9, SendMULTIPLY, SendADD, SendSEPARATOR, SendSUBTRACT, SendDECIMAL, SendDIVIDE, SendF1, SendF2, SendF3, SendF4, SendF5, SendF6, SendF7, SendF8, SendF9, SendF10, SendF11, SendF12, SendF13, SendF14, SendF15, SendF16, SendF17, SendF18, SendF19, SendF20, SendF21, SendF22, SendF23, SendF24, SendNUMLOCK, SendSCROLL, SendLeftShift, SendRightShift, SendLeftControl, SendRightControl, SendLMENU, SendRMENU);
+                                SendMouse.SetKM(KeyboardMouseDriverType, MouseMoveX, MouseMoveY, MouseAbsX, MouseAbsY, MouseDesktopX, MouseDesktopY);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                SendKeyboard.UnLoadKM();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                        private static Controller[] controller = new Controller[] { null };
+                        private static SharpDX.XInput.State xistate;
+                        private static int xinum = 0;
+                        public static bool Controller1ButtonAPressed;
+                        public static bool Controller1ButtonBPressed;
+                        public static bool Controller1ButtonXPressed;
+                        public static bool Controller1ButtonYPressed;
+                        public static bool Controller1ButtonStartPressed;
+                        public static bool Controller1ButtonBackPressed;
+                        public static bool Controller1ButtonDownPressed;
+                        public static bool Controller1ButtonUpPressed;
+                        public static bool Controller1ButtonLeftPressed;
+                        public static bool Controller1ButtonRightPressed;
+                        public static bool Controller1ButtonShoulderLeftPressed;
+                        public static bool Controller1ButtonShoulderRightPressed;
+                        public static bool Controller1ThumbpadLeftPressed;
+                        public static bool Controller1ThumbpadRightPressed;
+                        public static double Controller1TriggerLeftPosition;
+                        public static double Controller1TriggerRightPosition;
+                        public static double Controller1ThumbLeftX;
+                        public static double Controller1ThumbLeftY;
+                        public static double Controller1ThumbRightX;
+                        public static double Controller1ThumbRightY;
+                        public bool XInputHookConnect()
+                        {
+                            try
+                            {
+                                controller = new Controller[] { null };
+                                xinum = 0;
+                                var controllers = new[] { new Controller(UserIndex.One) };
+                                foreach (var selectControler in controllers)
+                                {
+                                    if (selectControler.IsConnected)
+                                    {
+                                        controller[xinum] = selectControler;
+                                        xinum++;
+                                        if (xinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (controller[0] == null)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                return true;
+                            }
+                        }
+                        private void ControllerProcess()
+                        {
+                            for (int inc = 0; inc < xinum; inc++)
+                            {
+                                xistate = controller[inc].GetState();
+                                if (inc == 0)
+                                {
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.A))
+                                        Controller1ButtonAPressed = true;
+                                    else
+                                        Controller1ButtonAPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.B))
+                                        Controller1ButtonBPressed = true;
+                                    else
+                                        Controller1ButtonBPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.X))
+                                        Controller1ButtonXPressed = true;
+                                    else
+                                        Controller1ButtonXPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Y))
+                                        Controller1ButtonYPressed = true;
+                                    else
+                                        Controller1ButtonYPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Start))
+                                        Controller1ButtonStartPressed = true;
+                                    else
+                                        Controller1ButtonStartPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Back))
+                                        Controller1ButtonBackPressed = true;
+                                    else
+                                        Controller1ButtonBackPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadDown))
+                                        Controller1ButtonDownPressed = true;
+                                    else
+                                        Controller1ButtonDownPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadUp))
+                                        Controller1ButtonUpPressed = true;
+                                    else
+                                        Controller1ButtonUpPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadLeft))
+                                        Controller1ButtonLeftPressed = true;
+                                    else
+                                        Controller1ButtonLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadRight))
+                                        Controller1ButtonRightPressed = true;
+                                    else
+                                        Controller1ButtonRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftShoulder))
+                                        Controller1ButtonShoulderLeftPressed = true;
+                                    else
+                                        Controller1ButtonShoulderLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightShoulder))
+                                        Controller1ButtonShoulderRightPressed = true;
+                                    else
+                                        Controller1ButtonShoulderRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftThumb))
+                                        Controller1ThumbpadLeftPressed = true;
+                                    else
+                                        Controller1ThumbpadLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightThumb))
+                                        Controller1ThumbpadRightPressed = true;
+                                    else
+                                        Controller1ThumbpadRightPressed = false;
+                                    Controller1TriggerLeftPosition = xistate.Gamepad.LeftTrigger;
+                                    Controller1TriggerRightPosition = xistate.Gamepad.RightTrigger;
+                                    Controller1ThumbLeftX = xistate.Gamepad.LeftThumbX;
+                                    Controller1ThumbLeftY = xistate.Gamepad.LeftThumbY;
+                                    Controller1ThumbRightX = xistate.Gamepad.RightThumbX;
+                                    Controller1ThumbRightY = xistate.Gamepad.RightThumbY;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.XInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
@@ -39077,6 +40966,348 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.XInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
+            if (toolStripComboBox1.Text == "XCM-Int")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX.XInput;
+                using SharpDX;
+                using Interceptions;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        DirectInput directInput = new DirectInput();
+                        private static int width, height;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        public static Input input = new Input();
+                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            input.KeyboardFilterMode = KeyboardFilterMode.All;
+                            input.MouseFilterMode = MouseFilterMode.All;
+                            input.Load();
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            MouseInputHookConnect();
+                            XInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                ControllerProcess();
+                                funct_driver
+                                SendInterception.SetKM(MouseDesktopX, MouseDesktopY, input, keyboard_1_id, mouse_1_id, int_1_deltaX, int_1_deltaY, int_1_x, int_1_y, int_1_SendLeftClick, int_1_SendRightClick, int_1_SendMiddleClick, int_1_SendWheelUp, int_1_SendWheelDown, int_1_SendCANCEL, int_1_SendBACK, int_1_SendTAB, int_1_SendCLEAR, int_1_SendRETURN, int_1_SendSHIFT, int_1_SendCONTROL, int_1_SendMENU, int_1_SendCAPITAL, int_1_SendESCAPE, int_1_SendSPACE, int_1_SendPRIOR, int_1_SendNEXT, int_1_SendEND, int_1_SendHOME, int_1_SendLEFT, int_1_SendUP, int_1_SendRIGHT, int_1_SendDOWN, int_1_SendSNAPSHOT, int_1_SendINSERT, int_1_SendNUMPADDEL, int_1_SendNUMPADINSERT, int_1_SendHELP, int_1_SendAPOSTROPHE, int_1_SendBACKSPACE, int_1_SendPAGEDOWN, int_1_SendPAGEUP, int_1_SendFIN, int_1_SendMOUSE, int_1_SendA, int_1_SendB, int_1_SendC, int_1_SendD, int_1_SendE, int_1_SendF, int_1_SendG, int_1_SendH, int_1_SendI, int_1_SendJ, int_1_SendK, int_1_SendL, int_1_SendM, int_1_SendN, int_1_SendO, int_1_SendP, int_1_SendQ, int_1_SendR, int_1_SendS, int_1_SendT, int_1_SendU, int_1_SendV, int_1_SendW, int_1_SendX, int_1_SendY, int_1_SendZ, int_1_SendLWIN, int_1_SendRWIN, int_1_SendAPPS, int_1_SendDELETE, int_1_SendNUMPAD0, int_1_SendNUMPAD1, int_1_SendNUMPAD2, int_1_SendNUMPAD3, int_1_SendNUMPAD4, int_1_SendNUMPAD5, int_1_SendNUMPAD6, int_1_SendNUMPAD7, int_1_SendNUMPAD8, int_1_SendNUMPAD9, int_1_SendMULTIPLY, int_1_SendADD, int_1_SendSUBTRACT, int_1_SendDECIMAL, int_1_SendPRINTSCREEN, int_1_SendDIVIDE, int_1_SendF1, int_1_SendF2, int_1_SendF3, int_1_SendF4, int_1_SendF5, int_1_SendF6, int_1_SendF7, int_1_SendF8, int_1_SendF9, int_1_SendF10, int_1_SendF11, int_1_SendF12, int_1_SendNUMLOCK, int_1_SendSCROLLLOCK, int_1_SendLEFTSHIFT, int_1_SendRIGHTSHIFT, int_1_SendLEFTCONTROL, int_1_SendRIGHTCONTROL, int_1_SendLEFTALT, int_1_SendRIGHTALT, int_1_SendBROWSER_BACK, int_1_SendBROWSER_FORWARD, int_1_SendBROWSER_REFRESH, int_1_SendBROWSER_STOP, int_1_SendBROWSER_SEARCH, int_1_SendBROWSER_FAVORITES, int_1_SendBROWSER_HOME, int_1_SendVOLUME_MUTE, int_1_SendVOLUME_DOWN, int_1_SendVOLUME_UP, int_1_SendMEDIA_NEXT_TRACK, int_1_SendMEDIA_PREV_TRACK, int_1_SendMEDIA_STOP, int_1_SendMEDIA_PLAY_PAUSE, int_1_SendLAUNCH_MAIL, int_1_SendLAUNCH_MEDIA_SELECT, int_1_SendLAUNCH_APP1, int_1_SendLAUNCH_APP2, int_1_SendOEM_1, int_1_SendOEM_PLUS, int_1_SendOEM_COMMA, int_1_SendOEM_MINUS, int_1_SendOEM_PERIOD, int_1_SendOEM_2, int_1_SendOEM_3, int_1_SendOEM_4, int_1_SendOEM_5, int_1_SendOEM_6, int_1_SendOEM_7, int_1_SendOEM_8, int_1_SendOEM_102, int_1_SendEREOF, int_1_SendZOOM, int_1_SendEscape, int_1_SendOne, int_1_SendTwo, int_1_SendThree, int_1_SendFour, int_1_SendFive, int_1_SendSix, int_1_SendSeven, int_1_SendEight, int_1_SendNine, int_1_SendZero, int_1_SendDashUnderscore, int_1_SendPlusEquals, int_1_SendBackspace, int_1_SendTab, int_1_SendOpenBracketBrace, int_1_SendCloseBracketBrace, int_1_SendEnter, int_1_SendControl, int_1_SendSemicolonColon, int_1_SendSingleDoubleQuote, int_1_SendTilde, int_1_SendLeftShift, int_1_SendBackslashPipe, int_1_SendCommaLeftArrow, int_1_SendPeriodRightArrow, int_1_SendForwardSlashQuestionMark, int_1_SendRightShift, int_1_SendRightAlt, int_1_SendSpace, int_1_SendCapsLock, int_1_SendUp, int_1_SendDown, int_1_SendRight, int_1_SendLeft, int_1_SendHome, int_1_SendEnd, int_1_SendDelete, int_1_SendPageUp, int_1_SendPageDown, int_1_SendInsert, int_1_SendPrintScreen, int_1_SendNumLock, int_1_SendScrollLock, int_1_SendMenu, int_1_SendWindowsKey, int_1_SendNumpadDivide, int_1_SendNumpadAsterisk, int_1_SendNumpad7, int_1_SendNumpad8, int_1_SendNumpad9, int_1_SendNumpad4, int_1_SendNumpad5, int_1_SendNumpad6, int_1_SendNumpad1, int_1_SendNumpad2, int_1_SendNumpad3, int_1_SendNumpad0, int_1_SendNumpadDelete, int_1_SendNumpadEnter, int_1_SendNumpadPlus, int_1_SendNumpadMinus);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                SendInterception.UnLoadKM(input, keyboard_1_id, mouse_1_id);
+                                input.Unload();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                        private static Controller[] controller = new Controller[] { null };
+                        private static SharpDX.XInput.State xistate;
+                        private static int xinum = 0;
+                        public static bool Controller1ButtonAPressed;
+                        public static bool Controller1ButtonBPressed;
+                        public static bool Controller1ButtonXPressed;
+                        public static bool Controller1ButtonYPressed;
+                        public static bool Controller1ButtonStartPressed;
+                        public static bool Controller1ButtonBackPressed;
+                        public static bool Controller1ButtonDownPressed;
+                        public static bool Controller1ButtonUpPressed;
+                        public static bool Controller1ButtonLeftPressed;
+                        public static bool Controller1ButtonRightPressed;
+                        public static bool Controller1ButtonShoulderLeftPressed;
+                        public static bool Controller1ButtonShoulderRightPressed;
+                        public static bool Controller1ThumbpadLeftPressed;
+                        public static bool Controller1ThumbpadRightPressed;
+                        public static double Controller1TriggerLeftPosition;
+                        public static double Controller1TriggerRightPosition;
+                        public static double Controller1ThumbLeftX;
+                        public static double Controller1ThumbLeftY;
+                        public static double Controller1ThumbRightX;
+                        public static double Controller1ThumbRightY;
+                        public bool XInputHookConnect()
+                        {
+                            try
+                            {
+                                controller = new Controller[] { null };
+                                xinum = 0;
+                                var controllers = new[] { new Controller(UserIndex.One) };
+                                foreach (var selectControler in controllers)
+                                {
+                                    if (selectControler.IsConnected)
+                                    {
+                                        controller[xinum] = selectControler;
+                                        xinum++;
+                                        if (xinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (controller[0] == null)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                return true;
+                            }
+                        }
+                        private void ControllerProcess()
+                        {
+                            for (int inc = 0; inc < xinum; inc++)
+                            {
+                                xistate = controller[inc].GetState();
+                                if (inc == 0)
+                                {
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.A))
+                                        Controller1ButtonAPressed = true;
+                                    else
+                                        Controller1ButtonAPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.B))
+                                        Controller1ButtonBPressed = true;
+                                    else
+                                        Controller1ButtonBPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.X))
+                                        Controller1ButtonXPressed = true;
+                                    else
+                                        Controller1ButtonXPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Y))
+                                        Controller1ButtonYPressed = true;
+                                    else
+                                        Controller1ButtonYPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Start))
+                                        Controller1ButtonStartPressed = true;
+                                    else
+                                        Controller1ButtonStartPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.Back))
+                                        Controller1ButtonBackPressed = true;
+                                    else
+                                        Controller1ButtonBackPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadDown))
+                                        Controller1ButtonDownPressed = true;
+                                    else
+                                        Controller1ButtonDownPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadUp))
+                                        Controller1ButtonUpPressed = true;
+                                    else
+                                        Controller1ButtonUpPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadLeft))
+                                        Controller1ButtonLeftPressed = true;
+                                    else
+                                        Controller1ButtonLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadRight))
+                                        Controller1ButtonRightPressed = true;
+                                    else
+                                        Controller1ButtonRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftShoulder))
+                                        Controller1ButtonShoulderLeftPressed = true;
+                                    else
+                                        Controller1ButtonShoulderLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightShoulder))
+                                        Controller1ButtonShoulderRightPressed = true;
+                                    else
+                                        Controller1ButtonShoulderRightPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftThumb))
+                                        Controller1ThumbpadLeftPressed = true;
+                                    else
+                                        Controller1ThumbpadLeftPressed = false;
+                                    if (xistate.Gamepad.Buttons.HasFlag(GamepadButtonFlags.RightThumb))
+                                        Controller1ThumbpadRightPressed = true;
+                                    else
+                                        Controller1ThumbpadRightPressed = false;
+                                    Controller1TriggerLeftPosition = xistate.Gamepad.LeftTrigger;
+                                    Controller1TriggerRightPosition = xistate.Gamepad.RightTrigger;
+                                    Controller1ThumbLeftX = xistate.Gamepad.LeftThumbX;
+                                    Controller1ThumbLeftY = xistate.Gamepad.LeftThumbY;
+                                    Controller1ThumbRightX = xistate.Gamepad.RightThumbX;
+                                    Controller1ThumbRightY = xistate.Gamepad.RightThumbY;
+                                }
+                            }
+                        }
+                    }
+                }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.XInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
