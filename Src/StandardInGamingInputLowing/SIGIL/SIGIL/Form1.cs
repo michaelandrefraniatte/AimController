@@ -2122,6 +2122,250 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
+            if (toolStripComboBox1.Text == "FV2M-XC")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "controller1_send_xbox",
+        "controller1_send_back",
+        "controller1_send_start",
+        "controller1_send_A",
+        "controller1_send_B",
+        "controller1_send_X",
+        "controller1_send_Y",
+        "controller1_send_up",
+        "controller1_send_left",
+        "controller1_send_down",
+        "controller1_send_right",
+        "controller1_send_leftstick",
+        "controller1_send_rightstick",
+        "controller1_send_leftbumper",
+        "controller1_send_rightbumper",
+        "controller1_send_lefttrigger",
+        "controller1_send_righttrigger",
+        "controller1_send_leftstickx",
+        "controller1_send_leftsticky",
+        "controller1_send_rightstickx",
+        "controller1_send_rightsticky",
+        "controller1_send_lefttriggerposition",
+        "controller1_send_righttriggerposition",
+        "Joystick1AxisX",
+        "Joystick1AxisY",
+        "Joystick1AxisZ",
+        "Joystick1RotationX",
+        "Joystick1RotationY",
+        "Joystick1RotationZ",
+        "Joystick1Sliders0",
+        "Joystick1Sliders1",
+        "Joystick1PointOfViewControllers0",
+        "Joystick1PointOfViewControllers1",
+        "Joystick1PointOfViewControllers2",
+        "Joystick1PointOfViewControllers3",
+        "Joystick1VelocityX",
+        "Joystick1VelocityY",
+        "Joystick1VelocityZ",
+        "Joystick1AngularVelocityX",
+        "Joystick1AngularVelocityY",
+        "Joystick1AngularVelocityZ",
+        "Joystick1VelocitySliders0",
+        "Joystick1VelocitySliders1",
+        "Joystick1AccelerationX",
+        "Joystick1AccelerationY",
+        "Joystick1AccelerationZ",
+        "Joystick1AngularAccelerationX",
+        "Joystick1AngularAccelerationY",
+        "Joystick1AngularAccelerationZ",
+        "Joystick1AccelerationSliders0",
+        "Joystick1AccelerationSliders1",
+        "Joystick1ForceX",
+        "Joystick1ForceY",
+        "Joystick1ForceZ",
+        "Joystick1TorqueX",
+        "Joystick1TorqueY",
+        "Joystick1TorqueZ",
+        "Joystick1ForceSliders0",
+        "Joystick1ForceSliders1",
+        "Joystick1Buttons0",
+        "Joystick1Buttons1",
+        "Joystick1Buttons2",
+        "Joystick1Buttons3",
+        "Joystick1Buttons4",
+        "Joystick1Buttons5",
+        "Joystick1Buttons6",
+        "Joystick1Buttons7",
+        "Joystick1Buttons8",
+        "Joystick1Buttons9",
+        "Joystick1Buttons10",
+        "Joystick1Buttons11",
+        "Joystick1Buttons12",
+        "Joystick1Buttons13",
+        "Joystick1Buttons14",
+        "Joystick1Buttons15",
+        "Joystick1Buttons16",
+        "Joystick1Buttons17",
+        "Joystick1Buttons18",
+        "Joystick1Buttons19",
+        "Joystick1Buttons20",
+        "Joystick1Buttons21",
+        "Joystick1Buttons22",
+        "Joystick1Buttons23",
+        "Joystick1Buttons24",
+        "Joystick1Buttons25",
+        "Joystick1Buttons26",
+        "Joystick1Buttons27",
+        "Joystick1Buttons28",
+        "Joystick1Buttons29",
+        "Joystick1Buttons30",
+        "Joystick1Buttons31",
+        "Joystick1Buttons32",
+        "Joystick1Buttons33",
+        "Joystick1Buttons34",
+        "Joystick1Buttons35",
+        "Joystick1Buttons36",
+        "Joystick1Buttons37",
+        "Joystick1Buttons38",
+        "Joystick1Buttons39",
+        "Joystick1Buttons40",
+        "Joystick1Buttons41",
+        "Joystick1Buttons42",
+        "Joystick1Buttons43",
+        "Joystick1Buttons44",
+        "Joystick1Buttons45",
+        "Joystick1Buttons46",
+        "Joystick1Buttons47",
+        "Joystick1Buttons48",
+        "Joystick1Buttons49",
+        "Joystick1Buttons50",
+        "Joystick1Buttons51",
+        "Joystick1Buttons52",
+        "Joystick1Buttons53",
+        "Joystick1Buttons54",
+        "Joystick1Buttons55",
+        "Joystick1Buttons56",
+        "Joystick1Buttons57",
+        "Joystick1Buttons58",
+        "Joystick1Buttons59",
+        "Joystick1Buttons60",
+        "Joystick1Buttons61",
+        "Joystick1Buttons62",
+        "Joystick1Buttons63",
+        "Joystick1Buttons64",
+        "Joystick1Buttons65",
+        "Joystick1Buttons66",
+        "Joystick1Buttons67",
+        "Joystick1Buttons68",
+        "Joystick1Buttons69",
+        "Joystick1Buttons70",
+        "Joystick1Buttons71",
+        "Joystick1Buttons72",
+        "Joystick1Buttons73",
+        "Joystick1Buttons74",
+        "Joystick1Buttons75",
+        "Joystick1Buttons76",
+        "Joystick1Buttons77",
+        "Joystick1Buttons78",
+        "Joystick1Buttons79",
+        "Joystick1Buttons80",
+        "Joystick1Buttons81",
+        "Joystick1Buttons82",
+        "Joystick1Buttons83",
+        "Joystick1Buttons84",
+        "Joystick1Buttons85",
+        "Joystick1Buttons86",
+        "Joystick1Buttons87",
+        "Joystick1Buttons88",
+        "Joystick1Buttons89",
+        "Joystick1Buttons90",
+        "Joystick1Buttons91",
+        "Joystick1Buttons92",
+        "Joystick1Buttons93",
+        "Joystick1Buttons94",
+        "Joystick1Buttons95",
+        "Joystick1Buttons96",
+        "Joystick1Buttons97",
+        "Joystick1Buttons98",
+        "Joystick1Buttons99",
+        "Joystick1Buttons100",
+        "Joystick1Buttons101",
+        "Joystick1Buttons102",
+        "Joystick1Buttons103",
+        "Joystick1Buttons104",
+        "Joystick1Buttons105",
+        "Joystick1Buttons106",
+        "Joystick1Buttons107",
+        "Joystick1Buttons108",
+        "Joystick1Buttons109",
+        "Joystick1Buttons110",
+        "Joystick1Buttons111",
+        "Joystick1Buttons112",
+        "Joystick1Buttons113",
+        "Joystick1Buttons114",
+        "Joystick1Buttons115",
+        "Joystick1Buttons116",
+        "Joystick1Buttons117",
+        "Joystick1Buttons118",
+        "Joystick1Buttons119",
+        "Joystick1Buttons120",
+        "Joystick1Buttons121",
+        "Joystick1Buttons122",
+        "Joystick1Buttons123",
+        "Joystick1Buttons124",
+        "Joystick1Buttons125",
+        "Joystick1Buttons126",
+        "Joystick1Buttons127",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
             if (toolStripComboBox1.Text == "FV2-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
@@ -2482,9 +2726,809 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
+            if (toolStripComboBox1.Text == "FV2M-KM")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "KeyboardMouseDriverType",
+        "MouseMoveX",
+        "MouseMoveY",
+        "MouseAbsX",
+        "MouseAbsY",
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "SendLeftClick",
+        "SendRightClick",
+        "SendMiddleClick",
+        "SendWheelUp",
+        "SendWheelDown",
+        "SendLeft",
+        "SendRight",
+        "SendUp",
+        "SendDown",
+        "SendLButton",
+        "SendRButton",
+        "SendCancel",
+        "SendMBUTTON",
+        "SendXBUTTON1",
+        "SendXBUTTON2",
+        "SendBack",
+        "SendTab",
+        "SendClear",
+        "SendReturn",
+        "SendSHIFT",
+        "SendCONTROL",
+        "SendMENU",
+        "SendPAUSE",
+        "SendCAPITAL",
+        "SendKANA",
+        "SendHANGEUL",
+        "SendHANGUL",
+        "SendJUNJA",
+        "SendFINAL",
+        "SendHANJA",
+        "SendKANJI",
+        "SendEscape",
+        "SendCONVERT",
+        "SendNONCONVERT",
+        "SendACCEPT",
+        "SendMODECHANGE",
+        "SendSpace",
+        "SendPRIOR",
+        "SendNEXT",
+        "SendEND",
+        "SendHOME",
+        "SendLEFT",
+        "SendUP",
+        "SendRIGHT",
+        "SendDOWN",
+        "SendSELECT",
+        "SendPRINT",
+        "SendEXECUTE",
+        "SendSNAPSHOT",
+        "SendINSERT",
+        "SendDELETE",
+        "SendHELP",
+        "SendAPOSTROPHE",
+        "Send0",
+        "Send1",
+        "Send2",
+        "Send3",
+        "Send4",
+        "Send5",
+        "Send6",
+        "Send7",
+        "Send8",
+        "Send9",
+        "SendA",
+        "SendB",
+        "SendC",
+        "SendD",
+        "SendE",
+        "SendF",
+        "SendG",
+        "SendH",
+        "SendI",
+        "SendJ",
+        "SendK",
+        "SendL",
+        "SendM",
+        "SendN",
+        "SendO",
+        "SendP",
+        "SendQ",
+        "SendR",
+        "SendS",
+        "SendT",
+        "SendU",
+        "SendV",
+        "SendW",
+        "SendX",
+        "SendY",
+        "SendZ",
+        "SendLWIN",
+        "SendRWIN",
+        "SendAPPS",
+        "SendSLEEP",
+        "SendNUMPAD0",
+        "SendNUMPAD1",
+        "SendNUMPAD2",
+        "SendNUMPAD3",
+        "SendNUMPAD4",
+        "SendNUMPAD5",
+        "SendNUMPAD6",
+        "SendNUMPAD7",
+        "SendNUMPAD8",
+        "SendNUMPAD9",
+        "SendMULTIPLY",
+        "SendADD",
+        "SendSEPARATOR",
+        "SendSUBTRACT",
+        "SendDECIMAL",
+        "SendDIVIDE",
+        "SendF1",
+        "SendF2",
+        "SendF3",
+        "SendF4",
+        "SendF5",
+        "SendF6",
+        "SendF7",
+        "SendF8",
+        "SendF9",
+        "SendF10",
+        "SendF11",
+        "SendF12",
+        "SendF13",
+        "SendF14",
+        "SendF15",
+        "SendF16",
+        "SendF17",
+        "SendF18",
+        "SendF19",
+        "SendF20",
+        "SendF21",
+        "SendF22",
+        "SendF23",
+        "SendF24",
+        "SendNUMLOCK",
+        "SendSCROLL",
+        "SendLeftShift",
+        "SendRightShift",
+        "SendLeftControl",
+        "SendRightControl",
+        "SendLMENU",
+        "SendRMENU",
+        "Joystick1AxisX",
+        "Joystick1AxisY",
+        "Joystick1AxisZ",
+        "Joystick1RotationX",
+        "Joystick1RotationY",
+        "Joystick1RotationZ",
+        "Joystick1Sliders0",
+        "Joystick1Sliders1",
+        "Joystick1PointOfViewControllers0",
+        "Joystick1PointOfViewControllers1",
+        "Joystick1PointOfViewControllers2",
+        "Joystick1PointOfViewControllers3",
+        "Joystick1VelocityX",
+        "Joystick1VelocityY",
+        "Joystick1VelocityZ",
+        "Joystick1AngularVelocityX",
+        "Joystick1AngularVelocityY",
+        "Joystick1AngularVelocityZ",
+        "Joystick1VelocitySliders0",
+        "Joystick1VelocitySliders1",
+        "Joystick1AccelerationX",
+        "Joystick1AccelerationY",
+        "Joystick1AccelerationZ",
+        "Joystick1AngularAccelerationX",
+        "Joystick1AngularAccelerationY",
+        "Joystick1AngularAccelerationZ",
+        "Joystick1AccelerationSliders0",
+        "Joystick1AccelerationSliders1",
+        "Joystick1ForceX",
+        "Joystick1ForceY",
+        "Joystick1ForceZ",
+        "Joystick1TorqueX",
+        "Joystick1TorqueY",
+        "Joystick1TorqueZ",
+        "Joystick1ForceSliders0",
+        "Joystick1ForceSliders1",
+        "Joystick1Buttons0",
+        "Joystick1Buttons1",
+        "Joystick1Buttons2",
+        "Joystick1Buttons3",
+        "Joystick1Buttons4",
+        "Joystick1Buttons5",
+        "Joystick1Buttons6",
+        "Joystick1Buttons7",
+        "Joystick1Buttons8",
+        "Joystick1Buttons9",
+        "Joystick1Buttons10",
+        "Joystick1Buttons11",
+        "Joystick1Buttons12",
+        "Joystick1Buttons13",
+        "Joystick1Buttons14",
+        "Joystick1Buttons15",
+        "Joystick1Buttons16",
+        "Joystick1Buttons17",
+        "Joystick1Buttons18",
+        "Joystick1Buttons19",
+        "Joystick1Buttons20",
+        "Joystick1Buttons21",
+        "Joystick1Buttons22",
+        "Joystick1Buttons23",
+        "Joystick1Buttons24",
+        "Joystick1Buttons25",
+        "Joystick1Buttons26",
+        "Joystick1Buttons27",
+        "Joystick1Buttons28",
+        "Joystick1Buttons29",
+        "Joystick1Buttons30",
+        "Joystick1Buttons31",
+        "Joystick1Buttons32",
+        "Joystick1Buttons33",
+        "Joystick1Buttons34",
+        "Joystick1Buttons35",
+        "Joystick1Buttons36",
+        "Joystick1Buttons37",
+        "Joystick1Buttons38",
+        "Joystick1Buttons39",
+        "Joystick1Buttons40",
+        "Joystick1Buttons41",
+        "Joystick1Buttons42",
+        "Joystick1Buttons43",
+        "Joystick1Buttons44",
+        "Joystick1Buttons45",
+        "Joystick1Buttons46",
+        "Joystick1Buttons47",
+        "Joystick1Buttons48",
+        "Joystick1Buttons49",
+        "Joystick1Buttons50",
+        "Joystick1Buttons51",
+        "Joystick1Buttons52",
+        "Joystick1Buttons53",
+        "Joystick1Buttons54",
+        "Joystick1Buttons55",
+        "Joystick1Buttons56",
+        "Joystick1Buttons57",
+        "Joystick1Buttons58",
+        "Joystick1Buttons59",
+        "Joystick1Buttons60",
+        "Joystick1Buttons61",
+        "Joystick1Buttons62",
+        "Joystick1Buttons63",
+        "Joystick1Buttons64",
+        "Joystick1Buttons65",
+        "Joystick1Buttons66",
+        "Joystick1Buttons67",
+        "Joystick1Buttons68",
+        "Joystick1Buttons69",
+        "Joystick1Buttons70",
+        "Joystick1Buttons71",
+        "Joystick1Buttons72",
+        "Joystick1Buttons73",
+        "Joystick1Buttons74",
+        "Joystick1Buttons75",
+        "Joystick1Buttons76",
+        "Joystick1Buttons77",
+        "Joystick1Buttons78",
+        "Joystick1Buttons79",
+        "Joystick1Buttons80",
+        "Joystick1Buttons81",
+        "Joystick1Buttons82",
+        "Joystick1Buttons83",
+        "Joystick1Buttons84",
+        "Joystick1Buttons85",
+        "Joystick1Buttons86",
+        "Joystick1Buttons87",
+        "Joystick1Buttons88",
+        "Joystick1Buttons89",
+        "Joystick1Buttons90",
+        "Joystick1Buttons91",
+        "Joystick1Buttons92",
+        "Joystick1Buttons93",
+        "Joystick1Buttons94",
+        "Joystick1Buttons95",
+        "Joystick1Buttons96",
+        "Joystick1Buttons97",
+        "Joystick1Buttons98",
+        "Joystick1Buttons99",
+        "Joystick1Buttons100",
+        "Joystick1Buttons101",
+        "Joystick1Buttons102",
+        "Joystick1Buttons103",
+        "Joystick1Buttons104",
+        "Joystick1Buttons105",
+        "Joystick1Buttons106",
+        "Joystick1Buttons107",
+        "Joystick1Buttons108",
+        "Joystick1Buttons109",
+        "Joystick1Buttons110",
+        "Joystick1Buttons111",
+        "Joystick1Buttons112",
+        "Joystick1Buttons113",
+        "Joystick1Buttons114",
+        "Joystick1Buttons115",
+        "Joystick1Buttons116",
+        "Joystick1Buttons117",
+        "Joystick1Buttons118",
+        "Joystick1Buttons119",
+        "Joystick1Buttons120",
+        "Joystick1Buttons121",
+        "Joystick1Buttons122",
+        "Joystick1Buttons123",
+        "Joystick1Buttons124",
+        "Joystick1Buttons125",
+        "Joystick1Buttons126",
+        "Joystick1Buttons127",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
             if (toolStripComboBox1.Text == "FV2-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "int_1_deltaX",
+        "int_1_deltaY",
+        "int_1_x",
+        "int_1_y",
+        "int_1_SendLeftClick",
+        "int_1_SendRightClick",
+        "int_1_SendMiddleClick",
+        "int_1_SendWheelUp",
+        "int_1_SendWheelDown",
+        "int_1_SendCANCEL",
+        "int_1_SendBACK",
+        "int_1_SendTAB",
+        "int_1_SendCLEAR",
+        "int_1_SendRETURN",
+        "int_1_SendSHIFT",
+        "int_1_SendCONTROL",
+        "int_1_SendMENU",
+        "int_1_SendCAPITAL",
+        "int_1_SendESCAPE",
+        "int_1_SendSPACE",
+        "int_1_SendPRIOR",
+        "int_1_SendNEXT",
+        "int_1_SendEND",
+        "int_1_SendHOME",
+        "int_1_SendLEFT",
+        "int_1_SendUP",
+        "int_1_SendRIGHT",
+        "int_1_SendDOWN",
+        "int_1_SendSNAPSHOT",
+        "int_1_SendINSERT",
+        "int_1_SendNUMPADDEL",
+        "int_1_SendNUMPADINSERT",
+        "int_1_SendHELP",
+        "int_1_SendAPOSTROPHE",
+        "int_1_SendBACKSPACE",
+        "int_1_SendPAGEDOWN",
+        "int_1_SendPAGEUP",
+        "int_1_SendFIN",
+        "int_1_SendMOUSE",
+        "int_1_SendA",
+        "int_1_SendB",
+        "int_1_SendC",
+        "int_1_SendD",
+        "int_1_SendE",
+        "int_1_SendF",
+        "int_1_SendG",
+        "int_1_SendH",
+        "int_1_SendI",
+        "int_1_SendJ",
+        "int_1_SendK",
+        "int_1_SendL",
+        "int_1_SendM",
+        "int_1_SendN",
+        "int_1_SendO",
+        "int_1_SendP",
+        "int_1_SendQ",
+        "int_1_SendR",
+        "int_1_SendS",
+        "int_1_SendT",
+        "int_1_SendU",
+        "int_1_SendV",
+        "int_1_SendW",
+        "int_1_SendX",
+        "int_1_SendY",
+        "int_1_SendZ",
+        "int_1_SendLWIN",
+        "int_1_SendRWIN",
+        "int_1_SendAPPS",
+        "int_1_SendDELETE",
+        "int_1_SendNUMPAD0",
+        "int_1_SendNUMPAD1",
+        "int_1_SendNUMPAD2",
+        "int_1_SendNUMPAD3",
+        "int_1_SendNUMPAD4",
+        "int_1_SendNUMPAD5",
+        "int_1_SendNUMPAD6",
+        "int_1_SendNUMPAD7",
+        "int_1_SendNUMPAD8",
+        "int_1_SendNUMPAD9",
+        "int_1_SendMULTIPLY",
+        "int_1_SendADD",
+        "int_1_SendSUBTRACT",
+        "int_1_SendDECIMAL",
+        "int_1_SendPRINTSCREEN",
+        "int_1_SendDIVIDE",
+        "int_1_SendF1",
+        "int_1_SendF2",
+        "int_1_SendF3",
+        "int_1_SendF4",
+        "int_1_SendF5",
+        "int_1_SendF6",
+        "int_1_SendF7",
+        "int_1_SendF8",
+        "int_1_SendF9",
+        "int_1_SendF10",
+        "int_1_SendF11",
+        "int_1_SendF12",
+        "int_1_SendNUMLOCK",
+        "int_1_SendSCROLLLOCK",
+        "int_1_SendLEFTSHIFT",
+        "int_1_SendRIGHTSHIFT",
+        "int_1_SendLEFTCONTROL",
+        "int_1_SendRIGHTCONTROL",
+        "int_1_SendLEFTALT",
+        "int_1_SendRIGHTALT",
+        "int_1_SendBROWSER_BACK",
+        "int_1_SendBROWSER_FORWARD",
+        "int_1_SendBROWSER_REFRESH",
+        "int_1_SendBROWSER_STOP",
+        "int_1_SendBROWSER_SEARCH",
+        "int_1_SendBROWSER_FAVORITES",
+        "int_1_SendBROWSER_HOME",
+        "int_1_SendVOLUME_MUTE",
+        "int_1_SendVOLUME_DOWN",
+        "int_1_SendVOLUME_UP",
+        "int_1_SendMEDIA_NEXT_TRACK",
+        "int_1_SendMEDIA_PREV_TRACK",
+        "int_1_SendMEDIA_STOP",
+        "int_1_SendMEDIA_PLAY_PAUSE",
+        "int_1_SendLAUNCH_MAIL",
+        "int_1_SendLAUNCH_MEDIA_SELECT",
+        "int_1_SendLAUNCH_APP1",
+        "int_1_SendLAUNCH_APP2",
+        "int_1_SendOEM_1",
+        "int_1_SendOEM_PLUS",
+        "int_1_SendOEM_COMMA",
+        "int_1_SendOEM_MINUS",
+        "int_1_SendOEM_PERIOD",
+        "int_1_SendOEM_2",
+        "int_1_SendOEM_3",
+        "int_1_SendOEM_4",
+        "int_1_SendOEM_5",
+        "int_1_SendOEM_6",
+        "int_1_SendOEM_7",
+        "int_1_SendOEM_8",
+        "int_1_SendOEM_102",
+        "int_1_SendEREOF",
+        "int_1_SendZOOM",
+        "int_1_SendEscape",
+        "int_1_SendOne",
+        "int_1_SendTwo",
+        "int_1_SendThree",
+        "int_1_SendFour",
+        "int_1_SendFive",
+        "int_1_SendSix",
+        "int_1_SendSeven",
+        "int_1_SendEight",
+        "int_1_SendNine",
+        "int_1_SendZero",
+        "int_1_SendDashUnderscore",
+        "int_1_SendPlusEquals",
+        "int_1_SendBackspace",
+        "int_1_SendTab",
+        "int_1_SendOpenBracketBrace",
+        "int_1_SendCloseBracketBrace",
+        "int_1_SendEnter",
+        "int_1_SendControl",
+        "int_1_SendSemicolonColon",
+        "int_1_SendSingleDoubleQuote",
+        "int_1_SendTilde",
+        "int_1_SendLeftShift",
+        "int_1_SendBackslashPipe",
+        "int_1_SendCommaLeftArrow",
+        "int_1_SendPeriodRightArrow",
+        "int_1_SendForwardSlashQuestionMark",
+        "int_1_SendRightShift",
+        "int_1_SendRightAlt",
+        "int_1_SendSpace",
+        "int_1_SendCapsLock",
+        "int_1_SendUp",
+        "int_1_SendDown",
+        "int_1_SendRight",
+        "int_1_SendLeft",
+        "int_1_SendHome",
+        "int_1_SendEnd",
+        "int_1_SendDelete",
+        "int_1_SendPageUp",
+        "int_1_SendPageDown",
+        "int_1_SendInsert",
+        "int_1_SendPrintScreen",
+        "int_1_SendNumLock",
+        "int_1_SendScrollLock",
+        "int_1_SendMenu",
+        "int_1_SendWindowsKey",
+        "int_1_SendNumpadDivide",
+        "int_1_SendNumpadAsterisk",
+        "int_1_SendNumpad7",
+        "int_1_SendNumpad8",
+        "int_1_SendNumpad9",
+        "int_1_SendNumpad4",
+        "int_1_SendNumpad5",
+        "int_1_SendNumpad6",
+        "int_1_SendNumpad1",
+        "int_1_SendNumpad2",
+        "int_1_SendNumpad3",
+        "int_1_SendNumpad0",
+        "int_1_SendNumpadDelete",
+        "int_1_SendNumpadEnter",
+        "int_1_SendNumpadPlus",
+        "int_1_SendNumpadMinus",
+        "Joystick1AxisX",
+        "Joystick1AxisY",
+        "Joystick1AxisZ",
+        "Joystick1RotationX",
+        "Joystick1RotationY",
+        "Joystick1RotationZ",
+        "Joystick1Sliders0",
+        "Joystick1Sliders1",
+        "Joystick1PointOfViewControllers0",
+        "Joystick1PointOfViewControllers1",
+        "Joystick1PointOfViewControllers2",
+        "Joystick1PointOfViewControllers3",
+        "Joystick1VelocityX",
+        "Joystick1VelocityY",
+        "Joystick1VelocityZ",
+        "Joystick1AngularVelocityX",
+        "Joystick1AngularVelocityY",
+        "Joystick1AngularVelocityZ",
+        "Joystick1VelocitySliders0",
+        "Joystick1VelocitySliders1",
+        "Joystick1AccelerationX",
+        "Joystick1AccelerationY",
+        "Joystick1AccelerationZ",
+        "Joystick1AngularAccelerationX",
+        "Joystick1AngularAccelerationY",
+        "Joystick1AngularAccelerationZ",
+        "Joystick1AccelerationSliders0",
+        "Joystick1AccelerationSliders1",
+        "Joystick1ForceX",
+        "Joystick1ForceY",
+        "Joystick1ForceZ",
+        "Joystick1TorqueX",
+        "Joystick1TorqueY",
+        "Joystick1TorqueZ",
+        "Joystick1ForceSliders0",
+        "Joystick1ForceSliders1",
+        "Joystick1Buttons0",
+        "Joystick1Buttons1",
+        "Joystick1Buttons2",
+        "Joystick1Buttons3",
+        "Joystick1Buttons4",
+        "Joystick1Buttons5",
+        "Joystick1Buttons6",
+        "Joystick1Buttons7",
+        "Joystick1Buttons8",
+        "Joystick1Buttons9",
+        "Joystick1Buttons10",
+        "Joystick1Buttons11",
+        "Joystick1Buttons12",
+        "Joystick1Buttons13",
+        "Joystick1Buttons14",
+        "Joystick1Buttons15",
+        "Joystick1Buttons16",
+        "Joystick1Buttons17",
+        "Joystick1Buttons18",
+        "Joystick1Buttons19",
+        "Joystick1Buttons20",
+        "Joystick1Buttons21",
+        "Joystick1Buttons22",
+        "Joystick1Buttons23",
+        "Joystick1Buttons24",
+        "Joystick1Buttons25",
+        "Joystick1Buttons26",
+        "Joystick1Buttons27",
+        "Joystick1Buttons28",
+        "Joystick1Buttons29",
+        "Joystick1Buttons30",
+        "Joystick1Buttons31",
+        "Joystick1Buttons32",
+        "Joystick1Buttons33",
+        "Joystick1Buttons34",
+        "Joystick1Buttons35",
+        "Joystick1Buttons36",
+        "Joystick1Buttons37",
+        "Joystick1Buttons38",
+        "Joystick1Buttons39",
+        "Joystick1Buttons40",
+        "Joystick1Buttons41",
+        "Joystick1Buttons42",
+        "Joystick1Buttons43",
+        "Joystick1Buttons44",
+        "Joystick1Buttons45",
+        "Joystick1Buttons46",
+        "Joystick1Buttons47",
+        "Joystick1Buttons48",
+        "Joystick1Buttons49",
+        "Joystick1Buttons50",
+        "Joystick1Buttons51",
+        "Joystick1Buttons52",
+        "Joystick1Buttons53",
+        "Joystick1Buttons54",
+        "Joystick1Buttons55",
+        "Joystick1Buttons56",
+        "Joystick1Buttons57",
+        "Joystick1Buttons58",
+        "Joystick1Buttons59",
+        "Joystick1Buttons60",
+        "Joystick1Buttons61",
+        "Joystick1Buttons62",
+        "Joystick1Buttons63",
+        "Joystick1Buttons64",
+        "Joystick1Buttons65",
+        "Joystick1Buttons66",
+        "Joystick1Buttons67",
+        "Joystick1Buttons68",
+        "Joystick1Buttons69",
+        "Joystick1Buttons70",
+        "Joystick1Buttons71",
+        "Joystick1Buttons72",
+        "Joystick1Buttons73",
+        "Joystick1Buttons74",
+        "Joystick1Buttons75",
+        "Joystick1Buttons76",
+        "Joystick1Buttons77",
+        "Joystick1Buttons78",
+        "Joystick1Buttons79",
+        "Joystick1Buttons80",
+        "Joystick1Buttons81",
+        "Joystick1Buttons82",
+        "Joystick1Buttons83",
+        "Joystick1Buttons84",
+        "Joystick1Buttons85",
+        "Joystick1Buttons86",
+        "Joystick1Buttons87",
+        "Joystick1Buttons88",
+        "Joystick1Buttons89",
+        "Joystick1Buttons90",
+        "Joystick1Buttons91",
+        "Joystick1Buttons92",
+        "Joystick1Buttons93",
+        "Joystick1Buttons94",
+        "Joystick1Buttons95",
+        "Joystick1Buttons96",
+        "Joystick1Buttons97",
+        "Joystick1Buttons98",
+        "Joystick1Buttons99",
+        "Joystick1Buttons100",
+        "Joystick1Buttons101",
+        "Joystick1Buttons102",
+        "Joystick1Buttons103",
+        "Joystick1Buttons104",
+        "Joystick1Buttons105",
+        "Joystick1Buttons106",
+        "Joystick1Buttons107",
+        "Joystick1Buttons108",
+        "Joystick1Buttons109",
+        "Joystick1Buttons110",
+        "Joystick1Buttons111",
+        "Joystick1Buttons112",
+        "Joystick1Buttons113",
+        "Joystick1Buttons114",
+        "Joystick1Buttons115",
+        "Joystick1Buttons116",
+        "Joystick1Buttons117",
+        "Joystick1Buttons118",
+        "Joystick1Buttons119",
+        "Joystick1Buttons120",
+        "Joystick1Buttons121",
+        "Joystick1Buttons122",
+        "Joystick1Buttons123",
+        "Joystick1Buttons124",
+        "Joystick1Buttons125",
+        "Joystick1Buttons126",
+        "Joystick1Buttons127",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
+            if (toolStripComboBox1.Text == "FV2M-Int")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
         "MouseDesktopX",
         "MouseDesktopY",
         "int_1_deltaX",
@@ -6699,6 +7743,106 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
+            if (toolStripComboBox1.Text == "MJoyL-XC")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "JoyconLeftAccelCenter",
+        "JoyconLeftStickX",
+        "JoyconLeftStickY",
+        "JoyconLeftButtonSHOULDER_1",
+        "JoyconLeftButtonSHOULDER_2",
+        "JoyconLeftButtonSR",
+        "JoyconLeftButtonSL",
+        "JoyconLeftButtonDPAD_DOWN",
+        "JoyconLeftButtonDPAD_RIGHT",
+        "JoyconLeftButtonDPAD_UP",
+        "JoyconLeftButtonDPAD_LEFT",
+        "JoyconLeftButtonMINUS",
+        "JoyconLeftButtonCAPTURE",
+        "JoyconLeftButtonSTICK",
+        "JoyconLeftAccelX",
+        "JoyconLeftAccelY",
+        "JoyconLeftGyroX",
+        "JoyconLeftGyroY",
+        "controller1_send_xbox",
+        "controller1_send_back",
+        "controller1_send_start",
+        "controller1_send_A",
+        "controller1_send_B",
+        "controller1_send_X",
+        "controller1_send_Y",
+        "controller1_send_up",
+        "controller1_send_left",
+        "controller1_send_down",
+        "controller1_send_right",
+        "controller1_send_leftstick",
+        "controller1_send_rightstick",
+        "controller1_send_leftbumper",
+        "controller1_send_rightbumper",
+        "controller1_send_lefttrigger",
+        "controller1_send_righttrigger",
+        "controller1_send_leftstickx",
+        "controller1_send_leftsticky",
+        "controller1_send_rightstickx",
+        "controller1_send_rightsticky",
+        "controller1_send_lefttriggerposition",
+        "controller1_send_righttriggerposition",
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
             if (toolStripComboBox1.Text == "XC-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
@@ -7354,6 +8498,233 @@ namespace SIGIL
         "ValueChange",
         "Valuechange._ValueChange"};
             }
+            if (toolStripComboBox1.Text == "MJoyL-KM")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "JoyconLeftAccelCenter",
+        "JoyconLeftStickX",
+        "JoyconLeftStickY",
+        "JoyconLeftButtonSHOULDER_1",
+        "JoyconLeftButtonSHOULDER_2",
+        "JoyconLeftButtonSR",
+        "JoyconLeftButtonSL",
+        "JoyconLeftButtonDPAD_DOWN",
+        "JoyconLeftButtonDPAD_RIGHT",
+        "JoyconLeftButtonDPAD_UP",
+        "JoyconLeftButtonDPAD_LEFT",
+        "JoyconLeftButtonMINUS",
+        "JoyconLeftButtonCAPTURE",
+        "JoyconLeftButtonSTICK",
+        "JoyconLeftAccelX",
+        "JoyconLeftAccelY",
+        "JoyconLeftGyroX",
+        "JoyconLeftGyroY",
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "KeyboardMouseDriverType",
+        "MouseMoveX",
+        "MouseMoveY",
+        "MouseAbsX",
+        "MouseAbsY",
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "SendLeftClick",
+        "SendRightClick",
+        "SendMiddleClick",
+        "SendWheelUp",
+        "SendWheelDown",
+        "SendLeft",
+        "SendRight",
+        "SendUp",
+        "SendDown",
+        "SendLButton",
+        "SendRButton",
+        "SendCancel",
+        "SendMBUTTON",
+        "SendXBUTTON1",
+        "SendXBUTTON2",
+        "SendBack",
+        "SendTab",
+        "SendClear",
+        "SendReturn",
+        "SendSHIFT",
+        "SendCONTROL",
+        "SendMENU",
+        "SendPAUSE",
+        "SendCAPITAL",
+        "SendKANA",
+        "SendHANGEUL",
+        "SendHANGUL",
+        "SendJUNJA",
+        "SendFINAL",
+        "SendHANJA",
+        "SendKANJI",
+        "SendEscape",
+        "SendCONVERT",
+        "SendNONCONVERT",
+        "SendACCEPT",
+        "SendMODECHANGE",
+        "SendSpace",
+        "SendPRIOR",
+        "SendNEXT",
+        "SendEND",
+        "SendHOME",
+        "SendLEFT",
+        "SendUP",
+        "SendRIGHT",
+        "SendDOWN",
+        "SendSELECT",
+        "SendPRINT",
+        "SendEXECUTE",
+        "SendSNAPSHOT",
+        "SendINSERT",
+        "SendDELETE",
+        "SendHELP",
+        "SendAPOSTROPHE",
+        "Send0",
+        "Send1",
+        "Send2",
+        "Send3",
+        "Send4",
+        "Send5",
+        "Send6",
+        "Send7",
+        "Send8",
+        "Send9",
+        "SendA",
+        "SendB",
+        "SendC",
+        "SendD",
+        "SendE",
+        "SendF",
+        "SendG",
+        "SendH",
+        "SendI",
+        "SendJ",
+        "SendK",
+        "SendL",
+        "SendM",
+        "SendN",
+        "SendO",
+        "SendP",
+        "SendQ",
+        "SendR",
+        "SendS",
+        "SendT",
+        "SendU",
+        "SendV",
+        "SendW",
+        "SendX",
+        "SendY",
+        "SendZ",
+        "SendLWIN",
+        "SendRWIN",
+        "SendAPPS",
+        "SendSLEEP",
+        "SendNUMPAD0",
+        "SendNUMPAD1",
+        "SendNUMPAD2",
+        "SendNUMPAD3",
+        "SendNUMPAD4",
+        "SendNUMPAD5",
+        "SendNUMPAD6",
+        "SendNUMPAD7",
+        "SendNUMPAD8",
+        "SendNUMPAD9",
+        "SendMULTIPLY",
+        "SendADD",
+        "SendSEPARATOR",
+        "SendSUBTRACT",
+        "SendDECIMAL",
+        "SendDIVIDE",
+        "SendF1",
+        "SendF2",
+        "SendF3",
+        "SendF4",
+        "SendF5",
+        "SendF6",
+        "SendF7",
+        "SendF8",
+        "SendF9",
+        "SendF10",
+        "SendF11",
+        "SendF12",
+        "SendF13",
+        "SendF14",
+        "SendF15",
+        "SendF16",
+        "SendF17",
+        "SendF18",
+        "SendF19",
+        "SendF20",
+        "SendF21",
+        "SendF22",
+        "SendF23",
+        "SendF24",
+        "SendNUMLOCK",
+        "SendSCROLL",
+        "SendLeftShift",
+        "SendRightShift",
+        "SendLeftControl",
+        "SendRightControl",
+        "SendLMENU",
+        "SendRMENU",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
             if (toolStripComboBox1.Text == "XC-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
@@ -7772,6 +9143,287 @@ namespace SIGIL
         "Keyboard1KeyMail",
         "Keyboard1KeyMediaSelect",
         "Keyboard1KeyUnknown",
+        "Mouse1Buttons0",
+        "Mouse1Buttons1",
+        "Mouse1Buttons2",
+        "Mouse1Buttons3",
+        "Mouse1Buttons4",
+        "Mouse1Buttons5",
+        "Mouse1Buttons6",
+        "Mouse1Buttons7",
+        "Mouse1AxisX",
+        "Mouse1AxisY",
+        "Mouse1AxisZ",
+        "MouseHookX",
+        "MouseHookY",
+        "MouseDesktopX",
+        "MouseDesktopY",
+        "int_1_deltaX",
+        "int_1_deltaY",
+        "int_1_x",
+        "int_1_y",
+        "int_1_SendLeftClick",
+        "int_1_SendRightClick",
+        "int_1_SendMiddleClick",
+        "int_1_SendWheelUp",
+        "int_1_SendWheelDown",
+        "int_1_SendCANCEL",
+        "int_1_SendBACK",
+        "int_1_SendTAB",
+        "int_1_SendCLEAR",
+        "int_1_SendRETURN",
+        "int_1_SendSHIFT",
+        "int_1_SendCONTROL",
+        "int_1_SendMENU",
+        "int_1_SendCAPITAL",
+        "int_1_SendESCAPE",
+        "int_1_SendSPACE",
+        "int_1_SendPRIOR",
+        "int_1_SendNEXT",
+        "int_1_SendEND",
+        "int_1_SendHOME",
+        "int_1_SendLEFT",
+        "int_1_SendUP",
+        "int_1_SendRIGHT",
+        "int_1_SendDOWN",
+        "int_1_SendSNAPSHOT",
+        "int_1_SendINSERT",
+        "int_1_SendNUMPADDEL",
+        "int_1_SendNUMPADINSERT",
+        "int_1_SendHELP",
+        "int_1_SendAPOSTROPHE",
+        "int_1_SendBACKSPACE",
+        "int_1_SendPAGEDOWN",
+        "int_1_SendPAGEUP",
+        "int_1_SendFIN",
+        "int_1_SendMOUSE",
+        "int_1_SendA",
+        "int_1_SendB",
+        "int_1_SendC",
+        "int_1_SendD",
+        "int_1_SendE",
+        "int_1_SendF",
+        "int_1_SendG",
+        "int_1_SendH",
+        "int_1_SendI",
+        "int_1_SendJ",
+        "int_1_SendK",
+        "int_1_SendL",
+        "int_1_SendM",
+        "int_1_SendN",
+        "int_1_SendO",
+        "int_1_SendP",
+        "int_1_SendQ",
+        "int_1_SendR",
+        "int_1_SendS",
+        "int_1_SendT",
+        "int_1_SendU",
+        "int_1_SendV",
+        "int_1_SendW",
+        "int_1_SendX",
+        "int_1_SendY",
+        "int_1_SendZ",
+        "int_1_SendLWIN",
+        "int_1_SendRWIN",
+        "int_1_SendAPPS",
+        "int_1_SendDELETE",
+        "int_1_SendNUMPAD0",
+        "int_1_SendNUMPAD1",
+        "int_1_SendNUMPAD2",
+        "int_1_SendNUMPAD3",
+        "int_1_SendNUMPAD4",
+        "int_1_SendNUMPAD5",
+        "int_1_SendNUMPAD6",
+        "int_1_SendNUMPAD7",
+        "int_1_SendNUMPAD8",
+        "int_1_SendNUMPAD9",
+        "int_1_SendMULTIPLY",
+        "int_1_SendADD",
+        "int_1_SendSUBTRACT",
+        "int_1_SendDECIMAL",
+        "int_1_SendPRINTSCREEN",
+        "int_1_SendDIVIDE",
+        "int_1_SendF1",
+        "int_1_SendF2",
+        "int_1_SendF3",
+        "int_1_SendF4",
+        "int_1_SendF5",
+        "int_1_SendF6",
+        "int_1_SendF7",
+        "int_1_SendF8",
+        "int_1_SendF9",
+        "int_1_SendF10",
+        "int_1_SendF11",
+        "int_1_SendF12",
+        "int_1_SendNUMLOCK",
+        "int_1_SendSCROLLLOCK",
+        "int_1_SendLEFTSHIFT",
+        "int_1_SendRIGHTSHIFT",
+        "int_1_SendLEFTCONTROL",
+        "int_1_SendRIGHTCONTROL",
+        "int_1_SendLEFTALT",
+        "int_1_SendRIGHTALT",
+        "int_1_SendBROWSER_BACK",
+        "int_1_SendBROWSER_FORWARD",
+        "int_1_SendBROWSER_REFRESH",
+        "int_1_SendBROWSER_STOP",
+        "int_1_SendBROWSER_SEARCH",
+        "int_1_SendBROWSER_FAVORITES",
+        "int_1_SendBROWSER_HOME",
+        "int_1_SendVOLUME_MUTE",
+        "int_1_SendVOLUME_DOWN",
+        "int_1_SendVOLUME_UP",
+        "int_1_SendMEDIA_NEXT_TRACK",
+        "int_1_SendMEDIA_PREV_TRACK",
+        "int_1_SendMEDIA_STOP",
+        "int_1_SendMEDIA_PLAY_PAUSE",
+        "int_1_SendLAUNCH_MAIL",
+        "int_1_SendLAUNCH_MEDIA_SELECT",
+        "int_1_SendLAUNCH_APP1",
+        "int_1_SendLAUNCH_APP2",
+        "int_1_SendOEM_1",
+        "int_1_SendOEM_PLUS",
+        "int_1_SendOEM_COMMA",
+        "int_1_SendOEM_MINUS",
+        "int_1_SendOEM_PERIOD",
+        "int_1_SendOEM_2",
+        "int_1_SendOEM_3",
+        "int_1_SendOEM_4",
+        "int_1_SendOEM_5",
+        "int_1_SendOEM_6",
+        "int_1_SendOEM_7",
+        "int_1_SendOEM_8",
+        "int_1_SendOEM_102",
+        "int_1_SendEREOF",
+        "int_1_SendZOOM",
+        "int_1_SendEscape",
+        "int_1_SendOne",
+        "int_1_SendTwo",
+        "int_1_SendThree",
+        "int_1_SendFour",
+        "int_1_SendFive",
+        "int_1_SendSix",
+        "int_1_SendSeven",
+        "int_1_SendEight",
+        "int_1_SendNine",
+        "int_1_SendZero",
+        "int_1_SendDashUnderscore",
+        "int_1_SendPlusEquals",
+        "int_1_SendBackspace",
+        "int_1_SendTab",
+        "int_1_SendOpenBracketBrace",
+        "int_1_SendCloseBracketBrace",
+        "int_1_SendEnter",
+        "int_1_SendControl",
+        "int_1_SendSemicolonColon",
+        "int_1_SendSingleDoubleQuote",
+        "int_1_SendTilde",
+        "int_1_SendLeftShift",
+        "int_1_SendBackslashPipe",
+        "int_1_SendCommaLeftArrow",
+        "int_1_SendPeriodRightArrow",
+        "int_1_SendForwardSlashQuestionMark",
+        "int_1_SendRightShift",
+        "int_1_SendRightAlt",
+        "int_1_SendSpace",
+        "int_1_SendCapsLock",
+        "int_1_SendUp",
+        "int_1_SendDown",
+        "int_1_SendRight",
+        "int_1_SendLeft",
+        "int_1_SendHome",
+        "int_1_SendEnd",
+        "int_1_SendDelete",
+        "int_1_SendPageUp",
+        "int_1_SendPageDown",
+        "int_1_SendInsert",
+        "int_1_SendPrintScreen",
+        "int_1_SendNumLock",
+        "int_1_SendScrollLock",
+        "int_1_SendMenu",
+        "int_1_SendWindowsKey",
+        "int_1_SendNumpadDivide",
+        "int_1_SendNumpadAsterisk",
+        "int_1_SendNumpad7",
+        "int_1_SendNumpad8",
+        "int_1_SendNumpad9",
+        "int_1_SendNumpad4",
+        "int_1_SendNumpad5",
+        "int_1_SendNumpad6",
+        "int_1_SendNumpad1",
+        "int_1_SendNumpad2",
+        "int_1_SendNumpad3",
+        "int_1_SendNumpad0",
+        "int_1_SendNumpadDelete",
+        "int_1_SendNumpadEnter",
+        "int_1_SendNumpadPlus",
+        "int_1_SendNumpadMinus",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
+        "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
+        "kmevent",
+        "sendinput",
+        "pollcount",
+        "getstate",
+        "Math.Abs",
+        "Math.Sign",
+        "Math.Round",
+        "Math.Pow",
+        "Math.Sqrt",
+        "Math.Log",
+        "Math.Exp",
+        "Math.Min",
+        "Math.Max",
+        "Math.Floor",
+        "Math.Truncate",
+        "keys12345",
+        "keys54321",
+        "wd",
+        "wu",
+        "valchanged",
+        "Scale",
+        "width",
+        "height",
+        "mousexp",
+        "mouseyp",
+        "sleeptime",
+        "statex",
+        "statey",
+        "mousex",
+        "mousey",
+        "mousestatex",
+        "mousestatey",
+        "dzx",
+        "dzy",
+        "viewpower1x",
+        "viewpower1y",
+        "viewpower2x",
+        "viewpower2y",
+        "viewpower3x",
+        "viewpower3y",
+        "ValueChange",
+        "Valuechange._ValueChange"};
+            }
+            if (toolStripComboBox1.Text == "MJoyL-Int")
+            {
+                this.autocompleteMenu1.Items = new string[] {
+        "JoyconLeftAccelCenter",
+        "JoyconLeftStickX",
+        "JoyconLeftStickY",
+        "JoyconLeftButtonSHOULDER_1",
+        "JoyconLeftButtonSHOULDER_2",
+        "JoyconLeftButtonSR",
+        "JoyconLeftButtonSL",
+        "JoyconLeftButtonDPAD_DOWN",
+        "JoyconLeftButtonDPAD_RIGHT",
+        "JoyconLeftButtonDPAD_UP",
+        "JoyconLeftButtonDPAD_LEFT",
+        "JoyconLeftButtonMINUS",
+        "JoyconLeftButtonCAPTURE",
+        "JoyconLeftButtonSTICK",
+        "JoyconLeftAccelX",
+        "JoyconLeftAccelY",
+        "JoyconLeftGyroX",
+        "JoyconLeftGyroY",
         "Mouse1Buttons0",
         "Mouse1Buttons1",
         "Mouse1Buttons2",
@@ -10044,6 +11696,247 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "FV2M-XC")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_start"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_A"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_B"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_X"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_Y"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_up"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_left"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_down"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_right"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttriggerposition"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttriggerposition"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons8"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons9"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons10"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons11"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons12"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons13"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons14"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons15"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons16"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons17"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons18"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons19"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons20"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons21"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons22"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons23"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons24"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons25"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons26"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons27"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons28"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons29"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons30"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons31"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons32"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons33"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons34"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons35"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons36"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons37"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons38"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons39"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons40"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons41"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons42"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons43"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons44"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons45"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons46"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons47"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons48"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons49"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons50"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons51"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons52"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons53"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons54"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons55"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons56"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons57"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons58"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons59"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons60"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons61"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons62"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons63"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons64"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons65"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons66"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons67"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons68"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons69"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons70"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons71"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons72"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons73"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons74"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons75"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons76"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons77"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons78"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons79"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons80"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons81"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons82"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons83"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons84"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons85"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons86"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons87"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons88"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons89"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons90"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons91"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons92"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons93"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons94"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons95"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons96"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons97"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons98"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons99"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons100"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons101"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons102"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons103"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons104"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons105"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons106"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons107"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons108"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons109"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons110"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons111"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons112"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons113"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons114"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons115"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons116"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons117"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons118"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons119"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons120"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons121"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons122"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons123"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons124"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons125"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons126"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons127"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "FV2-KM")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
@@ -10403,8 +12296,802 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "FV2M-KM")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCancel"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMBUTTON"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendBack"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendClear"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendReturn"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGEUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJUNJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendFINAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANJI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNONCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendACCEPT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMODECHANGE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRINT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEXECUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send0"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send1"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send2"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send3"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send4"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send5"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send6"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send7"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send8"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSLEEP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSEPARATOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF13"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF14"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF15"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF16"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF17"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF18"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF19"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF20"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF21"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF22"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF23"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF24"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSCROLL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRMENU"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons8"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons9"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons10"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons11"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons12"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons13"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons14"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons15"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons16"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons17"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons18"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons19"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons20"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons21"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons22"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons23"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons24"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons25"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons26"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons27"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons28"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons29"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons30"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons31"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons32"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons33"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons34"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons35"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons36"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons37"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons38"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons39"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons40"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons41"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons42"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons43"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons44"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons45"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons46"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons47"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons48"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons49"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons50"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons51"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons52"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons53"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons54"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons55"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons56"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons57"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons58"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons59"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons60"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons61"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons62"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons63"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons64"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons65"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons66"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons67"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons68"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons69"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons70"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons71"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons72"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons73"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons74"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons75"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons76"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons77"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons78"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons79"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons80"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons81"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons82"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons83"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons84"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons85"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons86"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons87"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons88"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons89"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons90"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons91"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons92"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons93"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons94"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons95"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons96"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons97"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons98"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons99"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons100"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons101"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons102"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons103"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons104"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons105"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons106"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons107"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons108"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons109"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons110"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons111"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons112"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons113"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons114"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons115"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons116"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons117"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons118"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons119"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons120"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons121"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons122"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons123"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons124"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons125"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons126"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons127"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "FV2-Int")
                 {
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_x"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_y"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCANCEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTAB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCLEAR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRETURN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendESCAPE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADDEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACKSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMOUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRINTSCREEN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSCROLLLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_BACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FORWARD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_REFRESH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_SEARCH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FAVORITES"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_HOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_MUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_DOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_UP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_NEXT_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PREV_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PLAY_PAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MAIL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MEDIA_SELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PLUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_COMMA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_MINUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PERIOD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_102"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEREOF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZOOM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOne"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTwo"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendThree"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFour"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFive"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSix"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSeven"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNine"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZero"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDashUnderscore"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPlusEquals"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackspace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOpenBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCloseBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSemicolonColon"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSingleDoubleQuote"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTilde"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackslashPipe"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCommaLeftArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPeriodRightArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendForwardSlashQuestionMark"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightAlt"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCapsLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHome"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnd"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendInsert"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPrintScreen"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendScrollLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMenu"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWindowsKey"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDivide"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadAsterisk"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadPlus"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadMinus"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AxisZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1RotationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Sliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1PointOfViewControllers3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularVelocityZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1VelocitySliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AngularAccelerationZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1AccelerationSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueX"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueY"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1TorqueZ"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1ForceSliders1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons8"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons9"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons10"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons11"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons12"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons13"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons14"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons15"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons16"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons17"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons18"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons19"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons20"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons21"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons22"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons23"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons24"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons25"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons26"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons27"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons28"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons29"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons30"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons31"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons32"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons33"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons34"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons35"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons36"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons37"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons38"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons39"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons40"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons41"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons42"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons43"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons44"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons45"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons46"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons47"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons48"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons49"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons50"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons51"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons52"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons53"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons54"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons55"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons56"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons57"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons58"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons59"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons60"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons61"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons62"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons63"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons64"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons65"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons66"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons67"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons68"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons69"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons70"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons71"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons72"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons73"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons74"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons75"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons76"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons77"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons78"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons79"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons80"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons81"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons82"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons83"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons84"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons85"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons86"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons87"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons88"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons89"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons90"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons91"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons92"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons93"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons94"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons95"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons96"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons97"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons98"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons99"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons100"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons101"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons102"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons103"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons104"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons105"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons106"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons107"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons108"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons109"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons110"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons111"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons112"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons113"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons114"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons115"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons116"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons117"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons118"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons119"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons120"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons121"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons122"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons123"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons124"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons125"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons126"));
+                    range.SetStyle(InputStyle, new Regex(@"Joystick1Buttons127"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
+                if (toolStripComboBox1.Text == "FV2M-Int")
+                {
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
                     range.SetStyle(OutputStyle, new Regex(@"int_1_deltaX"));
@@ -14598,6 +17285,103 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "MJoyL-XC")
+                {
+                    range.SetStyle(OutputStyle, new Regex(@"JoyconLeftAccelCenter"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_1"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_2"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSR"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSL"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_DOWN"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_RIGHT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_UP"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_LEFT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonMINUS"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonCAPTURE"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSTICK"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroY"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_start"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_A"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_B"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_X"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_Y"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_up"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_left"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_down"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_right"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstick"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightbumper"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttrigger"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_leftsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightstickx"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_rightsticky"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_lefttriggerposition"));
+                    range.SetStyle(OutputStyle, new Regex(@"controller1_send_righttriggerposition"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "XC-XC")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
@@ -15248,6 +18032,230 @@ namespace SIGIL
                     range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
                     range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
                 }
+                if (toolStripComboBox1.Text == "MJoyL-KM")
+                {
+                    range.SetStyle(OutputStyle, new Regex(@"JoyconLeftAccelCenter"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_1"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_2"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSR"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSL"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_DOWN"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_RIGHT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_UP"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_LEFT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonMINUS"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonCAPTURE"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSTICK"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseMoveY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseAbsY"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRButton"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCancel"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMBUTTON"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendXBUTTON2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendBack"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendClear"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendReturn"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGEUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANGUL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJUNJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendFINAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHANJA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendKANJI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNONCONVERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendACCEPT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMODECHANGE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendPRINT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendEXECUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send0"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send1"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send2"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send3"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send4"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send5"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send6"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send7"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send8"));
+                    range.SetStyle(OutputStyle, new Regex(@"Send9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSLEEP"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSEPARATOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF13"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF14"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF15"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF16"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF17"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF18"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF19"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF20"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF21"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF22"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF23"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendF24"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendSCROLL"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLeftControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRightControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendLMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"SendRMENU"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
                 if (toolStripComboBox1.Text == "XC-Int")
                 {
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
@@ -15664,6 +18672,284 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"Keyboard1KeyMail"));
                     range.SetStyle(InputStyle, new Regex(@"Keyboard1KeyMediaSelect"));
                     range.SetStyle(InputStyle, new Regex(@"Keyboard1KeyUnknown"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons3"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons4"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons5"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons6"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons7"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisX"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisY"));
+                    range.SetStyle(InputStyle, new Regex(@"Mouse1AxisZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
+                    range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_deltaY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_x"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_y"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMiddleClick"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWheelDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCANCEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTAB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCLEAR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRETURN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMENU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCAPITAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendESCAPE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRIOR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNEXT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEND"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSNAPSHOT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADDEL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPADINSERT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHELP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPOSTROPHE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBACKSPACE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEDOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPAGEUP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMOUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendB"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendC"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendG"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendI"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendJ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendO"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendQ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendR"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendU"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendV"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendW"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendX"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZ"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRWIN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendAPPS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDELETE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMPAD9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMULTIPLY"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendADD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSUBTRACT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDECIMAL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPRINTSCREEN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDIVIDE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF10"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF11"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendF12"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNUMLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSCROLLLOCK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTSHIFT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTCONTROL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLEFTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRIGHTALT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_BACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FORWARD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_REFRESH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_SEARCH"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_FAVORITES"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBROWSER_HOME"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_MUTE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_DOWN"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendVOLUME_UP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_NEXT_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PREV_TRACK"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_STOP"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMEDIA_PLAY_PAUSE"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MAIL"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_MEDIA_SELECT"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLAUNCH_APP2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PLUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_COMMA"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_MINUS"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_PERIOD"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOEM_102"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEREOF"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZOOM"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEscape"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOne"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTwo"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendThree"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFour"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendFive"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSix"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSeven"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNine"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendZero"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDashUnderscore"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPlusEquals"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackspace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTab"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendOpenBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCloseBracketBrace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendControl"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSemicolonColon"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSingleDoubleQuote"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendTilde"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeftShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendBackslashPipe"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCommaLeftArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPeriodRightArrow"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendForwardSlashQuestionMark"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightShift"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRightAlt"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendSpace"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendCapsLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendRight"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendLeft"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendHome"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendEnd"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageUp"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPageDown"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendInsert"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendPrintScreen"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendScrollLock"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendMenu"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendWindowsKey"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDivide"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadAsterisk"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad7"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad8"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad9"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad4"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad5"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad6"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad1"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad2"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad3"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpad0"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadDelete"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadEnter"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadPlus"));
+                    range.SetStyle(OutputStyle, new Regex(@"int_1_SendNumpadMinus"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
+                    range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
+                    range.SetStyle(InputStyle, new Regex(@"kmevent"));
+                    range.SetStyle(InputStyle, new Regex(@"sendinput"));
+                    range.SetStyle(InputStyle, new Regex(@"pollcount"));
+                    range.SetStyle(InputStyle, new Regex(@"getstate"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Abs"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sign"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Round"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Pow"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Sqrt"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Log"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Exp"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Min"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Max"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Floor"));
+                    range.SetStyle(InputStyle, new Regex(@"Math.Truncate"));
+                    range.SetStyle(InputStyle, new Regex(@"keys12345"));
+                    range.SetStyle(InputStyle, new Regex(@"keys54321"));
+                    range.SetStyle(InputStyle, new Regex(@"wd"));
+                    range.SetStyle(InputStyle, new Regex(@"wu"));
+                    range.SetStyle(InputStyle, new Regex(@"valchanged"));
+                    range.SetStyle(InputStyle, new Regex(@"Scale"));
+                    range.SetStyle(InputStyle, new Regex(@"width"));
+                    range.SetStyle(InputStyle, new Regex(@"height"));
+                    range.SetStyle(InputStyle, new Regex(@"mousexp"));
+                    range.SetStyle(InputStyle, new Regex(@"mouseyp"));
+                    range.SetStyle(InputStyle, new Regex(@"sleeptime"));
+                    range.SetStyle(InputStyle, new Regex(@"statex"));
+                    range.SetStyle(InputStyle, new Regex(@"statey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousey"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatex"));
+                    range.SetStyle(InputStyle, new Regex(@"mousestatey"));
+                    range.SetStyle(InputStyle, new Regex(@"dzx"));
+                    range.SetStyle(InputStyle, new Regex(@"dzy"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower1y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower2y"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3x"));
+                    range.SetStyle(InputStyle, new Regex(@"viewpower3y"));
+                    range.SetStyle(OutputStyle, new Regex(@"ValueChange"));
+                    range.SetStyle(InputStyle, new Regex(@"Valuechange._ValueChange"));
+                }
+                if (toolStripComboBox1.Text == "MJoyL-Int")
+                {
+                    range.SetStyle(OutputStyle, new Regex(@"JoyconLeftAccelCenter"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftStickY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_1"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSHOULDER_2"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSR"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSL"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_DOWN"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_RIGHT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_UP"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonDPAD_LEFT"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonMINUS"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonCAPTURE"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftButtonSTICK"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftAccelY"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroX"));
+                    range.SetStyle(InputStyle, new Regex(@"JoyconLeftGyroY"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons0"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons1"));
                     range.SetStyle(InputStyle, new Regex(@"Mouse1Buttons2"));
@@ -20413,6 +23699,934 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
+            if (toolStripComboBox1.Text == "FV2M-XC")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX;
+                using controllers;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        DirectInput directInput = new DirectInput();
+                        private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
+                        private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            MouseInputHookConnect();
+                            DirectInputHookConnect();
+                            ScpBus.LoadController();
+                            Task.Run(() => taskX());
+                        }
+                        private void taskX()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                GamepadProcess();
+                                funct_driver
+                                ScpBus.SetController(controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition, controller1_send_xbox);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                ScpBus.UnLoadController();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                        private static Joystick[] joystick = new Joystick[] { null };
+                        private static Guid[] joystickGuid = new Guid[] { Guid.Empty };
+                        private static int dinum = 0;
+                        public static int Joystick1AxisX;
+                        public static int Joystick1AxisY;
+                        public static int Joystick1AxisZ;
+                        public static int Joystick1RotationX;
+                        public static int Joystick1RotationY;
+                        public static int Joystick1RotationZ;
+                        public static int Joystick1Sliders0;
+                        public static int Joystick1Sliders1;
+                        public static int Joystick1PointOfViewControllers0;
+                        public static int Joystick1PointOfViewControllers1;
+                        public static int Joystick1PointOfViewControllers2;
+                        public static int Joystick1PointOfViewControllers3;
+                        public static int Joystick1VelocityX;
+                        public static int Joystick1VelocityY;
+                        public static int Joystick1VelocityZ;
+                        public static int Joystick1AngularVelocityX;
+                        public static int Joystick1AngularVelocityY;
+                        public static int Joystick1AngularVelocityZ;
+                        public static int Joystick1VelocitySliders0;
+                        public static int Joystick1VelocitySliders1;
+                        public static int Joystick1AccelerationX;
+                        public static int Joystick1AccelerationY;
+                        public static int Joystick1AccelerationZ;
+                        public static int Joystick1AngularAccelerationX;
+                        public static int Joystick1AngularAccelerationY;
+                        public static int Joystick1AngularAccelerationZ;
+                        public static int Joystick1AccelerationSliders0;
+                        public static int Joystick1AccelerationSliders1;
+                        public static int Joystick1ForceX;
+                        public static int Joystick1ForceY;
+                        public static int Joystick1ForceZ;
+                        public static int Joystick1TorqueX;
+                        public static int Joystick1TorqueY;
+                        public static int Joystick1TorqueZ;
+                        public static int Joystick1ForceSliders0;
+                        public static int Joystick1ForceSliders1;
+                        public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
+                        public bool DirectInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                joystick = new Joystick[] { null };
+                                joystickGuid = new Guid[] { Guid.Empty };
+                                dinum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                    dinum++;
+                                    if (dinum >= 1)
+                                    {
+                                        break;
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Joystick, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Flight, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.FirstPerson, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Driving, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (joystickGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < dinum; inc++)
+                                {
+                                    joystick[inc] = new Joystick(directInput, joystickGuid[inc]);
+                                    joystick[inc].Properties.BufferSize = 128;
+                                    joystick[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        private void GamepadProcess()
+                        {
+                            for (int inc = 0; inc < dinum; inc++)
+                            {
+                                joystick[inc].Poll();
+                                var datas = joystick[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == JoystickOffset.X)
+                                        Joystick1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Y)
+                                        Joystick1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Z)
+                                        Joystick1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationX)
+                                        Joystick1RotationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationY)
+                                        Joystick1RotationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationZ)
+                                        Joystick1RotationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders0)
+                                        Joystick1Sliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders1)
+                                        Joystick1Sliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers0)
+                                        Joystick1PointOfViewControllers0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers1)
+                                        Joystick1PointOfViewControllers1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers2)
+                                        Joystick1PointOfViewControllers2 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers3)
+                                        Joystick1PointOfViewControllers3 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityX)
+                                        Joystick1VelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityY)
+                                        Joystick1VelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityZ)
+                                        Joystick1VelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityX)
+                                        Joystick1AngularVelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityY)
+                                        Joystick1AngularVelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityZ)
+                                        Joystick1AngularVelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders0)
+                                        Joystick1VelocitySliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders1)
+                                        Joystick1VelocitySliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationX)
+                                        Joystick1AccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationY)
+                                        Joystick1AccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationZ)
+                                        Joystick1AccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationX)
+                                        Joystick1AngularAccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationY)
+                                        Joystick1AngularAccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationZ)
+                                        Joystick1AngularAccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders0)
+                                        Joystick1AccelerationSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders1)
+                                        Joystick1AccelerationSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceX)
+                                        Joystick1ForceX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceY)
+                                        Joystick1ForceY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceZ)
+                                        Joystick1ForceZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueX)
+                                        Joystick1TorqueX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueY)
+                                        Joystick1TorqueY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueZ)
+                                        Joystick1TorqueZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders0)
+                                        Joystick1ForceSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders1)
+                                        Joystick1ForceSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 128)
+                                        Joystick1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 0)
+                                        Joystick1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 128)
+                                        Joystick1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 0)
+                                        Joystick1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 128)
+                                        Joystick1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 0)
+                                        Joystick1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 128)
+                                        Joystick1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 0)
+                                        Joystick1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 128)
+                                        Joystick1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 0)
+                                        Joystick1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 128)
+                                        Joystick1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 0)
+                                        Joystick1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 128)
+                                        Joystick1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 0)
+                                        Joystick1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 128)
+                                        Joystick1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 0)
+                                        Joystick1Buttons7 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 128)
+                                        Joystick1Buttons8 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 0)
+                                        Joystick1Buttons8 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 128)
+                                        Joystick1Buttons9 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 0)
+                                        Joystick1Buttons9 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 128)
+                                        Joystick1Buttons10 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 0)
+                                        Joystick1Buttons10 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 128)
+                                        Joystick1Buttons11 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 0)
+                                        Joystick1Buttons11 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 128)
+                                        Joystick1Buttons12 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 0)
+                                        Joystick1Buttons12 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 128)
+                                        Joystick1Buttons13 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 0)
+                                        Joystick1Buttons13 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 128)
+                                        Joystick1Buttons14 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 0)
+                                        Joystick1Buttons14 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 128)
+                                        Joystick1Buttons15 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 0)
+                                        Joystick1Buttons15 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 128)
+                                        Joystick1Buttons16 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 0)
+                                        Joystick1Buttons16 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 128)
+                                        Joystick1Buttons17 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 0)
+                                        Joystick1Buttons17 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 128)
+                                        Joystick1Buttons18 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 0)
+                                        Joystick1Buttons18 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 128)
+                                        Joystick1Buttons19 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 0)
+                                        Joystick1Buttons19 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 128)
+                                        Joystick1Buttons20 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 0)
+                                        Joystick1Buttons20 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 128)
+                                        Joystick1Buttons21 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 0)
+                                        Joystick1Buttons21 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 128)
+                                        Joystick1Buttons22 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 0)
+                                        Joystick1Buttons22 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 128)
+                                        Joystick1Buttons23 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 0)
+                                        Joystick1Buttons23 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 128)
+                                        Joystick1Buttons24 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 0)
+                                        Joystick1Buttons24 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 128)
+                                        Joystick1Buttons25 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 0)
+                                        Joystick1Buttons25 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 128)
+                                        Joystick1Buttons26 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 0)
+                                        Joystick1Buttons26 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 128)
+                                        Joystick1Buttons27 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 0)
+                                        Joystick1Buttons27 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 128)
+                                        Joystick1Buttons28 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 0)
+                                        Joystick1Buttons28 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 128)
+                                        Joystick1Buttons29 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 0)
+                                        Joystick1Buttons29 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 128)
+                                        Joystick1Buttons30 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 0)
+                                        Joystick1Buttons30 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 128)
+                                        Joystick1Buttons31 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 0)
+                                        Joystick1Buttons31 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 128)
+                                        Joystick1Buttons32 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 0)
+                                        Joystick1Buttons32 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 128)
+                                        Joystick1Buttons33 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 0)
+                                        Joystick1Buttons33 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 128)
+                                        Joystick1Buttons34 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 0)
+                                        Joystick1Buttons34 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 128)
+                                        Joystick1Buttons35 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 0)
+                                        Joystick1Buttons35 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 128)
+                                        Joystick1Buttons36 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 0)
+                                        Joystick1Buttons36 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 128)
+                                        Joystick1Buttons37 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 0)
+                                        Joystick1Buttons37 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 128)
+                                        Joystick1Buttons38 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 0)
+                                        Joystick1Buttons38 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 128)
+                                        Joystick1Buttons39 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 0)
+                                        Joystick1Buttons39 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 128)
+                                        Joystick1Buttons40 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 0)
+                                        Joystick1Buttons40 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 128)
+                                        Joystick1Buttons41 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 0)
+                                        Joystick1Buttons41 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 128)
+                                        Joystick1Buttons42 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 0)
+                                        Joystick1Buttons42 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 128)
+                                        Joystick1Buttons43 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 0)
+                                        Joystick1Buttons43 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 128)
+                                        Joystick1Buttons44 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 0)
+                                        Joystick1Buttons44 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 128)
+                                        Joystick1Buttons45 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 0)
+                                        Joystick1Buttons45 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 128)
+                                        Joystick1Buttons46 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 0)
+                                        Joystick1Buttons46 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 128)
+                                        Joystick1Buttons47 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 0)
+                                        Joystick1Buttons47 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 128)
+                                        Joystick1Buttons48 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 0)
+                                        Joystick1Buttons48 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 128)
+                                        Joystick1Buttons49 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 0)
+                                        Joystick1Buttons49 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 128)
+                                        Joystick1Buttons50 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 0)
+                                        Joystick1Buttons50 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 128)
+                                        Joystick1Buttons51 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 0)
+                                        Joystick1Buttons51 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 128)
+                                        Joystick1Buttons52 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 0)
+                                        Joystick1Buttons52 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 128)
+                                        Joystick1Buttons53 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 0)
+                                        Joystick1Buttons53 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 128)
+                                        Joystick1Buttons54 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 0)
+                                        Joystick1Buttons54 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 128)
+                                        Joystick1Buttons55 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 0)
+                                        Joystick1Buttons55 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 128)
+                                        Joystick1Buttons56 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 0)
+                                        Joystick1Buttons56 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 128)
+                                        Joystick1Buttons57 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 0)
+                                        Joystick1Buttons57 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 128)
+                                        Joystick1Buttons58 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 0)
+                                        Joystick1Buttons58 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 128)
+                                        Joystick1Buttons59 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 0)
+                                        Joystick1Buttons59 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 128)
+                                        Joystick1Buttons60 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 0)
+                                        Joystick1Buttons60 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 128)
+                                        Joystick1Buttons61 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 0)
+                                        Joystick1Buttons61 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 128)
+                                        Joystick1Buttons62 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 0)
+                                        Joystick1Buttons62 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 128)
+                                        Joystick1Buttons63 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 0)
+                                        Joystick1Buttons63 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 128)
+                                        Joystick1Buttons64 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 0)
+                                        Joystick1Buttons64 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 128)
+                                        Joystick1Buttons65 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 0)
+                                        Joystick1Buttons65 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 128)
+                                        Joystick1Buttons66 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 0)
+                                        Joystick1Buttons66 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 128)
+                                        Joystick1Buttons67 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 0)
+                                        Joystick1Buttons67 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 128)
+                                        Joystick1Buttons68 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 0)
+                                        Joystick1Buttons68 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 128)
+                                        Joystick1Buttons69 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 0)
+                                        Joystick1Buttons69 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 128)
+                                        Joystick1Buttons70 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 0)
+                                        Joystick1Buttons70 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 128)
+                                        Joystick1Buttons71 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 0)
+                                        Joystick1Buttons71 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 128)
+                                        Joystick1Buttons72 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 0)
+                                        Joystick1Buttons72 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 128)
+                                        Joystick1Buttons73 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 0)
+                                        Joystick1Buttons73 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 128)
+                                        Joystick1Buttons74 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 0)
+                                        Joystick1Buttons74 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 128)
+                                        Joystick1Buttons75 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 0)
+                                        Joystick1Buttons75 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 128)
+                                        Joystick1Buttons76 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 0)
+                                        Joystick1Buttons76 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 128)
+                                        Joystick1Buttons77 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 0)
+                                        Joystick1Buttons77 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 128)
+                                        Joystick1Buttons78 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 0)
+                                        Joystick1Buttons78 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 128)
+                                        Joystick1Buttons79 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 0)
+                                        Joystick1Buttons79 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 128)
+                                        Joystick1Buttons80 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 0)
+                                        Joystick1Buttons80 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 128)
+                                        Joystick1Buttons81 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 0)
+                                        Joystick1Buttons81 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 128)
+                                        Joystick1Buttons82 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 0)
+                                        Joystick1Buttons82 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 128)
+                                        Joystick1Buttons83 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 0)
+                                        Joystick1Buttons83 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 128)
+                                        Joystick1Buttons84 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 0)
+                                        Joystick1Buttons84 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 128)
+                                        Joystick1Buttons85 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 0)
+                                        Joystick1Buttons85 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 128)
+                                        Joystick1Buttons86 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 0)
+                                        Joystick1Buttons86 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 128)
+                                        Joystick1Buttons87 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 0)
+                                        Joystick1Buttons87 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 128)
+                                        Joystick1Buttons88 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 0)
+                                        Joystick1Buttons88 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 128)
+                                        Joystick1Buttons89 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 0)
+                                        Joystick1Buttons89 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 128)
+                                        Joystick1Buttons90 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 0)
+                                        Joystick1Buttons90 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 128)
+                                        Joystick1Buttons91 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 0)
+                                        Joystick1Buttons91 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 128)
+                                        Joystick1Buttons92 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 0)
+                                        Joystick1Buttons92 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 128)
+                                        Joystick1Buttons93 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 0)
+                                        Joystick1Buttons93 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 128)
+                                        Joystick1Buttons94 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 0)
+                                        Joystick1Buttons94 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 128)
+                                        Joystick1Buttons95 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 0)
+                                        Joystick1Buttons95 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 128)
+                                        Joystick1Buttons96 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 0)
+                                        Joystick1Buttons96 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 128)
+                                        Joystick1Buttons97 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 0)
+                                        Joystick1Buttons97 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 128)
+                                        Joystick1Buttons98 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 0)
+                                        Joystick1Buttons98 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 128)
+                                        Joystick1Buttons99 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 0)
+                                        Joystick1Buttons99 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 128)
+                                        Joystick1Buttons100 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 0)
+                                        Joystick1Buttons100 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 128)
+                                        Joystick1Buttons101 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 0)
+                                        Joystick1Buttons101 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 128)
+                                        Joystick1Buttons102 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 0)
+                                        Joystick1Buttons102 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 128)
+                                        Joystick1Buttons103 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 0)
+                                        Joystick1Buttons103 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 128)
+                                        Joystick1Buttons104 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 0)
+                                        Joystick1Buttons104 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 128)
+                                        Joystick1Buttons105 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 0)
+                                        Joystick1Buttons105 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 128)
+                                        Joystick1Buttons106 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 0)
+                                        Joystick1Buttons106 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 128)
+                                        Joystick1Buttons107 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 0)
+                                        Joystick1Buttons107 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 128)
+                                        Joystick1Buttons108 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 0)
+                                        Joystick1Buttons108 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 128)
+                                        Joystick1Buttons109 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 0)
+                                        Joystick1Buttons109 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 128)
+                                        Joystick1Buttons110 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 0)
+                                        Joystick1Buttons110 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 128)
+                                        Joystick1Buttons111 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 0)
+                                        Joystick1Buttons111 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 128)
+                                        Joystick1Buttons112 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 0)
+                                        Joystick1Buttons112 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 128)
+                                        Joystick1Buttons113 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 0)
+                                        Joystick1Buttons113 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 128)
+                                        Joystick1Buttons114 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 0)
+                                        Joystick1Buttons114 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 128)
+                                        Joystick1Buttons115 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 0)
+                                        Joystick1Buttons115 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 128)
+                                        Joystick1Buttons116 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 0)
+                                        Joystick1Buttons116 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 128)
+                                        Joystick1Buttons117 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 0)
+                                        Joystick1Buttons117 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 128)
+                                        Joystick1Buttons118 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 0)
+                                        Joystick1Buttons118 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 128)
+                                        Joystick1Buttons119 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 0)
+                                        Joystick1Buttons119 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 128)
+                                        Joystick1Buttons120 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 0)
+                                        Joystick1Buttons120 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 128)
+                                        Joystick1Buttons121 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 0)
+                                        Joystick1Buttons121 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 128)
+                                        Joystick1Buttons122 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 0)
+                                        Joystick1Buttons122 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 128)
+                                        Joystick1Buttons123 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 0)
+                                        Joystick1Buttons123 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 128)
+                                        Joystick1Buttons124 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 0)
+                                        Joystick1Buttons124 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 128)
+                                        Joystick1Buttons125 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 0)
+                                        Joystick1Buttons125 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 128)
+                                        Joystick1Buttons126 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 0)
+                                        Joystick1Buttons126 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 128)
+                                        Joystick1Buttons127 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 0)
+                                        Joystick1Buttons127 = false;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
             if (toolStripComboBox1.Text == "FV2-KM")
             {
                 code = @"
@@ -20514,6 +24728,936 @@ namespace SIGIL
                         {
                             double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
                             return scaled;
+                        }
+                        private static Joystick[] joystick = new Joystick[] { null };
+                        private static Guid[] joystickGuid = new Guid[] { Guid.Empty };
+                        private static int dinum = 0;
+                        public static int Joystick1AxisX;
+                        public static int Joystick1AxisY;
+                        public static int Joystick1AxisZ;
+                        public static int Joystick1RotationX;
+                        public static int Joystick1RotationY;
+                        public static int Joystick1RotationZ;
+                        public static int Joystick1Sliders0;
+                        public static int Joystick1Sliders1;
+                        public static int Joystick1PointOfViewControllers0;
+                        public static int Joystick1PointOfViewControllers1;
+                        public static int Joystick1PointOfViewControllers2;
+                        public static int Joystick1PointOfViewControllers3;
+                        public static int Joystick1VelocityX;
+                        public static int Joystick1VelocityY;
+                        public static int Joystick1VelocityZ;
+                        public static int Joystick1AngularVelocityX;
+                        public static int Joystick1AngularVelocityY;
+                        public static int Joystick1AngularVelocityZ;
+                        public static int Joystick1VelocitySliders0;
+                        public static int Joystick1VelocitySliders1;
+                        public static int Joystick1AccelerationX;
+                        public static int Joystick1AccelerationY;
+                        public static int Joystick1AccelerationZ;
+                        public static int Joystick1AngularAccelerationX;
+                        public static int Joystick1AngularAccelerationY;
+                        public static int Joystick1AngularAccelerationZ;
+                        public static int Joystick1AccelerationSliders0;
+                        public static int Joystick1AccelerationSliders1;
+                        public static int Joystick1ForceX;
+                        public static int Joystick1ForceY;
+                        public static int Joystick1ForceZ;
+                        public static int Joystick1TorqueX;
+                        public static int Joystick1TorqueY;
+                        public static int Joystick1TorqueZ;
+                        public static int Joystick1ForceSliders0;
+                        public static int Joystick1ForceSliders1;
+                        public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
+                        public bool DirectInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                joystick = new Joystick[] { null };
+                                joystickGuid = new Guid[] { Guid.Empty };
+                                dinum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                    dinum++;
+                                    if (dinum >= 1)
+                                    {
+                                        break;
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Joystick, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Flight, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.FirstPerson, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Driving, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (joystickGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < dinum; inc++)
+                                {
+                                    joystick[inc] = new Joystick(directInput, joystickGuid[inc]);
+                                    joystick[inc].Properties.BufferSize = 128;
+                                    joystick[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        private void GamepadProcess()
+                        {
+                            for (int inc = 0; inc < dinum; inc++)
+                            {
+                                joystick[inc].Poll();
+                                var datas = joystick[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == JoystickOffset.X)
+                                        Joystick1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Y)
+                                        Joystick1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Z)
+                                        Joystick1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationX)
+                                        Joystick1RotationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationY)
+                                        Joystick1RotationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationZ)
+                                        Joystick1RotationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders0)
+                                        Joystick1Sliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders1)
+                                        Joystick1Sliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers0)
+                                        Joystick1PointOfViewControllers0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers1)
+                                        Joystick1PointOfViewControllers1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers2)
+                                        Joystick1PointOfViewControllers2 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers3)
+                                        Joystick1PointOfViewControllers3 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityX)
+                                        Joystick1VelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityY)
+                                        Joystick1VelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityZ)
+                                        Joystick1VelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityX)
+                                        Joystick1AngularVelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityY)
+                                        Joystick1AngularVelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityZ)
+                                        Joystick1AngularVelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders0)
+                                        Joystick1VelocitySliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders1)
+                                        Joystick1VelocitySliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationX)
+                                        Joystick1AccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationY)
+                                        Joystick1AccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationZ)
+                                        Joystick1AccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationX)
+                                        Joystick1AngularAccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationY)
+                                        Joystick1AngularAccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationZ)
+                                        Joystick1AngularAccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders0)
+                                        Joystick1AccelerationSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders1)
+                                        Joystick1AccelerationSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceX)
+                                        Joystick1ForceX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceY)
+                                        Joystick1ForceY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceZ)
+                                        Joystick1ForceZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueX)
+                                        Joystick1TorqueX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueY)
+                                        Joystick1TorqueY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueZ)
+                                        Joystick1TorqueZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders0)
+                                        Joystick1ForceSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders1)
+                                        Joystick1ForceSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 128)
+                                        Joystick1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 0)
+                                        Joystick1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 128)
+                                        Joystick1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 0)
+                                        Joystick1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 128)
+                                        Joystick1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 0)
+                                        Joystick1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 128)
+                                        Joystick1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 0)
+                                        Joystick1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 128)
+                                        Joystick1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 0)
+                                        Joystick1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 128)
+                                        Joystick1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 0)
+                                        Joystick1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 128)
+                                        Joystick1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 0)
+                                        Joystick1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 128)
+                                        Joystick1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 0)
+                                        Joystick1Buttons7 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 128)
+                                        Joystick1Buttons8 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 0)
+                                        Joystick1Buttons8 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 128)
+                                        Joystick1Buttons9 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 0)
+                                        Joystick1Buttons9 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 128)
+                                        Joystick1Buttons10 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 0)
+                                        Joystick1Buttons10 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 128)
+                                        Joystick1Buttons11 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 0)
+                                        Joystick1Buttons11 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 128)
+                                        Joystick1Buttons12 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 0)
+                                        Joystick1Buttons12 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 128)
+                                        Joystick1Buttons13 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 0)
+                                        Joystick1Buttons13 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 128)
+                                        Joystick1Buttons14 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 0)
+                                        Joystick1Buttons14 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 128)
+                                        Joystick1Buttons15 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 0)
+                                        Joystick1Buttons15 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 128)
+                                        Joystick1Buttons16 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 0)
+                                        Joystick1Buttons16 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 128)
+                                        Joystick1Buttons17 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 0)
+                                        Joystick1Buttons17 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 128)
+                                        Joystick1Buttons18 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 0)
+                                        Joystick1Buttons18 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 128)
+                                        Joystick1Buttons19 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 0)
+                                        Joystick1Buttons19 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 128)
+                                        Joystick1Buttons20 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 0)
+                                        Joystick1Buttons20 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 128)
+                                        Joystick1Buttons21 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 0)
+                                        Joystick1Buttons21 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 128)
+                                        Joystick1Buttons22 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 0)
+                                        Joystick1Buttons22 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 128)
+                                        Joystick1Buttons23 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 0)
+                                        Joystick1Buttons23 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 128)
+                                        Joystick1Buttons24 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 0)
+                                        Joystick1Buttons24 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 128)
+                                        Joystick1Buttons25 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 0)
+                                        Joystick1Buttons25 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 128)
+                                        Joystick1Buttons26 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 0)
+                                        Joystick1Buttons26 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 128)
+                                        Joystick1Buttons27 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 0)
+                                        Joystick1Buttons27 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 128)
+                                        Joystick1Buttons28 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 0)
+                                        Joystick1Buttons28 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 128)
+                                        Joystick1Buttons29 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 0)
+                                        Joystick1Buttons29 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 128)
+                                        Joystick1Buttons30 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 0)
+                                        Joystick1Buttons30 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 128)
+                                        Joystick1Buttons31 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 0)
+                                        Joystick1Buttons31 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 128)
+                                        Joystick1Buttons32 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 0)
+                                        Joystick1Buttons32 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 128)
+                                        Joystick1Buttons33 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 0)
+                                        Joystick1Buttons33 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 128)
+                                        Joystick1Buttons34 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 0)
+                                        Joystick1Buttons34 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 128)
+                                        Joystick1Buttons35 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 0)
+                                        Joystick1Buttons35 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 128)
+                                        Joystick1Buttons36 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 0)
+                                        Joystick1Buttons36 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 128)
+                                        Joystick1Buttons37 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 0)
+                                        Joystick1Buttons37 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 128)
+                                        Joystick1Buttons38 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 0)
+                                        Joystick1Buttons38 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 128)
+                                        Joystick1Buttons39 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 0)
+                                        Joystick1Buttons39 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 128)
+                                        Joystick1Buttons40 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 0)
+                                        Joystick1Buttons40 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 128)
+                                        Joystick1Buttons41 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 0)
+                                        Joystick1Buttons41 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 128)
+                                        Joystick1Buttons42 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 0)
+                                        Joystick1Buttons42 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 128)
+                                        Joystick1Buttons43 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 0)
+                                        Joystick1Buttons43 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 128)
+                                        Joystick1Buttons44 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 0)
+                                        Joystick1Buttons44 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 128)
+                                        Joystick1Buttons45 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 0)
+                                        Joystick1Buttons45 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 128)
+                                        Joystick1Buttons46 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 0)
+                                        Joystick1Buttons46 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 128)
+                                        Joystick1Buttons47 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 0)
+                                        Joystick1Buttons47 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 128)
+                                        Joystick1Buttons48 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 0)
+                                        Joystick1Buttons48 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 128)
+                                        Joystick1Buttons49 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 0)
+                                        Joystick1Buttons49 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 128)
+                                        Joystick1Buttons50 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 0)
+                                        Joystick1Buttons50 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 128)
+                                        Joystick1Buttons51 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 0)
+                                        Joystick1Buttons51 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 128)
+                                        Joystick1Buttons52 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 0)
+                                        Joystick1Buttons52 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 128)
+                                        Joystick1Buttons53 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 0)
+                                        Joystick1Buttons53 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 128)
+                                        Joystick1Buttons54 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 0)
+                                        Joystick1Buttons54 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 128)
+                                        Joystick1Buttons55 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 0)
+                                        Joystick1Buttons55 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 128)
+                                        Joystick1Buttons56 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 0)
+                                        Joystick1Buttons56 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 128)
+                                        Joystick1Buttons57 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 0)
+                                        Joystick1Buttons57 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 128)
+                                        Joystick1Buttons58 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 0)
+                                        Joystick1Buttons58 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 128)
+                                        Joystick1Buttons59 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 0)
+                                        Joystick1Buttons59 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 128)
+                                        Joystick1Buttons60 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 0)
+                                        Joystick1Buttons60 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 128)
+                                        Joystick1Buttons61 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 0)
+                                        Joystick1Buttons61 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 128)
+                                        Joystick1Buttons62 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 0)
+                                        Joystick1Buttons62 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 128)
+                                        Joystick1Buttons63 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 0)
+                                        Joystick1Buttons63 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 128)
+                                        Joystick1Buttons64 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 0)
+                                        Joystick1Buttons64 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 128)
+                                        Joystick1Buttons65 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 0)
+                                        Joystick1Buttons65 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 128)
+                                        Joystick1Buttons66 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 0)
+                                        Joystick1Buttons66 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 128)
+                                        Joystick1Buttons67 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 0)
+                                        Joystick1Buttons67 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 128)
+                                        Joystick1Buttons68 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 0)
+                                        Joystick1Buttons68 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 128)
+                                        Joystick1Buttons69 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 0)
+                                        Joystick1Buttons69 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 128)
+                                        Joystick1Buttons70 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 0)
+                                        Joystick1Buttons70 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 128)
+                                        Joystick1Buttons71 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 0)
+                                        Joystick1Buttons71 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 128)
+                                        Joystick1Buttons72 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 0)
+                                        Joystick1Buttons72 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 128)
+                                        Joystick1Buttons73 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 0)
+                                        Joystick1Buttons73 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 128)
+                                        Joystick1Buttons74 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 0)
+                                        Joystick1Buttons74 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 128)
+                                        Joystick1Buttons75 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 0)
+                                        Joystick1Buttons75 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 128)
+                                        Joystick1Buttons76 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 0)
+                                        Joystick1Buttons76 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 128)
+                                        Joystick1Buttons77 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 0)
+                                        Joystick1Buttons77 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 128)
+                                        Joystick1Buttons78 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 0)
+                                        Joystick1Buttons78 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 128)
+                                        Joystick1Buttons79 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 0)
+                                        Joystick1Buttons79 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 128)
+                                        Joystick1Buttons80 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 0)
+                                        Joystick1Buttons80 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 128)
+                                        Joystick1Buttons81 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 0)
+                                        Joystick1Buttons81 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 128)
+                                        Joystick1Buttons82 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 0)
+                                        Joystick1Buttons82 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 128)
+                                        Joystick1Buttons83 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 0)
+                                        Joystick1Buttons83 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 128)
+                                        Joystick1Buttons84 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 0)
+                                        Joystick1Buttons84 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 128)
+                                        Joystick1Buttons85 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 0)
+                                        Joystick1Buttons85 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 128)
+                                        Joystick1Buttons86 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 0)
+                                        Joystick1Buttons86 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 128)
+                                        Joystick1Buttons87 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 0)
+                                        Joystick1Buttons87 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 128)
+                                        Joystick1Buttons88 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 0)
+                                        Joystick1Buttons88 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 128)
+                                        Joystick1Buttons89 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 0)
+                                        Joystick1Buttons89 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 128)
+                                        Joystick1Buttons90 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 0)
+                                        Joystick1Buttons90 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 128)
+                                        Joystick1Buttons91 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 0)
+                                        Joystick1Buttons91 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 128)
+                                        Joystick1Buttons92 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 0)
+                                        Joystick1Buttons92 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 128)
+                                        Joystick1Buttons93 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 0)
+                                        Joystick1Buttons93 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 128)
+                                        Joystick1Buttons94 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 0)
+                                        Joystick1Buttons94 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 128)
+                                        Joystick1Buttons95 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 0)
+                                        Joystick1Buttons95 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 128)
+                                        Joystick1Buttons96 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 0)
+                                        Joystick1Buttons96 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 128)
+                                        Joystick1Buttons97 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 0)
+                                        Joystick1Buttons97 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 128)
+                                        Joystick1Buttons98 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 0)
+                                        Joystick1Buttons98 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 128)
+                                        Joystick1Buttons99 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 0)
+                                        Joystick1Buttons99 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 128)
+                                        Joystick1Buttons100 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 0)
+                                        Joystick1Buttons100 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 128)
+                                        Joystick1Buttons101 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 0)
+                                        Joystick1Buttons101 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 128)
+                                        Joystick1Buttons102 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 0)
+                                        Joystick1Buttons102 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 128)
+                                        Joystick1Buttons103 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 0)
+                                        Joystick1Buttons103 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 128)
+                                        Joystick1Buttons104 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 0)
+                                        Joystick1Buttons104 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 128)
+                                        Joystick1Buttons105 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 0)
+                                        Joystick1Buttons105 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 128)
+                                        Joystick1Buttons106 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 0)
+                                        Joystick1Buttons106 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 128)
+                                        Joystick1Buttons107 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 0)
+                                        Joystick1Buttons107 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 128)
+                                        Joystick1Buttons108 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 0)
+                                        Joystick1Buttons108 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 128)
+                                        Joystick1Buttons109 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 0)
+                                        Joystick1Buttons109 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 128)
+                                        Joystick1Buttons110 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 0)
+                                        Joystick1Buttons110 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 128)
+                                        Joystick1Buttons111 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 0)
+                                        Joystick1Buttons111 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 128)
+                                        Joystick1Buttons112 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 0)
+                                        Joystick1Buttons112 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 128)
+                                        Joystick1Buttons113 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 0)
+                                        Joystick1Buttons113 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 128)
+                                        Joystick1Buttons114 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 0)
+                                        Joystick1Buttons114 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 128)
+                                        Joystick1Buttons115 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 0)
+                                        Joystick1Buttons115 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 128)
+                                        Joystick1Buttons116 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 0)
+                                        Joystick1Buttons116 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 128)
+                                        Joystick1Buttons117 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 0)
+                                        Joystick1Buttons117 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 128)
+                                        Joystick1Buttons118 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 0)
+                                        Joystick1Buttons118 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 128)
+                                        Joystick1Buttons119 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 0)
+                                        Joystick1Buttons119 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 128)
+                                        Joystick1Buttons120 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 0)
+                                        Joystick1Buttons120 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 128)
+                                        Joystick1Buttons121 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 0)
+                                        Joystick1Buttons121 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 128)
+                                        Joystick1Buttons122 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 0)
+                                        Joystick1Buttons122 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 128)
+                                        Joystick1Buttons123 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 0)
+                                        Joystick1Buttons123 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 128)
+                                        Joystick1Buttons124 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 0)
+                                        Joystick1Buttons124 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 128)
+                                        Joystick1Buttons125 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 0)
+                                        Joystick1Buttons125 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 128)
+                                        Joystick1Buttons126 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 0)
+                                        Joystick1Buttons126 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 128)
+                                        Joystick1Buttons127 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 0)
+                                        Joystick1Buttons127 = false;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
+            if (toolStripComboBox1.Text == "FV2M-KM")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX;
+                using keyboards;
+                using mouses;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        private static int width, height;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        DirectInput directInput = new DirectInput();
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            MouseInputHookConnect();
+                            DirectInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                GamepadProcess();
+                                funct_driver
+                                SendKeyboard.SetKM(KeyboardMouseDriverType, SendLeftClick, SendRightClick, SendMiddleClick, SendWheelUp, SendWheelDown, SendLeft, SendRight, SendUp, SendDown, SendLButton, SendRButton, SendCancel, SendMBUTTON, SendXBUTTON1, SendXBUTTON2, SendBack, SendTab, SendClear, SendReturn, SendSHIFT, SendCONTROL, SendMENU, SendPAUSE, SendCAPITAL, SendKANA, SendHANGEUL, SendHANGUL, SendJUNJA, SendFINAL, SendHANJA, SendKANJI, SendEscape, SendCONVERT, SendNONCONVERT, SendACCEPT, SendMODECHANGE, SendSpace, SendPRIOR, SendNEXT, SendEND, SendHOME, SendLEFT, SendUP, SendRIGHT, SendDOWN, SendSELECT, SendPRINT, SendEXECUTE, SendSNAPSHOT, SendINSERT, SendDELETE, SendHELP, SendAPOSTROPHE, Send0, Send1, Send2, Send3, Send4, Send5, Send6, Send7, Send8, Send9, SendA, SendB, SendC, SendD, SendE, SendF, SendG, SendH, SendI, SendJ, SendK, SendL, SendM, SendN, SendO, SendP, SendQ, SendR, SendS, SendT, SendU, SendV, SendW, SendX, SendY, SendZ, SendLWIN, SendRWIN, SendAPPS, SendSLEEP, SendNUMPAD0, SendNUMPAD1, SendNUMPAD2, SendNUMPAD3, SendNUMPAD4, SendNUMPAD5, SendNUMPAD6, SendNUMPAD7, SendNUMPAD8, SendNUMPAD9, SendMULTIPLY, SendADD, SendSEPARATOR, SendSUBTRACT, SendDECIMAL, SendDIVIDE, SendF1, SendF2, SendF3, SendF4, SendF5, SendF6, SendF7, SendF8, SendF9, SendF10, SendF11, SendF12, SendF13, SendF14, SendF15, SendF16, SendF17, SendF18, SendF19, SendF20, SendF21, SendF22, SendF23, SendF24, SendNUMLOCK, SendSCROLL, SendLeftShift, SendRightShift, SendLeftControl, SendRightControl, SendLMENU, SendRMENU);
+                                SendMouse.SetKM(KeyboardMouseDriverType, MouseMoveX, MouseMoveY, MouseAbsX, MouseAbsY, MouseDesktopX, MouseDesktopY);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                SendKeyboard.UnLoadKM();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
                         }
                         private static Joystick[] joystick = new Joystick[] { null };
                         private static Guid[] joystickGuid = new Guid[] { Guid.Empty };
@@ -21350,6 +26494,938 @@ namespace SIGIL
                         {
                             double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
                             return scaled;
+                        }
+                        private static Joystick[] joystick = new Joystick[] { null };
+                        private static Guid[] joystickGuid = new Guid[] { Guid.Empty };
+                        private static int dinum = 0;
+                        public static int Joystick1AxisX;
+                        public static int Joystick1AxisY;
+                        public static int Joystick1AxisZ;
+                        public static int Joystick1RotationX;
+                        public static int Joystick1RotationY;
+                        public static int Joystick1RotationZ;
+                        public static int Joystick1Sliders0;
+                        public static int Joystick1Sliders1;
+                        public static int Joystick1PointOfViewControllers0;
+                        public static int Joystick1PointOfViewControllers1;
+                        public static int Joystick1PointOfViewControllers2;
+                        public static int Joystick1PointOfViewControllers3;
+                        public static int Joystick1VelocityX;
+                        public static int Joystick1VelocityY;
+                        public static int Joystick1VelocityZ;
+                        public static int Joystick1AngularVelocityX;
+                        public static int Joystick1AngularVelocityY;
+                        public static int Joystick1AngularVelocityZ;
+                        public static int Joystick1VelocitySliders0;
+                        public static int Joystick1VelocitySliders1;
+                        public static int Joystick1AccelerationX;
+                        public static int Joystick1AccelerationY;
+                        public static int Joystick1AccelerationZ;
+                        public static int Joystick1AngularAccelerationX;
+                        public static int Joystick1AngularAccelerationY;
+                        public static int Joystick1AngularAccelerationZ;
+                        public static int Joystick1AccelerationSliders0;
+                        public static int Joystick1AccelerationSliders1;
+                        public static int Joystick1ForceX;
+                        public static int Joystick1ForceY;
+                        public static int Joystick1ForceZ;
+                        public static int Joystick1TorqueX;
+                        public static int Joystick1TorqueY;
+                        public static int Joystick1TorqueZ;
+                        public static int Joystick1ForceSliders0;
+                        public static int Joystick1ForceSliders1;
+                        public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
+                        public bool DirectInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                joystick = new Joystick[] { null };
+                                joystickGuid = new Guid[] { Guid.Empty };
+                                dinum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                    dinum++;
+                                    if (dinum >= 1)
+                                    {
+                                        break;
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Joystick, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Flight, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.FirstPerson, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (dinum < 1)
+                                {
+                                    foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Driving, DeviceEnumerationFlags.AllDevices))
+                                    {
+                                        joystickGuid[dinum] = deviceInstance.InstanceGuid;
+                                        dinum++;
+                                        if (dinum >= 1)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                            if (joystickGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < dinum; inc++)
+                                {
+                                    joystick[inc] = new Joystick(directInput, joystickGuid[inc]);
+                                    joystick[inc].Properties.BufferSize = 128;
+                                    joystick[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        private void GamepadProcess()
+                        {
+                            for (int inc = 0; inc < dinum; inc++)
+                            {
+                                joystick[inc].Poll();
+                                var datas = joystick[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == JoystickOffset.X)
+                                        Joystick1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Y)
+                                        Joystick1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Z)
+                                        Joystick1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationX)
+                                        Joystick1RotationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationY)
+                                        Joystick1RotationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.RotationZ)
+                                        Joystick1RotationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders0)
+                                        Joystick1Sliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Sliders1)
+                                        Joystick1Sliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers0)
+                                        Joystick1PointOfViewControllers0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers1)
+                                        Joystick1PointOfViewControllers1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers2)
+                                        Joystick1PointOfViewControllers2 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.PointOfViewControllers3)
+                                        Joystick1PointOfViewControllers3 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityX)
+                                        Joystick1VelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityY)
+                                        Joystick1VelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocityZ)
+                                        Joystick1VelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityX)
+                                        Joystick1AngularVelocityX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityY)
+                                        Joystick1AngularVelocityY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularVelocityZ)
+                                        Joystick1AngularVelocityZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders0)
+                                        Joystick1VelocitySliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.VelocitySliders1)
+                                        Joystick1VelocitySliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationX)
+                                        Joystick1AccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationY)
+                                        Joystick1AccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationZ)
+                                        Joystick1AccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationX)
+                                        Joystick1AngularAccelerationX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationY)
+                                        Joystick1AngularAccelerationY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AngularAccelerationZ)
+                                        Joystick1AngularAccelerationZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders0)
+                                        Joystick1AccelerationSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.AccelerationSliders1)
+                                        Joystick1AccelerationSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceX)
+                                        Joystick1ForceX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceY)
+                                        Joystick1ForceY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceZ)
+                                        Joystick1ForceZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueX)
+                                        Joystick1TorqueX = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueY)
+                                        Joystick1TorqueY = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.TorqueZ)
+                                        Joystick1TorqueZ = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders0)
+                                        Joystick1ForceSliders0 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.ForceSliders1)
+                                        Joystick1ForceSliders1 = state.Value;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 128)
+                                        Joystick1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons0 & state.Value == 0)
+                                        Joystick1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 128)
+                                        Joystick1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons1 & state.Value == 0)
+                                        Joystick1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 128)
+                                        Joystick1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons2 & state.Value == 0)
+                                        Joystick1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 128)
+                                        Joystick1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons3 & state.Value == 0)
+                                        Joystick1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 128)
+                                        Joystick1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons4 & state.Value == 0)
+                                        Joystick1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 128)
+                                        Joystick1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons5 & state.Value == 0)
+                                        Joystick1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 128)
+                                        Joystick1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons6 & state.Value == 0)
+                                        Joystick1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 128)
+                                        Joystick1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons7 & state.Value == 0)
+                                        Joystick1Buttons7 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 128)
+                                        Joystick1Buttons8 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons8 & state.Value == 0)
+                                        Joystick1Buttons8 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 128)
+                                        Joystick1Buttons9 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons9 & state.Value == 0)
+                                        Joystick1Buttons9 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 128)
+                                        Joystick1Buttons10 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons10 & state.Value == 0)
+                                        Joystick1Buttons10 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 128)
+                                        Joystick1Buttons11 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons11 & state.Value == 0)
+                                        Joystick1Buttons11 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 128)
+                                        Joystick1Buttons12 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons12 & state.Value == 0)
+                                        Joystick1Buttons12 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 128)
+                                        Joystick1Buttons13 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons13 & state.Value == 0)
+                                        Joystick1Buttons13 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 128)
+                                        Joystick1Buttons14 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons14 & state.Value == 0)
+                                        Joystick1Buttons14 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 128)
+                                        Joystick1Buttons15 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons15 & state.Value == 0)
+                                        Joystick1Buttons15 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 128)
+                                        Joystick1Buttons16 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons16 & state.Value == 0)
+                                        Joystick1Buttons16 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 128)
+                                        Joystick1Buttons17 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons17 & state.Value == 0)
+                                        Joystick1Buttons17 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 128)
+                                        Joystick1Buttons18 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons18 & state.Value == 0)
+                                        Joystick1Buttons18 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 128)
+                                        Joystick1Buttons19 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons19 & state.Value == 0)
+                                        Joystick1Buttons19 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 128)
+                                        Joystick1Buttons20 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons20 & state.Value == 0)
+                                        Joystick1Buttons20 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 128)
+                                        Joystick1Buttons21 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons21 & state.Value == 0)
+                                        Joystick1Buttons21 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 128)
+                                        Joystick1Buttons22 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons22 & state.Value == 0)
+                                        Joystick1Buttons22 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 128)
+                                        Joystick1Buttons23 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons23 & state.Value == 0)
+                                        Joystick1Buttons23 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 128)
+                                        Joystick1Buttons24 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons24 & state.Value == 0)
+                                        Joystick1Buttons24 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 128)
+                                        Joystick1Buttons25 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons25 & state.Value == 0)
+                                        Joystick1Buttons25 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 128)
+                                        Joystick1Buttons26 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons26 & state.Value == 0)
+                                        Joystick1Buttons26 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 128)
+                                        Joystick1Buttons27 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons27 & state.Value == 0)
+                                        Joystick1Buttons27 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 128)
+                                        Joystick1Buttons28 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons28 & state.Value == 0)
+                                        Joystick1Buttons28 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 128)
+                                        Joystick1Buttons29 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons29 & state.Value == 0)
+                                        Joystick1Buttons29 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 128)
+                                        Joystick1Buttons30 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons30 & state.Value == 0)
+                                        Joystick1Buttons30 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 128)
+                                        Joystick1Buttons31 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons31 & state.Value == 0)
+                                        Joystick1Buttons31 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 128)
+                                        Joystick1Buttons32 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons32 & state.Value == 0)
+                                        Joystick1Buttons32 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 128)
+                                        Joystick1Buttons33 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons33 & state.Value == 0)
+                                        Joystick1Buttons33 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 128)
+                                        Joystick1Buttons34 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons34 & state.Value == 0)
+                                        Joystick1Buttons34 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 128)
+                                        Joystick1Buttons35 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons35 & state.Value == 0)
+                                        Joystick1Buttons35 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 128)
+                                        Joystick1Buttons36 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons36 & state.Value == 0)
+                                        Joystick1Buttons36 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 128)
+                                        Joystick1Buttons37 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons37 & state.Value == 0)
+                                        Joystick1Buttons37 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 128)
+                                        Joystick1Buttons38 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons38 & state.Value == 0)
+                                        Joystick1Buttons38 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 128)
+                                        Joystick1Buttons39 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons39 & state.Value == 0)
+                                        Joystick1Buttons39 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 128)
+                                        Joystick1Buttons40 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons40 & state.Value == 0)
+                                        Joystick1Buttons40 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 128)
+                                        Joystick1Buttons41 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons41 & state.Value == 0)
+                                        Joystick1Buttons41 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 128)
+                                        Joystick1Buttons42 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons42 & state.Value == 0)
+                                        Joystick1Buttons42 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 128)
+                                        Joystick1Buttons43 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons43 & state.Value == 0)
+                                        Joystick1Buttons43 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 128)
+                                        Joystick1Buttons44 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons44 & state.Value == 0)
+                                        Joystick1Buttons44 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 128)
+                                        Joystick1Buttons45 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons45 & state.Value == 0)
+                                        Joystick1Buttons45 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 128)
+                                        Joystick1Buttons46 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons46 & state.Value == 0)
+                                        Joystick1Buttons46 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 128)
+                                        Joystick1Buttons47 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons47 & state.Value == 0)
+                                        Joystick1Buttons47 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 128)
+                                        Joystick1Buttons48 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons48 & state.Value == 0)
+                                        Joystick1Buttons48 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 128)
+                                        Joystick1Buttons49 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons49 & state.Value == 0)
+                                        Joystick1Buttons49 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 128)
+                                        Joystick1Buttons50 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons50 & state.Value == 0)
+                                        Joystick1Buttons50 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 128)
+                                        Joystick1Buttons51 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons51 & state.Value == 0)
+                                        Joystick1Buttons51 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 128)
+                                        Joystick1Buttons52 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons52 & state.Value == 0)
+                                        Joystick1Buttons52 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 128)
+                                        Joystick1Buttons53 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons53 & state.Value == 0)
+                                        Joystick1Buttons53 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 128)
+                                        Joystick1Buttons54 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons54 & state.Value == 0)
+                                        Joystick1Buttons54 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 128)
+                                        Joystick1Buttons55 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons55 & state.Value == 0)
+                                        Joystick1Buttons55 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 128)
+                                        Joystick1Buttons56 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons56 & state.Value == 0)
+                                        Joystick1Buttons56 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 128)
+                                        Joystick1Buttons57 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons57 & state.Value == 0)
+                                        Joystick1Buttons57 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 128)
+                                        Joystick1Buttons58 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons58 & state.Value == 0)
+                                        Joystick1Buttons58 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 128)
+                                        Joystick1Buttons59 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons59 & state.Value == 0)
+                                        Joystick1Buttons59 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 128)
+                                        Joystick1Buttons60 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons60 & state.Value == 0)
+                                        Joystick1Buttons60 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 128)
+                                        Joystick1Buttons61 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons61 & state.Value == 0)
+                                        Joystick1Buttons61 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 128)
+                                        Joystick1Buttons62 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons62 & state.Value == 0)
+                                        Joystick1Buttons62 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 128)
+                                        Joystick1Buttons63 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons63 & state.Value == 0)
+                                        Joystick1Buttons63 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 128)
+                                        Joystick1Buttons64 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons64 & state.Value == 0)
+                                        Joystick1Buttons64 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 128)
+                                        Joystick1Buttons65 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons65 & state.Value == 0)
+                                        Joystick1Buttons65 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 128)
+                                        Joystick1Buttons66 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons66 & state.Value == 0)
+                                        Joystick1Buttons66 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 128)
+                                        Joystick1Buttons67 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons67 & state.Value == 0)
+                                        Joystick1Buttons67 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 128)
+                                        Joystick1Buttons68 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons68 & state.Value == 0)
+                                        Joystick1Buttons68 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 128)
+                                        Joystick1Buttons69 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons69 & state.Value == 0)
+                                        Joystick1Buttons69 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 128)
+                                        Joystick1Buttons70 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons70 & state.Value == 0)
+                                        Joystick1Buttons70 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 128)
+                                        Joystick1Buttons71 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons71 & state.Value == 0)
+                                        Joystick1Buttons71 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 128)
+                                        Joystick1Buttons72 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons72 & state.Value == 0)
+                                        Joystick1Buttons72 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 128)
+                                        Joystick1Buttons73 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons73 & state.Value == 0)
+                                        Joystick1Buttons73 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 128)
+                                        Joystick1Buttons74 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons74 & state.Value == 0)
+                                        Joystick1Buttons74 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 128)
+                                        Joystick1Buttons75 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons75 & state.Value == 0)
+                                        Joystick1Buttons75 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 128)
+                                        Joystick1Buttons76 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons76 & state.Value == 0)
+                                        Joystick1Buttons76 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 128)
+                                        Joystick1Buttons77 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons77 & state.Value == 0)
+                                        Joystick1Buttons77 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 128)
+                                        Joystick1Buttons78 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons78 & state.Value == 0)
+                                        Joystick1Buttons78 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 128)
+                                        Joystick1Buttons79 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons79 & state.Value == 0)
+                                        Joystick1Buttons79 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 128)
+                                        Joystick1Buttons80 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons80 & state.Value == 0)
+                                        Joystick1Buttons80 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 128)
+                                        Joystick1Buttons81 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons81 & state.Value == 0)
+                                        Joystick1Buttons81 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 128)
+                                        Joystick1Buttons82 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons82 & state.Value == 0)
+                                        Joystick1Buttons82 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 128)
+                                        Joystick1Buttons83 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons83 & state.Value == 0)
+                                        Joystick1Buttons83 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 128)
+                                        Joystick1Buttons84 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons84 & state.Value == 0)
+                                        Joystick1Buttons84 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 128)
+                                        Joystick1Buttons85 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons85 & state.Value == 0)
+                                        Joystick1Buttons85 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 128)
+                                        Joystick1Buttons86 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons86 & state.Value == 0)
+                                        Joystick1Buttons86 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 128)
+                                        Joystick1Buttons87 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons87 & state.Value == 0)
+                                        Joystick1Buttons87 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 128)
+                                        Joystick1Buttons88 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons88 & state.Value == 0)
+                                        Joystick1Buttons88 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 128)
+                                        Joystick1Buttons89 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons89 & state.Value == 0)
+                                        Joystick1Buttons89 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 128)
+                                        Joystick1Buttons90 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons90 & state.Value == 0)
+                                        Joystick1Buttons90 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 128)
+                                        Joystick1Buttons91 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons91 & state.Value == 0)
+                                        Joystick1Buttons91 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 128)
+                                        Joystick1Buttons92 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons92 & state.Value == 0)
+                                        Joystick1Buttons92 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 128)
+                                        Joystick1Buttons93 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons93 & state.Value == 0)
+                                        Joystick1Buttons93 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 128)
+                                        Joystick1Buttons94 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons94 & state.Value == 0)
+                                        Joystick1Buttons94 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 128)
+                                        Joystick1Buttons95 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons95 & state.Value == 0)
+                                        Joystick1Buttons95 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 128)
+                                        Joystick1Buttons96 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons96 & state.Value == 0)
+                                        Joystick1Buttons96 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 128)
+                                        Joystick1Buttons97 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons97 & state.Value == 0)
+                                        Joystick1Buttons97 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 128)
+                                        Joystick1Buttons98 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons98 & state.Value == 0)
+                                        Joystick1Buttons98 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 128)
+                                        Joystick1Buttons99 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons99 & state.Value == 0)
+                                        Joystick1Buttons99 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 128)
+                                        Joystick1Buttons100 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons100 & state.Value == 0)
+                                        Joystick1Buttons100 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 128)
+                                        Joystick1Buttons101 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons101 & state.Value == 0)
+                                        Joystick1Buttons101 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 128)
+                                        Joystick1Buttons102 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons102 & state.Value == 0)
+                                        Joystick1Buttons102 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 128)
+                                        Joystick1Buttons103 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons103 & state.Value == 0)
+                                        Joystick1Buttons103 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 128)
+                                        Joystick1Buttons104 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons104 & state.Value == 0)
+                                        Joystick1Buttons104 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 128)
+                                        Joystick1Buttons105 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons105 & state.Value == 0)
+                                        Joystick1Buttons105 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 128)
+                                        Joystick1Buttons106 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons106 & state.Value == 0)
+                                        Joystick1Buttons106 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 128)
+                                        Joystick1Buttons107 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons107 & state.Value == 0)
+                                        Joystick1Buttons107 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 128)
+                                        Joystick1Buttons108 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons108 & state.Value == 0)
+                                        Joystick1Buttons108 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 128)
+                                        Joystick1Buttons109 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons109 & state.Value == 0)
+                                        Joystick1Buttons109 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 128)
+                                        Joystick1Buttons110 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons110 & state.Value == 0)
+                                        Joystick1Buttons110 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 128)
+                                        Joystick1Buttons111 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons111 & state.Value == 0)
+                                        Joystick1Buttons111 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 128)
+                                        Joystick1Buttons112 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons112 & state.Value == 0)
+                                        Joystick1Buttons112 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 128)
+                                        Joystick1Buttons113 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons113 & state.Value == 0)
+                                        Joystick1Buttons113 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 128)
+                                        Joystick1Buttons114 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons114 & state.Value == 0)
+                                        Joystick1Buttons114 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 128)
+                                        Joystick1Buttons115 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons115 & state.Value == 0)
+                                        Joystick1Buttons115 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 128)
+                                        Joystick1Buttons116 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons116 & state.Value == 0)
+                                        Joystick1Buttons116 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 128)
+                                        Joystick1Buttons117 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons117 & state.Value == 0)
+                                        Joystick1Buttons117 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 128)
+                                        Joystick1Buttons118 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons118 & state.Value == 0)
+                                        Joystick1Buttons118 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 128)
+                                        Joystick1Buttons119 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons119 & state.Value == 0)
+                                        Joystick1Buttons119 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 128)
+                                        Joystick1Buttons120 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons120 & state.Value == 0)
+                                        Joystick1Buttons120 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 128)
+                                        Joystick1Buttons121 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons121 & state.Value == 0)
+                                        Joystick1Buttons121 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 128)
+                                        Joystick1Buttons122 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons122 & state.Value == 0)
+                                        Joystick1Buttons122 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 128)
+                                        Joystick1Buttons123 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons123 & state.Value == 0)
+                                        Joystick1Buttons123 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 128)
+                                        Joystick1Buttons124 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons124 & state.Value == 0)
+                                        Joystick1Buttons124 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 128)
+                                        Joystick1Buttons125 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons125 & state.Value == 0)
+                                        Joystick1Buttons125 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 128)
+                                        Joystick1Buttons126 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons126 & state.Value == 0)
+                                        Joystick1Buttons126 = false;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 128)
+                                        Joystick1Buttons127 = true;
+                                    if (inc == 0 & state.Offset == JoystickOffset.Buttons127 & state.Value == 0)
+                                        Joystick1Buttons127 = false;
+                                }
+                            }
+                        }
+                    }
+                }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
+            if (toolStripComboBox1.Text == "FV2M-Int")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX;
+                using Interceptions;
+                using Valuechanges;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        private static int width, height;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        DirectInput directInput = new DirectInput();
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        public static Input input = new Input();
+                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            input.KeyboardFilterMode = KeyboardFilterMode.All;
+                            input.MouseFilterMode = MouseFilterMode.All;
+                            input.Load();
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            MouseInputHookConnect();
+                            DirectInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                MouseInputProcess();
+                                GamepadProcess();
+                                funct_driver
+                                SendInterception.SetKM(MouseDesktopX, MouseDesktopY, input, keyboard_1_id, mouse_1_id, int_1_deltaX, int_1_deltaY, int_1_x, int_1_y, int_1_SendLeftClick, int_1_SendRightClick, int_1_SendMiddleClick, int_1_SendWheelUp, int_1_SendWheelDown, int_1_SendCANCEL, int_1_SendBACK, int_1_SendTAB, int_1_SendCLEAR, int_1_SendRETURN, int_1_SendSHIFT, int_1_SendCONTROL, int_1_SendMENU, int_1_SendCAPITAL, int_1_SendESCAPE, int_1_SendSPACE, int_1_SendPRIOR, int_1_SendNEXT, int_1_SendEND, int_1_SendHOME, int_1_SendLEFT, int_1_SendUP, int_1_SendRIGHT, int_1_SendDOWN, int_1_SendSNAPSHOT, int_1_SendINSERT, int_1_SendNUMPADDEL, int_1_SendNUMPADINSERT, int_1_SendHELP, int_1_SendAPOSTROPHE, int_1_SendBACKSPACE, int_1_SendPAGEDOWN, int_1_SendPAGEUP, int_1_SendFIN, int_1_SendMOUSE, int_1_SendA, int_1_SendB, int_1_SendC, int_1_SendD, int_1_SendE, int_1_SendF, int_1_SendG, int_1_SendH, int_1_SendI, int_1_SendJ, int_1_SendK, int_1_SendL, int_1_SendM, int_1_SendN, int_1_SendO, int_1_SendP, int_1_SendQ, int_1_SendR, int_1_SendS, int_1_SendT, int_1_SendU, int_1_SendV, int_1_SendW, int_1_SendX, int_1_SendY, int_1_SendZ, int_1_SendLWIN, int_1_SendRWIN, int_1_SendAPPS, int_1_SendDELETE, int_1_SendNUMPAD0, int_1_SendNUMPAD1, int_1_SendNUMPAD2, int_1_SendNUMPAD3, int_1_SendNUMPAD4, int_1_SendNUMPAD5, int_1_SendNUMPAD6, int_1_SendNUMPAD7, int_1_SendNUMPAD8, int_1_SendNUMPAD9, int_1_SendMULTIPLY, int_1_SendADD, int_1_SendSUBTRACT, int_1_SendDECIMAL, int_1_SendPRINTSCREEN, int_1_SendDIVIDE, int_1_SendF1, int_1_SendF2, int_1_SendF3, int_1_SendF4, int_1_SendF5, int_1_SendF6, int_1_SendF7, int_1_SendF8, int_1_SendF9, int_1_SendF10, int_1_SendF11, int_1_SendF12, int_1_SendNUMLOCK, int_1_SendSCROLLLOCK, int_1_SendLEFTSHIFT, int_1_SendRIGHTSHIFT, int_1_SendLEFTCONTROL, int_1_SendRIGHTCONTROL, int_1_SendLEFTALT, int_1_SendRIGHTALT, int_1_SendBROWSER_BACK, int_1_SendBROWSER_FORWARD, int_1_SendBROWSER_REFRESH, int_1_SendBROWSER_STOP, int_1_SendBROWSER_SEARCH, int_1_SendBROWSER_FAVORITES, int_1_SendBROWSER_HOME, int_1_SendVOLUME_MUTE, int_1_SendVOLUME_DOWN, int_1_SendVOLUME_UP, int_1_SendMEDIA_NEXT_TRACK, int_1_SendMEDIA_PREV_TRACK, int_1_SendMEDIA_STOP, int_1_SendMEDIA_PLAY_PAUSE, int_1_SendLAUNCH_MAIL, int_1_SendLAUNCH_MEDIA_SELECT, int_1_SendLAUNCH_APP1, int_1_SendLAUNCH_APP2, int_1_SendOEM_1, int_1_SendOEM_PLUS, int_1_SendOEM_COMMA, int_1_SendOEM_MINUS, int_1_SendOEM_PERIOD, int_1_SendOEM_2, int_1_SendOEM_3, int_1_SendOEM_4, int_1_SendOEM_5, int_1_SendOEM_6, int_1_SendOEM_7, int_1_SendOEM_8, int_1_SendOEM_102, int_1_SendEREOF, int_1_SendZOOM, int_1_SendEscape, int_1_SendOne, int_1_SendTwo, int_1_SendThree, int_1_SendFour, int_1_SendFive, int_1_SendSix, int_1_SendSeven, int_1_SendEight, int_1_SendNine, int_1_SendZero, int_1_SendDashUnderscore, int_1_SendPlusEquals, int_1_SendBackspace, int_1_SendTab, int_1_SendOpenBracketBrace, int_1_SendCloseBracketBrace, int_1_SendEnter, int_1_SendControl, int_1_SendSemicolonColon, int_1_SendSingleDoubleQuote, int_1_SendTilde, int_1_SendLeftShift, int_1_SendBackslashPipe, int_1_SendCommaLeftArrow, int_1_SendPeriodRightArrow, int_1_SendForwardSlashQuestionMark, int_1_SendRightShift, int_1_SendRightAlt, int_1_SendSpace, int_1_SendCapsLock, int_1_SendUp, int_1_SendDown, int_1_SendRight, int_1_SendLeft, int_1_SendHome, int_1_SendEnd, int_1_SendDelete, int_1_SendPageUp, int_1_SendPageDown, int_1_SendInsert, int_1_SendPrintScreen, int_1_SendNumLock, int_1_SendScrollLock, int_1_SendMenu, int_1_SendWindowsKey, int_1_SendNumpadDivide, int_1_SendNumpadAsterisk, int_1_SendNumpad7, int_1_SendNumpad8, int_1_SendNumpad9, int_1_SendNumpad4, int_1_SendNumpad5, int_1_SendNumpad6, int_1_SendNumpad1, int_1_SendNumpad2, int_1_SendNumpad3, int_1_SendNumpad0, int_1_SendNumpadDelete, int_1_SendNumpadEnter, int_1_SendNumpadPlus, int_1_SendNumpadMinus);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                SendInterception.UnLoadKM(input, keyboard_1_id, mouse_1_id);
+                                input.Unload();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
                         }
                         private static Joystick[] joystick = new Joystick[] { null };
                         private static Guid[] joystickGuid = new Guid[] { Guid.Empty };
@@ -30441,6 +36517,435 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
+            if (toolStripComboBox1.Text == "MJoyL-XC")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX;
+                using controllers;
+                using Valuechanges;
+                using Vector3 = System.Numerics.Vector3;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftconnect"")]
+                        public static extern bool joyconleftconnect();
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftdisconnect"")]
+                        public static extern bool joyconleftdisconnect();
+                        [DllImport(""hid.dll"")]
+                        public static extern void HidD_GetHidGuid(out Guid gHid);
+                        [DllImport(""hid.dll"")]
+                        public extern static bool HidD_SetOutputReport(IntPtr HidDeviceObject, byte[] lpReportBuffer, uint ReportBufferLength);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern IntPtr SetupDiGetClassDevs(ref Guid ClassGuid, string Enumerator, IntPtr hwndParent, UInt32 Flags);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiEnumDeviceInterfaces(IntPtr hDevInfo, IntPtr devInvo, ref Guid interfaceClassGuid, Int32 memberIndex, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, IntPtr deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, ref SP_DEVICE_INTERFACE_DETAIL_DATA deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern SafeFileHandle CreateFile(string fileName, [MarshalAs(UnmanagedType.U4)] FileAccess fileAccess, [MarshalAs(UnmanagedType.U4)] FileShare fileShare, IntPtr securityAttributes, [MarshalAs(UnmanagedType.U4)] FileMode creationDisposition, [MarshalAs(UnmanagedType.U4)] uint flags, IntPtr template);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern IntPtr CreateFile(string fileName, System.IO.FileAccess fileAccess, System.IO.FileShare fileShare, IntPtr securityAttributes, System.IO.FileMode creationDisposition, EFileAttributes flags, IntPtr template);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_read_timeout"")]
+                        public static extern int Lhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_write"")]
+                        public static extern int Lhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_open_path"")]
+                        public static extern SafeFileHandle Lhid_open_path(IntPtr handle);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_close"")]
+                        public static extern void Lhid_close(SafeFileHandle device);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_read_timeout"")]
+                        public static extern int Rhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_write"")]
+                        public static extern int Rhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_open_path"")]
+                        public static extern SafeFileHandle Rhid_open_path(IntPtr handle);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_close"")]
+                        public static extern void Rhid_close(SafeFileHandle device);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        private static int width, height;
+                        DirectInput directInput = new DirectInput();
+                        private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
+                        private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            do
+                                Thread.Sleep(1);
+                            while (!joyconleftconnect());
+                            ScanLeft();
+                            Task.Run(() => taskDLeft());
+                            Thread.Sleep(1000);
+                            InitLeftJoycon();
+                            MouseInputHookConnect();
+                            ScpBus.LoadController();
+                            Task.Run(() => taskX());
+                        }
+                        private void taskX()
+                        {
+                            while (running)
+                            {
+                                ProcessButtonsLeftJoycon();
+                                MouseInputProcess();
+                                funct_driver
+                                ScpBus.SetController(controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition, controller1_send_xbox);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                Subcommand3Left(0x06, new byte[] { 0x01 }, 1);
+                                Lhid_close(handleLeft);
+                                handleLeft.Close();
+                                ScpBus.UnLoadController();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static void taskDLeft()
+                        {
+                            while (running)
+                            {
+                                try
+                                {
+                                    Lhid_read_timeout(handleLeft, report_bufLeft, (UIntPtr)report_lenLeft);
+                                }
+                                catch { }
+                            }
+                        }
+                        public const string vendor_id = ""57e"", vendor_id_ = ""057e"", product_l = ""2006"", product_r = ""2007"";
+                        public enum EFileAttributes : uint
+                        {
+                            Overlapped = 0x40000000,
+                            Normal = 0x80
+                        };
+                        public struct SP_DEVICE_INTERFACE_DATA
+                        {
+                            public int cbSize;
+                            public Guid InterfaceClassGuid;
+                            public int Flags;
+                            public IntPtr RESERVED;
+                        }
+                        public struct SP_DEVICE_INTERFACE_DETAIL_DATA
+                        {
+                            public UInt32 cbSize;
+                            [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst = 256)]
+                            public string DevicePath;
+                        }
+                        public static void InitLeftJoycon()
+                        {
+                            try
+                            {
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                acc_gcalibrationLeftX = (Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftY = (Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftZ = (Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00));
+                            }
+                            catch { }
+                        }
+                        public static void ProcessButtonsLeftJoycon()
+                        {
+                            try
+                            {
+                                if (JoyconLeftStickCenter)
+                                {
+                                    stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                    stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                    stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                }
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickLeft[0] = ((UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8)) - stickCenterLeft[0]) / 1440f;
+                                stickLeft[1] = ((UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4)) - stickCenterLeft[1]) / 1440f;
+                                JoyconLeftStickX = stickLeft[0];
+                                JoyconLeftStickY = stickLeft[1];
+                                acc_gLeft.X = ((Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftX) * (1.0f / 12000f);
+                                acc_gLeft.Y = -((Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftY) * (1.0f / 12000f);
+                                acc_gLeft.Z = -((Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftZ) * (1.0f / 12000f);
+                                JoyconLeftButtonSHOULDER_1 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x40) != 0;
+                                JoyconLeftButtonSHOULDER_2 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x80) != 0;
+                                JoyconLeftButtonSR = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x10) != 0;
+                                JoyconLeftButtonSL = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x20) != 0;
+                                JoyconLeftButtonDPAD_DOWN = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x01 : 0x04)) != 0;
+                                JoyconLeftButtonDPAD_RIGHT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x04 : 0x08)) != 0;
+                                JoyconLeftButtonDPAD_UP = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x02 : 0x02)) != 0;
+                                JoyconLeftButtonDPAD_LEFT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x08 : 0x01)) != 0;
+                                JoyconLeftButtonMINUS = (report_bufLeft[4] & 0x01) != 0;
+                                JoyconLeftButtonCAPTURE = (report_bufLeft[4] & 0x20) != 0;
+                                JoyconLeftButtonSTICK = (report_bufLeft[4] & (ISLEFT ? 0x08 : 0x04)) != 0;
+                                JoyconLeftButtonACC = acc_gLeft.X <= -1.13;
+                                JoyconLeftButtonSMA = JoyconLeftButtonSL | JoyconLeftButtonSR | JoyconLeftButtonMINUS | JoyconLeftButtonACC;
+                                if (JoyconLeftAccelCenter)
+                                    InitDirectAnglesLeft = acc_gLeft;
+                                DirectAnglesLeft = acc_gLeft - InitDirectAnglesLeft;
+                                JoyconLeftAccelX = DirectAnglesLeft.X * 1350f;
+                                JoyconLeftAccelY = -DirectAnglesLeft.Y * 1350f;
+                                gyr_gLeft.X = ((Int16)(report_bufLeft[19 + 0 * 12] | ((report_bufLeft[20 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 1 * 12] | ((report_bufLeft[20 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 2 * 12] | ((report_bufLeft[20 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Y = ((Int16)(report_bufLeft[21 + 0 * 12] | ((report_bufLeft[22 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 1 * 12] | ((report_bufLeft[22 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 2 * 12] | ((report_bufLeft[22 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Z = ((Int16)(report_bufLeft[23 + 0 * 12] | ((report_bufLeft[24 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 1 * 12] | ((report_bufLeft[24 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 2 * 12] | ((report_bufLeft[24 + 2 * 12] << 8) & 0xff00)));
+                                JoyconLeftGyroX = gyr_gLeft.Z;
+                                JoyconLeftGyroY = gyr_gLeft.Y;
+                            }
+                            catch { }
+                        }
+                        public static bool JoyconLeftButtonSMA, JoyconLeftButtonACC, JoyconLeftRollLeft, JoyconLeftRollRight;
+                        private static double JoyconLeftStickX, JoyconLeftStickY;
+                        public static System.Collections.Generic.List<double> LeftValListX = new System.Collections.Generic.List<double>(), LeftValListY = new System.Collections.Generic.List<double>();
+                        public static bool JoyconLeftAccelCenter, JoyconLeftStickCenter;
+                        public static double JoyconLeftAccelX, JoyconLeftAccelY, JoyconLeftGyroX, JoyconLeftGyroY;
+                        private static double[] stickLeft = { 0, 0 };
+                        private static double[] stickCenterLeft = { 0, 0 };
+                        private static byte[] stick_rawLeft = { 0, 0, 0 };
+                        public static SafeFileHandle handleLeft;
+                        public static Vector3 acc_gLeft = new Vector3();
+                        public static Vector3 gyr_gLeft = new Vector3();
+                        public const uint report_lenLeft = 49;
+                        public static Vector3 InitDirectAnglesLeft, DirectAnglesLeft;
+                        public static bool JoyconLeftButtonSHOULDER_1, JoyconLeftButtonSHOULDER_2, JoyconLeftButtonSR, JoyconLeftButtonSL, JoyconLeftButtonDPAD_DOWN, JoyconLeftButtonDPAD_RIGHT, JoyconLeftButtonDPAD_UP, JoyconLeftButtonDPAD_LEFT, JoyconLeftButtonMINUS, JoyconLeftButtonSTICK, JoyconLeftButtonCAPTURE, ISLEFT;
+                        public static byte[] report_bufLeft = new byte[report_lenLeft];
+                        public static float acc_gcalibrationLeftX, acc_gcalibrationLeftY, acc_gcalibrationLeftZ;
+                        public static bool ScanLeft()
+                        {
+                            int index = 0;
+                            System.Guid guid;
+                            HidD_GetHidGuid(out guid);
+                            System.IntPtr hDevInfo = SetupDiGetClassDevs(ref guid, null, new System.IntPtr(), 0x00000010);
+                            SP_DEVICE_INTERFACE_DATA diData = new SP_DEVICE_INTERFACE_DATA();
+                            diData.cbSize = System.Runtime.InteropServices.Marshal.SizeOf(diData);
+                            while (SetupDiEnumDeviceInterfaces(hDevInfo, new System.IntPtr(), ref guid, index, ref diData))
+                            {
+                                System.UInt32 size;
+                                SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, new System.IntPtr(), 0, out size, new System.IntPtr());
+                                SP_DEVICE_INTERFACE_DETAIL_DATA diDetail = new SP_DEVICE_INTERFACE_DETAIL_DATA();
+                                diDetail.cbSize = 5;
+                                if (SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, ref diDetail, size, out size, new System.IntPtr()))
+                                {
+                                    if ((diDetail.DevicePath.Contains(vendor_id) | diDetail.DevicePath.Contains(vendor_id_)) & diDetail.DevicePath.Contains(product_l))
+                                    {
+                                        ISLEFT = true;
+                                        AttachJoyLeft(diDetail.DevicePath);
+                                        return true;
+                                    }
+                                }
+                                index++;
+                            }
+                            return false;
+                        }
+                        public static void AttachJoyLeft(string path)
+                        {
+                            do
+                            {
+                                IntPtr handle = CreateFile(path, System.IO.FileAccess.ReadWrite, System.IO.FileShare.ReadWrite, new System.IntPtr(), System.IO.FileMode.Open, EFileAttributes.Normal, new System.IntPtr());
+                                handleLeft = Lhid_open_path(handle);
+                                Subcommand2Left(0x40, new byte[] { 0x1 }, 1);
+                                Subcommand2Left(0x3, new byte[] { 0x30 }, 1);
+                            }
+                            while (handleLeft.IsInvalid);
+                        }
+                        private static void Subcommand2Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0;
+                            buf_Left[0] = 0x1;
+                            Lhid_write(handleLeft, buf_Left, (UIntPtr)(len + 11));
+                            Lhid_read_timeout(handleLeft, buf_Left, (UIntPtr)report_lenLeft);
+                        }
+                        private static void Subcommand3Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0x5;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                            buf_Left[1] = 0x6;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
             if (toolStripComboBox1.Text == "XC-XC")
             {
                 code = @"
@@ -31903,6 +38408,436 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
+            if (toolStripComboBox1.Text == "MJoyL-KM")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX.DirectInput;
+                using SharpDX;
+                using keyboards;
+                using mouses;
+                using Valuechanges;
+                using Vector3 = System.Numerics.Vector3;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftconnect"")]
+                        public static extern bool joyconleftconnect();
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftdisconnect"")]
+                        public static extern bool joyconleftdisconnect();
+                        [DllImport(""hid.dll"")]
+                        public static extern void HidD_GetHidGuid(out Guid gHid);
+                        [DllImport(""hid.dll"")]
+                        public extern static bool HidD_SetOutputReport(IntPtr HidDeviceObject, byte[] lpReportBuffer, uint ReportBufferLength);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern IntPtr SetupDiGetClassDevs(ref Guid ClassGuid, string Enumerator, IntPtr hwndParent, UInt32 Flags);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiEnumDeviceInterfaces(IntPtr hDevInfo, IntPtr devInvo, ref Guid interfaceClassGuid, Int32 memberIndex, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, IntPtr deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, ref SP_DEVICE_INTERFACE_DETAIL_DATA deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern SafeFileHandle CreateFile(string fileName, [MarshalAs(UnmanagedType.U4)] FileAccess fileAccess, [MarshalAs(UnmanagedType.U4)] FileShare fileShare, IntPtr securityAttributes, [MarshalAs(UnmanagedType.U4)] FileMode creationDisposition, [MarshalAs(UnmanagedType.U4)] uint flags, IntPtr template);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern IntPtr CreateFile(string fileName, System.IO.FileAccess fileAccess, System.IO.FileShare fileShare, IntPtr securityAttributes, System.IO.FileMode creationDisposition, EFileAttributes flags, IntPtr template);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_read_timeout"")]
+                        public static extern int Lhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_write"")]
+                        public static extern int Lhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_open_path"")]
+                        public static extern SafeFileHandle Lhid_open_path(IntPtr handle);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_close"")]
+                        public static extern void Lhid_close(SafeFileHandle device);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_read_timeout"")]
+                        public static extern int Rhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_write"")]
+                        public static extern int Rhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_open_path"")]
+                        public static extern SafeFileHandle Rhid_open_path(IntPtr handle);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_close"")]
+                        public static extern void Rhid_close(SafeFileHandle device);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        private static int width, height;
+                        DirectInput directInput = new DirectInput();
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            do
+                                Thread.Sleep(1);
+                            while (!joyconleftconnect());
+                            ScanLeft();
+                            Task.Run(() => taskDLeft());
+                            Thread.Sleep(1000);
+                            InitLeftJoycon();
+                            MouseInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                ProcessButtonsLeftJoycon();
+                                MouseInputProcess();
+                                funct_driver
+                                SendKeyboard.SetKM(KeyboardMouseDriverType, SendLeftClick, SendRightClick, SendMiddleClick, SendWheelUp, SendWheelDown, SendLeft, SendRight, SendUp, SendDown, SendLButton, SendRButton, SendCancel, SendMBUTTON, SendXBUTTON1, SendXBUTTON2, SendBack, SendTab, SendClear, SendReturn, SendSHIFT, SendCONTROL, SendMENU, SendPAUSE, SendCAPITAL, SendKANA, SendHANGEUL, SendHANGUL, SendJUNJA, SendFINAL, SendHANJA, SendKANJI, SendEscape, SendCONVERT, SendNONCONVERT, SendACCEPT, SendMODECHANGE, SendSpace, SendPRIOR, SendNEXT, SendEND, SendHOME, SendLEFT, SendUP, SendRIGHT, SendDOWN, SendSELECT, SendPRINT, SendEXECUTE, SendSNAPSHOT, SendINSERT, SendDELETE, SendHELP, SendAPOSTROPHE, Send0, Send1, Send2, Send3, Send4, Send5, Send6, Send7, Send8, Send9, SendA, SendB, SendC, SendD, SendE, SendF, SendG, SendH, SendI, SendJ, SendK, SendL, SendM, SendN, SendO, SendP, SendQ, SendR, SendS, SendT, SendU, SendV, SendW, SendX, SendY, SendZ, SendLWIN, SendRWIN, SendAPPS, SendSLEEP, SendNUMPAD0, SendNUMPAD1, SendNUMPAD2, SendNUMPAD3, SendNUMPAD4, SendNUMPAD5, SendNUMPAD6, SendNUMPAD7, SendNUMPAD8, SendNUMPAD9, SendMULTIPLY, SendADD, SendSEPARATOR, SendSUBTRACT, SendDECIMAL, SendDIVIDE, SendF1, SendF2, SendF3, SendF4, SendF5, SendF6, SendF7, SendF8, SendF9, SendF10, SendF11, SendF12, SendF13, SendF14, SendF15, SendF16, SendF17, SendF18, SendF19, SendF20, SendF21, SendF22, SendF23, SendF24, SendNUMLOCK, SendSCROLL, SendLeftShift, SendRightShift, SendLeftControl, SendRightControl, SendLMENU, SendRMENU);
+                                SendMouse.SetKM(KeyboardMouseDriverType, MouseMoveX, MouseMoveY, MouseAbsX, MouseAbsY, MouseDesktopX, MouseDesktopY);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                Subcommand3Left(0x06, new byte[] { 0x01 }, 1);
+                                Lhid_close(handleLeft);
+                                handleLeft.Close();
+                                SendKeyboard.UnLoadKM();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static void taskDLeft()
+                        {
+                            while (running)
+                            {
+                                try
+                                {
+                                    Lhid_read_timeout(handleLeft, report_bufLeft, (UIntPtr)report_lenLeft);
+                                }
+                                catch { }
+                            }
+                        }
+                        public const string vendor_id = ""57e"", vendor_id_ = ""057e"", product_l = ""2006"", product_r = ""2007"";
+                        public enum EFileAttributes : uint
+                        {
+                            Overlapped = 0x40000000,
+                            Normal = 0x80
+                        };
+                        public struct SP_DEVICE_INTERFACE_DATA
+                        {
+                            public int cbSize;
+                            public Guid InterfaceClassGuid;
+                            public int Flags;
+                            public IntPtr RESERVED;
+                        }
+                        public struct SP_DEVICE_INTERFACE_DETAIL_DATA
+                        {
+                            public UInt32 cbSize;
+                            [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst = 256)]
+                            public string DevicePath;
+                        }
+                        public static void InitLeftJoycon()
+                        {
+                            try
+                            {
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                acc_gcalibrationLeftX = (Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftY = (Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftZ = (Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00));
+                            }
+                            catch { }
+                        }
+                        public static void ProcessButtonsLeftJoycon()
+                        {
+                            try
+                            {
+                                if (JoyconLeftStickCenter)
+                                {
+                                    stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                    stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                    stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                }
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickLeft[0] = ((UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8)) - stickCenterLeft[0]) / 1440f;
+                                stickLeft[1] = ((UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4)) - stickCenterLeft[1]) / 1440f;
+                                JoyconLeftStickX = stickLeft[0];
+                                JoyconLeftStickY = stickLeft[1];
+                                acc_gLeft.X = ((Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftX) * (1.0f / 12000f);
+                                acc_gLeft.Y = -((Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftY) * (1.0f / 12000f);
+                                acc_gLeft.Z = -((Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftZ) * (1.0f / 12000f);
+                                JoyconLeftButtonSHOULDER_1 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x40) != 0;
+                                JoyconLeftButtonSHOULDER_2 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x80) != 0;
+                                JoyconLeftButtonSR = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x10) != 0;
+                                JoyconLeftButtonSL = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x20) != 0;
+                                JoyconLeftButtonDPAD_DOWN = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x01 : 0x04)) != 0;
+                                JoyconLeftButtonDPAD_RIGHT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x04 : 0x08)) != 0;
+                                JoyconLeftButtonDPAD_UP = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x02 : 0x02)) != 0;
+                                JoyconLeftButtonDPAD_LEFT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x08 : 0x01)) != 0;
+                                JoyconLeftButtonMINUS = (report_bufLeft[4] & 0x01) != 0;
+                                JoyconLeftButtonCAPTURE = (report_bufLeft[4] & 0x20) != 0;
+                                JoyconLeftButtonSTICK = (report_bufLeft[4] & (ISLEFT ? 0x08 : 0x04)) != 0;
+                                JoyconLeftButtonACC = acc_gLeft.X <= -1.13;
+                                JoyconLeftButtonSMA = JoyconLeftButtonSL | JoyconLeftButtonSR | JoyconLeftButtonMINUS | JoyconLeftButtonACC;
+                                if (JoyconLeftAccelCenter)
+                                    InitDirectAnglesLeft = acc_gLeft;
+                                DirectAnglesLeft = acc_gLeft - InitDirectAnglesLeft;
+                                JoyconLeftAccelX = DirectAnglesLeft.X * 1350f;
+                                JoyconLeftAccelY = -DirectAnglesLeft.Y * 1350f;
+                                gyr_gLeft.X = ((Int16)(report_bufLeft[19 + 0 * 12] | ((report_bufLeft[20 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 1 * 12] | ((report_bufLeft[20 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 2 * 12] | ((report_bufLeft[20 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Y = ((Int16)(report_bufLeft[21 + 0 * 12] | ((report_bufLeft[22 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 1 * 12] | ((report_bufLeft[22 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 2 * 12] | ((report_bufLeft[22 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Z = ((Int16)(report_bufLeft[23 + 0 * 12] | ((report_bufLeft[24 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 1 * 12] | ((report_bufLeft[24 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 2 * 12] | ((report_bufLeft[24 + 2 * 12] << 8) & 0xff00)));
+                                JoyconLeftGyroX = gyr_gLeft.Z;
+                                JoyconLeftGyroY = gyr_gLeft.Y;
+                            }
+                            catch { }
+                        }
+                        public static bool JoyconLeftButtonSMA, JoyconLeftButtonACC, JoyconLeftRollLeft, JoyconLeftRollRight;
+                        private static double JoyconLeftStickX, JoyconLeftStickY;
+                        public static System.Collections.Generic.List<double> LeftValListX = new System.Collections.Generic.List<double>(), LeftValListY = new System.Collections.Generic.List<double>();
+                        public static bool JoyconLeftAccelCenter, JoyconLeftStickCenter;
+                        public static double JoyconLeftAccelX, JoyconLeftAccelY, JoyconLeftGyroX, JoyconLeftGyroY;
+                        private static double[] stickLeft = { 0, 0 };
+                        private static double[] stickCenterLeft = { 0, 0 };
+                        private static byte[] stick_rawLeft = { 0, 0, 0 };
+                        public static SafeFileHandle handleLeft;
+                        public static Vector3 acc_gLeft = new Vector3();
+                        public static Vector3 gyr_gLeft = new Vector3();
+                        public const uint report_lenLeft = 49;
+                        public static Vector3 InitDirectAnglesLeft, DirectAnglesLeft;
+                        public static bool JoyconLeftButtonSHOULDER_1, JoyconLeftButtonSHOULDER_2, JoyconLeftButtonSR, JoyconLeftButtonSL, JoyconLeftButtonDPAD_DOWN, JoyconLeftButtonDPAD_RIGHT, JoyconLeftButtonDPAD_UP, JoyconLeftButtonDPAD_LEFT, JoyconLeftButtonMINUS, JoyconLeftButtonSTICK, JoyconLeftButtonCAPTURE, ISLEFT;
+                        public static byte[] report_bufLeft = new byte[report_lenLeft];
+                        public static float acc_gcalibrationLeftX, acc_gcalibrationLeftY, acc_gcalibrationLeftZ;
+                        public static bool ScanLeft()
+                        {
+                            int index = 0;
+                            System.Guid guid;
+                            HidD_GetHidGuid(out guid);
+                            System.IntPtr hDevInfo = SetupDiGetClassDevs(ref guid, null, new System.IntPtr(), 0x00000010);
+                            SP_DEVICE_INTERFACE_DATA diData = new SP_DEVICE_INTERFACE_DATA();
+                            diData.cbSize = System.Runtime.InteropServices.Marshal.SizeOf(diData);
+                            while (SetupDiEnumDeviceInterfaces(hDevInfo, new System.IntPtr(), ref guid, index, ref diData))
+                            {
+                                System.UInt32 size;
+                                SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, new System.IntPtr(), 0, out size, new System.IntPtr());
+                                SP_DEVICE_INTERFACE_DETAIL_DATA diDetail = new SP_DEVICE_INTERFACE_DETAIL_DATA();
+                                diDetail.cbSize = 5;
+                                if (SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, ref diDetail, size, out size, new System.IntPtr()))
+                                {
+                                    if ((diDetail.DevicePath.Contains(vendor_id) | diDetail.DevicePath.Contains(vendor_id_)) & diDetail.DevicePath.Contains(product_l))
+                                    {
+                                        ISLEFT = true;
+                                        AttachJoyLeft(diDetail.DevicePath);
+                                        return true;
+                                    }
+                                }
+                                index++;
+                            }
+                            return false;
+                        }
+                        public static void AttachJoyLeft(string path)
+                        {
+                            do
+                            {
+                                IntPtr handle = CreateFile(path, System.IO.FileAccess.ReadWrite, System.IO.FileShare.ReadWrite, new System.IntPtr(), System.IO.FileMode.Open, EFileAttributes.Normal, new System.IntPtr());
+                                handleLeft = Lhid_open_path(handle);
+                                Subcommand2Left(0x40, new byte[] { 0x1 }, 1);
+                                Subcommand2Left(0x3, new byte[] { 0x30 }, 1);
+                            }
+                            while (handleLeft.IsInvalid);
+                        }
+                        private static void Subcommand2Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0;
+                            buf_Left[0] = 0x1;
+                            Lhid_write(handleLeft, buf_Left, (UIntPtr)(len + 11));
+                            Lhid_read_timeout(handleLeft, buf_Left, (UIntPtr)report_lenLeft);
+                        }
+                        private static void Subcommand3Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0x5;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                            buf_Left[1] = 0x6;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                    }
+                }";
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
             if (toolStripComboBox1.Text == "XC-Int")
             {
                 code = @"
@@ -33126,6 +40061,438 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
+            }
+            if (toolStripComboBox1.Text == "MJoyL-Int")
+            {
+                code = @"
+                using Microsoft.Win32.SafeHandles;
+                using System;
+                using System.Globalization;
+                using System.IO;
+                using System.Numerics;
+                using System.Runtime.InteropServices;
+                using System.Threading;
+                using System.Threading.Tasks;
+                using System.Windows;
+                using System.Windows.Forms;
+                using System.Reflection;
+                using SharpDX;
+                using SharpDX.DirectInput;
+                using Interceptions;
+                using Valuechanges;
+                using Vector3 = System.Numerics.Vector3;
+                namespace StringToCode
+                {
+                    public class FooClass 
+                    { 
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftconnect"")]
+                        public static extern bool joyconleftconnect();
+                        [DllImport(""MotionInputPairing.dll"", EntryPoint = ""joyconleftdisconnect"")]
+                        public static extern bool joyconleftdisconnect();
+                        [DllImport(""hid.dll"")]
+                        public static extern void HidD_GetHidGuid(out Guid gHid);
+                        [DllImport(""hid.dll"")]
+                        public extern static bool HidD_SetOutputReport(IntPtr HidDeviceObject, byte[] lpReportBuffer, uint ReportBufferLength);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern IntPtr SetupDiGetClassDevs(ref Guid ClassGuid, string Enumerator, IntPtr hwndParent, UInt32 Flags);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiEnumDeviceInterfaces(IntPtr hDevInfo, IntPtr devInvo, ref Guid interfaceClassGuid, Int32 memberIndex, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, IntPtr deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""setupapi.dll"")]
+                        public static extern Boolean SetupDiGetDeviceInterfaceDetail(IntPtr hDevInfo, ref SP_DEVICE_INTERFACE_DATA deviceInterfaceData, ref SP_DEVICE_INTERFACE_DETAIL_DATA deviceInterfaceDetailData, UInt32 deviceInterfaceDetailDataSize, out UInt32 requiredSize, IntPtr deviceInfoData);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern SafeFileHandle CreateFile(string fileName, [MarshalAs(UnmanagedType.U4)] FileAccess fileAccess, [MarshalAs(UnmanagedType.U4)] FileShare fileShare, IntPtr securityAttributes, [MarshalAs(UnmanagedType.U4)] FileMode creationDisposition, [MarshalAs(UnmanagedType.U4)] uint flags, IntPtr template);
+                        [DllImport(""Kernel32.dll"")]
+                        public static extern IntPtr CreateFile(string fileName, System.IO.FileAccess fileAccess, System.IO.FileShare fileShare, IntPtr securityAttributes, System.IO.FileMode creationDisposition, EFileAttributes flags, IntPtr template);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_read_timeout"")]
+                        public static extern int Lhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_write"")]
+                        public static extern int Lhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_open_path"")]
+                        public static extern SafeFileHandle Lhid_open_path(IntPtr handle);
+                        [DllImport(""lhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Lhid_close"")]
+                        public static extern void Lhid_close(SafeFileHandle device);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_read_timeout"")]
+                        public static extern int Rhid_read_timeout(SafeFileHandle dev, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_write"")]
+                        public static extern int Rhid_write(SafeFileHandle device, byte[] data, UIntPtr length);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_open_path"")]
+                        public static extern SafeFileHandle Rhid_open_path(IntPtr handle);
+                        [DllImport(""rhidread.dll"", CallingConvention = CallingConvention.Cdecl, EntryPoint = ""Rhid_close"")]
+                        public static extern void Rhid_close(SafeFileHandle device);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeBeginPeriod"")]
+                        private static extern uint TimeBeginPeriod(uint ms);
+                        [DllImport(""winmm.dll"", EntryPoint = ""timeEndPeriod"")]
+                        private static extern uint TimeEndPeriod(uint ms);
+                        [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
+                        private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+                        private static uint CurrentResolution = 0;
+                        private static bool running;
+                        private static int width, height;
+                        DirectInput directInput = new DirectInput();
+                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private bool[] getstate = new bool[12];
+                        private int[] pollcount = new int[12];
+                        private int[] keys12345 = new int[12];
+                        private int[] keys54321 = new int[12];
+                        private double[] mousexp = new double[12];
+                        private double[] mouseyp = new double[12];
+                        private int sleeptime = 1;
+                        public Valuechange ValueChange = new Valuechange();
+                        public static Input input = new Input();
+                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+                        public static void valchanged(int n, bool val)
+                        {
+                            if (val)
+                            {
+                                if (wd[n] <= 1)
+                                {
+                                    wd[n] = wd[n] + 1;
+                                }
+                                wu[n] = 0;
+                            }
+                            else
+                            {
+                                if (wu[n] <= 1)
+                                {
+                                    wu[n] = wu[n] + 1;
+                                }
+                                wd[n] = 0;
+                            }
+                        }
+                        public void Load()
+                        {
+                            TimeBeginPeriod(1);
+                            NtSetTimerResolution(1, true, ref CurrentResolution);
+                            input.KeyboardFilterMode = KeyboardFilterMode.All;
+                            input.MouseFilterMode = MouseFilterMode.All;
+                            input.Load();
+                            Task.Run(() => Start());
+                        }
+                        private void Start()
+                        {
+                            running = true;
+                            do
+                                Thread.Sleep(1);
+                            while (!joyconleftconnect());
+                            ScanLeft();
+                            Task.Run(() => taskDLeft());
+                            Thread.Sleep(1000);
+                            InitLeftJoycon();
+                            MouseInputHookConnect();
+                            Task.Run(() => taskKM());
+                        }
+                        private void taskKM()
+                        {
+                            while (running)
+                            {
+                                ProcessButtonsLeftJoycon();
+                                MouseInputProcess();
+                                funct_driver
+                                SendInterception.SetKM(MouseDesktopX, MouseDesktopY, input, keyboard_1_id, mouse_1_id, int_1_deltaX, int_1_deltaY, int_1_x, int_1_y, int_1_SendLeftClick, int_1_SendRightClick, int_1_SendMiddleClick, int_1_SendWheelUp, int_1_SendWheelDown, int_1_SendCANCEL, int_1_SendBACK, int_1_SendTAB, int_1_SendCLEAR, int_1_SendRETURN, int_1_SendSHIFT, int_1_SendCONTROL, int_1_SendMENU, int_1_SendCAPITAL, int_1_SendESCAPE, int_1_SendSPACE, int_1_SendPRIOR, int_1_SendNEXT, int_1_SendEND, int_1_SendHOME, int_1_SendLEFT, int_1_SendUP, int_1_SendRIGHT, int_1_SendDOWN, int_1_SendSNAPSHOT, int_1_SendINSERT, int_1_SendNUMPADDEL, int_1_SendNUMPADINSERT, int_1_SendHELP, int_1_SendAPOSTROPHE, int_1_SendBACKSPACE, int_1_SendPAGEDOWN, int_1_SendPAGEUP, int_1_SendFIN, int_1_SendMOUSE, int_1_SendA, int_1_SendB, int_1_SendC, int_1_SendD, int_1_SendE, int_1_SendF, int_1_SendG, int_1_SendH, int_1_SendI, int_1_SendJ, int_1_SendK, int_1_SendL, int_1_SendM, int_1_SendN, int_1_SendO, int_1_SendP, int_1_SendQ, int_1_SendR, int_1_SendS, int_1_SendT, int_1_SendU, int_1_SendV, int_1_SendW, int_1_SendX, int_1_SendY, int_1_SendZ, int_1_SendLWIN, int_1_SendRWIN, int_1_SendAPPS, int_1_SendDELETE, int_1_SendNUMPAD0, int_1_SendNUMPAD1, int_1_SendNUMPAD2, int_1_SendNUMPAD3, int_1_SendNUMPAD4, int_1_SendNUMPAD5, int_1_SendNUMPAD6, int_1_SendNUMPAD7, int_1_SendNUMPAD8, int_1_SendNUMPAD9, int_1_SendMULTIPLY, int_1_SendADD, int_1_SendSUBTRACT, int_1_SendDECIMAL, int_1_SendPRINTSCREEN, int_1_SendDIVIDE, int_1_SendF1, int_1_SendF2, int_1_SendF3, int_1_SendF4, int_1_SendF5, int_1_SendF6, int_1_SendF7, int_1_SendF8, int_1_SendF9, int_1_SendF10, int_1_SendF11, int_1_SendF12, int_1_SendNUMLOCK, int_1_SendSCROLLLOCK, int_1_SendLEFTSHIFT, int_1_SendRIGHTSHIFT, int_1_SendLEFTCONTROL, int_1_SendRIGHTCONTROL, int_1_SendLEFTALT, int_1_SendRIGHTALT, int_1_SendBROWSER_BACK, int_1_SendBROWSER_FORWARD, int_1_SendBROWSER_REFRESH, int_1_SendBROWSER_STOP, int_1_SendBROWSER_SEARCH, int_1_SendBROWSER_FAVORITES, int_1_SendBROWSER_HOME, int_1_SendVOLUME_MUTE, int_1_SendVOLUME_DOWN, int_1_SendVOLUME_UP, int_1_SendMEDIA_NEXT_TRACK, int_1_SendMEDIA_PREV_TRACK, int_1_SendMEDIA_STOP, int_1_SendMEDIA_PLAY_PAUSE, int_1_SendLAUNCH_MAIL, int_1_SendLAUNCH_MEDIA_SELECT, int_1_SendLAUNCH_APP1, int_1_SendLAUNCH_APP2, int_1_SendOEM_1, int_1_SendOEM_PLUS, int_1_SendOEM_COMMA, int_1_SendOEM_MINUS, int_1_SendOEM_PERIOD, int_1_SendOEM_2, int_1_SendOEM_3, int_1_SendOEM_4, int_1_SendOEM_5, int_1_SendOEM_6, int_1_SendOEM_7, int_1_SendOEM_8, int_1_SendOEM_102, int_1_SendEREOF, int_1_SendZOOM, int_1_SendEscape, int_1_SendOne, int_1_SendTwo, int_1_SendThree, int_1_SendFour, int_1_SendFive, int_1_SendSix, int_1_SendSeven, int_1_SendEight, int_1_SendNine, int_1_SendZero, int_1_SendDashUnderscore, int_1_SendPlusEquals, int_1_SendBackspace, int_1_SendTab, int_1_SendOpenBracketBrace, int_1_SendCloseBracketBrace, int_1_SendEnter, int_1_SendControl, int_1_SendSemicolonColon, int_1_SendSingleDoubleQuote, int_1_SendTilde, int_1_SendLeftShift, int_1_SendBackslashPipe, int_1_SendCommaLeftArrow, int_1_SendPeriodRightArrow, int_1_SendForwardSlashQuestionMark, int_1_SendRightShift, int_1_SendRightAlt, int_1_SendSpace, int_1_SendCapsLock, int_1_SendUp, int_1_SendDown, int_1_SendRight, int_1_SendLeft, int_1_SendHome, int_1_SendEnd, int_1_SendDelete, int_1_SendPageUp, int_1_SendPageDown, int_1_SendInsert, int_1_SendPrintScreen, int_1_SendNumLock, int_1_SendScrollLock, int_1_SendMenu, int_1_SendWindowsKey, int_1_SendNumpadDivide, int_1_SendNumpadAsterisk, int_1_SendNumpad7, int_1_SendNumpad8, int_1_SendNumpad9, int_1_SendNumpad4, int_1_SendNumpad5, int_1_SendNumpad6, int_1_SendNumpad1, int_1_SendNumpad2, int_1_SendNumpad3, int_1_SendNumpad0, int_1_SendNumpadDelete, int_1_SendNumpadEnter, int_1_SendNumpadPlus, int_1_SendNumpadMinus);
+                                Thread.Sleep(sleeptime);
+                            }
+                        }
+                        public void Close()
+                        {
+                            try
+                            {
+                                running = false;
+                                Thread.Sleep(100);
+                                Subcommand3Left(0x06, new byte[] { 0x01 }, 1);
+                                Lhid_close(handleLeft);
+                                handleLeft.Close();
+                                SendInterception.UnLoadKM(input, keyboard_1_id, mouse_1_id);
+                                input.Unload();
+                            }
+                            catch { }
+                        }
+                        private static double Scale(double value, double min, double max, double minScale, double maxScale)
+                        {
+                            double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
+                            return scaled;
+                        }
+                        private static void taskDLeft()
+                        {
+                            while (running)
+                            {
+                                try
+                                {
+                                    Lhid_read_timeout(handleLeft, report_bufLeft, (UIntPtr)report_lenLeft);
+                                }
+                                catch { }
+                            }
+                        }
+                        public const string vendor_id = ""57e"", vendor_id_ = ""057e"", product_l = ""2006"", product_r = ""2007"";
+                        public enum EFileAttributes : uint
+                        {
+                            Overlapped = 0x40000000,
+                            Normal = 0x80
+                        };
+                        public struct SP_DEVICE_INTERFACE_DATA
+                        {
+                            public int cbSize;
+                            public Guid InterfaceClassGuid;
+                            public int Flags;
+                            public IntPtr RESERVED;
+                        }
+                        public struct SP_DEVICE_INTERFACE_DETAIL_DATA
+                        {
+                            public UInt32 cbSize;
+                            [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst = 256)]
+                            public string DevicePath;
+                        }
+                        public static void InitLeftJoycon()
+                        {
+                            try
+                            {
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                acc_gcalibrationLeftX = (Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftY = (Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00));
+                                acc_gcalibrationLeftZ = (Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00));
+                            }
+                            catch { }
+                        }
+                        public static void ProcessButtonsLeftJoycon()
+                        {
+                            try
+                            {
+                                if (JoyconLeftStickCenter)
+                                {
+                                    stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                    stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                    stickCenterLeft[0] = (UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8));
+                                    stickCenterLeft[1] = (UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4));
+                                }
+                                stick_rawLeft[0] = report_bufLeft[6 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[1] = report_bufLeft[7 + (ISLEFT ? 0 : 3)];
+                                stick_rawLeft[2] = report_bufLeft[8 + (ISLEFT ? 0 : 3)];
+                                stickLeft[0] = ((UInt16)(stick_rawLeft[0] | ((stick_rawLeft[1] & 0xf) << 8)) - stickCenterLeft[0]) / 1440f;
+                                stickLeft[1] = ((UInt16)((stick_rawLeft[1] >> 4) | (stick_rawLeft[2] << 4)) - stickCenterLeft[1]) / 1440f;
+                                JoyconLeftStickX = stickLeft[0];
+                                JoyconLeftStickY = stickLeft[1];
+                                acc_gLeft.X = ((Int16)(report_bufLeft[13 + 0 * 12] | ((report_bufLeft[14 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 1 * 12] | ((report_bufLeft[14 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[13 + 2 * 12] | ((report_bufLeft[14 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftX) * (1.0f / 12000f);
+                                acc_gLeft.Y = -((Int16)(report_bufLeft[15 + 0 * 12] | ((report_bufLeft[16 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 1 * 12] | ((report_bufLeft[16 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[15 + 2 * 12] | ((report_bufLeft[16 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftY) * (1.0f / 12000f);
+                                acc_gLeft.Z = -((Int16)(report_bufLeft[17 + 0 * 12] | ((report_bufLeft[18 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 1 * 12] | ((report_bufLeft[18 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[17 + 2 * 12] | ((report_bufLeft[18 + 2 * 12] << 8) & 0xff00)) - acc_gcalibrationLeftZ) * (1.0f / 12000f);
+                                JoyconLeftButtonSHOULDER_1 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x40) != 0;
+                                JoyconLeftButtonSHOULDER_2 = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x80) != 0;
+                                JoyconLeftButtonSR = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x10) != 0;
+                                JoyconLeftButtonSL = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & 0x20) != 0;
+                                JoyconLeftButtonDPAD_DOWN = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x01 : 0x04)) != 0;
+                                JoyconLeftButtonDPAD_RIGHT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x04 : 0x08)) != 0;
+                                JoyconLeftButtonDPAD_UP = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x02 : 0x02)) != 0;
+                                JoyconLeftButtonDPAD_LEFT = (report_bufLeft[3 + (ISLEFT ? 2 : 0)] & (ISLEFT ? 0x08 : 0x01)) != 0;
+                                JoyconLeftButtonMINUS = (report_bufLeft[4] & 0x01) != 0;
+                                JoyconLeftButtonCAPTURE = (report_bufLeft[4] & 0x20) != 0;
+                                JoyconLeftButtonSTICK = (report_bufLeft[4] & (ISLEFT ? 0x08 : 0x04)) != 0;
+                                JoyconLeftButtonACC = acc_gLeft.X <= -1.13;
+                                JoyconLeftButtonSMA = JoyconLeftButtonSL | JoyconLeftButtonSR | JoyconLeftButtonMINUS | JoyconLeftButtonACC;
+                                if (JoyconLeftAccelCenter)
+                                    InitDirectAnglesLeft = acc_gLeft;
+                                DirectAnglesLeft = acc_gLeft - InitDirectAnglesLeft;
+                                JoyconLeftAccelX = DirectAnglesLeft.X * 1350f;
+                                JoyconLeftAccelY = -DirectAnglesLeft.Y * 1350f;
+                                gyr_gLeft.X = ((Int16)(report_bufLeft[19 + 0 * 12] | ((report_bufLeft[20 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 1 * 12] | ((report_bufLeft[20 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[19 + 2 * 12] | ((report_bufLeft[20 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Y = ((Int16)(report_bufLeft[21 + 0 * 12] | ((report_bufLeft[22 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 1 * 12] | ((report_bufLeft[22 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[21 + 2 * 12] | ((report_bufLeft[22 + 2 * 12] << 8) & 0xff00)));
+                                gyr_gLeft.Z = ((Int16)(report_bufLeft[23 + 0 * 12] | ((report_bufLeft[24 + 0 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 1 * 12] | ((report_bufLeft[24 + 1 * 12] << 8) & 0xff00)) + (Int16)(report_bufLeft[23 + 2 * 12] | ((report_bufLeft[24 + 2 * 12] << 8) & 0xff00)));
+                                JoyconLeftGyroX = gyr_gLeft.Z;
+                                JoyconLeftGyroY = gyr_gLeft.Y;
+                            }
+                            catch { }
+                        }
+                        public static bool JoyconLeftButtonSMA, JoyconLeftButtonACC, JoyconLeftRollLeft, JoyconLeftRollRight;
+                        private static double JoyconLeftStickX, JoyconLeftStickY;
+                        public static System.Collections.Generic.List<double> LeftValListX = new System.Collections.Generic.List<double>(), LeftValListY = new System.Collections.Generic.List<double>();
+                        public static bool JoyconLeftAccelCenter, JoyconLeftStickCenter;
+                        public static double JoyconLeftAccelX, JoyconLeftAccelY, JoyconLeftGyroX, JoyconLeftGyroY;
+                        private static double[] stickLeft = { 0, 0 };
+                        private static double[] stickCenterLeft = { 0, 0 };
+                        private static byte[] stick_rawLeft = { 0, 0, 0 };
+                        public static SafeFileHandle handleLeft;
+                        public static Vector3 acc_gLeft = new Vector3();
+                        public static Vector3 gyr_gLeft = new Vector3();
+                        public const uint report_lenLeft = 49;
+                        public static Vector3 InitDirectAnglesLeft, DirectAnglesLeft;
+                        public static bool JoyconLeftButtonSHOULDER_1, JoyconLeftButtonSHOULDER_2, JoyconLeftButtonSR, JoyconLeftButtonSL, JoyconLeftButtonDPAD_DOWN, JoyconLeftButtonDPAD_RIGHT, JoyconLeftButtonDPAD_UP, JoyconLeftButtonDPAD_LEFT, JoyconLeftButtonMINUS, JoyconLeftButtonSTICK, JoyconLeftButtonCAPTURE, ISLEFT;
+                        public static byte[] report_bufLeft = new byte[report_lenLeft];
+                        public static float acc_gcalibrationLeftX, acc_gcalibrationLeftY, acc_gcalibrationLeftZ;
+                        public static bool ScanLeft()
+                        {
+                            int index = 0;
+                            System.Guid guid;
+                            HidD_GetHidGuid(out guid);
+                            System.IntPtr hDevInfo = SetupDiGetClassDevs(ref guid, null, new System.IntPtr(), 0x00000010);
+                            SP_DEVICE_INTERFACE_DATA diData = new SP_DEVICE_INTERFACE_DATA();
+                            diData.cbSize = System.Runtime.InteropServices.Marshal.SizeOf(diData);
+                            while (SetupDiEnumDeviceInterfaces(hDevInfo, new System.IntPtr(), ref guid, index, ref diData))
+                            {
+                                System.UInt32 size;
+                                SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, new System.IntPtr(), 0, out size, new System.IntPtr());
+                                SP_DEVICE_INTERFACE_DETAIL_DATA diDetail = new SP_DEVICE_INTERFACE_DETAIL_DATA();
+                                diDetail.cbSize = 5;
+                                if (SetupDiGetDeviceInterfaceDetail(hDevInfo, ref diData, ref diDetail, size, out size, new System.IntPtr()))
+                                {
+                                    if ((diDetail.DevicePath.Contains(vendor_id) | diDetail.DevicePath.Contains(vendor_id_)) & diDetail.DevicePath.Contains(product_l))
+                                    {
+                                        ISLEFT = true;
+                                        AttachJoyLeft(diDetail.DevicePath);
+                                        return true;
+                                    }
+                                }
+                                index++;
+                            }
+                            return false;
+                        }
+                        public static void AttachJoyLeft(string path)
+                        {
+                            do
+                            {
+                                IntPtr handle = CreateFile(path, System.IO.FileAccess.ReadWrite, System.IO.FileShare.ReadWrite, new System.IntPtr(), System.IO.FileMode.Open, EFileAttributes.Normal, new System.IntPtr());
+                                handleLeft = Lhid_open_path(handle);
+                                Subcommand2Left(0x40, new byte[] { 0x1 }, 1);
+                                Subcommand2Left(0x3, new byte[] { 0x30 }, 1);
+                            }
+                            while (handleLeft.IsInvalid);
+                        }
+                        private static void Subcommand2Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0;
+                            buf_Left[0] = 0x1;
+                            Lhid_write(handleLeft, buf_Left, (UIntPtr)(len + 11));
+                            Lhid_read_timeout(handleLeft, buf_Left, (UIntPtr)report_lenLeft);
+                        }
+                        private static void Subcommand3Left(byte sc, byte[] buf, uint len)
+                        {
+                            byte[] buf_Left = new byte[report_lenLeft];
+                            System.Array.Copy(buf, 0, buf_Left, 11, len);
+                            buf_Left[10] = sc;
+                            buf_Left[1] = 0x5;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                            buf_Left[1] = 0x6;
+                            buf_Left[0] = 0x80;
+                            Lhid_write(handleLeft, buf_Left, new UIntPtr(2));
+                        }
+                        private static Mouse[] mouse = new Mouse[] { null };
+                        private static Guid[] mouseGuid = new Guid[] { Guid.Empty };
+                        private static int mnum = 0;
+                        public static bool Mouse1Buttons0;
+                        public static bool Mouse1Buttons1;
+                        public static bool Mouse1Buttons2;
+                        public static bool Mouse1Buttons3;
+                        public static bool Mouse1Buttons4;
+                        public static bool Mouse1Buttons5;
+                        public static bool Mouse1Buttons6;
+                        public static bool Mouse1Buttons7;
+                        public static int Mouse1AxisX;
+                        public static int Mouse1AxisY;
+                        public static int Mouse1AxisZ;
+                        public bool MouseInputHookConnect()
+                        {
+                            try
+                            {
+                                directInput = new DirectInput();
+                                mouse = new Mouse[] { null };
+                                mouseGuid = new Guid[] { Guid.Empty };
+                                mnum = 0;
+                                foreach (var deviceInstance in directInput.GetDevices(SharpDX.DirectInput.DeviceType.Mouse, DeviceEnumerationFlags.AllDevices))
+                                {
+                                    mouseGuid[mnum] = deviceInstance.InstanceGuid;
+                                    mnum++;
+                                    if (mnum >= 1)
+                                        break;
+                                }
+                            }
+                            catch { }
+                            if (mouseGuid[0] == Guid.Empty)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                for (int inc = 0; inc < mnum; inc++)
+                                {
+                                    mouse[inc] = new Mouse(directInput);
+                                    mouse[inc].Properties.BufferSize = 128;
+                                    mouse[inc].Acquire();
+                                }
+                                return true;
+                            }
+                        }
+                        public void MouseInputProcess()
+                        {
+                            for (int inc = 0; inc < mnum; inc++)
+                            {
+                                mouse[inc].Poll();
+                                var datas = mouse[inc].GetBufferedData();
+                                foreach (var state in datas)
+                                {
+                                    if (inc == 0 & state.Offset == MouseOffset.X)
+                                        Mouse1AxisX = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Y)
+                                        Mouse1AxisY = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Z)
+                                        Mouse1AxisZ = state.Value;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 128)
+                                        Mouse1Buttons0 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons0 & state.Value == 0)
+                                        Mouse1Buttons0 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 128)
+                                        Mouse1Buttons1 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons1 & state.Value == 0)
+                                        Mouse1Buttons1 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 128)
+                                        Mouse1Buttons2 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons2 & state.Value == 0)
+                                        Mouse1Buttons2 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 128)
+                                        Mouse1Buttons3 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons3 & state.Value == 0)
+                                        Mouse1Buttons3 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 128)
+                                        Mouse1Buttons4 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons4 & state.Value == 0)
+                                        Mouse1Buttons4 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 128)
+                                        Mouse1Buttons5 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons5 & state.Value == 0)
+                                        Mouse1Buttons5 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 128)
+                                        Mouse1Buttons6 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons6 & state.Value == 0)
+                                        Mouse1Buttons6 = false;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 128)
+                                        Mouse1Buttons7 = true;
+                                    if (inc == 0 & state.Offset == MouseOffset.Buttons7 & state.Value == 0)
+                                        Mouse1Buttons7 = false;
+                                }
+                            }
+                        }
+                    }
+                }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
+                parameters = new System.CodeDom.Compiler.CompilerParameters();
+                parameters.GenerateExecutable = false;
+                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\SharpDX.DirectInput.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");

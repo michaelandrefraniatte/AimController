@@ -488,9 +488,11 @@
             "SPC-XC",
             "JCG-XC",
             "FV2-XC",
+            "FV2M-XC",
             "DS-XC",
             "DS4-XC",
             "KM-XC",
+            "MJoyL-XC",
             "XC-XC",
             "WiiJoyL-KM",
             "WiiJoyR-KM",
@@ -501,10 +503,12 @@
             "SPC-KM",
             "JCG-KM",
             "FV2-KM",
+            "FV2M-KM",
             "DS-KM",
             "DS4-KM",
             "XC-KM",
             "KM-KM",
+            "MJoyL-KM",
             "WiiJoyL-Int",
             "WiiJoyR-Int",
             "Wii-Int",
@@ -514,10 +518,12 @@
             "SPC-Int",
             "JCG-Int",
             "FV2-Int",
+            "FV2M-Int",
             "DS-Int",
             "DS4-Int",
             "XC-Int",
-            "KM-Int"});
+            "KM-Int",
+            "MJoyL-Int"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
             this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
