@@ -21976,6 +21976,7 @@ namespace SIGIL
         }
         private void FillCode()
         {
+            parameters = new System.CodeDom.Compiler.CompilerParameters();
             if (toolStripComboBox1.Text == "WiiJoyL-XC")
             {
                 code = @"
@@ -21991,6 +21992,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using controllers;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -22035,14 +22037,14 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -22064,13 +22066,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -22093,7 +22103,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -22169,7 +22179,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -22360,9 +22370,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
@@ -22383,6 +22391,7 @@ namespace SIGIL
                 using System.Reflection;
                 using keyboards;
                 using mouses;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -22426,15 +22435,15 @@ namespace SIGIL
                         private static int width, height;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -22456,13 +22465,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -22484,7 +22501,7 @@ namespace SIGIL
                             JoyconLeftAccelY = ((Int16)(report_bufLeft[15] | ((report_bufLeft[16] << 8) & 0xff00)) - acc_gcalibrationLeftY) * (1.0f / 4000f);
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -22561,7 +22578,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -22752,9 +22769,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
@@ -22775,6 +22790,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using Interceptions;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -22819,15 +22835,15 @@ namespace SIGIL
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -22849,16 +22865,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -22880,7 +22904,7 @@ namespace SIGIL
                             JoyconLeftAccelY = ((Int16)(report_bufLeft[15] | ((report_bufLeft[16] << 8) & 0xff00)) - acc_gcalibrationLeftY) * (1.0f / 4000f);
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -22956,7 +22980,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -23148,9 +23172,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
@@ -23170,6 +23192,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using controllers;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -23214,14 +23237,14 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -23243,13 +23266,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -23272,7 +23303,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -23348,7 +23379,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -23539,9 +23570,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
@@ -23562,6 +23591,7 @@ namespace SIGIL
                 using System.Reflection;
                 using keyboards;
                 using mouses;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -23596,7 +23626,7 @@ namespace SIGIL
                         private static extern uint TimeEndPeriod(uint ms);
                         [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
                         private static double irx0, iry0, irx1, iry1, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
                         private static bool WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running;
@@ -23606,14 +23636,14 @@ namespace SIGIL
                         private static int width, height;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -23635,13 +23665,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -23663,7 +23701,7 @@ namespace SIGIL
                             JoyconRightAccelY = ((Int16)(report_bufRight[15] | ((report_bufRight[16] << 8) & 0xff00)) - acc_gcalibrationRightY) * (1.0f / 4000f);
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -23740,7 +23778,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -23931,9 +23969,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
@@ -23954,6 +23990,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using Interceptions;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -23989,7 +24026,7 @@ namespace SIGIL
                         [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
                         private static double irx0, iry0, irx1, iry1, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
                         private static bool WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running;
@@ -23999,14 +24036,14 @@ namespace SIGIL
                         private static int width, height;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -24028,16 +24065,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -24059,7 +24104,7 @@ namespace SIGIL
                             JoyconRightAccelY = ((Int16)(report_bufRight[15] | ((report_bufRight[16] << 8) & 0xff00)) - acc_gcalibrationRightY) * (1.0f / 4000f);
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -24135,7 +24180,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -24327,9 +24372,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
@@ -24349,6 +24392,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using controllers;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -24388,14 +24432,14 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f, dzx = 2.0f, dzy = 2.0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -24417,13 +24461,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -24438,7 +24490,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -24514,7 +24566,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -24641,9 +24693,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
@@ -24664,6 +24714,7 @@ namespace SIGIL
                 using System.Reflection;
                 using keyboards;
                 using mouses;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -24690,7 +24741,7 @@ namespace SIGIL
                         private static extern uint TimeEndPeriod(uint ms);
                         [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
                         private static double irx0, iry0, irx1, iry1, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
                         private static bool WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running;
@@ -24703,14 +24754,14 @@ namespace SIGIL
                         private static int width, height;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 0f, dzy = 0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 0f, dzy = 0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -24732,13 +24783,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -24752,7 +24811,7 @@ namespace SIGIL
                             stickviewyinit = -aBuffer[17] + 125f;
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -24829,7 +24888,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -24956,9 +25015,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
@@ -24979,6 +25036,7 @@ namespace SIGIL
                 using System.Windows.Forms;
                 using System.Reflection;
                 using Interceptions;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -25006,7 +25064,7 @@ namespace SIGIL
                         [DllImport(""ntdll.dll"", EntryPoint = ""NtSetTimerResolution"")]
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
                         private static double irx0, iry0, irx1, iry1, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
                         private static bool WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running;
@@ -25019,14 +25077,14 @@ namespace SIGIL
                         private static int width, height;
                         private static FileStream mStream;
                         private static SafeFileHandle handle = null;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 0f, dzy = 0f, centery = 80f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 0f, dzy = 0f, centery = 80f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -25048,16 +25106,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -25071,7 +25137,7 @@ namespace SIGIL
                             stickviewyinit = -aBuffer[17] + 125f;
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -25147,7 +25213,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -25275,9 +25341,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
@@ -25300,6 +25364,7 @@ namespace SIGIL
                 using SharpDX;
                 using controllers;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -25312,18 +25377,18 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -25345,20 +25410,28 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             DirectInputHookConnect();
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -25368,7 +25441,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -25423,7 +25496,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -25505,7 +25578,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -26102,9 +26175,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -26131,6 +26202,7 @@ namespace SIGIL
                 using SharpDX;
                 using controllers;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -26143,18 +26215,18 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -26176,13 +26248,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
@@ -26190,7 +26270,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -26201,7 +26281,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -26230,7 +26310,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -26262,7 +26342,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -26351,7 +26431,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -26433,7 +26513,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -27030,9 +27110,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -27060,6 +27138,7 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -27073,17 +27152,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        DirectInput directInput = new DirectInput();
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        static DirectInput directInput = new DirectInput();
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -27105,19 +27184,27 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             DirectInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -27128,7 +27215,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -27183,7 +27270,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -27265,7 +27352,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -27862,9 +27949,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -27893,6 +27978,7 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -27906,17 +27992,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        DirectInput directInput = new DirectInput();
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        static DirectInput directInput = new DirectInput();
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -27938,20 +28024,28 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             DirectInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -27963,7 +28057,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -27992,7 +28086,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -28024,7 +28118,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -28113,7 +28207,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -28195,7 +28289,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -28792,9 +28886,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -28822,6 +28914,7 @@ namespace SIGIL
                 using SharpDX;
                 using Interceptions;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -28835,18 +28928,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        DirectInput directInput = new DirectInput();
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        static DirectInput directInput = new DirectInput();
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -28868,22 +28961,30 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             DirectInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -28893,7 +28994,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -28949,7 +29050,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -29031,7 +29132,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -29628,9 +29729,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -29657,6 +29756,7 @@ namespace SIGIL
                 using SharpDX;
                 using Interceptions;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -29670,18 +29770,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        DirectInput directInput = new DirectInput();
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        static DirectInput directInput = new DirectInput();
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -29703,23 +29803,31 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             DirectInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -29730,7 +29838,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -29760,7 +29868,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -29792,7 +29900,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -29881,7 +29989,7 @@ namespace SIGIL
                         public static int Joystick1ForceSliders0;
                         public static int Joystick1ForceSliders1;
                         public static bool Joystick1Buttons0, Joystick1Buttons1, Joystick1Buttons2, Joystick1Buttons3, Joystick1Buttons4, Joystick1Buttons5, Joystick1Buttons6, Joystick1Buttons7, Joystick1Buttons8, Joystick1Buttons9, Joystick1Buttons10, Joystick1Buttons11, Joystick1Buttons12, Joystick1Buttons13, Joystick1Buttons14, Joystick1Buttons15, Joystick1Buttons16, Joystick1Buttons17, Joystick1Buttons18, Joystick1Buttons19, Joystick1Buttons20, Joystick1Buttons21, Joystick1Buttons22, Joystick1Buttons23, Joystick1Buttons24, Joystick1Buttons25, Joystick1Buttons26, Joystick1Buttons27, Joystick1Buttons28, Joystick1Buttons29, Joystick1Buttons30, Joystick1Buttons31, Joystick1Buttons32, Joystick1Buttons33, Joystick1Buttons34, Joystick1Buttons35, Joystick1Buttons36, Joystick1Buttons37, Joystick1Buttons38, Joystick1Buttons39, Joystick1Buttons40, Joystick1Buttons41, Joystick1Buttons42, Joystick1Buttons43, Joystick1Buttons44, Joystick1Buttons45, Joystick1Buttons46, Joystick1Buttons47, Joystick1Buttons48, Joystick1Buttons49, Joystick1Buttons50, Joystick1Buttons51, Joystick1Buttons52, Joystick1Buttons53, Joystick1Buttons54, Joystick1Buttons55, Joystick1Buttons56, Joystick1Buttons57, Joystick1Buttons58, Joystick1Buttons59, Joystick1Buttons60, Joystick1Buttons61, Joystick1Buttons62, Joystick1Buttons63, Joystick1Buttons64, Joystick1Buttons65, Joystick1Buttons66, Joystick1Buttons67, Joystick1Buttons68, Joystick1Buttons69, Joystick1Buttons70, Joystick1Buttons71, Joystick1Buttons72, Joystick1Buttons73, Joystick1Buttons74, Joystick1Buttons75, Joystick1Buttons76, Joystick1Buttons77, Joystick1Buttons78, Joystick1Buttons79, Joystick1Buttons80, Joystick1Buttons81, Joystick1Buttons82, Joystick1Buttons83, Joystick1Buttons84, Joystick1Buttons85, Joystick1Buttons86, Joystick1Buttons87, Joystick1Buttons88, Joystick1Buttons89, Joystick1Buttons90, Joystick1Buttons91, Joystick1Buttons92, Joystick1Buttons93, Joystick1Buttons94, Joystick1Buttons95, Joystick1Buttons96, Joystick1Buttons97, Joystick1Buttons98, Joystick1Buttons99, Joystick1Buttons100, Joystick1Buttons101, Joystick1Buttons102, Joystick1Buttons103, Joystick1Buttons104, Joystick1Buttons105, Joystick1Buttons106, Joystick1Buttons107, Joystick1Buttons108, Joystick1Buttons109, Joystick1Buttons110, Joystick1Buttons111, Joystick1Buttons112, Joystick1Buttons113, Joystick1Buttons114, Joystick1Buttons115, Joystick1Buttons116, Joystick1Buttons117, Joystick1Buttons118, Joystick1Buttons119, Joystick1Buttons120, Joystick1Buttons121, Joystick1Buttons122, Joystick1Buttons123, Joystick1Buttons124, Joystick1Buttons125, Joystick1Buttons126, Joystick1Buttons127;
-                        public bool DirectInputHookConnect()
+                        public static bool DirectInputHookConnect()
                         {
                             try
                             {
@@ -29963,7 +30071,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void GamepadProcess()
+                        private static void GamepadProcess()
                         {
                             for (int inc = 0; inc < dinum; inc++)
                             {
@@ -30560,9 +30668,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -30592,6 +30698,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -30606,15 +30713,15 @@ namespace SIGIL
                         private static bool running;
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -30636,13 +30743,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds = ChooseController();
@@ -30653,7 +30768,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -30663,7 +30778,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -30775,9 +30890,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbdsvendorid.Text, tbdsproductid.Text, tbdslabel.Text", "\"" + tbdsvendorid.Text + "\", \"" + tbdsproductid.Text + "\", \"" + tbdslabel.Text + "\"");
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -30812,6 +30925,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -30825,16 +30939,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -30856,13 +30970,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds = ChooseController();
@@ -30872,7 +30994,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -30883,7 +31005,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -30995,9 +31117,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbdsvendorid.Text, tbdsproductid.Text, tbdslabel.Text", "\"" + tbdsvendorid.Text + "\", \"" + tbdsproductid.Text + "\", \"" + tbdslabel.Text + "\"");
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -31032,6 +31152,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -31045,17 +31166,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -31077,16 +31198,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds = ChooseController();
@@ -31096,7 +31225,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -31106,7 +31235,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -31219,9 +31348,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbdsvendorid.Text, tbdsproductid.Text, tbdslabel.Text", "\"" + tbdsvendorid.Text + "\", \"" + tbdsproductid.Text + "\", \"" + tbdslabel.Text + "\"").Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -31255,6 +31382,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -31269,15 +31397,15 @@ namespace SIGIL
                         private static bool running;
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -31299,13 +31427,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds4 = DS4ChooseController();
@@ -31316,7 +31452,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -31326,7 +31462,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -31438,9 +31574,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbds4vendorid.Text, tbds4productid.Text, tbds4label.Text", "\"" + tbds4vendorid.Text + "\", \"" + tbds4productid.Text + "\", \"" + tbds4label.Text + "\"");
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -31475,6 +31609,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -31488,16 +31623,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -31519,13 +31654,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds4 = DS4ChooseController();
@@ -31535,7 +31678,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -31546,7 +31689,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -31658,9 +31801,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbds4vendorid.Text, tbds4productid.Text, tbds4label.Text", "\"" + tbds4vendorid.Text + "\", \"" + tbds4productid.Text + "\", \"" + tbds4label.Text + "\"");
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -31695,6 +31836,7 @@ namespace SIGIL
                 using System.Runtime;
                 using System.Linq;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -31708,17 +31850,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -31740,16 +31882,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ds4 = DS4ChooseController();
@@ -31759,7 +31909,7 @@ namespace SIGIL
                                 Task.Run(() => taskX());
                             }
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -31769,7 +31919,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -31882,9 +32032,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("tbds4vendorid.Text, tbds4productid.Text, tbds4label.Text", "\"" + tbds4vendorid.Text + "\", \"" + tbds4productid.Text + "\", \"" + tbds4label.Text + "\"").Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -31914,6 +32062,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -31952,15 +32101,15 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -31982,13 +32131,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanPro();
@@ -31998,7 +32155,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -32008,7 +32165,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -32256,9 +32413,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -32284,6 +32439,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -32321,16 +32477,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -32352,13 +32508,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanPro();
@@ -32367,7 +32531,7 @@ namespace SIGIL
                             InitProController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -32378,7 +32542,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -32626,9 +32790,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -32654,6 +32816,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -32691,17 +32854,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -32723,16 +32886,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanPro();
@@ -32741,7 +32912,7 @@ namespace SIGIL
                             InitProController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -32751,7 +32922,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -33000,9 +33171,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -33027,6 +33196,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -33073,15 +33243,15 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -33103,13 +33273,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanGrip();
@@ -33121,7 +33299,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -33132,7 +33310,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -33504,9 +33682,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -33532,6 +33708,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -33577,16 +33754,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -33608,13 +33785,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanGrip();
@@ -33625,7 +33810,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -33637,7 +33822,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -34009,9 +34194,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -34037,6 +34220,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -34082,17 +34266,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -34114,16 +34298,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScanGrip();
@@ -34134,7 +34326,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -34145,7 +34337,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -34518,9 +34710,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -34545,6 +34735,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -34597,15 +34788,15 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -34627,13 +34818,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -34649,7 +34848,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -34660,7 +34859,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -35002,9 +35201,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -35030,6 +35227,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -35081,16 +35279,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -35112,13 +35310,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -35133,7 +35339,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -35145,7 +35351,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -35487,9 +35693,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -35515,6 +35719,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -35566,17 +35771,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -35598,16 +35803,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -35622,7 +35835,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -35633,7 +35846,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -35976,9 +36189,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -36003,6 +36214,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -36053,15 +36265,15 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -36083,13 +36295,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -36102,7 +36322,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -36112,7 +36332,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -36301,9 +36521,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -36329,6 +36547,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -36378,16 +36597,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -36409,13 +36628,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -36427,7 +36654,7 @@ namespace SIGIL
                             InitLeftJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -36438,7 +36665,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -36627,9 +36854,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -36655,6 +36880,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -36704,17 +36930,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -36736,16 +36962,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -36757,7 +36991,7 @@ namespace SIGIL
                             InitLeftJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -36767,7 +37001,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -36957,9 +37191,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -36984,6 +37216,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -37034,15 +37267,15 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -37064,13 +37297,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -37083,7 +37324,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -37093,7 +37334,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -37282,9 +37523,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -37311,6 +37550,7 @@ namespace SIGIL
                 using SharpDX;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -37361,16 +37601,16 @@ namespace SIGIL
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        static DirectInput directInput = new DirectInput();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -37392,13 +37632,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -37412,7 +37660,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -37423,7 +37671,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -37624,7 +37872,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -37656,7 +37904,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -37707,9 +37955,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -37738,6 +37984,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -37787,16 +38034,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -37818,13 +38065,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -37836,7 +38091,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -37847,7 +38102,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -38036,9 +38291,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -38067,6 +38320,7 @@ namespace SIGIL
                 using SharpDX;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -38115,18 +38369,18 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -38148,13 +38402,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -38167,7 +38429,7 @@ namespace SIGIL
                             MouseInputHookConnect();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -38179,7 +38441,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -38380,7 +38642,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -38412,7 +38674,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -38463,9 +38725,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -38494,6 +38754,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -38543,17 +38804,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -38575,16 +38836,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -38596,7 +38865,7 @@ namespace SIGIL
                             InitRightJoycon();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -38606,7 +38875,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -38796,9 +39065,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Numerics.Vectors.dll");
@@ -38825,6 +39092,7 @@ namespace SIGIL
                 using SharpDX;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -38873,19 +39141,19 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, viewpower1x = 1f, viewpower2x = 0f, viewpower3x = 0f, viewpower1y = 1f, viewpower2y = 0f, viewpower3y = 0f, dzx = 20.0f, dzy = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -38907,16 +39175,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -38929,7 +39205,7 @@ namespace SIGIL
                             MouseInputHookConnect();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -38940,7 +39216,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -39142,7 +39418,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -39174,7 +39450,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -39225,9 +39501,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -39256,6 +39530,7 @@ namespace SIGIL
                 using SharpDX;
                 using controllers;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -39269,18 +39544,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -39302,13 +39577,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
@@ -39316,7 +39599,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -39327,7 +39610,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -39356,7 +39639,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -39388,7 +39671,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -39585,7 +39868,7 @@ namespace SIGIL
                         public static bool Keyboard1KeyMail;
                         public static bool Keyboard1KeyMediaSelect;
                         public static bool Keyboard1KeyUnknown;
-                        public bool KeyboardInputHookConnect()
+                        public static bool KeyboardInputHookConnect()
                         {
                             try
                             {
@@ -39617,7 +39900,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void KeyboardInputProcess()
+                        public static void KeyboardInputProcess()
                         {
                             for (int inc = 0; inc < knum; inc++)
                             {
@@ -40210,9 +40493,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -40240,6 +40521,7 @@ namespace SIGIL
                 using controllers;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -40289,18 +40571,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -40322,13 +40604,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -40342,7 +40632,7 @@ namespace SIGIL
                             ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -40353,7 +40643,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -40554,7 +40844,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -40586,7 +40876,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -40637,9 +40927,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -40668,6 +40956,7 @@ namespace SIGIL
                 using SharpDX;
                 using controllers;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -40682,15 +40971,15 @@ namespace SIGIL
                         private static bool running;
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -40712,20 +41001,28 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScpBus.LoadController();
                             XInputHookConnect();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -40735,7 +41032,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -40773,7 +41070,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -40803,7 +41100,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -40877,9 +41174,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -40907,6 +41202,7 @@ namespace SIGIL
                 using SharpDX;
                 using controllers;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -40919,18 +41215,18 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -40952,13 +41248,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             ScpBus.LoadController();
@@ -40966,7 +41270,7 @@ namespace SIGIL
                             XInputHookConnect();
                             Task.Run(() => taskX());
                         }
-                        private void taskX()
+                        private static void taskX()
                         {
                             while (running)
                             {
@@ -40977,7 +41281,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -41006,7 +41310,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -41038,7 +41342,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -41110,7 +41414,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -41140,7 +41444,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -41214,9 +41518,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -41245,6 +41547,7 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -41258,16 +41561,16 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -41289,19 +41592,27 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             XInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -41312,7 +41623,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -41350,7 +41661,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -41380,7 +41691,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -41454,9 +41765,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -41486,6 +41795,7 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -41498,18 +41808,18 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -41531,20 +41841,28 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             XInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -41556,7 +41874,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -41585,7 +41903,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -41617,7 +41935,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -41689,7 +42007,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -41719,7 +42037,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -41793,9 +42111,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -41825,6 +42141,7 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -41838,17 +42155,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        static DirectInput directInput = new DirectInput();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -41870,20 +42187,28 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             KeyboardInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -41895,7 +42220,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -41924,7 +42249,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -41956,7 +42281,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -42153,7 +42478,7 @@ namespace SIGIL
                         public static bool Keyboard1KeyMail;
                         public static bool Keyboard1KeyMediaSelect;
                         public static bool Keyboard1KeyUnknown;
-                        public bool KeyboardInputHookConnect()
+                        public static bool KeyboardInputHookConnect()
                         {
                             try
                             {
@@ -42185,7 +42510,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void KeyboardInputProcess()
+                        public static void KeyboardInputProcess()
                         {
                             for (int inc = 0; inc < knum; inc++)
                             {
@@ -42778,9 +43103,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -42810,6 +43133,7 @@ namespace SIGIL
                 using mouses;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -42859,17 +43183,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
-                        string KeyboardMouseDriverType = """"; double MouseMoveX; double MouseMoveY; double MouseAbsX; double MouseAbsY; double MouseDesktopX; double MouseDesktopY; bool SendLeftClick; bool SendRightClick; bool SendMiddleClick; bool SendWheelUp; bool SendWheelDown; bool SendLeft; bool SendRight; bool SendUp; bool SendDown; bool SendLButton; bool SendRButton; bool SendCancel; bool SendMBUTTON; bool SendXBUTTON1; bool SendXBUTTON2; bool SendBack; bool SendTab; bool SendClear; bool SendReturn; bool SendSHIFT; bool SendCONTROL; bool SendMENU; bool SendPAUSE; bool SendCAPITAL; bool SendKANA; bool SendHANGEUL; bool SendHANGUL; bool SendJUNJA; bool SendFINAL; bool SendHANJA; bool SendKANJI; bool SendEscape; bool SendCONVERT; bool SendNONCONVERT; bool SendACCEPT; bool SendMODECHANGE; bool SendSpace; bool SendPRIOR; bool SendNEXT; bool SendEND; bool SendHOME; bool SendLEFT; bool SendUP; bool SendRIGHT; bool SendDOWN; bool SendSELECT; bool SendPRINT; bool SendEXECUTE; bool SendSNAPSHOT; bool SendINSERT; bool SendDELETE; bool SendHELP; bool SendAPOSTROPHE; bool Send0; bool Send1; bool Send2; bool Send3; bool Send4; bool Send5; bool Send6; bool Send7; bool Send8; bool Send9; bool SendA; bool SendB; bool SendC; bool SendD; bool SendE; bool SendF; bool SendG; bool SendH; bool SendI; bool SendJ; bool SendK; bool SendL; bool SendM; bool SendN; bool SendO; bool SendP; bool SendQ; bool SendR; bool SendS; bool SendT; bool SendU; bool SendV; bool SendW; bool SendX; bool SendY; bool SendZ; bool SendLWIN; bool SendRWIN; bool SendAPPS; bool SendSLEEP; bool SendNUMPAD0; bool SendNUMPAD1; bool SendNUMPAD2; bool SendNUMPAD3; bool SendNUMPAD4; bool SendNUMPAD5; bool SendNUMPAD6; bool SendNUMPAD7; bool SendNUMPAD8; bool SendNUMPAD9; bool SendMULTIPLY; bool SendADD; bool SendSEPARATOR; bool SendSUBTRACT; bool SendDECIMAL; bool SendDIVIDE; bool SendF1; bool SendF2; bool SendF3; bool SendF4; bool SendF5; bool SendF6; bool SendF7; bool SendF8; bool SendF9; bool SendF10; bool SendF11; bool SendF12; bool SendF13; bool SendF14; bool SendF15; bool SendF16; bool SendF17; bool SendF18; bool SendF19; bool SendF20; bool SendF21; bool SendF22; bool SendF23; bool SendF24; bool SendNUMLOCK; bool SendSCROLL; bool SendLeftShift; bool SendRightShift; bool SendLeftControl; bool SendRightControl; bool SendLMENU; bool SendRMENU;
+                        static DirectInput directInput = new DirectInput();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
+                        static string KeyboardMouseDriverType = """"; static double MouseMoveX; static double MouseMoveY; static double MouseAbsX; static double MouseAbsY; static double MouseDesktopX; static double MouseDesktopY; static bool SendLeftClick; static bool SendRightClick; static bool SendMiddleClick; static bool SendWheelUp; static bool SendWheelDown; static bool SendLeft; static bool SendRight; static bool SendUp; static bool SendDown; static bool SendLButton; static bool SendRButton; static bool SendCancel; static bool SendMBUTTON; static bool SendXBUTTON1; static bool SendXBUTTON2; static bool SendBack; static bool SendTab; static bool SendClear; static bool SendReturn; static bool SendSHIFT; static bool SendCONTROL; static bool SendMENU; static bool SendPAUSE; static bool SendCAPITAL; static bool SendKANA; static bool SendHANGEUL; static bool SendHANGUL; static bool SendJUNJA; static bool SendFINAL; static bool SendHANJA; static bool SendKANJI; static bool SendEscape; static bool SendCONVERT; static bool SendNONCONVERT; static bool SendACCEPT; static bool SendMODECHANGE; static bool SendSpace; static bool SendPRIOR; static bool SendNEXT; static bool SendEND; static bool SendHOME; static bool SendLEFT; static bool SendUP; static bool SendRIGHT; static bool SendDOWN; static bool SendSELECT; static bool SendPRINT; static bool SendEXECUTE; static bool SendSNAPSHOT; static bool SendINSERT; static bool SendDELETE; static bool SendHELP; static bool SendAPOSTROPHE; static bool Send0; static bool Send1; static bool Send2; static bool Send3; static bool Send4; static bool Send5; static bool Send6; static bool Send7; static bool Send8; static bool Send9; static bool SendA; static bool SendB; static bool SendC; static bool SendD; static bool SendE; static bool SendF; static bool SendG; static bool SendH; static bool SendI; static bool SendJ; static bool SendK; static bool SendL; static bool SendM; static bool SendN; static bool SendO; static bool SendP; static bool SendQ; static bool SendR; static bool SendS; static bool SendT; static bool SendU; static bool SendV; static bool SendW; static bool SendX; static bool SendY; static bool SendZ; static bool SendLWIN; static bool SendRWIN; static bool SendAPPS; static bool SendSLEEP; static bool SendNUMPAD0; static bool SendNUMPAD1; static bool SendNUMPAD2; static bool SendNUMPAD3; static bool SendNUMPAD4; static bool SendNUMPAD5; static bool SendNUMPAD6; static bool SendNUMPAD7; static bool SendNUMPAD8; static bool SendNUMPAD9; static bool SendMULTIPLY; static bool SendADD; static bool SendSEPARATOR; static bool SendSUBTRACT; static bool SendDECIMAL; static bool SendDIVIDE; static bool SendF1; static bool SendF2; static bool SendF3; static bool SendF4; static bool SendF5; static bool SendF6; static bool SendF7; static bool SendF8; static bool SendF9; static bool SendF10; static bool SendF11; static bool SendF12; static bool SendF13; static bool SendF14; static bool SendF15; static bool SendF16; static bool SendF17; static bool SendF18; static bool SendF19; static bool SendF20; static bool SendF21; static bool SendF22; static bool SendF23; static bool SendF24; static bool SendNUMLOCK; static bool SendSCROLL; static bool SendLeftShift; static bool SendRightShift; static bool SendLeftControl; static bool SendRightControl; static bool SendLMENU; static bool SendRMENU;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -42891,13 +43215,21 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -42910,7 +43242,7 @@ namespace SIGIL
                             MouseInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -42922,7 +43254,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -43123,7 +43455,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -43155,7 +43487,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -43206,9 +43538,7 @@ namespace SIGIL
                         }
                     }
                 }";
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -43238,6 +43568,7 @@ namespace SIGIL
                 using SharpDX;
                 using Interceptions;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -43251,17 +43582,17 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -43283,22 +43614,30 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             XInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -43308,7 +43647,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -43347,7 +43686,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -43377,7 +43716,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -43451,9 +43790,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -43481,6 +43818,7 @@ namespace SIGIL
                 using SharpDX;
                 using Interceptions;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -43493,19 +43831,19 @@ namespace SIGIL
                         private static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
                         private static uint CurrentResolution = 0;
                         private static bool running;
-                        DirectInput directInput = new DirectInput();
+                        static DirectInput directInput = new DirectInput();
                         private static int width, height;
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -43527,23 +43865,31 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             XInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -43554,7 +43900,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -43584,7 +43930,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -43616,7 +43962,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -43688,7 +44034,7 @@ namespace SIGIL
                         public static double Controller1ThumbLeftY;
                         public static double Controller1ThumbRightX;
                         public static double Controller1ThumbRightY;
-                        public bool XInputHookConnect()
+                        public static bool XInputHookConnect()
                         {
                             try
                             {
@@ -43718,7 +44064,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        private void ControllerProcess()
+                        private static void ControllerProcess()
                         {
                             for (int inc = 0; inc < xinum; inc++)
                             {
@@ -43792,9 +44138,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -43822,6 +44166,7 @@ namespace SIGIL
                 using SharpDX.DirectInput;
                 using Interceptions;
                 using Valuechanges;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -43835,18 +44180,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        static DirectInput directInput = new DirectInput();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -43868,23 +44213,31 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             MouseInputHookConnect();
                             KeyboardInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -43895,7 +44248,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -43925,7 +44278,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -43957,7 +44310,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -44154,7 +44507,7 @@ namespace SIGIL
                         public static bool Keyboard1KeyMail;
                         public static bool Keyboard1KeyMediaSelect;
                         public static bool Keyboard1KeyUnknown;
-                        public bool KeyboardInputHookConnect()
+                        public static bool KeyboardInputHookConnect()
                         {
                             try
                             {
@@ -44186,7 +44539,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void KeyboardInputProcess()
+                        public static void KeyboardInputProcess()
                         {
                             for (int inc = 0; inc < knum; inc++)
                             {
@@ -44779,9 +45132,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -44809,6 +45160,7 @@ namespace SIGIL
                 using Interceptions;
                 using Valuechanges;
                 using Vector3 = System.Numerics.Vector3;
+                using System.Diagnostics;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -44858,18 +45210,18 @@ namespace SIGIL
                         private static uint CurrentResolution = 0;
                         private static bool running;
                         private static int width, height;
-                        DirectInput directInput = new DirectInput();
-                        private double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
-                        private bool[] getstate = new bool[12];
-                        private int[] pollcount = new int[12];
-                        private int[] keys12345 = new int[12];
-                        private int[] keys54321 = new int[12];
-                        private double[] mousexp = new double[12];
-                        private double[] mouseyp = new double[12];
-                        private int sleeptime = 1;
-                        public Valuechange ValueChange = new Valuechange();
+                        static DirectInput directInput = new DirectInput();
+                        private static double statex = 0f, statey = 0f, mousex = 0f, mousey = 0f, mousestatex = 0f, mousestatey = 0f, dzx = 0.0f, dzy = 0.0f, viewpower1x = 0f, viewpower2x = 1f, viewpower3x = 0f, viewpower1y = 0.25f, viewpower2y = 0.75f, viewpower3y = 0f;
+                        private static bool[] getstate = new bool[12];
+                        private static int[] pollcount = new int[12];
+                        private static int[] keys12345 = new int[12];
+                        private static int[] keys54321 = new int[12];
+                        private static double[] mousexp = new double[12];
+                        private static double[] mouseyp = new double[12];
+                        private static int sleeptime = 1;
+                        public static Valuechange ValueChange = new Valuechange();
                         public static Input input = new Input();
-                        double MouseDesktopX; double MouseDesktopY; double int_1_deltaX = 0; double int_1_deltaY = 0; double int_1_x = 0; double int_1_y = 0; bool int_1_SendLeftClick; bool int_1_SendRightClick; bool int_1_SendMiddleClick; bool int_1_SendWheelUp; bool int_1_SendWheelDown; bool int_1_SendCANCEL; bool int_1_SendBACK; bool int_1_SendTAB; bool int_1_SendCLEAR; bool int_1_SendRETURN; bool int_1_SendSHIFT; bool int_1_SendCONTROL; bool int_1_SendMENU; bool int_1_SendCAPITAL; bool int_1_SendESCAPE; bool int_1_SendSPACE; bool int_1_SendPRIOR; bool int_1_SendNEXT; bool int_1_SendEND; bool int_1_SendHOME; bool int_1_SendLEFT; bool int_1_SendUP; bool int_1_SendRIGHT; bool int_1_SendDOWN; bool int_1_SendSNAPSHOT; bool int_1_SendINSERT; bool int_1_SendNUMPADDEL; bool int_1_SendNUMPADINSERT; bool int_1_SendHELP; bool int_1_SendAPOSTROPHE; bool int_1_SendBACKSPACE; bool int_1_SendPAGEDOWN; bool int_1_SendPAGEUP; bool int_1_SendFIN; bool int_1_SendMOUSE; bool int_1_SendA; bool int_1_SendB; bool int_1_SendC; bool int_1_SendD; bool int_1_SendE; bool int_1_SendF; bool int_1_SendG; bool int_1_SendH; bool int_1_SendI; bool int_1_SendJ; bool int_1_SendK; bool int_1_SendL; bool int_1_SendM; bool int_1_SendN; bool int_1_SendO; bool int_1_SendP; bool int_1_SendQ; bool int_1_SendR; bool int_1_SendS; bool int_1_SendT; bool int_1_SendU; bool int_1_SendV; bool int_1_SendW; bool int_1_SendX; bool int_1_SendY; bool int_1_SendZ; bool int_1_SendLWIN; bool int_1_SendRWIN; bool int_1_SendAPPS; bool int_1_SendDELETE; bool int_1_SendNUMPAD0; bool int_1_SendNUMPAD1; bool int_1_SendNUMPAD2; bool int_1_SendNUMPAD3; bool int_1_SendNUMPAD4; bool int_1_SendNUMPAD5; bool int_1_SendNUMPAD6; bool int_1_SendNUMPAD7; bool int_1_SendNUMPAD8; bool int_1_SendNUMPAD9; bool int_1_SendMULTIPLY; bool int_1_SendADD; bool int_1_SendSUBTRACT; bool int_1_SendDECIMAL; bool int_1_SendPRINTSCREEN; bool int_1_SendDIVIDE; bool int_1_SendF1; bool int_1_SendF2; bool int_1_SendF3; bool int_1_SendF4; bool int_1_SendF5; bool int_1_SendF6; bool int_1_SendF7; bool int_1_SendF8; bool int_1_SendF9; bool int_1_SendF10; bool int_1_SendF11; bool int_1_SendF12; bool int_1_SendNUMLOCK; bool int_1_SendSCROLLLOCK; bool int_1_SendLEFTSHIFT; bool int_1_SendRIGHTSHIFT; bool int_1_SendLEFTCONTROL; bool int_1_SendRIGHTCONTROL; bool int_1_SendLEFTALT; bool int_1_SendRIGHTALT; bool int_1_SendBROWSER_BACK; bool int_1_SendBROWSER_FORWARD; bool int_1_SendBROWSER_REFRESH; bool int_1_SendBROWSER_STOP; bool int_1_SendBROWSER_SEARCH; bool int_1_SendBROWSER_FAVORITES; bool int_1_SendBROWSER_HOME; bool int_1_SendVOLUME_MUTE; bool int_1_SendVOLUME_DOWN; bool int_1_SendVOLUME_UP; bool int_1_SendMEDIA_NEXT_TRACK; bool int_1_SendMEDIA_PREV_TRACK; bool int_1_SendMEDIA_STOP; bool int_1_SendMEDIA_PLAY_PAUSE; bool int_1_SendLAUNCH_MAIL; bool int_1_SendLAUNCH_MEDIA_SELECT; bool int_1_SendLAUNCH_APP1; bool int_1_SendLAUNCH_APP2; bool int_1_SendOEM_1; bool int_1_SendOEM_PLUS; bool int_1_SendOEM_COMMA; bool int_1_SendOEM_MINUS; bool int_1_SendOEM_PERIOD; bool int_1_SendOEM_2; bool int_1_SendOEM_3; bool int_1_SendOEM_4; bool int_1_SendOEM_5; bool int_1_SendOEM_6; bool int_1_SendOEM_7; bool int_1_SendOEM_8; bool int_1_SendOEM_102; bool int_1_SendEREOF; bool int_1_SendZOOM; bool int_1_SendEscape; bool int_1_SendOne; bool int_1_SendTwo; bool int_1_SendThree; bool int_1_SendFour; bool int_1_SendFive; bool int_1_SendSix; bool int_1_SendSeven; bool int_1_SendEight; bool int_1_SendNine; bool int_1_SendZero; bool int_1_SendDashUnderscore; bool int_1_SendPlusEquals; bool int_1_SendBackspace; bool int_1_SendTab; bool int_1_SendOpenBracketBrace; bool int_1_SendCloseBracketBrace; bool int_1_SendEnter; bool int_1_SendControl; bool int_1_SendSemicolonColon; bool int_1_SendSingleDoubleQuote; bool int_1_SendTilde; bool int_1_SendLeftShift; bool int_1_SendBackslashPipe; bool int_1_SendCommaLeftArrow; bool int_1_SendPeriodRightArrow; bool int_1_SendForwardSlashQuestionMark; bool int_1_SendRightShift; bool int_1_SendRightAlt; bool int_1_SendSpace; bool int_1_SendCapsLock; bool int_1_SendUp; bool int_1_SendDown; bool int_1_SendRight; bool int_1_SendLeft; bool int_1_SendHome; bool int_1_SendEnd; bool int_1_SendDelete; bool int_1_SendPageUp; bool int_1_SendPageDown; bool int_1_SendInsert; bool int_1_SendPrintScreen; bool int_1_SendNumLock; bool int_1_SendScrollLock; bool int_1_SendMenu; bool int_1_SendWindowsKey; bool int_1_SendNumpadDivide; bool int_1_SendNumpadAsterisk; bool int_1_SendNumpad7; bool int_1_SendNumpad8; bool int_1_SendNumpad9; bool int_1_SendNumpad4; bool int_1_SendNumpad5; bool int_1_SendNumpad6; bool int_1_SendNumpad1; bool int_1_SendNumpad2; bool int_1_SendNumpad3; bool int_1_SendNumpad0; bool int_1_SendNumpadDelete; bool int_1_SendNumpadEnter; bool int_1_SendNumpadPlus; bool int_1_SendNumpadMinus;
+                        static double MouseDesktopX; static double MouseDesktopY; static double int_1_deltaX = 0; static double int_1_deltaY = 0; static double int_1_x = 0; static double int_1_y = 0; static bool int_1_SendLeftClick; static bool int_1_SendRightClick; static bool int_1_SendMiddleClick; static bool int_1_SendWheelUp; static bool int_1_SendWheelDown; static bool int_1_SendCANCEL; static bool int_1_SendBACK; static bool int_1_SendTAB; static bool int_1_SendCLEAR; static bool int_1_SendRETURN; static bool int_1_SendSHIFT; static bool int_1_SendCONTROL; static bool int_1_SendMENU; static bool int_1_SendCAPITAL; static bool int_1_SendESCAPE; static bool int_1_SendSPACE; static bool int_1_SendPRIOR; static bool int_1_SendNEXT; static bool int_1_SendEND; static bool int_1_SendHOME; static bool int_1_SendLEFT; static bool int_1_SendUP; static bool int_1_SendRIGHT; static bool int_1_SendDOWN; static bool int_1_SendSNAPSHOT; static bool int_1_SendINSERT; static bool int_1_SendNUMPADDEL; static bool int_1_SendNUMPADINSERT; static bool int_1_SendHELP; static bool int_1_SendAPOSTROPHE; static bool int_1_SendBACKSPACE; static bool int_1_SendPAGEDOWN; static bool int_1_SendPAGEUP; static bool int_1_SendFIN; static bool int_1_SendMOUSE; static bool int_1_SendA; static bool int_1_SendB; static bool int_1_SendC; static bool int_1_SendD; static bool int_1_SendE; static bool int_1_SendF; static bool int_1_SendG; static bool int_1_SendH; static bool int_1_SendI; static bool int_1_SendJ; static bool int_1_SendK; static bool int_1_SendL; static bool int_1_SendM; static bool int_1_SendN; static bool int_1_SendO; static bool int_1_SendP; static bool int_1_SendQ; static bool int_1_SendR; static bool int_1_SendS; static bool int_1_SendT; static bool int_1_SendU; static bool int_1_SendV; static bool int_1_SendW; static bool int_1_SendX; static bool int_1_SendY; static bool int_1_SendZ; static bool int_1_SendLWIN; static bool int_1_SendRWIN; static bool int_1_SendAPPS; static bool int_1_SendDELETE; static bool int_1_SendNUMPAD0; static bool int_1_SendNUMPAD1; static bool int_1_SendNUMPAD2; static bool int_1_SendNUMPAD3; static bool int_1_SendNUMPAD4; static bool int_1_SendNUMPAD5; static bool int_1_SendNUMPAD6; static bool int_1_SendNUMPAD7; static bool int_1_SendNUMPAD8; static bool int_1_SendNUMPAD9; static bool int_1_SendMULTIPLY; static bool int_1_SendADD; static bool int_1_SendSUBTRACT; static bool int_1_SendDECIMAL; static bool int_1_SendPRINTSCREEN; static bool int_1_SendDIVIDE; static bool int_1_SendF1; static bool int_1_SendF2; static bool int_1_SendF3; static bool int_1_SendF4; static bool int_1_SendF5; static bool int_1_SendF6; static bool int_1_SendF7; static bool int_1_SendF8; static bool int_1_SendF9; static bool int_1_SendF10; static bool int_1_SendF11; static bool int_1_SendF12; static bool int_1_SendNUMLOCK; static bool int_1_SendSCROLLLOCK; static bool int_1_SendLEFTSHIFT; static bool int_1_SendRIGHTSHIFT; static bool int_1_SendLEFTCONTROL; static bool int_1_SendRIGHTCONTROL; static bool int_1_SendLEFTALT; static bool int_1_SendRIGHTALT; static bool int_1_SendBROWSER_BACK; static bool int_1_SendBROWSER_FORWARD; static bool int_1_SendBROWSER_REFRESH; static bool int_1_SendBROWSER_STOP; static bool int_1_SendBROWSER_SEARCH; static bool int_1_SendBROWSER_FAVORITES; static bool int_1_SendBROWSER_HOME; static bool int_1_SendVOLUME_MUTE; static bool int_1_SendVOLUME_DOWN; static bool int_1_SendVOLUME_UP; static bool int_1_SendMEDIA_NEXT_TRACK; static bool int_1_SendMEDIA_PREV_TRACK; static bool int_1_SendMEDIA_STOP; static bool int_1_SendMEDIA_PLAY_PAUSE; static bool int_1_SendLAUNCH_MAIL; static bool int_1_SendLAUNCH_MEDIA_SELECT; static bool int_1_SendLAUNCH_APP1; static bool int_1_SendLAUNCH_APP2; static bool int_1_SendOEM_1; static bool int_1_SendOEM_PLUS; static bool int_1_SendOEM_COMMA; static bool int_1_SendOEM_MINUS; static bool int_1_SendOEM_PERIOD; static bool int_1_SendOEM_2; static bool int_1_SendOEM_3; static bool int_1_SendOEM_4; static bool int_1_SendOEM_5; static bool int_1_SendOEM_6; static bool int_1_SendOEM_7; static bool int_1_SendOEM_8; static bool int_1_SendOEM_102; static bool int_1_SendEREOF; static bool int_1_SendZOOM; static bool int_1_SendEscape; static bool int_1_SendOne; static bool int_1_SendTwo; static bool int_1_SendThree; static bool int_1_SendFour; static bool int_1_SendFive; static bool int_1_SendSix; static bool int_1_SendSeven; static bool int_1_SendEight; static bool int_1_SendNine; static bool int_1_SendZero; static bool int_1_SendDashUnderscore; static bool int_1_SendPlusEquals; static bool int_1_SendBackspace; static bool int_1_SendTab; static bool int_1_SendOpenBracketBrace; static bool int_1_SendCloseBracketBrace; static bool int_1_SendEnter; static bool int_1_SendControl; static bool int_1_SendSemicolonColon; static bool int_1_SendSingleDoubleQuote; static bool int_1_SendTilde; static bool int_1_SendLeftShift; static bool int_1_SendBackslashPipe; static bool int_1_SendCommaLeftArrow; static bool int_1_SendPeriodRightArrow; static bool int_1_SendForwardSlashQuestionMark; static bool int_1_SendRightShift; static bool int_1_SendRightAlt; static bool int_1_SendSpace; static bool int_1_SendCapsLock; static bool int_1_SendUp; static bool int_1_SendDown; static bool int_1_SendRight; static bool int_1_SendLeft; static bool int_1_SendHome; static bool int_1_SendEnd; static bool int_1_SendDelete; static bool int_1_SendPageUp; static bool int_1_SendPageDown; static bool int_1_SendInsert; static bool int_1_SendPrintScreen; static bool int_1_SendNumLock; static bool int_1_SendScrollLock; static bool int_1_SendMenu; static bool int_1_SendWindowsKey; static bool int_1_SendNumpadDivide; static bool int_1_SendNumpadAsterisk; static bool int_1_SendNumpad7; static bool int_1_SendNumpad8; static bool int_1_SendNumpad9; static bool int_1_SendNumpad4; static bool int_1_SendNumpad5; static bool int_1_SendNumpad6; static bool int_1_SendNumpad1; static bool int_1_SendNumpad2; static bool int_1_SendNumpad3; static bool int_1_SendNumpad0; static bool int_1_SendNumpadDelete; static bool int_1_SendNumpadEnter; static bool int_1_SendNumpadPlus; static bool int_1_SendNumpadMinus;
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -44891,16 +45243,24 @@ namespace SIGIL
                                 wd[n] = 0;
                             }
                         }
-                        public void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
+                            SetProcessPriority();
                             input.KeyboardFilterMode = KeyboardFilterMode.All;
                             input.MouseFilterMode = MouseFilterMode.All;
                             input.Load();
                             Task.Run(() => Start());
                         }
-                        private void Start()
+                        private static void SetProcessPriority()
+                        {
+                            using (Process p = Process.GetCurrentProcess())
+                            {
+                                p.PriorityClass = ProcessPriorityClass.RealTime;
+                            }
+                        }
+                        private static void Start()
                         {
                             running = true;
                             do
@@ -44913,7 +45273,7 @@ namespace SIGIL
                             MouseInputHookConnect();
                             Task.Run(() => taskKM());
                         }
-                        private void taskKM()
+                        private static void taskKM()
                         {
                             while (running)
                             {
@@ -44924,7 +45284,7 @@ namespace SIGIL
                                 Thread.Sleep(sleeptime);
                             }
                         }
-                        public void Close()
+                        public static void Close()
                         {
                             try
                             {
@@ -45126,7 +45486,7 @@ namespace SIGIL
                         public static int Mouse1AxisX;
                         public static int Mouse1AxisY;
                         public static int Mouse1AxisZ;
-                        public bool MouseInputHookConnect()
+                        public static bool MouseInputHookConnect()
                         {
                             try
                             {
@@ -45158,7 +45518,7 @@ namespace SIGIL
                                 return true;
                             }
                         }
-                        public void MouseInputProcess()
+                        public static void MouseInputProcess()
                         {
                             for (int inc = 0; inc < mnum; inc++)
                             {
@@ -45209,9 +45569,7 @@ namespace SIGIL
                         }
                     }
                 }".Replace("keyboard_1_id, mouse_1_id", tbintkeyboardid.Text + ", " + tbintmouseid.Text);
-                parameters = new System.CodeDom.Compiler.CompilerParameters();
-                parameters.GenerateExecutable = false;
-                parameters.GenerateInMemory = true;
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Runtime.dll");
@@ -45222,6 +45580,10 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Valuechanges.dll");
             }
+            parameters.GenerateExecutable = true;
+            parameters.GenerateInMemory = false;
+            parameters.IncludeDebugInformation = false;
+            parameters.CompilerOptions = "/optimize";
         }
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45264,7 +45626,7 @@ namespace SIGIL
             assembly = results.CompiledAssembly;
             program = assembly.GetType("StringToCode.FooClass");
             obj = Activator.CreateInstance(program);
-            program.InvokeMember("Load", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
+            program.InvokeMember("Main", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
             runToolStripMenuItem.Text = "Stop";
             fastColoredTextBox1.ReadOnly = true;
             fastColoredTextBox1.Enabled = false;
@@ -45289,7 +45651,7 @@ namespace SIGIL
             runstopbool = false;
             try
             {
-                program.InvokeMember("Close", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
+                program.InvokeMember("Close", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
             }
             catch { }
         }
