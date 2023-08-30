@@ -56,3 +56,10 @@ C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualsense\o
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualsense\obj\Release\Dualsense.csproj.CopyComplete
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualsense\obj\Release\Dualsense.dll
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualsense\obj\Release\Dualsense.pdb
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\bin\Release\Dualsense.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\bin\Release\Dualsense.pdb
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\obj\Release\Dualsense.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\obj\Release\Dualsense.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\obj\Release\Dualsense.csproj.CopyComplete
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\obj\Release\Dualsense.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Dualsense\obj\Release\Dualsense.pdb

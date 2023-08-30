@@ -3998,6 +3998,10 @@ namespace SIGIL
         "PS5ControllerButtonMenuPressed",
         "PS5ControllerButtonLogoPressed",
         "PS5ControllerButtonTouchpadPressed",
+        "PS5ControllerButtonFnLPressed",
+        "PS5ControllerButtonFnRPressed",
+        "PS5ControllerButtonBLPPressed",
+        "PS5ControllerButtonBRPPressed",
         "PS5ControllerButtonMicPressed",
         "pollcount",
         "getstate",
@@ -4223,6 +4227,10 @@ namespace SIGIL
         "PS5ControllerButtonMenuPressed",
         "PS5ControllerButtonLogoPressed",
         "PS5ControllerButtonTouchpadPressed",
+        "PS5ControllerButtonFnLPressed",
+        "PS5ControllerButtonFnRPressed",
+        "PS5ControllerButtonBLPPressed",
+        "PS5ControllerButtonBRPPressed",
         "PS5ControllerButtonMicPressed",
         "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
         "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
@@ -4506,6 +4514,10 @@ namespace SIGIL
         "PS5ControllerButtonMenuPressed",
         "PS5ControllerButtonLogoPressed",
         "PS5ControllerButtonTouchpadPressed",
+        "PS5ControllerButtonFnLPressed",
+        "PS5ControllerButtonFnRPressed",
+        "PS5ControllerButtonBLPPressed",
+        "PS5ControllerButtonBRPPressed",
         "PS5ControllerButtonMicPressed",
         "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width",
         "System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height",
@@ -14776,6 +14788,10 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMenuPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonLogoPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonTouchpadPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnLPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnRPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBLPPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBRPPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMicPressed"));
                     range.SetStyle(InputStyle, new Regex(@"pollcount"));
                     range.SetStyle(InputStyle, new Regex(@"getstate"));
@@ -15000,6 +15016,10 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMenuPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonLogoPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonTouchpadPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnLPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnRPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBLPPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBRPPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMicPressed"));
                     range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
                     range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
@@ -15282,6 +15302,10 @@ namespace SIGIL
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMenuPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonLogoPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonTouchpadPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnLPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonFnRPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBLPPressed"));
+                    range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonBRPPressed"));
                     range.SetStyle(InputStyle, new Regex(@"PS5ControllerButtonMicPressed"));
                     range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width"));
                     range.SetStyle(InputStyle, new Regex(@"System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height"));
@@ -30811,6 +30835,10 @@ namespace SIGIL
                         public static bool PS5ControllerButtonMenuPressed;
                         public static bool PS5ControllerButtonLogoPressed;
                         public static bool PS5ControllerButtonTouchpadPressed;
+                        public static bool PS5ControllerButtonFnLPressed;
+                        public static bool PS5ControllerButtonFnRPressed;
+                        public static bool PS5ControllerButtonBLPPressed;
+                        public static bool PS5ControllerButtonBRPPressed;
                         public static bool PS5ControllerButtonMicPressed;
                         public static bool PS5ControllerTouchOn;
                         public static bool PS5ControllerButtonACC, PS5ControllerRollLeft, PS5ControllerRollRight;
@@ -30863,6 +30891,10 @@ namespace SIGIL
                             PS5ControllerButtonMenuPressed = DualSense.MenuButton;
                             PS5ControllerButtonLogoPressed = DualSense.LogoButton;
                             PS5ControllerButtonTouchpadPressed = DualSense.TouchpadButton;
+                            PS5ControllerButtonFnLPressed = DualSense.FnL;
+                            PS5ControllerButtonFnRPressed = DualSense.FnR;
+                            PS5ControllerButtonBLPPressed = DualSense.BLP;
+                            PS5ControllerButtonBRPPressed = DualSense.BRP;
                             PS5ControllerButtonMicPressed = DualSense.MicButton;
                         }
                         static T Choose<T>(T ts)
@@ -31038,6 +31070,10 @@ namespace SIGIL
                         public static bool PS5ControllerButtonMenuPressed;
                         public static bool PS5ControllerButtonLogoPressed;
                         public static bool PS5ControllerButtonTouchpadPressed;
+                        public static bool PS5ControllerButtonFnLPressed;
+                        public static bool PS5ControllerButtonFnRPressed;
+                        public static bool PS5ControllerButtonBLPPressed;
+                        public static bool PS5ControllerButtonBRPPressed;
                         public static bool PS5ControllerButtonMicPressed;
                         public static bool PS5ControllerTouchOn;
                         public static bool PS5ControllerButtonACC, PS5ControllerRollLeft, PS5ControllerRollRight;
@@ -31090,6 +31126,10 @@ namespace SIGIL
                             PS5ControllerButtonMenuPressed = DualSense.MenuButton;
                             PS5ControllerButtonLogoPressed = DualSense.LogoButton;
                             PS5ControllerButtonTouchpadPressed = DualSense.TouchpadButton;
+                            PS5ControllerButtonFnLPressed = DualSense.FnL;
+                            PS5ControllerButtonFnRPressed = DualSense.FnR;
+                            PS5ControllerButtonBLPPressed = DualSense.BLP;
+                            PS5ControllerButtonBRPPressed = DualSense.BRP;
                             PS5ControllerButtonMicPressed = DualSense.MicButton;
                         }
                         static T Choose<T>(T ts)
@@ -31269,6 +31309,10 @@ namespace SIGIL
                         public static bool PS5ControllerButtonMenuPressed;
                         public static bool PS5ControllerButtonLogoPressed;
                         public static bool PS5ControllerButtonTouchpadPressed;
+                        public static bool PS5ControllerButtonFnLPressed;
+                        public static bool PS5ControllerButtonFnRPressed;
+                        public static bool PS5ControllerButtonBLPPressed;
+                        public static bool PS5ControllerButtonBRPPressed;
                         public static bool PS5ControllerButtonMicPressed;
                         public static bool PS5ControllerTouchOn;
                         public static bool PS5ControllerButtonACC, PS5ControllerRollLeft, PS5ControllerRollRight;
@@ -31321,6 +31365,10 @@ namespace SIGIL
                             PS5ControllerButtonMenuPressed = DualSense.MenuButton;
                             PS5ControllerButtonLogoPressed = DualSense.LogoButton;
                             PS5ControllerButtonTouchpadPressed = DualSense.TouchpadButton;
+                            PS5ControllerButtonFnLPressed = DualSense.FnL;
+                            PS5ControllerButtonFnRPressed = DualSense.FnR;
+                            PS5ControllerButtonBLPPressed = DualSense.BLP;
+                            PS5ControllerButtonBRPPressed = DualSense.BRP;
                             PS5ControllerButtonMicPressed = DualSense.MicButton;
                         }
                         static T Choose<T>(T ts)

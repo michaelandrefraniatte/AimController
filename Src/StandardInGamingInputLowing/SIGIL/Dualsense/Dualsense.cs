@@ -105,8 +105,12 @@ namespace DualSenseAPI
             MenuButton = btnBlock2.HasFlag(0x20);
             L3Button = btnBlock2.HasFlag(0x40);
             R3Button = btnBlock2.HasFlag(0x80);
-            LogoButton = btnBlock3.HasFlag(0x01);
+            LogoButton = btnBlock3.HasFlag(1 << 0);
             TouchpadButton = btnBlock3.HasFlag(0x02);
+            FnL = btnBlock3.HasFlag(1 << 4);
+            FnR = btnBlock3.HasFlag(1 << 5);
+            BLP = btnBlock3.HasFlag(1 << 6);
+            BRP = btnBlock3.HasFlag(1 << 7);
             MicButton = GetModeSwitch(data, 9).HasFlag(0x04); // not supported on the broken BT protocol, otherwise would likely be in btnBlock3
 
             // Multitouch
@@ -364,6 +368,26 @@ namespace DualSenseAPI
         /// The status of the touchpad button.
         /// </summary>
         public static bool TouchpadButton { get; private set; }
+
+        /// <summary>
+        /// The status of the FnL button.
+        /// </summary>
+        public static bool FnL { get; private set; }
+
+        /// <summary>
+        /// The status of the FnR button.
+        /// </summary>
+        public static bool FnR { get; private set; }
+
+        /// <summary>
+        /// The status of the BLP button.
+        /// </summary>
+        public static bool BLP { get; private set; }
+
+        /// <summary>
+        /// The status of the BRP button.
+        /// </summary>
+        public static bool BRP { get; private set; }
 
         /// <summary>
         /// The status of the mic button.
