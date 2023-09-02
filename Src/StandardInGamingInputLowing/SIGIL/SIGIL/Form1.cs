@@ -1311,6 +1311,16 @@ namespace SIGIL
             if (toolStripComboBox1.Text == "Wii-XC")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "valListX.Count",
+        "valListX.Clear",
+        "valListX.RemoveAt",
+        "valListX.Add",
+        "valListX.Average",
+        "valListY.Count",
+        "valListY.Clear",
+        "valListY.RemoveAt",
+        "valListY.Add",
+        "valListY.Average",
         "controller1_send_xbox",
         "controller1_send_back",
         "controller1_send_start",
@@ -1400,6 +1410,16 @@ namespace SIGIL
             if (toolStripComboBox1.Text == "Wii-KM")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "valListX.Count",
+        "valListX.Clear",
+        "valListX.RemoveAt",
+        "valListX.Add",
+        "valListX.Average",
+        "valListY.Count",
+        "valListY.Clear",
+        "valListY.RemoveAt",
+        "valListY.Add",
+        "valListY.Average",
         "KeyboardMouseDriverType",
         "MouseMoveX",
         "MouseMoveY",
@@ -1620,6 +1640,16 @@ namespace SIGIL
             if (toolStripComboBox1.Text == "Wii-Int")
             {
                 this.autocompleteMenu1.Items = new string[] {
+        "valListX.Count",
+        "valListX.Clear",
+        "valListX.RemoveAt",
+        "valListX.Add",
+        "valListX.Average",
+        "valListY.Count",
+        "valListY.Clear",
+        "valListY.RemoveAt",
+        "valListY.Add",
+        "valListY.Average",
         "MouseDesktopX",
         "MouseDesktopY",
         "int_1_deltaX",
@@ -12120,6 +12150,16 @@ namespace SIGIL
                 }
                 if (toolStripComboBox1.Text == "Wii-XC")
                 {
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Average"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Average"));
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_xbox"));
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_back"));
                     range.SetStyle(OutputStyle, new Regex(@"controller1_send_start"));
@@ -12208,6 +12248,16 @@ namespace SIGIL
                 }
                 if (toolStripComboBox1.Text == "Wii-KM")
                 {
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Average"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Average"));
                     range.SetStyle(OutputStyle, new Regex(@"KeyboardMouseDriverType"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseMoveY"));
@@ -12425,6 +12475,16 @@ namespace SIGIL
                 }
                 if (toolStripComboBox1.Text == "Wii-Int")
                 {
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListX.Average"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Count"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Clear"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.RemoveAt"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Add"));
+                    range.SetStyle(InputStyle, new Regex(@"valListY.Average"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopX"));
                     range.SetStyle(OutputStyle, new Regex(@"MouseDesktopY"));
                     range.SetStyle(OutputStyle, new Regex(@"int_1_deltaX"));
@@ -24417,6 +24477,8 @@ namespace SIGIL
                 using System.Reflection;
                 using controllers;
                 using System.Diagnostics;
+                using System.Collections.Generic;
+                using System.Linq;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -24464,6 +24526,7 @@ namespace SIGIL
                         private static double[] mousexp = new double[12];
                         private static double[] mouseyp = new double[12];
                         private static int sleeptime = 1;
+                        public static List<double> valListX = new List<double>(), valListY = new List<double>();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -24721,6 +24784,8 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\controllers.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Collections.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Linq.dll");
             }
             if (toolStripComboBox1.Text == "Wii-KM")
             {
@@ -24739,6 +24804,8 @@ namespace SIGIL
                 using keyboards;
                 using mouses;
                 using System.Diagnostics;
+                using System.Collections.Generic;
+                using System.Linq;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -24786,6 +24853,7 @@ namespace SIGIL
                         private static double[] mousexp = new double[12];
                         private static double[] mouseyp = new double[12];
                         private static int sleeptime = 1;
+                        public static List<double> valListX = new List<double>(), valListY = new List<double>();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -25044,6 +25112,8 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\keyboards.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\mouses.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Collections.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Linq.dll");
             }
             if (toolStripComboBox1.Text == "Wii-Int")
             {
@@ -25061,6 +25131,8 @@ namespace SIGIL
                 using System.Reflection;
                 using Interceptions;
                 using System.Diagnostics;
+                using System.Collections.Generic;
+                using System.Linq;
                 namespace StringToCode
                 {
                     public class FooClass 
@@ -25109,6 +25181,7 @@ namespace SIGIL
                         private static double[] mousexp = new double[12];
                         private static double[] mouseyp = new double[12];
                         private static int sleeptime = 1;
+                        public static List<double> valListX = new List<double>(), valListY = new List<double>();
                         private static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         private static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
                         public static void valchanged(int n, bool val)
@@ -25369,6 +25442,8 @@ namespace SIGIL
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Windows.Forms.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Drawing.dll");
                 parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\Interceptions.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Collections.dll");
+                parameters.ReferencedAssemblies.Add(Application.StartupPath + @"\System.Linq.dll");
             }
             if (toolStripComboBox1.Text == "DIC-XC")
             {

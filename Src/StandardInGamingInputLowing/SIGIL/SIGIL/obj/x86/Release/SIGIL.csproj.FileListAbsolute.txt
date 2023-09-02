@@ -237,3 +237,5 @@ C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\obj\x86\Release\SIGIL.csproj.CopyComplete
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\obj\x86\Release\SIGIL.exe
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\obj\x86\Release\SIGIL.pdb
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\Microsoft.CSharp.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\System.Linq.dll
