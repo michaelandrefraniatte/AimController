@@ -198,7 +198,7 @@ namespace ciine
                                 WiimoteNunchuckStateRawValuesZ = aBuffer[20] - 125f;
                                 WiimoteNunchuckStateC = (aBuffer[21] & 0x02) == 0;
                                 WiimoteNunchuckStateZ = (aBuffer[21] & 0x01) == 0;
-                                controller1_send_rightstick   = WiimoteNunchuckStateRawValuesY > 33f;
+                                controller1_send_rightstick   = WiimoteNunchuckStateRawValuesY > 60f;
                                 controller1_send_leftstick    = WiimoteNunchuckStateZ;
                                 controller1_send_A            = WiimoteNunchuckStateC;
                                 controller1_send_back         = WiimoteButtonStateOne;
