@@ -67,6 +67,7 @@ namespace SIGIL
                 result = MessageBox.Show("Content will be lost! Are you sure?", "Open", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
+                    fastColoredTextBox1.Clear();
                     OpenType(Path.GetDirectoryName(filePath) + "/type/" + Path.GetFileName(filePath) + ".type");
                     string readText = File.ReadAllText(filePath);
                     fastColoredTextBox1.Text = readText;
@@ -78,6 +79,7 @@ namespace SIGIL
             }
             else
             {
+                fastColoredTextBox1.Clear();
                 OpenType(Path.GetDirectoryName(filePath) + "/type/" + Path.GetFileName(filePath) + ".type");
                 string readText = File.ReadAllText(filePath);
                 fastColoredTextBox1.Text = readText;
@@ -21946,6 +21948,7 @@ namespace SIGIL
                     op.Filter = "Script SIGIL File(*.sig)|*.sig";
                     if (op.ShowDialog() == DialogResult.OK)
                     {
+                        fastColoredTextBox1.Clear();
                         OpenType(Path.GetDirectoryName(op.FileName) + "/type/" + Path.GetFileName(op.FileName) + ".type");
                         string readText = File.ReadAllText(op.FileName);
                         fastColoredTextBox1.Text = readText;
@@ -21962,6 +21965,7 @@ namespace SIGIL
                 op.Filter = "Script SIGIL File(*.sig)|*.sig";
                 if (op.ShowDialog() == DialogResult.OK)
                 {
+                    fastColoredTextBox1.Clear();
                     OpenType(Path.GetDirectoryName(op.FileName) + "/type/" + Path.GetFileName(op.FileName) + ".type");
                     string readText = File.ReadAllText(op.FileName);
                     fastColoredTextBox1.Text = readText;
