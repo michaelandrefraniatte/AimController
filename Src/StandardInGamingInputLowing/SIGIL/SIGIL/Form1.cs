@@ -12,6 +12,7 @@ using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using OpenWithSingleInstance;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace SIGIL
 {
@@ -90,7 +91,7 @@ namespace SIGIL
             }
             using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
             {
-                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(Process.GetCurrentProcess().MainWindowHandle);
                 createdfile.WriteLine(this.Text);
             }
         }
@@ -21815,13 +21816,12 @@ namespace SIGIL
                     IntPtr handle = new IntPtr(int.Parse(file.ReadLine()));
                     ShowWindow(handle, 9);
                     SetForegroundWindow(handle);
-                    IntPtr HWND = FindWindow(null, file.ReadLine());
-                    SetForegroundWindow(HWND);
+                    Microsoft.VisualBasic.Interaction.AppActivate(file.ReadLine());
                 }
         }
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
-            MaxmizedFromTray();
+            Task.Run(() => MaxmizedFromTray());
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -21859,7 +21859,7 @@ namespace SIGIL
                 }
                 using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
                 {
-                    createdfile.WriteLine(this.Handle);
+                    createdfile.WriteLine(Process.GetCurrentProcess().MainWindowHandle);
                     createdfile.WriteLine(this.Text);
                 }
                 if (minimizeToSystrayAtBootToolStripMenuItem.Checked)
@@ -21932,7 +21932,7 @@ namespace SIGIL
             }
             using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
             {
-                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(Process.GetCurrentProcess().MainWindowHandle);
                 createdfile.WriteLine(this.Text);
             }
         }
@@ -21978,7 +21978,7 @@ namespace SIGIL
             }
             using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
             {
-                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(Process.GetCurrentProcess().MainWindowHandle);
                 createdfile.WriteLine(this.Text);
             }
         }
@@ -22043,7 +22043,7 @@ namespace SIGIL
             }
             using (System.IO.StreamWriter createdfile = new System.IO.StreamWriter(Application.StartupPath + @"\temphandle"))
             {
-                createdfile.WriteLine(this.Handle);
+                createdfile.WriteLine(Process.GetCurrentProcess().MainWindowHandle);
                 createdfile.WriteLine(this.Text);
             }
         }

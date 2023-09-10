@@ -28,8 +28,7 @@ namespace SIGIL
                         IntPtr handle = new IntPtr(int.Parse(file.ReadLine()));
                         ShowWindow(handle, 9);
                         SetForegroundWindow(handle);
-                        IntPtr HWND = FindWindow(null, file.ReadLine());
-                        SetForegroundWindow(HWND);
+                        Microsoft.VisualBasic.Interaction.AppActivate(file.ReadLine());
                     }
                 if (SingleInstanceHelper.CheckInstancesUsingMutex() && args.Length > 0)
                 {
