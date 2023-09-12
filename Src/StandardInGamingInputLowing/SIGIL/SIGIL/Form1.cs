@@ -41146,8 +41146,8 @@ namespace SIGIL
                         private static void Start()
                         {
                             running = true;
-                            ScpBus.LoadController();
                             XInputHookConnect();
+                            ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
                         private static void taskX()
@@ -41393,9 +41393,9 @@ namespace SIGIL
                         private static void Start()
                         {
                             running = true;
-                            ScpBus.LoadController();
                             MouseInputHookConnect();
                             XInputHookConnect();
+                            ScpBus.LoadController();
                             Task.Run(() => taskX());
                         }
                         private static void taskX()
