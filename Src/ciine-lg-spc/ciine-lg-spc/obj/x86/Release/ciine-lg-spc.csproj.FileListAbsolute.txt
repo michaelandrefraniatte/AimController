@@ -1,0 +1,16 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\ciine-lg-spc.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\ciine-lg-spc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\ciine-lg-spc.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\mouses.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\bin\x86\Release\mouses.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine_lg_spc.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine_lg_spc.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-spc\ciine-lg-spc\obj\x86\Release\ciine-lg-spc.pdb

@@ -1,0 +1,15 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\ciine-gp-joys.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\ciine-gp-joys.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\ciine-gp-joys.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\controllers.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\System.Numerics.Vectors.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\bin\x86\Release\controllers.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine_gp_joys.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine_gp_joys.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-joys\ciine-gp-joys\obj\x86\Release\ciine-gp-joys.pdb

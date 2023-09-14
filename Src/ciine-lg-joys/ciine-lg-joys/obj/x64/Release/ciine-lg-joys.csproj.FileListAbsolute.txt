@@ -1,0 +1,17 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\ciine-lg-joys.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\ciine-lg-joys.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\ciine-lg-joys.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\mouses.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\bin\x64\Release\mouses.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine_lg_joys.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine_lg_joys.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-joys\ciine-lg-joys\obj\x64\Release\ciine-lg-joys.pdb

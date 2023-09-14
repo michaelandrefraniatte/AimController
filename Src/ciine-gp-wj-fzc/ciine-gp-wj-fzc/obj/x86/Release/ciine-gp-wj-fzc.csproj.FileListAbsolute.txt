@@ -1,0 +1,14 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\bin\x86\Release\ciine-gp-wj-fzc.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\bin\x86\Release\ciine-gp-wj-fzc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\bin\x86\Release\ciine-gp-wj-fzc.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\bin\x86\Release\controllers.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\bin\x86\Release\controllers.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine_gp_wj_fzc.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine_gp_wj_fzc.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wj-fzc\ciine-gp-wj-fzc\obj\x86\Release\ciine-gp-wj-fzc.pdb

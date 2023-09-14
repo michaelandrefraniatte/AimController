@@ -1,0 +1,14 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine_gp_wn_fzc.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine_gp_wn_fzc.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\bin\x86\Release\ciine-gp-wn-fzc.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\bin\x86\Release\ciine-gp-wn-fzc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\bin\x86\Release\ciine-gp-wn-fzc.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\bin\x86\Release\controllers.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\bin\x86\Release\controllers.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-gp-wn-fzc\ciine-gp-wn-fzc\obj\x86\Release\ciine-gp-wn-fzc.pdb

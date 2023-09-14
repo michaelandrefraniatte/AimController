@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ciine-lg-wn", "ciine-lg-wn\ciine-lg-wn.csproj", "{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mouses", "mouses\mouses.csproj", "{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keyboards", "keyboards\keyboards.csproj", "{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Debug|x86.ActiveCfg = Debug|x86
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Debug|x86.Build.0 = Debug|x86
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Release|x86.ActiveCfg = Release|x86
+		{AE1D7EBF-64EC-4BC1-9BEC-9E14C727D320}.Release|x86.Build.0 = Release|x86
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Debug|x86.Build.0 = Debug|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{53849BEC-E4F5-4043-BFD3-6B87CFC1C1FF}.Release|x86.Build.0 = Release|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Debug|x86.Build.0 = Debug|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Release|x86.ActiveCfg = Release|Any CPU
+		{3A819ECF-C03A-49FB-B3F5-4E7A5563FB42}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80789FE6-5B85-4B9F-9831-16A7E93FB33B}
+	EndGlobalSection
+EndGlobal

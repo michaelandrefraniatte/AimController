@@ -1,0 +1,16 @@
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\ciine-lg-wn.exe.config
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\ciine-lg-wn.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\ciine-lg-wn.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\mouses.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\bin\x86\Release\mouses.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.csproj.SuggestedBindingRedirects.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine_lg_wn.Form1.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine_lg_wn.Properties.Resources.resources
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.csproj.GenerateResource.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.csproj.CopyComplete
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.exe
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg-wn\ciine-lg-wn\obj\x86\Release\ciine-lg-wn.pdb

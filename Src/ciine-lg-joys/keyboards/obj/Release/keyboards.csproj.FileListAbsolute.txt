@@ -1,0 +1,12 @@
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\bin\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\bin\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\obj\Release\keyboards.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\obj\Release\keyboards.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\obj\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine-lg\keyboards\obj\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\bin\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\bin\Release\keyboards.pdb
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\obj\Release\keyboards.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\obj\Release\keyboards.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\obj\Release\keyboards.dll
+C:\Users\micha\Documents\File\perso\ciine\Src\ciine-lg\keyboards\obj\Release\keyboards.pdb

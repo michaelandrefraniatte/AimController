@@ -1,0 +1,12 @@
+C:\Users\micha\Documents\Tool\ciine\controllers\obj\Release\controllers.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\Tool\ciine\controllers\obj\Release\controllers.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\Tool\ciine\controllers\bin\Release\controllers.dll
+C:\Users\micha\Documents\Tool\ciine\controllers\bin\Release\controllers.pdb
+C:\Users\micha\Documents\Tool\ciine\controllers\obj\Release\controllers.dll
+C:\Users\micha\Documents\Tool\ciine\controllers\obj\Release\controllers.pdb
+C:\Users\micha\Documents\File\perso\ciine\controllers\bin\Release\controllers.dll
+C:\Users\micha\Documents\File\perso\ciine\controllers\bin\Release\controllers.pdb
+C:\Users\micha\Documents\File\perso\ciine\controllers\obj\Release\controllers.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\File\perso\ciine\controllers\obj\Release\controllers.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\File\perso\ciine\controllers\obj\Release\controllers.dll
+C:\Users\micha\Documents\File\perso\ciine\controllers\obj\Release\controllers.pdb
