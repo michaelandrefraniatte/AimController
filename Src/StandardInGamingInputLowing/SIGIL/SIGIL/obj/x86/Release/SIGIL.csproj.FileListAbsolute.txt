@@ -239,3 +239,6 @@ C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\obj\x86\Release\SIGIL.pdb
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\Microsoft.CSharp.dll
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\System.Linq.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersds4.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\Nefarius.ViGEm.Client.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersds4.pdb
