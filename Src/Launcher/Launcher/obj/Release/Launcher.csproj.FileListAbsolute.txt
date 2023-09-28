@@ -1,0 +1,27 @@
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\bin\Release\Launcher.exe.config
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\bin\Release\Launcher.exe
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\bin\Release\Launcher.pdb
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.Form1.resources
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.Properties.Resources.resources
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.csproj.GenerateResource.Cache
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.exe
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\copie2009\mic\Launcher\Launcher\obj\Release\Launcher.pdb
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\bin\Release\Launcher.exe.config
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.exe
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.pdb
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\bin\Release\Launcher.exe
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\bin\Release\Launcher.pdb
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.Form1.resources
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.Properties.Resources.resources
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\WiimoteByMic - C#\Launcher\Launcher\obj\Release\Launcher.csproj.GenerateResource.Cache
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\bin\Release\Launcher.exe.config
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.exe
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.pdb
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\bin\Release\Launcher.exe
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\bin\Release\Launcher.pdb
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.Form1.resources
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.Properties.Resources.resources
+C:\Users\mic\Documents\Visual Studio 2012\Projects\Launcher\Launcher\obj\Release\Launcher.csproj.GenerateResource.Cache
