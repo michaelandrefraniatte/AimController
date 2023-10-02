@@ -109,6 +109,7 @@
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.fastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
             this.fastColoredTextBox1.LeftBracket = '(';
@@ -545,7 +546,24 @@
             "XC-DS4",
             "XCM-DS4",
             "MJoyL-DS4",
-            "MJoyR-DS4"});
+            "MJoyR-DS4",
+            "WiiJoyL-VJoy",
+            "WiiJoyR-VJoy",
+            "Wii-VJoy",
+            "Joys-VJoy",
+            "JoyL-VJoy",
+            "JoyR-VJoy",
+            "SPC-VJoy",
+            "JCG-VJoy",
+            "DIC-VJoy",
+            "DICM-VJoy",
+            "DS-VJoy",
+            "DS4-VJoy",
+            "KM-VJoy",
+            "XC-VJoy",
+            "XCM-VJoy",
+            "MJoyL-VJoy",
+            "MJoyR-VJoy"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
             this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);

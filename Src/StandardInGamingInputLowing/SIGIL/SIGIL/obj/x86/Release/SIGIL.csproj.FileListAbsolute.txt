@@ -242,3 +242,6 @@ C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersds4.dll
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\Nefarius.ViGEm.Client.dll
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersds4.pdb
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersvjoy.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\vJoyInterfaceWrap.dll
+C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\SIGIL\bin\x86\Release\controllersvjoy.pdb

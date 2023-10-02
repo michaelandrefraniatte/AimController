@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interceptions", "Intercepti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controllersds4", "controllersds4\controllersds4.csproj", "{1C365D1F-B40B-416A-BF40-3782EC480E8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controllersvjoy", "controllersvjoy\controllersvjoy.csproj", "{56A4E8A4-7702-4235-B3D8-8E511AD7490D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,14 @@ Global
 		{1C365D1F-B40B-416A-BF40-3782EC480E8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C365D1F-B40B-416A-BF40-3782EC480E8F}.Release|x86.ActiveCfg = Release|Any CPU
 		{1C365D1F-B40B-416A-BF40-3782EC480E8F}.Release|x86.Build.0 = Release|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Debug|x86.Build.0 = Debug|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Release|x86.ActiveCfg = Release|Any CPU
+		{56A4E8A4-7702-4235-B3D8-8E511AD7490D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

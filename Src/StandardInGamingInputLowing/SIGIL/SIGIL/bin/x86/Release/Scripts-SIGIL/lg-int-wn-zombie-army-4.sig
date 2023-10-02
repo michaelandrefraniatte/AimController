@@ -1,4 +1,4 @@
-﻿viewpower1x = 0.08f;
+viewpower1x = 0.08f;
 viewpower2x = 0f;
 viewpower3x = 0.92f;
 viewpower1y = 0.08f;
@@ -77,7 +77,6 @@ if (getstate[0])
     int_1_SendS         = WiimoteNunchuckStateRawJoystickY <= -60f; /* Reculer */
     int_1_SendSpace     = WiimoteNunchuckStateC; /* Frapper fort */
     int_1_SendLeftShift = WiimoteNunchuckStateZ; /* Courir */
-    int_1_SendE         = WiimoteNunchuckStateZ; /* Poumons */
     int_1_SendV         = WiimoteNunchuckStateRawValuesY > 33f; /* Coup de pieds */
     int_1_SendEscape    = WiimoteButtonStateTwo; /* Passer */
     int_1_SendTab       = WiimoteButtonStateOne; /* Map */
@@ -88,7 +87,7 @@ if (getstate[0])
     int_1_SendY         = WiimoteButtonStateLeft; /* Objet suivant */
     int_1_SendU         = WiimoteButtonStateRight; /* Arme suivante */
     int_1_SendX         = WiimoteButtonStateUp; /* Zoomer */
-    int_1_SendC         = WiimoteButtonStateDown; /* Relacher */
+    int_1_SendC         = WiimoteButtonStateDown; /* A genoux */
     int_1_SendLeftClick = WiimoteButtonStateB; /* Tirer */
     valchanged(1, WiimoteButtonStateA);
     if (wd[1] == 1 & !getstate[1])
@@ -102,7 +101,7 @@ if (getstate[0])
             getstate[1] = false;
         }
     }
-    if (int_1_SendSpace | int_1_SendV | int_1_SendEscape | int_1_SendTab | int_1_SendR | int_1_SendF | int_1_SendT | int_1_SendG | int_1_SendY | int_1_SendU | int_1_SendX | int_1_SendC)
+    if (int_1_SendSpace | int_1_SendLeftShift | int_1_SendV | int_1_SendEscape | int_1_SendTab | int_1_SendR | int_1_SendF | int_1_SendT | int_1_SendG | int_1_SendY | int_1_SendU | int_1_SendX | int_1_SendC)
     {
         getstate[1] = false;
     }
