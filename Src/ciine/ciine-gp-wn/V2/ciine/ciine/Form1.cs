@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Text;
 
 namespace ciine
 {
@@ -59,10 +60,9 @@ namespace ciine
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_lefttrigger, controller1_send_righttrigger, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
-                        private static double irx0, iry0, irx1, iry1, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
-                        private static bool WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running;
-                        private static double reconnectingwiimotecount, stickviewxinit, stickviewyinit, WiimoteNunchuckStateRawValuesX, WiimoteNunchuckStateRawValuesY, WiimoteNunchuckStateRawValuesZ, WiimoteNunchuckStateRawJoystickX, WiimoteNunchuckStateRawJoystickY;
-                        private static bool reconnectingwiimotebool, WiimoteNunchuckStateC, WiimoteNunchuckStateZ;                        
+                        private static double irx2, iry2, irx3, iry3, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
+                        private static bool WiimoteIR0foundcam, WiimoteIR1foundcam, WiimoteIRswitch, WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running, reconnectingwiimotebool, WiimoteNunchuckStateC, WiimoteNunchuckStateZ;
+                        private static double WiimoteIR0notfound, reconnectingwiimotecount, stickviewxinit, stickviewyinit, WiimoteNunchuckStateRawValuesX, WiimoteNunchuckStateRawValuesY, WiimoteNunchuckStateRawValuesZ, WiimoteNunchuckStateRawJoystickX, WiimoteNunchuckStateRawJoystickY;                    
                         private static string path;
                         private static byte[] buff = new byte[] { 0x55 }, mBuff = new byte[22], aBuffer = new byte[22];
                         private const byte Type = 0x12, IR = 0x13, WriteMemory = 0x16, ReadMemory = 0x16, IRExtensionAccel = 0x37;
@@ -98,7 +98,7 @@ namespace ciine
                                 wd[n] = 0;
                             }
                         }
-                        public static void Load()
+                        public static void Main()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
@@ -144,39 +144,79 @@ namespace ciine
                                     else
                                         reconnectingwiimotecount = 0;
                                 }
-                                WiimoteIRSensors0X = aBuffer[6] | ((aBuffer[8] >> 4) & 0x03) << 8;
-                                WiimoteIRSensors0Y = aBuffer[7] | ((aBuffer[8] >> 6) & 0x03) << 8;
-                                WiimoteIRSensors1X = aBuffer[9] | ((aBuffer[8] >> 0) & 0x03) << 8;
-                                WiimoteIRSensors1Y = aBuffer[10] | ((aBuffer[8] >> 2) & 0x03) << 8;
-                                WiimoteIR0found = WiimoteIRSensors0X > 0f & WiimoteIRSensors0X <= 1024f & WiimoteIRSensors0Y > 0f & WiimoteIRSensors0Y <= 768f;
-                                WiimoteIR1found = WiimoteIRSensors1X > 0f & WiimoteIRSensors1X <= 1024f & WiimoteIRSensors1Y > 0f & WiimoteIRSensors1Y <= 768f;
+                                WiimoteIR0found = (aBuffer[6] | ((aBuffer[8] >> 4) & 0x03) << 8) > 1 & (aBuffer[6] | ((aBuffer[8] >> 4) & 0x03) << 8) < 1023;
+                                WiimoteIR1found = (aBuffer[9] | ((aBuffer[8] >> 0) & 0x03) << 8) > 1 & (aBuffer[9] | ((aBuffer[8] >> 0) & 0x03) << 8) < 1023;
+                                if (WiimoteIR0notfound == 0 & WiimoteIR1found)
+                                    WiimoteIR0notfound = 1;
+                                if (WiimoteIR0notfound == 1 & !WiimoteIR0found & !WiimoteIR1found)
+                                    WiimoteIR0notfound = 2;
+                                if (WiimoteIR0notfound == 2 & WiimoteIR0found)
+                                {
+                                    WiimoteIR0notfound = 0;
+                                    if (!WiimoteIRswitch)
+                                        WiimoteIRswitch = true;
+                                    else
+                                        WiimoteIRswitch = false;
+                                }
+                                if (WiimoteIR0notfound == 0 & WiimoteIR0found)
+                                    WiimoteIR0notfound = 0;
+                                if (WiimoteIR0notfound == 0 & !WiimoteIR0found & !WiimoteIR1found)
+                                    WiimoteIR0notfound = 0;
+                                if (WiimoteIR0notfound == 1 & WiimoteIR0found)
+                                    WiimoteIR0notfound = 0;
                                 if (WiimoteIR0found)
                                 {
-                                    WiimoteIRSensors0Xcam = WiimoteIRSensors0X - 512f;
-                                    WiimoteIRSensors0Ycam = WiimoteIRSensors0Y - 384f;
+                                    WiimoteIRSensors0X = (aBuffer[6] | ((aBuffer[8] >> 4) & 0x03) << 8);
+                                    WiimoteIRSensors0Y = (aBuffer[7] | ((aBuffer[8] >> 6) & 0x03) << 8);
                                 }
                                 if (WiimoteIR1found)
                                 {
+                                    WiimoteIRSensors1X = (aBuffer[9] | ((aBuffer[8] >> 0) & 0x03) << 8);
+                                    WiimoteIRSensors1Y = (aBuffer[10] | ((aBuffer[8] >> 2) & 0x03) << 8);
+                                }
+                                if (WiimoteIRswitch)
+                                {
+                                    WiimoteIR0foundcam = WiimoteIR0found;
+                                    WiimoteIR1foundcam = WiimoteIR1found;
+                                    WiimoteIRSensors0Xcam = WiimoteIRSensors0X - 512f;
+                                    WiimoteIRSensors0Ycam = WiimoteIRSensors0Y - 384f;
                                     WiimoteIRSensors1Xcam = WiimoteIRSensors1X - 512f;
                                     WiimoteIRSensors1Ycam = WiimoteIRSensors1Y - 384f;
                                 }
-                                if (WiimoteIR0found & WiimoteIR1found)
+                                else
                                 {
-                                    WiimoteIRSensorsXcam = (WiimoteIRSensors0Xcam + WiimoteIRSensors1Xcam) / 2f;
-                                    WiimoteIRSensorsYcam = (WiimoteIRSensors0Ycam + WiimoteIRSensors1Ycam) / 2f;
+                                    WiimoteIR1foundcam = WiimoteIR0found;
+                                    WiimoteIR0foundcam = WiimoteIR1found;
+                                    WiimoteIRSensors1Xcam = WiimoteIRSensors0X - 512f;
+                                    WiimoteIRSensors1Ycam = WiimoteIRSensors0Y - 384f;
+                                    WiimoteIRSensors0Xcam = WiimoteIRSensors1X - 512f;
+                                    WiimoteIRSensors0Ycam = WiimoteIRSensors1Y - 384f;
                                 }
-                                if (WiimoteIR0found)
+                                if (WiimoteIR0foundcam & WiimoteIR1foundcam)
                                 {
-                                    irx0 = 2 * WiimoteIRSensors0Xcam - WiimoteIRSensorsXcam;
-                                    iry0 = 2 * WiimoteIRSensors0Ycam - WiimoteIRSensorsYcam;
+                                    irx2 = WiimoteIRSensors0Xcam;
+                                    iry2 = WiimoteIRSensors0Ycam;
+                                    irx3 = WiimoteIRSensors1Xcam;
+                                    iry3 = WiimoteIRSensors1Ycam;
+                                    WiimoteIRSensorsXcam = WiimoteIRSensors0Xcam - WiimoteIRSensors1Xcam;
+                                    WiimoteIRSensorsYcam = WiimoteIRSensors0Ycam - WiimoteIRSensors1Ycam;
                                 }
-                                if (WiimoteIR1found)
+                                if (WiimoteIR0foundcam & !WiimoteIR1foundcam)
                                 {
-                                    irx1 = 2 * WiimoteIRSensors1Xcam - WiimoteIRSensorsXcam;
-                                    iry1 = 2 * WiimoteIRSensors1Ycam - WiimoteIRSensorsYcam;
+                                    irx2 = WiimoteIRSensors0Xcam;
+                                    iry2 = WiimoteIRSensors0Ycam;
+                                    irx3 = WiimoteIRSensors0Xcam - WiimoteIRSensorsXcam;
+                                    iry3 = WiimoteIRSensors0Ycam - WiimoteIRSensorsYcam;
                                 }
-                                irx = (irx0 + irx1) * (1024f / 1346f);
-                                iry = iry0 + iry1 + centery >= 0 ? Scale(iry0 + iry1 + centery, 0f, 782f + centery, 0f, 1024f) : Scale(iry0 + iry1 + centery, -782f + centery, 0f, -1024f, 0f);
+                                if (WiimoteIR1foundcam & !WiimoteIR0foundcam)
+                                {
+                                    irx3 = WiimoteIRSensors1Xcam;
+                                    iry3 = WiimoteIRSensors1Ycam;
+                                    irx2 = WiimoteIRSensors1Xcam + WiimoteIRSensorsXcam;
+                                    iry2 = WiimoteIRSensors1Ycam + WiimoteIRSensorsYcam;
+                                }
+                                irx = (irx2 + irx3) * (1024f / 1346f);
+                                iry = iry2 + iry3 + centery >= 0 ? Scale(iry2 + iry3 + centery, 0f, 782f + centery, 0f, 1024f) : Scale(iry2 + iry3 + centery, -782f + centery, 0f, -1024f, 0f);
                                 WiimoteButtonStateA = (aBuffer[2] & 0x08) != 0;
                                 WiimoteButtonStateB = (aBuffer[2] & 0x04) != 0;
                                 WiimoteButtonStateMinus = (aBuffer[2] & 0x10) != 0;
@@ -402,8 +442,8 @@ namespace ciine
         private void Form1_Load(object sender, EventArgs e)
         {
             parameters = new System.CodeDom.Compiler.CompilerParameters();
-            parameters.GenerateExecutable = false;
-            parameters.GenerateInMemory = true;
+            parameters.GenerateExecutable = true;
+            parameters.GenerateInMemory = false;
             parameters.IncludeDebugInformation = false;
             parameters.CompilerOptions = "/optimize";
             parameters.ReferencedAssemblies.Add("System.dll");
@@ -415,11 +455,11 @@ namespace ciine
             assembly = results.CompiledAssembly;
             program = assembly.GetType("StringToCode.FooClass");
             obj = Activator.CreateInstance(program);
-            program.InvokeMember("Load", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
+            program.InvokeMember("Main", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            program.InvokeMember("Close", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
+            program.InvokeMember("Close", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
         }
     }
 }
