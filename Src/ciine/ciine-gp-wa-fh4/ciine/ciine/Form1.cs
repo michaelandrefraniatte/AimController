@@ -126,8 +126,10 @@ namespace ciine
                         }
                         private static void taskX()
                         {
-                            while (running)
+                            for (; ; )
                             {
+                                if (!running)
+                                    break;
                                 WiimoteButtonStateA = (aBuffer[2] & 0x08) != 0;
                                 WiimoteButtonStateB = (aBuffer[2] & 0x04) != 0;
                                 WiimoteButtonStateMinus = (aBuffer[2] & 0x10) != 0;
@@ -188,8 +190,10 @@ namespace ciine
                         }
                         private static void taskD()
                         {
-                            while (running)
+                            for (; ; )
                             {
+                                if (!running)
+                                    break;
                                 try
                                 {
                                     mStream.Read(aBuffer, 0, 22);

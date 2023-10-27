@@ -60,7 +60,7 @@ namespace ciine
                         private static bool controller1_send_back, controller1_send_start, controller1_send_A, controller1_send_B, controller1_send_X, controller1_send_Y, controller1_send_up, controller1_send_left, controller1_send_down, controller1_send_right, controller1_send_leftstick, controller1_send_rightstick, controller1_send_leftbumper, controller1_send_rightbumper, controller1_send_xbox;
                         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
                         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
-                        private static double irx2, iry2, irx3, iry3, irx, iry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
+                        private static double irx2, iry2, irx3, iry3, irx, iry, tempirx, tempiry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
                         private static bool WiimoteIR0foundcam, WiimoteIR1foundcam, WiimoteIRswitch, WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running, reconnectingwiimotebool, WiimoteNunchuckStateC, WiimoteNunchuckStateZ;
                         private static double WiimoteIR0notfound, reconnectingwiimotecount, stickviewxinit, stickviewyinit, WiimoteNunchuckStateRawValuesX, WiimoteNunchuckStateRawValuesY, WiimoteNunchuckStateRawValuesZ, WiimoteNunchuckStateRawJoystickX, WiimoteNunchuckStateRawJoystickY;                    
                         private static string path;
@@ -129,12 +129,14 @@ namespace ciine
                         }
                         private static void taskX()
                         {
-                            while (running)
+                            for (; ; )
                             {
+                                if (!running)
+                                    break;
                                 if (reconnectingwiimotecount == 0)
                                     reconnectingwiimotebool = true;
                                 reconnectingwiimotecount++;
-                                if (reconnectingwiimotecount >= 150f / sleeptime)
+                                if (reconnectingwiimotecount >= 150f)
                                 {
                                     if (reconnectingwiimotebool)
                                     {
@@ -217,6 +219,19 @@ namespace ciine
                                 }
                                 irx = (irx2 + irx3) * (1024f / 1346f);
                                 iry = iry2 + iry3 + centery >= 0 ? Scale(iry2 + iry3 + centery, 0f, 782f + centery, 0f, 1024f) : Scale(iry2 + iry3 + centery, -782f + centery, 0f, -1024f, 0f);
+                                if (!WiimoteIR0foundcam & !WiimoteIR1foundcam)
+                                {
+                                    if (irx >= 350f & irx - tempirx >= 20f)
+                                        irx = 1024f;
+                                    if (irx <= -350f & irx - tempirx <= -20f)
+                                        irx = -1024f;
+                                    if (iry >= 400f & iry - tempiry >= 25f)
+                                        iry = 1024f;
+                                    if (iry <= -400f & iry - tempiry <= -25f)
+                                        iry = -1024f;
+                                }
+                                tempirx = irx;
+                                tempiry = iry;
                                 WiimoteButtonStateA = (aBuffer[2] & 0x08) != 0;
                                 WiimoteButtonStateB = (aBuffer[2] & 0x04) != 0;
                                 WiimoteButtonStateMinus = (aBuffer[2] & 0x10) != 0;
@@ -331,8 +346,10 @@ namespace ciine
                         }
                         private static void taskD()
                         {
-                            while (running)
+                            for (; ; )
                             {
+                                if (!running)
+                                    break;
                                 try
                                 {
                                     mStream.Read(aBuffer, 0, 22);
