@@ -217,21 +217,27 @@ namespace ciine
                                     irx2 = WiimoteIRSensors1Xcam + WiimoteIRSensorsXcam;
                                     iry2 = WiimoteIRSensors1Ycam + WiimoteIRSensorsYcam;
                                 }
-                                irx = (irx2 + irx3) * (1024f / 1346f);
-                                iry = iry2 + iry3 + centery >= 0 ? Scale(iry2 + iry3 + centery, 0f, 782f + centery, 0f, 1024f) : Scale(iry2 + iry3 + centery, -782f + centery, 0f, -1024f, 0f);
+                                if (WiimoteIR0foundcam | WiimoteIR1foundcam)
+                                {
+                                    irx = (irx2 + irx3) * (1024f / 1346f);
+                                    iry = iry2 + iry3 + centery >= 0 ? Scale(iry2 + iry3 + centery, 0f, 782f + centery, 0f, 1024f) : Scale(iry2 + iry3 + centery, -782f + centery, 0f, -1024f, 0f);
+                                }
                                 if (!WiimoteIR0foundcam & !WiimoteIR1foundcam)
                                 {
-                                    if (irx >= 350f & irx - tempirx >= 20f)
+                                    if (irx - tempirx >= 20f)
                                         irx = 1024f;
-                                    if (irx <= -350f & irx - tempirx <= -20f)
+                                    if (irx - tempirx <= -20f)
                                         irx = -1024f;
-                                    if (iry >= 400f & iry - tempiry >= 25f)
+                                    if (iry - tempiry >= 20f)
                                         iry = 1024f;
-                                    if (iry <= -400f & iry - tempiry <= -25f)
+                                    if (iry - tempiry <= -20f)
                                         iry = -1024f;
                                 }
-                                tempirx = irx;
-                                tempiry = iry;
+                                if (WiimoteIR0foundcam | WiimoteIR1foundcam)
+                                {
+                                    tempirx = irx;
+                                    tempiry = iry;
+                                }
                                 WiimoteButtonStateA = (aBuffer[2] & 0x08) != 0;
                                 WiimoteButtonStateB = (aBuffer[2] & 0x04) != 0;
                                 WiimoteButtonStateMinus = (aBuffer[2] & 0x10) != 0;
