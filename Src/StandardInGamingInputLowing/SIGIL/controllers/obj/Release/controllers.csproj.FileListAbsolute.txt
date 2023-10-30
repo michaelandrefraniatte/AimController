@@ -28,3 +28,9 @@ C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\controllers\obj\Release\controllers.csproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\controllers\obj\Release\controllers.dll
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\controllers\obj\Release\controllers.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\bin\Release\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\bin\Release\controllers.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\obj\Release\controllers.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\obj\Release\controllers.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\obj\Release\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\controllers\obj\Release\controllers.pdb
