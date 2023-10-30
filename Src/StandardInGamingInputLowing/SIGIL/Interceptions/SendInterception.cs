@@ -3,6 +3,23 @@ using System.Runtime.InteropServices;
 
 namespace Interceptions
 {
+    public class Valuechanges
+    {
+        public static double[] _valuechange = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+        public static double[] _ValueChange = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+        public double this[int index]
+        {
+            get { return _ValueChange[index]; }
+            set
+            {
+                if (_valuechange[index] != value)
+                    _ValueChange[index] = value - _valuechange[index];
+                else
+                    _ValueChange[index] = 0;
+                _valuechange[index] = value;
+            }
+        }
+    }
     public class SendInterception
     {
         [DllImport("user32.dll")]
@@ -11,27 +28,7 @@ namespace Interceptions
         public static extern void SetCaretPos(int X, int Y);
         [DllImport("user32.dll")]
         public static extern void SetCursorPos(int X, int Y);
-        public static int[] wd = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
-        public static int[] wu = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
-        public static void valchanged(int n, bool val)
-        {
-            if (val)
-            {
-                if (wd[n] <= 1)
-                {
-                    wd[n] = wd[n] + 1;
-                }
-                wu[n] = 0;
-            }
-            else
-            {
-                if (wu[n] <= 1)
-                {
-                    wu[n] = wu[n] + 1;
-                }
-                wd[n] = 0;
-            }
-        }
+        public static Valuechanges ValueChange = new Valuechanges();
         public static void UnLoadKM(Input input, int keyboard_1_id, int mouse_1_id)
         {
             SetKM(0, 0, input, keyboard_1_id, mouse_1_id, 0, 0, 0, 0, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
@@ -47,976 +44,976 @@ namespace Interceptions
                 SetCaretPos((int)(MouseDesktopX), (int)(MouseDesktopY));
                 SetCursorPos((int)(MouseDesktopX), (int)(MouseDesktopY));
             }
-            valchanged(1, SendLeftClick);
-            if (wd[1] == 1)
+            ValueChange[1] = SendLeftClick ? 1 : 0;
+            if (Valuechanges._ValueChange[1] > 0f)
                 mouseclickleft(input, mouse_id);
-            if (wu[1] == 1)
+            if (Valuechanges._ValueChange[1] < 0f)
                 mouseclickleftF(input, mouse_id);
-            valchanged(2, SendRightClick);
-            if (wd[2] == 1)
+            ValueChange[2] = SendRightClick ? 1 : 0;
+            if (Valuechanges._ValueChange[2] > 0f)
                 mouseclickright(input, mouse_id);
-            if (wu[2] == 1)
+            if (Valuechanges._ValueChange[2] < 0f)
                 mouseclickrightF(input, mouse_id);
-            valchanged(3, SendMiddleClick);
-            if (wd[3] == 1)
+            ValueChange[3] = SendMiddleClick ? 1 : 0;
+            if (Valuechanges._ValueChange[3] > 0f)
                 mouseclickmiddle(input, mouse_id);
-            if (wu[3] == 1)
+            if (Valuechanges._ValueChange[3] < 0f)
                 mouseclickmiddleF(input, mouse_id);
-            valchanged(4, SendWheelUp);
-            if (wd[4] == 1)
+            ValueChange[4] = SendWheelUp ? 1 : 0;
+            if (Valuechanges._ValueChange[4] > 0f)
                 mousewheelup(input, mouse_id);
-            valchanged(5, SendWheelDown);
-            if (wd[5] == 1)
+            ValueChange[5] = SendWheelDown ? 1 : 0;
+            if (Valuechanges._ValueChange[5] > 0f)
                 mousewheeldown(input, mouse_id);
-            valchanged(6, SendCANCEL);
-            if (wd[6] == 1)
+            ValueChange[6] = SendCANCEL ? 1 : 0;
+            if (Valuechanges._ValueChange[6] > 0f)
                 keyboardkey(input, Keys.CANCEL, keyboard_id);
-            if (wu[6] == 1)
+            if (Valuechanges._ValueChange[6] < 0f)
                 keyboardkeyF(input, Keys.CANCEL, keyboard_id);
-            valchanged(7, SendBACK);
-            if (wd[7] == 1)
+            ValueChange[7] = SendBACK ? 1 : 0;
+            if (Valuechanges._ValueChange[7] > 0f)
                 keyboardkey(input, Keys.BACK, keyboard_id);
-            if (wu[7] == 1)
+            if (Valuechanges._ValueChange[7] < 0f)
                 keyboardkeyF(input, Keys.BACK, keyboard_id);
-            valchanged(8, SendTAB);
-            if (wd[8] == 1)
+            ValueChange[8] = SendTAB ? 1 : 0;
+            if (Valuechanges._ValueChange[8] > 0f)
                 keyboardkey(input, Keys.TAB, keyboard_id);
-            if (wu[8] == 1)
+            if (Valuechanges._ValueChange[8] < 0f)
                 keyboardkeyF(input, Keys.TAB, keyboard_id);
-            valchanged(9, SendCLEAR);
-            if (wd[9] == 1)
+            ValueChange[9] = SendCLEAR ? 1 : 0;
+            if (Valuechanges._ValueChange[9] > 0f)
                 keyboardkey(input, Keys.CLEAR, keyboard_id);
-            if (wu[9] == 1)
+            if (Valuechanges._ValueChange[9] < 0f)
                 keyboardkeyF(input, Keys.CLEAR, keyboard_id);
-            valchanged(10, SendRETURN);
-            if (wd[10] == 1)
+            ValueChange[10] = SendRETURN ? 1 : 0;
+            if (Valuechanges._ValueChange[10] > 0f)
                 keyboardkey(input, Keys.RETURN, keyboard_id);
-            if (wu[10] == 1)
+            if (Valuechanges._ValueChange[10] < 0f)
                 keyboardkeyF(input, Keys.RETURN, keyboard_id);
-            valchanged(11, SendSHIFT);
-            if (wd[11] == 1)
+            ValueChange[11] = SendSHIFT ? 1 : 0;
+            if (Valuechanges._ValueChange[11] > 0f)
                 keyboardkey(input, Keys.SHIFT, keyboard_id);
-            if (wu[11] == 1)
+            if (Valuechanges._ValueChange[11] < 0f)
                 keyboardkeyF(input, Keys.SHIFT, keyboard_id);
-            valchanged(12, SendCONTROL);
-            if (wd[12] == 1)
+            ValueChange[12] = SendCONTROL ? 1 : 0;
+            if (Valuechanges._ValueChange[12] > 0f)
                 keyboardkey(input, Keys.CONTROL, keyboard_id);
-            if (wu[12] == 1)
+            if (Valuechanges._ValueChange[12] < 0f)
                 keyboardkeyF(input, Keys.CONTROL, keyboard_id);
-            valchanged(13, SendMENU);
-            if (wd[13] == 1)
+            ValueChange[13] = SendMENU ? 1 : 0;
+            if (Valuechanges._ValueChange[13] > 0f)
                 keyboardkey(input, Keys.MENU, keyboard_id);
-            if (wu[13] == 1)
+            if (Valuechanges._ValueChange[13] < 0f)
                 keyboardkeyF(input, Keys.MENU, keyboard_id);
-            valchanged(14, SendCAPITAL);
-            if (wd[14] == 1)
+            ValueChange[14] = SendCAPITAL ? 1 : 0;
+            if (Valuechanges._ValueChange[14] > 0f)
                 keyboardkey(input, Keys.CAPITAL, keyboard_id);
-            if (wu[14] == 1)
+            if (Valuechanges._ValueChange[14] < 0f)
                 keyboardkeyF(input, Keys.CAPITAL, keyboard_id);
-            valchanged(15, SendESCAPE);
-            if (wd[15] == 1)
+            ValueChange[15] = SendESCAPE ? 1 : 0;
+            if (Valuechanges._ValueChange[15] > 0f)
                 keyboardkey(input, Keys.ESCAPE, keyboard_id);
-            if (wu[15] == 1)
+            if (Valuechanges._ValueChange[15] < 0f)
                 keyboardkeyF(input, Keys.ESCAPE, keyboard_id);
-            valchanged(16, SendSPACE);
-            if (wd[16] == 1)
+            ValueChange[16] = SendSPACE ? 1 : 0;
+            if (Valuechanges._ValueChange[16] > 0f)
                 keyboardkey(input, Keys.SPACE, keyboard_id);
-            if (wu[16] == 1)
+            if (Valuechanges._ValueChange[16] < 0f)
                 keyboardkeyF(input, Keys.SPACE, keyboard_id);
-            valchanged(17, SendPRIOR);
-            if (wd[17] == 1)
+            ValueChange[17] = SendPRIOR ? 1 : 0;
+            if (Valuechanges._ValueChange[17] > 0f)
                 keyboardkey(input, Keys.PRIOR, keyboard_id);
-            if (wu[17] == 1)
+            if (Valuechanges._ValueChange[17] < 0f)
                 keyboardkeyF(input, Keys.PRIOR, keyboard_id);
-            valchanged(18, SendNEXT);
-            if (wd[18] == 1)
+            ValueChange[18] = SendNEXT ? 1 : 0;
+            if (Valuechanges._ValueChange[18] > 0f)
                 keyboardkey(input, Keys.NEXT, keyboard_id);
-            if (wu[18] == 1)
+            if (Valuechanges._ValueChange[18] < 0f)
                 keyboardkeyF(input, Keys.NEXT, keyboard_id);
-            valchanged(19, SendEND);
-            if (wd[19] == 1)
+            ValueChange[19] = SendEND ? 1 : 0;
+            if (Valuechanges._ValueChange[19] > 0f)
                 keyboardkey(input, Keys.END, keyboard_id);
-            if (wu[19] == 1)
+            if (Valuechanges._ValueChange[19] < 0f)
                 keyboardkeyF(input, Keys.END, keyboard_id);
-            valchanged(20, SendHOME);
-            if (wd[20] == 1)
+            ValueChange[20] = SendHOME ? 1 : 0;
+            if (Valuechanges._ValueChange[20] > 0f)
                 keyboardkey(input, Keys.HOME, keyboard_id);
-            if (wu[20] == 1)
+            if (Valuechanges._ValueChange[20] < 0f)
                 keyboardkeyF(input, Keys.HOME, keyboard_id);
-            valchanged(21, SendLEFT);
-            if (wd[21] == 1)
+            ValueChange[21] = SendLEFT ? 1 : 0;
+            if (Valuechanges._ValueChange[21] > 0f)
                 keyboardkey(input, Keys.LEFT, keyboard_id);
-            if (wu[21] == 1)
+            if (Valuechanges._ValueChange[21] < 0f)
                 keyboardkeyF(input, Keys.LEFT, keyboard_id);
-            valchanged(22, SendUP);
-            if (wd[22] == 1)
+            ValueChange[22] = SendUP ? 1 : 0;
+            if (Valuechanges._ValueChange[22] > 0f)
                 keyboardkey(input, Keys.UP, keyboard_id);
-            if (wu[22] == 1)
+            if (Valuechanges._ValueChange[22] < 0f)
                 keyboardkeyF(input, Keys.UP, keyboard_id);
-            valchanged(23, SendRIGHT);
-            if (wd[23] == 1)
+            ValueChange[23] = SendRIGHT ? 1 : 0;
+            if (Valuechanges._ValueChange[23] > 0f)
                 keyboardkey(input, Keys.RIGHT, keyboard_id);
-            if (wu[23] == 1)
+            if (Valuechanges._ValueChange[23] < 0f)
                 keyboardkeyF(input, Keys.RIGHT, keyboard_id);
-            valchanged(24, SendDOWN);
-            if (wd[24] == 1)
+            ValueChange[24] = SendDOWN ? 1 : 0;
+            if (Valuechanges._ValueChange[24] > 0f)
                 keyboardkey(input, Keys.DOWN, keyboard_id);
-            if (wu[24] == 1)
+            if (Valuechanges._ValueChange[24] < 0f)
                 keyboardkeyF(input, Keys.DOWN, keyboard_id);
-            valchanged(25, SendSNAPSHOT);
-            if (wd[25] == 1)
+            ValueChange[25] = SendSNAPSHOT ? 1 : 0;
+            if (Valuechanges._ValueChange[25] > 0f)
                 keyboardkey(input, Keys.SNAPSHOT, keyboard_id);
-            if (wu[25] == 1)
+            if (Valuechanges._ValueChange[25] < 0f)
                 keyboardkeyF(input, Keys.SNAPSHOT, keyboard_id);
-            valchanged(26, SendINSERT);
-            if (wd[26] == 1)
+            ValueChange[26] = SendINSERT ? 1 : 0;
+            if (Valuechanges._ValueChange[26] > 0f)
                 keyboardkey(input, Keys.INSERT, keyboard_id);
-            if (wu[26] == 1)
+            if (Valuechanges._ValueChange[26] < 0f)
                 keyboardkeyF(input, Keys.INSERT, keyboard_id);
-            valchanged(27, SendNUMPADDEL);
-            if (wd[27] == 1)
+            ValueChange[27] = SendNUMPADDEL ? 1 : 0;
+            if (Valuechanges._ValueChange[27] > 0f)
                 keyboardkey(input, Keys.NUMPADDEL, keyboard_id);
-            if (wu[27] == 1)
+            if (Valuechanges._ValueChange[27] < 0f)
                 keyboardkeyF(input, Keys.NUMPADDEL, keyboard_id);
-            valchanged(28, SendNUMPADINSERT);
-            if (wd[28] == 1)
+            ValueChange[28] = SendNUMPADINSERT ? 1 : 0;
+            if (Valuechanges._ValueChange[28] > 0f)
                 keyboardkey(input, Keys.NUMPADINSERT, keyboard_id);
-            if (wu[28] == 1)
+            if (Valuechanges._ValueChange[28] < 0f)
                 keyboardkeyF(input, Keys.NUMPADINSERT, keyboard_id);
-            valchanged(29, SendHELP);
-            if (wd[29] == 1)
+            ValueChange[29] = SendHELP ? 1 : 0;
+            if (Valuechanges._ValueChange[29] > 0f)
                 keyboardkey(input, Keys.HELP, keyboard_id);
-            if (wu[29] == 1)
+            if (Valuechanges._ValueChange[29] < 0f)
                 keyboardkeyF(input, Keys.HELP, keyboard_id);
-            valchanged(30, SendAPOSTROPHE);
-            if (wd[30] == 1)
+            ValueChange[30] = SendAPOSTROPHE ? 1 : 0;
+            if (Valuechanges._ValueChange[30] > 0f)
                 keyboardkey(input, Keys.APOSTROPHE, keyboard_id);
-            if (wu[30] == 1)
+            if (Valuechanges._ValueChange[30] < 0f)
                 keyboardkeyF(input, Keys.APOSTROPHE, keyboard_id);
-            valchanged(31, SendBACKSPACE);
-            if (wd[31] == 1)
+            ValueChange[31] = SendBACKSPACE ? 1 : 0;
+            if (Valuechanges._ValueChange[31] > 0f)
                 keyboardkey(input, Keys.BACKSPACE, keyboard_id);
-            if (wu[31] == 1)
+            if (Valuechanges._ValueChange[31] < 0f)
                 keyboardkeyF(input, Keys.BACKSPACE, keyboard_id);
-            valchanged(32, SendPAGEDOWN);
-            if (wd[32] == 1)
+            ValueChange[32] = SendPAGEDOWN ? 1 : 0;
+            if (Valuechanges._ValueChange[32] > 0f)
                 keyboardkey(input, Keys.PAGEDOWN, keyboard_id);
-            if (wu[32] == 1)
+            if (Valuechanges._ValueChange[32] < 0f)
                 keyboardkeyF(input, Keys.PAGEDOWN, keyboard_id);
-            valchanged(33, SendPAGEUP);
-            if (wd[33] == 1)
+            ValueChange[33] = SendPAGEUP ? 1 : 0;
+            if (Valuechanges._ValueChange[33] > 0f)
                 keyboardkey(input, Keys.PAGEUP, keyboard_id);
-            if (wu[33] == 1)
+            if (Valuechanges._ValueChange[33] < 0f)
                 keyboardkeyF(input, Keys.PAGEUP, keyboard_id);
-            valchanged(34, SendFIN);
-            if (wd[34] == 1)
+            ValueChange[34] = SendFIN ? 1 : 0;
+            if (Valuechanges._ValueChange[34] > 0f)
                 keyboardkey(input, Keys.FIN, keyboard_id);
-            if (wu[34] == 1)
+            if (Valuechanges._ValueChange[34] < 0f)
                 keyboardkeyF(input, Keys.FIN, keyboard_id);
-            valchanged(35, SendMOUSE);
-            if (wd[35] == 1)
+            ValueChange[35] = SendMOUSE ? 1 : 0;
+            if (Valuechanges._ValueChange[35] > 0f)
                 keyboardkey(input, Keys.MOUSE, keyboard_id);
-            if (wu[35] == 1)
+            if (Valuechanges._ValueChange[35] < 0f)
                 keyboardkeyF(input, Keys.MOUSE, keyboard_id);
-            valchanged(36, SendA);
-            if (wd[36] == 1)
+            ValueChange[36] = SendA ? 1 : 0;
+            if (Valuechanges._ValueChange[36] > 0f)
                 keyboardkey(input, Keys.A, keyboard_id);
-            if (wu[36] == 1)
+            if (Valuechanges._ValueChange[36] < 0f)
                 keyboardkeyF(input, Keys.A, keyboard_id);
-            valchanged(37, SendB);
-            if (wd[37] == 1)
+            ValueChange[37] = SendB ? 1 : 0;
+            if (Valuechanges._ValueChange[37] > 0f)
                 keyboardkey(input, Keys.B, keyboard_id);
-            if (wu[37] == 1)
+            if (Valuechanges._ValueChange[37] < 0f)
                 keyboardkeyF(input, Keys.B, keyboard_id);
-            valchanged(38, SendC);
-            if (wd[38] == 1)
+            ValueChange[38] = SendC ? 1 : 0;
+            if (Valuechanges._ValueChange[38] > 0f)
                 keyboardkey(input, Keys.C, keyboard_id);
-            if (wu[38] == 1)
+            if (Valuechanges._ValueChange[38] < 0f)
                 keyboardkeyF(input, Keys.C, keyboard_id);
-            valchanged(39, SendD);
-            if (wd[39] == 1)
+            ValueChange[39] = SendD ? 1 : 0;
+            if (Valuechanges._ValueChange[39] > 0f)
                 keyboardkey(input, Keys.D, keyboard_id);
-            if (wu[39] == 1)
+            if (Valuechanges._ValueChange[39] < 0f)
                 keyboardkeyF(input, Keys.D, keyboard_id);
-            valchanged(40, SendE);
-            if (wd[40] == 1)
+            ValueChange[40] = SendE ? 1 : 0;
+            if (Valuechanges._ValueChange[40] > 0f)
                 keyboardkey(input, Keys.E, keyboard_id);
-            if (wu[40] == 1)
+            if (Valuechanges._ValueChange[40] < 0f)
                 keyboardkeyF(input, Keys.E, keyboard_id);
-            valchanged(41, SendF);
-            if (wd[41] == 1)
+            ValueChange[41] = SendF ? 1 : 0;
+            if (Valuechanges._ValueChange[41] > 0f)
                 keyboardkey(input, Keys.F, keyboard_id);
-            if (wu[41] == 1)
+            if (Valuechanges._ValueChange[41] < 0f)
                 keyboardkeyF(input, Keys.F, keyboard_id);
-            valchanged(42, SendG);
-            if (wd[42] == 1)
+            ValueChange[42] = SendG ? 1 : 0;
+            if (Valuechanges._ValueChange[42] > 0f)
                 keyboardkey(input, Keys.G, keyboard_id);
-            if (wu[42] == 1)
+            if (Valuechanges._ValueChange[42] < 0f)
                 keyboardkeyF(input, Keys.G, keyboard_id);
-            valchanged(43, SendH);
-            if (wd[43] == 1)
+            ValueChange[43] = SendH ? 1 : 0;
+            if (Valuechanges._ValueChange[43] > 0f)
                 keyboardkey(input, Keys.H, keyboard_id);
-            if (wu[43] == 1)
+            if (Valuechanges._ValueChange[43] < 0f)
                 keyboardkeyF(input, Keys.H, keyboard_id);
-            valchanged(44, SendI);
-            if (wd[44] == 1)
+            ValueChange[44] = SendI ? 1 : 0;
+            if (Valuechanges._ValueChange[44] > 0f)
                 keyboardkey(input, Keys.I, keyboard_id);
-            if (wu[44] == 1)
+            if (Valuechanges._ValueChange[44] < 0f)
                 keyboardkeyF(input, Keys.I, keyboard_id);
-            valchanged(45, SendJ);
-            if (wd[45] == 1)
+            ValueChange[45] = SendJ ? 1 : 0;
+            if (Valuechanges._ValueChange[45] > 0f)
                 keyboardkey(input, Keys.J, keyboard_id);
-            if (wu[45] == 1)
+            if (Valuechanges._ValueChange[45] < 0f)
                 keyboardkeyF(input, Keys.J, keyboard_id);
-            valchanged(46, SendK);
-            if (wd[46] == 1)
+            ValueChange[46] = SendK ? 1 : 0;
+            if (Valuechanges._ValueChange[46] > 0f)
                 keyboardkey(input, Keys.K, keyboard_id);
-            if (wu[46] == 1)
+            if (Valuechanges._ValueChange[46] < 0f)
                 keyboardkeyF(input, Keys.K, keyboard_id);
-            valchanged(47, SendL);
-            if (wd[47] == 1)
+            ValueChange[47] = SendL ? 1 : 0;
+            if (Valuechanges._ValueChange[47] > 0f)
                 keyboardkey(input, Keys.L, keyboard_id);
-            if (wu[47] == 1)
+            if (Valuechanges._ValueChange[47] < 0f)
                 keyboardkeyF(input, Keys.L, keyboard_id);
-            valchanged(48, SendM);
-            if (wd[48] == 1)
+            ValueChange[48] = SendM ? 1 : 0;
+            if (Valuechanges._ValueChange[48] > 0f)
                 keyboardkey(input, Keys.M, keyboard_id);
-            if (wu[48] == 1)
+            if (Valuechanges._ValueChange[48] < 0f)
                 keyboardkeyF(input, Keys.M, keyboard_id);
-            valchanged(49, SendN);
-            if (wd[49] == 1)
+            ValueChange[49] = SendN ? 1 : 0;
+            if (Valuechanges._ValueChange[49] > 0f)
                 keyboardkey(input, Keys.N, keyboard_id);
-            if (wu[49] == 1)
+            if (Valuechanges._ValueChange[49] < 0f)
                 keyboardkeyF(input, Keys.N, keyboard_id);
-            valchanged(50, SendO);
-            if (wd[50] == 1)
+            ValueChange[50] = SendO ? 1 : 0;
+            if (Valuechanges._ValueChange[50] > 0f)
                 keyboardkey(input, Keys.O, keyboard_id);
-            if (wu[50] == 1)
+            if (Valuechanges._ValueChange[50] < 0f)
                 keyboardkeyF(input, Keys.O, keyboard_id);
-            valchanged(51, SendP);
-            if (wd[51] == 1)
+            ValueChange[51] = SendP ? 1 : 0;
+            if (Valuechanges._ValueChange[51] > 0f)
                 keyboardkey(input, Keys.P, keyboard_id);
-            if (wu[51] == 1)
+            if (Valuechanges._ValueChange[51] < 0f)
                 keyboardkeyF(input, Keys.P, keyboard_id);
-            valchanged(52, SendQ);
-            if (wd[52] == 1)
+            ValueChange[52] = SendQ ? 1 : 0;
+            if (Valuechanges._ValueChange[52] > 0f)
                 keyboardkey(input, Keys.Q, keyboard_id);
-            if (wu[52] == 1)
+            if (Valuechanges._ValueChange[52] < 0f)
                 keyboardkeyF(input, Keys.Q, keyboard_id);
-            valchanged(53, SendR);
-            if (wd[53] == 1)
+            ValueChange[53] = SendR ? 1 : 0;
+            if (Valuechanges._ValueChange[53] > 0f)
                 keyboardkey(input, Keys.R, keyboard_id);
-            if (wu[53] == 1)
+            if (Valuechanges._ValueChange[53] < 0f)
                 keyboardkeyF(input, Keys.R, keyboard_id);
-            valchanged(54, SendS);
-            if (wd[54] == 1)
+            ValueChange[54] = SendS ? 1 : 0;
+            if (Valuechanges._ValueChange[54] > 0f)
                 keyboardkey(input, Keys.S, keyboard_id);
-            if (wu[54] == 1)
+            if (Valuechanges._ValueChange[54] < 0f)
                 keyboardkeyF(input, Keys.S, keyboard_id);
-            valchanged(55, SendT);
-            if (wd[55] == 1)
+            ValueChange[55] = SendT ? 1 : 0;
+            if (Valuechanges._ValueChange[55] > 0f)
                 keyboardkey(input, Keys.T, keyboard_id);
-            if (wu[55] == 1)
+            if (Valuechanges._ValueChange[55] < 0f)
                 keyboardkeyF(input, Keys.T, keyboard_id);
-            valchanged(56, SendU);
-            if (wd[56] == 1)
+            ValueChange[56] = SendU ? 1 : 0;
+            if (Valuechanges._ValueChange[56] > 0f)
                 keyboardkey(input, Keys.U, keyboard_id);
-            if (wu[56] == 1)
+            if (Valuechanges._ValueChange[56] < 0f)
                 keyboardkeyF(input, Keys.U, keyboard_id);
-            valchanged(57, SendV);
-            if (wd[57] == 1)
+            ValueChange[57] = SendV ? 1 : 0;
+            if (Valuechanges._ValueChange[57] > 0f)
                 keyboardkey(input, Keys.V, keyboard_id);
-            if (wu[57] == 1)
+            if (Valuechanges._ValueChange[57] < 0f)
                 keyboardkeyF(input, Keys.V, keyboard_id);
-            valchanged(58, SendW);
-            if (wd[58] == 1)
+            ValueChange[58] = SendW ? 1 : 0;
+            if (Valuechanges._ValueChange[58] > 0f)
                 keyboardkey(input, Keys.W, keyboard_id);
-            if (wu[58] == 1)
+            if (Valuechanges._ValueChange[58] < 0f)
                 keyboardkeyF(input, Keys.W, keyboard_id);
-            valchanged(59, SendX);
-            if (wd[59] == 1)
+            ValueChange[59] = SendX ? 1 : 0;
+            if (Valuechanges._ValueChange[59] > 0f)
                 keyboardkey(input, Keys.X, keyboard_id);
-            if (wu[59] == 1)
+            if (Valuechanges._ValueChange[59] < 0f)
                 keyboardkeyF(input, Keys.X, keyboard_id);
-            valchanged(60, SendY);
-            if (wd[60] == 1)
+            ValueChange[60] = SendY ? 1 : 0;
+            if (Valuechanges._ValueChange[60] > 0f)
                 keyboardkey(input, Keys.Y, keyboard_id);
-            if (wu[60] == 1)
+            if (Valuechanges._ValueChange[60] < 0f)
                 keyboardkeyF(input, Keys.Y, keyboard_id);
-            valchanged(61, SendZ);
-            if (wd[61] == 1)
+            ValueChange[61] = SendZ ? 1 : 0;
+            if (Valuechanges._ValueChange[61] > 0f)
                 keyboardkey(input, Keys.Z, keyboard_id);
-            if (wu[61] == 1)
+            if (Valuechanges._ValueChange[61] < 0f)
                 keyboardkeyF(input, Keys.Z, keyboard_id);
-            valchanged(62, SendLWIN);
-            if (wd[62] == 1)
+            ValueChange[62] = SendLWIN ? 1 : 0;
+            if (Valuechanges._ValueChange[62] > 0f)
                 keyboardkey(input, Keys.LWIN, keyboard_id);
-            if (wu[62] == 1)
+            if (Valuechanges._ValueChange[62] < 0f)
                 keyboardkeyF(input, Keys.LWIN, keyboard_id);
-            valchanged(63, SendRWIN);
-            if (wd[63] == 1)
+            ValueChange[63] = SendRWIN ? 1 : 0;
+            if (Valuechanges._ValueChange[63] > 0f)
                 keyboardkey(input, Keys.RWIN, keyboard_id);
-            if (wu[63] == 1)
+            if (Valuechanges._ValueChange[63] < 0f)
                 keyboardkeyF(input, Keys.RWIN, keyboard_id);
-            valchanged(64, SendAPPS);
-            if (wd[64] == 1)
+            ValueChange[64] = SendAPPS ? 1 : 0;
+            if (Valuechanges._ValueChange[64] > 0f)
                 keyboardkey(input, Keys.APPS, keyboard_id);
-            if (wu[64] == 1)
+            if (Valuechanges._ValueChange[64] < 0f)
                 keyboardkeyF(input, Keys.APPS, keyboard_id);
-            valchanged(65, SendDELETE);
-            if (wd[65] == 1)
+            ValueChange[65] = SendDELETE ? 1 : 0;
+            if (Valuechanges._ValueChange[65] > 0f)
                 keyboardkey(input, Keys.DELETE, keyboard_id);
-            if (wu[65] == 1)
+            if (Valuechanges._ValueChange[65] < 0f)
                 keyboardkeyF(input, Keys.DELETE, keyboard_id);
-            valchanged(66, SendNUMPAD0);
-            if (wd[66] == 1)
+            ValueChange[66] = SendNUMPAD0 ? 1 : 0;
+            if (Valuechanges._ValueChange[66] > 0f)
                 keyboardkey(input, Keys.NUMPAD0, keyboard_id);
-            if (wu[66] == 1)
+            if (Valuechanges._ValueChange[66] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD0, keyboard_id);
-            valchanged(67, SendNUMPAD1);
-            if (wd[67] == 1)
+            ValueChange[67] = SendNUMPAD1 ? 1 : 0;
+            if (Valuechanges._ValueChange[67] > 0f)
                 keyboardkey(input, Keys.NUMPAD1, keyboard_id);
-            if (wu[67] == 1)
+            if (Valuechanges._ValueChange[67] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD1, keyboard_id);
-            valchanged(68, SendNUMPAD2);
-            if (wd[68] == 1)
+            ValueChange[68] = SendNUMPAD2 ? 1 : 0;
+            if (Valuechanges._ValueChange[68] > 0f)
                 keyboardkey(input, Keys.NUMPAD2, keyboard_id);
-            if (wu[68] == 1)
+            if (Valuechanges._ValueChange[68] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD2, keyboard_id);
-            valchanged(69, SendNUMPAD3);
-            if (wd[69] == 1)
+            ValueChange[69] = SendNUMPAD3 ? 1 : 0;
+            if (Valuechanges._ValueChange[69] > 0f)
                 keyboardkey(input, Keys.NUMPAD3, keyboard_id);
-            if (wu[69] == 1)
+            if (Valuechanges._ValueChange[69] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD3, keyboard_id);
-            valchanged(70, SendNUMPAD4);
-            if (wd[70] == 1)
+            ValueChange[70] = SendNUMPAD4 ? 1 : 0;
+            if (Valuechanges._ValueChange[70] > 0f)
                 keyboardkey(input, Keys.NUMPAD4, keyboard_id);
-            if (wu[70] == 1)
+            if (Valuechanges._ValueChange[70] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD4, keyboard_id);
-            valchanged(71, SendNUMPAD5);
-            if (wd[71] == 1)
+            ValueChange[71] = SendNUMPAD5 ? 1 : 0;
+            if (Valuechanges._ValueChange[71] > 0f)
                 keyboardkey(input, Keys.NUMPAD5, keyboard_id);
-            if (wu[71] == 1)
+            if (Valuechanges._ValueChange[71] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD5, keyboard_id);
-            valchanged(72, SendNUMPAD6);
-            if (wd[72] == 1)
+            ValueChange[72] = SendNUMPAD6 ? 1 : 0;
+            if (Valuechanges._ValueChange[72] > 0f)
                 keyboardkey(input, Keys.NUMPAD6, keyboard_id);
-            if (wu[72] == 1)
+            if (Valuechanges._ValueChange[72] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD6, keyboard_id);
-            valchanged(73, SendNUMPAD7);
-            if (wd[73] == 1)
+            ValueChange[73] = SendNUMPAD7 ? 1 : 0;
+            if (Valuechanges._ValueChange[73] > 0f)
                 keyboardkey(input, Keys.NUMPAD7, keyboard_id);
-            if (wu[73] == 1)
+            if (Valuechanges._ValueChange[73] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD7, keyboard_id);
-            valchanged(74, SendNUMPAD8);
-            if (wd[74] == 1)
+            ValueChange[74] = SendNUMPAD8 ? 1 : 0;
+            if (Valuechanges._ValueChange[74] > 0f)
                 keyboardkey(input, Keys.NUMPAD8, keyboard_id);
-            if (wu[74] == 1)
+            if (Valuechanges._ValueChange[74] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD8, keyboard_id);
-            valchanged(75, SendNUMPAD9);
-            if (wd[75] == 1)
+            ValueChange[75] = SendNUMPAD9 ? 1 : 0;
+            if (Valuechanges._ValueChange[75] > 0f)
                 keyboardkey(input, Keys.NUMPAD9, keyboard_id);
-            if (wu[75] == 1)
+            if (Valuechanges._ValueChange[75] < 0f)
                 keyboardkeyF(input, Keys.NUMPAD9, keyboard_id);
-            valchanged(76, SendMULTIPLY);
-            if (wd[76] == 1)
+            ValueChange[76] = SendMULTIPLY ? 1 : 0;
+            if (Valuechanges._ValueChange[76] > 0f)
                 keyboardkey(input, Keys.MULTIPLY, keyboard_id);
-            if (wu[76] == 1)
+            if (Valuechanges._ValueChange[76] < 0f)
                 keyboardkeyF(input, Keys.MULTIPLY, keyboard_id);
-            valchanged(77, SendADD);
-            if (wd[77] == 1)
+            ValueChange[77] = SendADD ? 1 : 0;
+            if (Valuechanges._ValueChange[77] > 0f)
                 keyboardkey(input, Keys.ADD, keyboard_id);
-            if (wu[77] == 1)
+            if (Valuechanges._ValueChange[77] < 0f)
                 keyboardkeyF(input, Keys.ADD, keyboard_id);
-            valchanged(78, SendSUBTRACT);
-            if (wd[78] == 1)
+            ValueChange[78] = SendSUBTRACT ? 1 : 0;
+            if (Valuechanges._ValueChange[78] > 0f)
                 keyboardkey(input, Keys.SUBTRACT, keyboard_id);
-            if (wu[78] == 1)
+            if (Valuechanges._ValueChange[78] < 0f)
                 keyboardkeyF(input, Keys.SUBTRACT, keyboard_id);
-            valchanged(79, SendDECIMAL);
-            if (wd[79] == 1)
+            ValueChange[79] = SendDECIMAL ? 1 : 0;
+            if (Valuechanges._ValueChange[79] > 0f)
                 keyboardkey(input, Keys.DECIMAL, keyboard_id);
-            if (wu[79] == 1)
+            if (Valuechanges._ValueChange[79] < 0f)
                 keyboardkeyF(input, Keys.DECIMAL, keyboard_id);
-            valchanged(80, SendPRINTSCREEN);
-            if (wd[80] == 1)
+            ValueChange[80] = SendPRINTSCREEN ? 1 : 0;
+            if (Valuechanges._ValueChange[80] > 0f)
                 keyboardkey(input, Keys.PRINTSCREEN, keyboard_id);
-            if (wu[80] == 1)
+            if (Valuechanges._ValueChange[80] < 0f)
                 keyboardkeyF(input, Keys.PRINTSCREEN, keyboard_id);
-            valchanged(81, SendDIVIDE);
-            if (wd[81] == 1)
+            ValueChange[81] = SendDIVIDE ? 1 : 0;
+            if (Valuechanges._ValueChange[81] > 0f)
                 keyboardkey(input, Keys.DIVIDE, keyboard_id);
-            if (wu[81] == 1)
+            if (Valuechanges._ValueChange[81] < 0f)
                 keyboardkeyF(input, Keys.DIVIDE, keyboard_id);
-            valchanged(82, SendF1);
-            if (wd[82] == 1)
+            ValueChange[82] = SendF1 ? 1 : 0;
+            if (Valuechanges._ValueChange[82] > 0f)
                 keyboardkey(input, Keys.F1, keyboard_id);
-            if (wu[82] == 1)
+            if (Valuechanges._ValueChange[82] < 0f)
                 keyboardkeyF(input, Keys.F1, keyboard_id);
-            valchanged(83, SendF2);
-            if (wd[83] == 1)
+            ValueChange[83] = SendF2 ? 1 : 0;
+            if (Valuechanges._ValueChange[83] > 0f)
                 keyboardkey(input, Keys.F2, keyboard_id);
-            if (wu[83] == 1)
+            if (Valuechanges._ValueChange[83] < 0f)
                 keyboardkeyF(input, Keys.F2, keyboard_id);
-            valchanged(84, SendF3);
-            if (wd[84] == 1)
+            ValueChange[84] = SendF3 ? 1 : 0;
+            if (Valuechanges._ValueChange[84] > 0f)
                 keyboardkey(input, Keys.F3, keyboard_id);
-            if (wu[84] == 1)
+            if (Valuechanges._ValueChange[84] < 0f)
                 keyboardkeyF(input, Keys.F3, keyboard_id);
-            valchanged(85, SendF4);
-            if (wd[85] == 1)
+            ValueChange[85] = SendF4 ? 1 : 0;
+            if (Valuechanges._ValueChange[85] > 0f)
                 keyboardkey(input, Keys.F4, keyboard_id);
-            if (wu[85] == 1)
+            if (Valuechanges._ValueChange[85] < 0f)
                 keyboardkeyF(input, Keys.F4, keyboard_id);
-            valchanged(86, SendF5);
-            if (wd[86] == 1)
+            ValueChange[86] = SendF5 ? 1 : 0;
+            if (Valuechanges._ValueChange[86] > 0f)
                 keyboardkey(input, Keys.F5, keyboard_id);
-            if (wu[86] == 1)
+            if (Valuechanges._ValueChange[86] < 0f)
                 keyboardkeyF(input, Keys.F5, keyboard_id);
-            valchanged(87, SendF6);
-            if (wd[87] == 1)
+            ValueChange[87] = SendF6 ? 1 : 0;
+            if (Valuechanges._ValueChange[87] > 0f)
                 keyboardkey(input, Keys.F6, keyboard_id);
-            if (wu[87] == 1)
+            if (Valuechanges._ValueChange[87] < 0f)
                 keyboardkeyF(input, Keys.F6, keyboard_id);
-            valchanged(88, SendF7);
-            if (wd[88] == 1)
+            ValueChange[88] = SendF7 ? 1 : 0;
+            if (Valuechanges._ValueChange[88] > 0f)
                 keyboardkey(input, Keys.F7, keyboard_id);
-            if (wu[88] == 1)
+            if (Valuechanges._ValueChange[88] < 0f)
                 keyboardkeyF(input, Keys.F7, keyboard_id);
-            valchanged(89, SendF8);
-            if (wd[89] == 1)
+            ValueChange[89] = SendF8 ? 1 : 0;
+            if (Valuechanges._ValueChange[89] > 0f)
                 keyboardkey(input, Keys.F8, keyboard_id);
-            if (wu[89] == 1)
+            if (Valuechanges._ValueChange[89] < 0f)
                 keyboardkeyF(input, Keys.F8, keyboard_id);
-            valchanged(90, SendF9);
-            if (wd[90] == 1)
+            ValueChange[90] = SendF9 ? 1 : 0;
+            if (Valuechanges._ValueChange[90] > 0f)
                 keyboardkey(input, Keys.F9, keyboard_id);
-            if (wu[90] == 1)
+            if (Valuechanges._ValueChange[90] < 0f)
                 keyboardkeyF(input, Keys.F9, keyboard_id);
-            valchanged(91, SendF10);
-            if (wd[91] == 1)
+            ValueChange[91] = SendF10 ? 1 : 0;
+            if (Valuechanges._ValueChange[91] > 0f)
                 keyboardkey(input, Keys.F10, keyboard_id);
-            if (wu[91] == 1)
+            if (Valuechanges._ValueChange[91] < 0f)
                 keyboardkeyF(input, Keys.F10, keyboard_id);
-            valchanged(92, SendF11);
-            if (wd[92] == 1)
+            ValueChange[92] = SendF11 ? 1 : 0;
+            if (Valuechanges._ValueChange[92] > 0f)
                 keyboardkey(input, Keys.F11, keyboard_id);
-            if (wu[92] == 1)
+            if (Valuechanges._ValueChange[92] < 0f)
                 keyboardkeyF(input, Keys.F11, keyboard_id);
-            valchanged(93, SendF12);
-            if (wd[93] == 1)
+            ValueChange[93] = SendF12 ? 1 : 0;
+            if (Valuechanges._ValueChange[93] > 0f)
                 keyboardkey(input, Keys.F12, keyboard_id);
-            if (wu[93] == 1)
+            if (Valuechanges._ValueChange[93] < 0f)
                 keyboardkeyF(input, Keys.F12, keyboard_id);
-            valchanged(94, SendNUMLOCK);
-            if (wd[94] == 1)
+            ValueChange[94] = SendNUMLOCK ? 1 : 0;
+            if (Valuechanges._ValueChange[94] > 0f)
                 keyboardkey(input, Keys.NUMLOCK, keyboard_id);
-            if (wu[94] == 1)
+            if (Valuechanges._ValueChange[94] < 0f)
                 keyboardkeyF(input, Keys.NUMLOCK, keyboard_id);
-            valchanged(95, SendSCROLLLOCK);
-            if (wd[95] == 1)
+            ValueChange[95] = SendSCROLLLOCK ? 1 : 0;
+            if (Valuechanges._ValueChange[95] > 0f)
                 keyboardkey(input, Keys.SCROLLLOCK, keyboard_id);
-            if (wu[95] == 1)
+            if (Valuechanges._ValueChange[95] < 0f)
                 keyboardkeyF(input, Keys.SCROLLLOCK, keyboard_id);
-            valchanged(96, SendLEFTSHIFT);
-            if (wd[96] == 1)
+            ValueChange[96] = SendLEFTSHIFT ? 1 : 0;
+            if (Valuechanges._ValueChange[96] > 0f)
                 keyboardkey(input, Keys.LEFTSHIFT, keyboard_id);
-            if (wu[96] == 1)
+            if (Valuechanges._ValueChange[96] < 0f)
                 keyboardkeyF(input, Keys.LEFTSHIFT, keyboard_id);
-            valchanged(97, SendRIGHTSHIFT);
-            if (wd[97] == 1)
+            ValueChange[97] = SendRIGHTSHIFT ? 1 : 0;
+            if (Valuechanges._ValueChange[97] > 0f)
                 keyboardkey(input, Keys.RIGHTSHIFT, keyboard_id);
-            if (wu[97] == 1)
+            if (Valuechanges._ValueChange[97] < 0f)
                 keyboardkeyF(input, Keys.RIGHTSHIFT, keyboard_id);
-            valchanged(98, SendLEFTCONTROL);
-            if (wd[98] == 1)
+            ValueChange[98] = SendLEFTCONTROL ? 1 : 0;
+            if (Valuechanges._ValueChange[98] > 0f)
                 keyboardkey(input, Keys.LEFTCONTROL, keyboard_id);
-            if (wu[98] == 1)
+            if (Valuechanges._ValueChange[98] < 0f)
                 keyboardkeyF(input, Keys.LEFTCONTROL, keyboard_id);
-            valchanged(99, SendRIGHTCONTROL);
-            if (wd[99] == 1)
+            ValueChange[99] = SendRIGHTCONTROL ? 1 : 0;
+            if (Valuechanges._ValueChange[99] > 0f)
                 keyboardkey(input, Keys.RIGHTCONTROL, keyboard_id);
-            if (wu[99] == 1)
+            if (Valuechanges._ValueChange[99] < 0f)
                 keyboardkeyF(input, Keys.RIGHTCONTROL, keyboard_id);
-            valchanged(100, SendLEFTALT);
-            if (wd[100] == 1)
+            ValueChange[100] = SendLEFTALT ? 1 : 0;
+            if (Valuechanges._ValueChange[100] > 0f)
                 keyboardkey(input, Keys.LEFTALT, keyboard_id);
-            if (wu[100] == 1)
+            if (Valuechanges._ValueChange[100] < 0f)
                 keyboardkeyF(input, Keys.LEFTALT, keyboard_id);
-            valchanged(101, SendRIGHTALT);
-            if (wd[101] == 1)
+            ValueChange[101] = SendRIGHTALT ? 1 : 0;
+            if (Valuechanges._ValueChange[101] > 0f)
                 keyboardkey(input, Keys.RIGHTALT, keyboard_id);
-            if (wu[101] == 1)
+            if (Valuechanges._ValueChange[101] < 0f)
                 keyboardkeyF(input, Keys.RIGHTALT, keyboard_id);
-            valchanged(102, SendBROWSER_BACK);
-            if (wd[102] == 1)
+            ValueChange[102] = SendBROWSER_BACK ? 1 : 0;
+            if (Valuechanges._ValueChange[102] > 0f)
                 keyboardkey(input, Keys.BROWSER_BACK, keyboard_id);
-            if (wu[102] == 1)
+            if (Valuechanges._ValueChange[102] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_BACK, keyboard_id);
-            valchanged(103, SendBROWSER_FORWARD);
-            if (wd[103] == 1)
+            ValueChange[103] = SendBROWSER_FORWARD ? 1 : 0;
+            if (Valuechanges._ValueChange[103] > 0f)
                 keyboardkey(input, Keys.BROWSER_FORWARD, keyboard_id);
-            if (wu[103] == 1)
+            if (Valuechanges._ValueChange[103] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_FORWARD, keyboard_id);
-            valchanged(104, SendBROWSER_REFRESH);
-            if (wd[104] == 1)
+            ValueChange[104] = SendBROWSER_REFRESH ? 1 : 0;
+            if (Valuechanges._ValueChange[104] > 0f)
                 keyboardkey(input, Keys.BROWSER_REFRESH, keyboard_id);
-            if (wu[104] == 1)
+            if (Valuechanges._ValueChange[104] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_REFRESH, keyboard_id);
-            valchanged(105, SendBROWSER_STOP);
-            if (wd[105] == 1)
+            ValueChange[105] = SendBROWSER_STOP ? 1 : 0;
+            if (Valuechanges._ValueChange[105] > 0f)
                 keyboardkey(input, Keys.BROWSER_STOP, keyboard_id);
-            if (wu[105] == 1)
+            if (Valuechanges._ValueChange[105] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_STOP, keyboard_id);
-            valchanged(106, SendBROWSER_SEARCH);
-            if (wd[106] == 1)
+            ValueChange[106] = SendBROWSER_SEARCH ? 1 : 0;
+            if (Valuechanges._ValueChange[106] > 0f)
                 keyboardkey(input, Keys.BROWSER_SEARCH, keyboard_id);
-            if (wu[106] == 1)
+            if (Valuechanges._ValueChange[106] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_SEARCH, keyboard_id);
-            valchanged(107, SendBROWSER_FAVORITES);
-            if (wd[107] == 1)
+            ValueChange[107] = SendBROWSER_FAVORITES ? 1 : 0;
+            if (Valuechanges._ValueChange[107] > 0f)
                 keyboardkey(input, Keys.BROWSER_FAVORITES, keyboard_id);
-            if (wu[107] == 1)
+            if (Valuechanges._ValueChange[107] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_FAVORITES, keyboard_id);
-            valchanged(108, SendBROWSER_HOME);
-            if (wd[108] == 1)
+            ValueChange[108] = SendBROWSER_HOME ? 1 : 0;
+            if (Valuechanges._ValueChange[108] > 0f)
                 keyboardkey(input, Keys.BROWSER_HOME, keyboard_id);
-            if (wu[108] == 1)
+            if (Valuechanges._ValueChange[108] < 0f)
                 keyboardkeyF(input, Keys.BROWSER_HOME, keyboard_id);
-            valchanged(109, SendVOLUME_MUTE);
-            if (wd[109] == 1)
+            ValueChange[109] = SendVOLUME_MUTE ? 1 : 0;
+            if (Valuechanges._ValueChange[109] > 0f)
                 keyboardkey(input, Keys.VOLUME_MUTE, keyboard_id);
-            if (wu[109] == 1)
+            if (Valuechanges._ValueChange[109] < 0f)
                 keyboardkeyF(input, Keys.VOLUME_MUTE, keyboard_id);
-            valchanged(110, SendVOLUME_DOWN);
-            if (wd[110] == 1)
+            ValueChange[110] = SendVOLUME_DOWN ? 1 : 0;
+            if (Valuechanges._ValueChange[110] > 0f)
                 keyboardkey(input, Keys.VOLUME_DOWN, keyboard_id);
-            if (wu[110] == 1)
+            if (Valuechanges._ValueChange[110] < 0f)
                 keyboardkeyF(input, Keys.VOLUME_DOWN, keyboard_id);
-            valchanged(111, SendVOLUME_UP);
-            if (wd[111] == 1)
+            ValueChange[111] = SendVOLUME_UP ? 1 : 0;
+            if (Valuechanges._ValueChange[111] > 0f)
                 keyboardkey(input, Keys.VOLUME_UP, keyboard_id);
-            if (wu[111] == 1)
+            if (Valuechanges._ValueChange[111] < 0f)
                 keyboardkeyF(input, Keys.VOLUME_UP, keyboard_id);
-            valchanged(112, SendMEDIA_NEXT_TRACK);
-            if (wd[112] == 1)
+            ValueChange[112] = SendMEDIA_NEXT_TRACK ? 1 : 0;
+            if (Valuechanges._ValueChange[112] > 0f)
                 keyboardkey(input, Keys.MEDIA_NEXT_TRACK, keyboard_id);
-            if (wu[112] == 1)
+            if (Valuechanges._ValueChange[112] < 0f)
                 keyboardkeyF(input, Keys.MEDIA_NEXT_TRACK, keyboard_id);
-            valchanged(113, SendMEDIA_PREV_TRACK);
-            if (wd[113] == 1)
+            ValueChange[113] = SendMEDIA_PREV_TRACK ? 1 : 0;
+            if (Valuechanges._ValueChange[113] > 0f)
                 keyboardkey(input, Keys.MEDIA_PREV_TRACK, keyboard_id);
-            if (wu[113] == 1)
+            if (Valuechanges._ValueChange[113] < 0f)
                 keyboardkeyF(input, Keys.MEDIA_PREV_TRACK, keyboard_id);
-            valchanged(114, SendMEDIA_STOP);
-            if (wd[114] == 1)
+            ValueChange[114] = SendMEDIA_STOP ? 1 : 0;
+            if (Valuechanges._ValueChange[114] > 0f)
                 keyboardkey(input, Keys.MEDIA_STOP, keyboard_id);
-            if (wu[114] == 1)
+            if (Valuechanges._ValueChange[114] < 0f)
                 keyboardkeyF(input, Keys.MEDIA_STOP, keyboard_id);
-            valchanged(115, SendMEDIA_PLAY_PAUSE);
-            if (wd[115] == 1)
+            ValueChange[115] = SendMEDIA_PLAY_PAUSE ? 1 : 0;
+            if (Valuechanges._ValueChange[115] > 0f)
                 keyboardkey(input, Keys.MEDIA_PLAY_PAUSE, keyboard_id);
-            if (wu[115] == 1)
+            if (Valuechanges._ValueChange[115] < 0f)
                 keyboardkeyF(input, Keys.MEDIA_PLAY_PAUSE, keyboard_id);
-            valchanged(116, SendLAUNCH_MAIL);
-            if (wd[116] == 1)
+            ValueChange[116] = SendLAUNCH_MAIL ? 1 : 0;
+            if (Valuechanges._ValueChange[116] > 0f)
                 keyboardkey(input, Keys.LAUNCH_MAIL, keyboard_id);
-            if (wu[116] == 1)
+            if (Valuechanges._ValueChange[116] < 0f)
                 keyboardkeyF(input, Keys.LAUNCH_MAIL, keyboard_id);
-            valchanged(117, SendLAUNCH_MEDIA_SELECT);
-            if (wd[117] == 1)
+            ValueChange[117] = SendLAUNCH_MEDIA_SELECT ? 1 : 0;
+            if (Valuechanges._ValueChange[117] > 0f)
                 keyboardkey(input, Keys.LAUNCH_MEDIA_SELECT, keyboard_id);
-            if (wu[117] == 1)
+            if (Valuechanges._ValueChange[117] < 0f)
                 keyboardkeyF(input, Keys.LAUNCH_MEDIA_SELECT, keyboard_id);
-            valchanged(118, SendLAUNCH_APP1);
-            if (wd[118] == 1)
+            ValueChange[118] = SendLAUNCH_APP1 ? 1 : 0;
+            if (Valuechanges._ValueChange[118] > 0f)
                 keyboardkey(input, Keys.LAUNCH_APP1, keyboard_id);
-            if (wu[118] == 1)
+            if (Valuechanges._ValueChange[118] < 0f)
                 keyboardkeyF(input, Keys.LAUNCH_APP1, keyboard_id);
-            valchanged(119, SendLAUNCH_APP2);
-            if (wd[119] == 1)
+            ValueChange[119] = SendLAUNCH_APP2 ? 1 : 0;
+            if (Valuechanges._ValueChange[119] > 0f)
                 keyboardkey(input, Keys.LAUNCH_APP2, keyboard_id);
-            if (wu[119] == 1)
+            if (Valuechanges._ValueChange[119] < 0f)
                 keyboardkeyF(input, Keys.LAUNCH_APP2, keyboard_id);
-            valchanged(120, SendOEM_1);
-            if (wd[120] == 1)
+            ValueChange[120] = SendOEM_1 ? 1 : 0;
+            if (Valuechanges._ValueChange[120] > 0f)
                 keyboardkey(input, Keys.OEM_1, keyboard_id);
-            if (wu[120] == 1)
+            if (Valuechanges._ValueChange[120] < 0f)
                 keyboardkeyF(input, Keys.OEM_1, keyboard_id);
-            valchanged(121, SendOEM_PLUS);
-            if (wd[121] == 1)
+            ValueChange[121] = SendOEM_PLUS ? 1 : 0;
+            if (Valuechanges._ValueChange[121] > 0f)
                 keyboardkey(input, Keys.OEM_PLUS, keyboard_id);
-            if (wu[121] == 1)
+            if (Valuechanges._ValueChange[121] < 0f)
                 keyboardkeyF(input, Keys.OEM_PLUS, keyboard_id);
-            valchanged(122, SendOEM_COMMA);
-            if (wd[122] == 1)
+            ValueChange[122] = SendOEM_COMMA ? 1 : 0;
+            if (Valuechanges._ValueChange[122] > 0f)
                 keyboardkey(input, Keys.OEM_COMMA, keyboard_id);
-            if (wu[122] == 1)
+            if (Valuechanges._ValueChange[122] < 0f)
                 keyboardkeyF(input, Keys.OEM_COMMA, keyboard_id);
-            valchanged(123, SendOEM_MINUS);
-            if (wd[123] == 1)
+            ValueChange[123] = SendOEM_MINUS ? 1 : 0;
+            if (Valuechanges._ValueChange[123] > 0f)
                 keyboardkey(input, Keys.OEM_MINUS, keyboard_id);
-            if (wu[123] == 1)
+            if (Valuechanges._ValueChange[123] < 0f)
                 keyboardkeyF(input, Keys.OEM_MINUS, keyboard_id);
-            valchanged(124, SendOEM_PERIOD);
-            if (wd[124] == 1)
+            ValueChange[124] = SendOEM_PERIOD ? 1 : 0;
+            if (Valuechanges._ValueChange[124] > 0f)
                 keyboardkey(input, Keys.OEM_PERIOD, keyboard_id);
-            if (wu[124] == 1)
+            if (Valuechanges._ValueChange[124] < 0f)
                 keyboardkeyF(input, Keys.OEM_PERIOD, keyboard_id);
-            valchanged(125, SendOEM_2);
-            if (wd[125] == 1)
+            ValueChange[125] = SendOEM_2 ? 1 : 0;
+            if (Valuechanges._ValueChange[125] > 0f)
                 keyboardkey(input, Keys.OEM_2, keyboard_id);
-            if (wu[125] == 1)
+            if (Valuechanges._ValueChange[125] < 0f)
                 keyboardkeyF(input, Keys.OEM_2, keyboard_id);
-            valchanged(126, SendOEM_3);
-            if (wd[126] == 1)
+            ValueChange[126] = SendOEM_3 ? 1 : 0;
+            if (Valuechanges._ValueChange[126] > 0f)
                 keyboardkey(input, Keys.OEM_3, keyboard_id);
-            if (wu[126] == 1)
+            if (Valuechanges._ValueChange[126] < 0f)
                 keyboardkeyF(input, Keys.OEM_3, keyboard_id);
-            valchanged(127, SendOEM_4);
-            if (wd[127] == 1)
+            ValueChange[127] = SendOEM_4 ? 1 : 0;
+            if (Valuechanges._ValueChange[127] > 0f)
                 keyboardkey(input, Keys.OEM_4, keyboard_id);
-            if (wu[127] == 1)
+            if (Valuechanges._ValueChange[127] < 0f)
                 keyboardkeyF(input, Keys.OEM_4, keyboard_id);
-            valchanged(128, SendOEM_5);
-            if (wd[128] == 1)
+            ValueChange[128] = SendOEM_5 ? 1 : 0;
+            if (Valuechanges._ValueChange[128] > 0f)
                 keyboardkey(input, Keys.OEM_5, keyboard_id);
-            if (wu[128] == 1)
+            if (Valuechanges._ValueChange[128] < 0f)
                 keyboardkeyF(input, Keys.OEM_5, keyboard_id);
-            valchanged(129, SendOEM_6);
-            if (wd[129] == 1)
+            ValueChange[129] = SendOEM_6 ? 1 : 0;
+            if (Valuechanges._ValueChange[129] > 0f)
                 keyboardkey(input, Keys.OEM_6, keyboard_id);
-            if (wu[129] == 1)
+            if (Valuechanges._ValueChange[129] < 0f)
                 keyboardkeyF(input, Keys.OEM_6, keyboard_id);
-            valchanged(130, SendOEM_7);
-            if (wd[130] == 1)
+            ValueChange[130] = SendOEM_7 ? 1 : 0;
+            if (Valuechanges._ValueChange[130] > 0f)
                 keyboardkey(input, Keys.OEM_7, keyboard_id);
-            if (wu[130] == 1)
+            if (Valuechanges._ValueChange[130] < 0f)
                 keyboardkeyF(input, Keys.OEM_7, keyboard_id);
-            valchanged(131, SendOEM_8);
-            if (wd[131] == 1)
+            ValueChange[131] = SendOEM_8 ? 1 : 0;
+            if (Valuechanges._ValueChange[131] > 0f)
                 keyboardkey(input, Keys.OEM_8, keyboard_id);
-            if (wu[131] == 1)
+            if (Valuechanges._ValueChange[131] < 0f)
                 keyboardkeyF(input, Keys.OEM_8, keyboard_id);
-            valchanged(132, SendOEM_102);
-            if (wd[132] == 1)
+            ValueChange[132] = SendOEM_102 ? 1 : 0;
+            if (Valuechanges._ValueChange[132] > 0f)
                 keyboardkey(input, Keys.OEM_102, keyboard_id);
-            if (wu[132] == 1)
+            if (Valuechanges._ValueChange[132] < 0f)
                 keyboardkeyF(input, Keys.OEM_102, keyboard_id);
-            valchanged(133, SendEREOF);
-            if (wd[133] == 1)
+            ValueChange[133] = SendEREOF ? 1 : 0;
+            if (Valuechanges._ValueChange[133] > 0f)
                 keyboardkey(input, Keys.EREOF, keyboard_id);
-            if (wu[133] == 1)
+            if (Valuechanges._ValueChange[133] < 0f)
                 keyboardkeyF(input, Keys.EREOF, keyboard_id);
-            valchanged(134, SendZOOM);
-            if (wd[134] == 1)
+            ValueChange[134] = SendZOOM ? 1 : 0;
+            if (Valuechanges._ValueChange[134] > 0f)
                 keyboardkey(input, Keys.ZOOM, keyboard_id);
-            if (wu[134] == 1)
+            if (Valuechanges._ValueChange[134] < 0f)
                 keyboardkeyF(input, Keys.ZOOM, keyboard_id);
-            valchanged(135, SendEscape);
-            if (wd[135] == 1)
+            ValueChange[135] = SendEscape ? 1 : 0;
+            if (Valuechanges._ValueChange[135] > 0f)
                 keyboardkey(input, Keys.Escape, keyboard_id);
-            if (wu[135] == 1)
+            if (Valuechanges._ValueChange[135] < 0f)
                 keyboardkeyF(input, Keys.Escape, keyboard_id);
-            valchanged(136, SendOne);
-            if (wd[136] == 1)
+            ValueChange[136] = SendOne ? 1 : 0;
+            if (Valuechanges._ValueChange[136] > 0f)
                 keyboardkey(input, Keys.One, keyboard_id);
-            if (wu[136] == 1)
+            if (Valuechanges._ValueChange[136] < 0f)
                 keyboardkeyF(input, Keys.One, keyboard_id);
-            valchanged(137, SendTwo);
-            if (wd[137] == 1)
+            ValueChange[137] = SendTwo ? 1 : 0;
+            if (Valuechanges._ValueChange[137] > 0f)
                 keyboardkey(input, Keys.Two, keyboard_id);
-            if (wu[137] == 1)
+            if (Valuechanges._ValueChange[137] < 0f)
                 keyboardkeyF(input, Keys.Two, keyboard_id);
-            valchanged(138, SendThree);
-            if (wd[138] == 1)
+            ValueChange[138] = SendThree ? 1 : 0;
+            if (Valuechanges._ValueChange[138] > 0f)
                 keyboardkey(input, Keys.Three, keyboard_id);
-            if (wu[138] == 1)
+            if (Valuechanges._ValueChange[138] < 0f)
                 keyboardkeyF(input, Keys.Three, keyboard_id);
-            valchanged(139, SendFour);
-            if (wd[139] == 1)
+            ValueChange[139] = SendFour ? 1 : 0;
+            if (Valuechanges._ValueChange[139] > 0f)
                 keyboardkey(input, Keys.Four, keyboard_id);
-            if (wu[139] == 1)
+            if (Valuechanges._ValueChange[139] < 0f)
                 keyboardkeyF(input, Keys.Four, keyboard_id);
-            valchanged(140, SendFive);
-            if (wd[140] == 1)
+            ValueChange[140] = SendFive ? 1 : 0;
+            if (Valuechanges._ValueChange[140] > 0f)
                 keyboardkey(input, Keys.Five, keyboard_id);
-            if (wu[140] == 1)
+            if (Valuechanges._ValueChange[140] < 0f)
                 keyboardkeyF(input, Keys.Five, keyboard_id);
-            valchanged(141, SendSix);
-            if (wd[141] == 1)
+            ValueChange[141] = SendSix ? 1 : 0;
+            if (Valuechanges._ValueChange[141] > 0f)
                 keyboardkey(input, Keys.Six, keyboard_id);
-            if (wu[141] == 1)
+            if (Valuechanges._ValueChange[141] < 0f)
                 keyboardkeyF(input, Keys.Six, keyboard_id);
-            valchanged(142, SendSeven);
-            if (wd[142] == 1)
+            ValueChange[142] = SendSeven ? 1 : 0;
+            if (Valuechanges._ValueChange[142] > 0f)
                 keyboardkey(input, Keys.Seven, keyboard_id);
-            if (wu[142] == 1)
+            if (Valuechanges._ValueChange[142] < 0f)
                 keyboardkeyF(input, Keys.Seven, keyboard_id);
-            valchanged(143, SendEight);
-            if (wd[143] == 1)
+            ValueChange[143] = SendEight ? 1 : 0;
+            if (Valuechanges._ValueChange[143] > 0f)
                 keyboardkey(input, Keys.Eight, keyboard_id);
-            if (wu[143] == 1)
+            if (Valuechanges._ValueChange[143] < 0f)
                 keyboardkeyF(input, Keys.Eight, keyboard_id);
-            valchanged(144, SendNine);
-            if (wd[144] == 1)
+            ValueChange[144] = SendNine ? 1 : 0;
+            if (Valuechanges._ValueChange[144] > 0f)
                 keyboardkey(input, Keys.Nine, keyboard_id);
-            if (wu[144] == 1)
+            if (Valuechanges._ValueChange[144] < 0f)
                 keyboardkeyF(input, Keys.Nine, keyboard_id);
-            valchanged(145, SendZero);
-            if (wd[145] == 1)
+            ValueChange[145] = SendZero ? 1 : 0;
+            if (Valuechanges._ValueChange[145] > 0f)
                 keyboardkey(input, Keys.Zero, keyboard_id);
-            if (wu[145] == 1)
+            if (Valuechanges._ValueChange[145] < 0f)
                 keyboardkeyF(input, Keys.Zero, keyboard_id);
-            valchanged(146, SendDashUnderscore);
-            if (wd[146] == 1)
+            ValueChange[146] = SendDashUnderscore ? 1 : 0;
+            if (Valuechanges._ValueChange[146] > 0f)
                 keyboardkey(input, Keys.DashUnderscore, keyboard_id);
-            if (wu[146] == 1)
+            if (Valuechanges._ValueChange[146] < 0f)
                 keyboardkeyF(input, Keys.DashUnderscore, keyboard_id);
-            valchanged(147, SendPlusEquals);
-            if (wd[147] == 1)
+            ValueChange[147] = SendPlusEquals ? 1 : 0;
+            if (Valuechanges._ValueChange[147] > 0f)
                 keyboardkey(input, Keys.PlusEquals, keyboard_id);
-            if (wu[147] == 1)
+            if (Valuechanges._ValueChange[147] < 0f)
                 keyboardkeyF(input, Keys.PlusEquals, keyboard_id);
-            valchanged(148, SendBackspace);
-            if (wd[148] == 1)
+            ValueChange[148] = SendBackspace ? 1 : 0;
+            if (Valuechanges._ValueChange[148] > 0f)
                 keyboardkey(input, Keys.Backspace, keyboard_id);
-            if (wu[148] == 1)
+            if (Valuechanges._ValueChange[148] < 0f)
                 keyboardkeyF(input, Keys.Backspace, keyboard_id);
-            valchanged(149, SendTab);
-            if (wd[149] == 1)
+            ValueChange[149] = SendTab ? 1 : 0;
+            if (Valuechanges._ValueChange[149] > 0f)
                 keyboardkey(input, Keys.Tab, keyboard_id);
-            if (wu[149] == 1)
+            if (Valuechanges._ValueChange[149] < 0f)
                 keyboardkeyF(input, Keys.Tab, keyboard_id);
-            valchanged(150, SendOpenBracketBrace);
-            if (wd[150] == 1)
+            ValueChange[150] = SendOpenBracketBrace ? 1 : 0;
+            if (Valuechanges._ValueChange[150] > 0f)
                 keyboardkey(input, Keys.OpenBracketBrace, keyboard_id);
-            if (wu[150] == 1)
+            if (Valuechanges._ValueChange[150] < 0f)
                 keyboardkeyF(input, Keys.OpenBracketBrace, keyboard_id);
-            valchanged(151, SendCloseBracketBrace);
-            if (wd[151] == 1)
+            ValueChange[151] = SendCloseBracketBrace ? 1 : 0;
+            if (Valuechanges._ValueChange[151] > 0f)
                 keyboardkey(input, Keys.CloseBracketBrace, keyboard_id);
-            if (wu[151] == 1)
+            if (Valuechanges._ValueChange[151] < 0f)
                 keyboardkeyF(input, Keys.CloseBracketBrace, keyboard_id);
-            valchanged(152, SendEnter);
-            if (wd[152] == 1)
+            ValueChange[152] = SendEnter ? 1 : 0;
+            if (Valuechanges._ValueChange[152] > 0f)
                 keyboardkey(input, Keys.Enter, keyboard_id);
-            if (wu[152] == 1)
+            if (Valuechanges._ValueChange[152] < 0f)
                 keyboardkeyF(input, Keys.Enter, keyboard_id);
-            valchanged(153, SendSemicolonColon);
-            if (wd[153] == 1)
+            ValueChange[153] = SendSemicolonColon ? 1 : 0;
+            if (Valuechanges._ValueChange[153] > 0f)
                 keyboardkey(input, Keys.SemicolonColon, keyboard_id);
-            if (wu[153] == 1)
+            if (Valuechanges._ValueChange[153] < 0f)
                 keyboardkeyF(input, Keys.SemicolonColon, keyboard_id);
-            valchanged(154, SendSingleDoubleQuote);
-            if (wd[154] == 1)
+            ValueChange[154] = SendSingleDoubleQuote ? 1 : 0;
+            if (Valuechanges._ValueChange[154] > 0f)
                 keyboardkey(input, Keys.SingleDoubleQuote, keyboard_id);
-            if (wu[154] == 1)
+            if (Valuechanges._ValueChange[154] < 0f)
                 keyboardkeyF(input, Keys.SingleDoubleQuote, keyboard_id);
-            valchanged(155, SendTilde);
-            if (wd[155] == 1)
+            ValueChange[155] = SendTilde ? 1 : 0;
+            if (Valuechanges._ValueChange[155] > 0f)
                 keyboardkey(input, Keys.Tilde, keyboard_id);
-            if (wu[155] == 1)
+            if (Valuechanges._ValueChange[155] < 0f)
                 keyboardkeyF(input, Keys.Tilde, keyboard_id);
-            valchanged(156, SendLeftShift);
-            if (wd[156] == 1)
+            ValueChange[156] = SendLeftShift ? 1 : 0;
+            if (Valuechanges._ValueChange[156] > 0f)
                 keyboardkey(input, Keys.LeftShift, keyboard_id);
-            if (wu[156] == 1)
+            if (Valuechanges._ValueChange[156] < 0f)
                 keyboardkeyF(input, Keys.LeftShift, keyboard_id);
-            valchanged(157, SendBackslashPipe);
-            if (wd[157] == 1)
+            ValueChange[157] = SendBackslashPipe ? 1 : 0;
+            if (Valuechanges._ValueChange[157] > 0f)
                 keyboardkey(input, Keys.BackslashPipe, keyboard_id);
-            if (wu[157] == 1)
+            if (Valuechanges._ValueChange[157] < 0f)
                 keyboardkeyF(input, Keys.BackslashPipe, keyboard_id);
-            valchanged(158, SendCommaLeftArrow);
-            if (wd[158] == 1)
+            ValueChange[158] = SendCommaLeftArrow ? 1 : 0;
+            if (Valuechanges._ValueChange[158] > 0f)
                 keyboardkey(input, Keys.CommaLeftArrow, keyboard_id);
-            if (wu[158] == 1)
+            if (Valuechanges._ValueChange[158] < 0f)
                 keyboardkeyF(input, Keys.CommaLeftArrow, keyboard_id);
-            valchanged(159, SendPeriodRightArrow);
-            if (wd[159] == 1)
+            ValueChange[159] = SendPeriodRightArrow ? 1 : 0;
+            if (Valuechanges._ValueChange[159] > 0f)
                 keyboardkey(input, Keys.PeriodRightArrow, keyboard_id);
-            if (wu[159] == 1)
+            if (Valuechanges._ValueChange[159] < 0f)
                 keyboardkeyF(input, Keys.PeriodRightArrow, keyboard_id);
-            valchanged(160, SendForwardSlashQuestionMark);
-            if (wd[160] == 1)
+            ValueChange[160] = SendForwardSlashQuestionMark ? 1 : 0;
+            if (Valuechanges._ValueChange[160] > 0f)
                 keyboardkey(input, Keys.ForwardSlashQuestionMark, keyboard_id);
-            if (wu[160] == 1)
+            if (Valuechanges._ValueChange[160] < 0f)
                 keyboardkeyF(input, Keys.ForwardSlashQuestionMark, keyboard_id);
-            valchanged(161, SendRightShift);
-            if (wd[161] == 1)
+            ValueChange[161] = SendRightShift ? 1 : 0;
+            if (Valuechanges._ValueChange[161] > 0f)
                 keyboardkey(input, Keys.RightShift, keyboard_id);
-            if (wu[161] == 1)
+            if (Valuechanges._ValueChange[161] < 0f)
                 keyboardkeyF(input, Keys.RightShift, keyboard_id);
-            valchanged(162, SendRightAlt);
-            if (wd[162] == 1)
+            ValueChange[162] = SendRightAlt ? 1 : 0;
+            if (Valuechanges._ValueChange[162] > 0f)
                 keyboardkey(input, Keys.RightAlt, keyboard_id);
-            if (wu[162] == 1)
+            if (Valuechanges._ValueChange[162] < 0f)
                 keyboardkeyF(input, Keys.RightAlt, keyboard_id);
-            valchanged(163, SendSpace);
-            if (wd[163] == 1)
+            ValueChange[163] = SendSpace ? 1 : 0;
+            if (Valuechanges._ValueChange[163] > 0f)
                 keyboardkey(input, Keys.Space, keyboard_id);
-            if (wu[163] == 1)
+            if (Valuechanges._ValueChange[163] < 0f)
                 keyboardkeyF(input, Keys.Space, keyboard_id);
-            valchanged(164, SendCapsLock);
-            if (wd[164] == 1)
+            ValueChange[164] = SendCapsLock ? 1 : 0;
+            if (Valuechanges._ValueChange[164] > 0f)
                 keyboardkey(input, Keys.CapsLock, keyboard_id);
-            if (wu[164] == 1)
+            if (Valuechanges._ValueChange[164] < 0f)
                 keyboardkeyF(input, Keys.CapsLock, keyboard_id);
-            valchanged(165, SendUp);
-            if (wd[165] == 1)
+            ValueChange[165] = SendUp ? 1 : 0;
+            if (Valuechanges._ValueChange[165] > 0f)
                 keyboardkey(input, Keys.Up, keyboard_id);
-            if (wu[165] == 1)
+            if (Valuechanges._ValueChange[165] < 0f)
                 keyboardkeyF(input, Keys.Up, keyboard_id);
-            valchanged(166, SendDown);
-            if (wd[166] == 1)
+            ValueChange[166] = SendDown ? 1 : 0;
+            if (Valuechanges._ValueChange[166] > 0f)
                 keyboardkey(input, Keys.Down, keyboard_id);
-            if (wu[166] == 1)
+            if (Valuechanges._ValueChange[166] < 0f)
                 keyboardkeyF(input, Keys.Down, keyboard_id);
-            valchanged(167, SendRight);
-            if (wd[167] == 1)
+            ValueChange[167] = SendRight ? 1 : 0;
+            if (Valuechanges._ValueChange[167] > 0f)
                 keyboardkey(input, Keys.Right, keyboard_id);
-            if (wu[167] == 1)
+            if (Valuechanges._ValueChange[167] < 0f)
                 keyboardkeyF(input, Keys.Right, keyboard_id);
-            valchanged(168, SendLeft);
-            if (wd[168] == 1)
+            ValueChange[168] = SendLeft ? 1 : 0;
+            if (Valuechanges._ValueChange[168] > 0f)
                 keyboardkey(input, Keys.Left, keyboard_id);
-            if (wu[168] == 1)
+            if (Valuechanges._ValueChange[168] < 0f)
                 keyboardkeyF(input, Keys.Left, keyboard_id);
-            valchanged(169, SendHome);
-            if (wd[169] == 1)
+            ValueChange[169] = SendHome ? 1 : 0;
+            if (Valuechanges._ValueChange[169] > 0f)
                 keyboardkey(input, Keys.Home, keyboard_id);
-            if (wu[169] == 1)
+            if (Valuechanges._ValueChange[169] < 0f)
                 keyboardkeyF(input, Keys.Home, keyboard_id);
-            valchanged(170, SendEnd);
-            if (wd[170] == 1)
+            ValueChange[170] = SendEnd ? 1 : 0;
+            if (Valuechanges._ValueChange[170] > 0f)
                 keyboardkey(input, Keys.End, keyboard_id);
-            if (wu[170] == 1)
+            if (Valuechanges._ValueChange[170] < 0f)
                 keyboardkeyF(input, Keys.End, keyboard_id);
-            valchanged(171, SendDelete);
-            if (wd[171] == 1)
+            ValueChange[171] = SendDelete ? 1 : 0;
+            if (Valuechanges._ValueChange[171] > 0f)
                 keyboardkey(input, Keys.Delete, keyboard_id);
-            if (wu[171] == 1)
+            if (Valuechanges._ValueChange[171] < 0f)
                 keyboardkeyF(input, Keys.Delete, keyboard_id);
-            valchanged(172, SendPageUp);
-            if (wd[172] == 1)
+            ValueChange[172] = SendPageUp ? 1 : 0;
+            if (Valuechanges._ValueChange[172] > 0f)
                 keyboardkey(input, Keys.PageUp, keyboard_id);
-            if (wu[172] == 1)
+            if (Valuechanges._ValueChange[172] < 0f)
                 keyboardkeyF(input, Keys.PageUp, keyboard_id);
-            valchanged(173, SendPageDown);
-            if (wd[173] == 1)
+            ValueChange[173] = SendPageDown ? 1 : 0;
+            if (Valuechanges._ValueChange[173] > 0f)
                 keyboardkey(input, Keys.PageDown, keyboard_id);
-            if (wu[173] == 1)
+            if (Valuechanges._ValueChange[173] < 0f)
                 keyboardkeyF(input, Keys.PageDown, keyboard_id);
-            valchanged(174, SendInsert);
-            if (wd[174] == 1)
+            ValueChange[174] = SendInsert ? 1 : 0;
+            if (Valuechanges._ValueChange[174] > 0f)
                 keyboardkey(input, Keys.Insert, keyboard_id);
-            if (wu[174] == 1)
+            if (Valuechanges._ValueChange[174] < 0f)
                 keyboardkeyF(input, Keys.Insert, keyboard_id);
-            valchanged(175, SendPrintScreen);
-            if (wd[175] == 1)
+            ValueChange[175] = SendPrintScreen ? 1 : 0;
+            if (Valuechanges._ValueChange[175] > 0f)
                 keyboardkey(input, Keys.PrintScreen, keyboard_id);
-            if (wu[175] == 1)
+            if (Valuechanges._ValueChange[175] < 0f)
                 keyboardkeyF(input, Keys.PrintScreen, keyboard_id);
-            valchanged(176, SendNumLock);
-            if (wd[176] == 1)
+            ValueChange[176] = SendNumLock ? 1 : 0;
+            if (Valuechanges._ValueChange[176] > 0f)
                 keyboardkey(input, Keys.NumLock, keyboard_id);
-            if (wu[176] == 1)
+            if (Valuechanges._ValueChange[176] < 0f)
                 keyboardkeyF(input, Keys.NumLock, keyboard_id);
-            valchanged(177, SendScrollLock);
-            if (wd[177] == 1)
+            ValueChange[177] = SendScrollLock ? 1 : 0;
+            if (Valuechanges._ValueChange[177] > 0f)
                 keyboardkey(input, Keys.ScrollLock, keyboard_id);
-            if (wu[177] == 1)
+            if (Valuechanges._ValueChange[177] < 0f)
                 keyboardkeyF(input, Keys.ScrollLock, keyboard_id);
-            valchanged(178, SendMenu);
-            if (wd[178] == 1)
+            ValueChange[178] = SendMenu ? 1 : 0;
+            if (Valuechanges._ValueChange[178] > 0f)
                 keyboardkey(input, Keys.Menu, keyboard_id);
-            if (wu[178] == 1)
+            if (Valuechanges._ValueChange[178] < 0f)
                 keyboardkeyF(input, Keys.Menu, keyboard_id);
-            valchanged(179, SendWindowsKey);
-            if (wd[179] == 1)
+            ValueChange[179] = SendWindowsKey ? 1 : 0;
+            if (Valuechanges._ValueChange[179] > 0f)
                 keyboardkey(input, Keys.WindowsKey, keyboard_id);
-            if (wu[179] == 1)
+            if (Valuechanges._ValueChange[179] < 0f)
                 keyboardkeyF(input, Keys.WindowsKey, keyboard_id);
-            valchanged(180, SendNumpadDivide);
-            if (wd[180] == 1)
+            ValueChange[180] = SendNumpadDivide ? 1 : 0;
+            if (Valuechanges._ValueChange[180] > 0f)
                 keyboardkey(input, Keys.NumpadDivide, keyboard_id);
-            if (wu[180] == 1)
+            if (Valuechanges._ValueChange[180] < 0f)
                 keyboardkeyF(input, Keys.NumpadDivide, keyboard_id);
-            valchanged(181, SendNumpadAsterisk);
-            if (wd[181] == 1)
+            ValueChange[181] = SendNumpadAsterisk ? 1 : 0;
+            if (Valuechanges._ValueChange[181] > 0f)
                 keyboardkey(input, Keys.NumpadAsterisk, keyboard_id);
-            if (wu[181] == 1)
+            if (Valuechanges._ValueChange[181] < 0f)
                 keyboardkeyF(input, Keys.NumpadAsterisk, keyboard_id);
-            valchanged(182, SendNumpad7);
-            if (wd[182] == 1)
+            ValueChange[182] = SendNumpad7 ? 1 : 0;
+            if (Valuechanges._ValueChange[182] > 0f)
                 keyboardkey(input, Keys.Numpad7, keyboard_id);
-            if (wu[182] == 1)
+            if (Valuechanges._ValueChange[182] < 0f)
                 keyboardkeyF(input, Keys.Numpad7, keyboard_id);
-            valchanged(183, SendNumpad8);
-            if (wd[183] == 1)
+            ValueChange[183] = SendNumpad8 ? 1 : 0;
+            if (Valuechanges._ValueChange[183] > 0f)
                 keyboardkey(input, Keys.Numpad8, keyboard_id);
-            if (wu[183] == 1)
+            if (Valuechanges._ValueChange[183] < 0f)
                 keyboardkeyF(input, Keys.Numpad8, keyboard_id);
-            valchanged(184, SendNumpad9);
-            if (wd[184] == 1)
+            ValueChange[184] = SendNumpad9 ? 1 : 0;
+            if (Valuechanges._ValueChange[184] > 0f)
                 keyboardkey(input, Keys.Numpad9, keyboard_id);
-            if (wu[184] == 1)
+            if (Valuechanges._ValueChange[184] < 0f)
                 keyboardkeyF(input, Keys.Numpad9, keyboard_id);
-            valchanged(185, SendNumpad4);
-            if (wd[185] == 1)
+            ValueChange[185] = SendNumpad4 ? 1 : 0;
+            if (Valuechanges._ValueChange[185] > 0f)
                 keyboardkey(input, Keys.Numpad4, keyboard_id);
-            if (wu[185] == 1)
+            if (Valuechanges._ValueChange[185] < 0f)
                 keyboardkeyF(input, Keys.Numpad4, keyboard_id);
-            valchanged(186, SendNumpad5);
-            if (wd[186] == 1)
+            ValueChange[186] = SendNumpad5 ? 1 : 0;
+            if (Valuechanges._ValueChange[186] > 0f)
                 keyboardkey(input, Keys.Numpad5, keyboard_id);
-            if (wu[186] == 1)
+            if (Valuechanges._ValueChange[186] < 0f)
                 keyboardkeyF(input, Keys.Numpad5, keyboard_id);
-            valchanged(187, SendNumpad6);
-            if (wd[187] == 1)
+            ValueChange[187] = SendNumpad6 ? 1 : 0;
+            if (Valuechanges._ValueChange[187] > 0f)
                 keyboardkey(input, Keys.Numpad6, keyboard_id);
-            if (wu[187] == 1)
+            if (Valuechanges._ValueChange[187] < 0f)
                 keyboardkeyF(input, Keys.Numpad6, keyboard_id);
-            valchanged(188, SendNumpad1);
-            if (wd[188] == 1)
+            ValueChange[188] = SendNumpad1 ? 1 : 0;
+            if (Valuechanges._ValueChange[188] > 0f)
                 keyboardkey(input, Keys.Numpad1, keyboard_id);
-            if (wu[188] == 1)
+            if (Valuechanges._ValueChange[188] < 0f)
                 keyboardkeyF(input, Keys.Numpad1, keyboard_id);
-            valchanged(189, SendNumpad2);
-            if (wd[189] == 1)
+            ValueChange[189] = SendNumpad2 ? 1 : 0;
+            if (Valuechanges._ValueChange[189] > 0f)
                 keyboardkey(input, Keys.Numpad2, keyboard_id);
-            if (wu[189] == 1)
+            if (Valuechanges._ValueChange[189] < 0f)
                 keyboardkeyF(input, Keys.Numpad2, keyboard_id);
-            valchanged(190, SendNumpad3);
-            if (wd[190] == 1)
+            ValueChange[190] = SendNumpad3 ? 1 : 0;
+            if (Valuechanges._ValueChange[190] > 0f)
                 keyboardkey(input, Keys.Numpad3, keyboard_id);
-            if (wu[190] == 1)
+            if (Valuechanges._ValueChange[190] < 0f)
                 keyboardkeyF(input, Keys.Numpad3, keyboard_id);
-            valchanged(191, SendNumpad0);
-            if (wd[191] == 1)
+            ValueChange[191] = SendNumpad0 ? 1 : 0;
+            if (Valuechanges._ValueChange[191] > 0f)
                 keyboardkey(input, Keys.Numpad0, keyboard_id);
-            if (wu[191] == 1)
+            if (Valuechanges._ValueChange[191] < 0f)
                 keyboardkeyF(input, Keys.Numpad0, keyboard_id);
-            valchanged(192, SendNumpadDelete);
-            if (wd[192] == 1)
+            ValueChange[192] = SendNumpadDelete ? 1 : 0;
+            if (Valuechanges._ValueChange[192] > 0f)
                 keyboardkey(input, Keys.NumpadDelete, keyboard_id);
-            if (wu[192] == 1)
+            if (Valuechanges._ValueChange[192] < 0f)
                 keyboardkeyF(input, Keys.NumpadDelete, keyboard_id);
-            valchanged(193, SendNumpadEnter);
-            if (wd[193] == 1)
+            ValueChange[193] = SendNumpadEnter ? 1 : 0;
+            if (Valuechanges._ValueChange[193] > 0f)
                 keyboardkey(input, Keys.NumpadEnter, keyboard_id);
-            if (wu[193] == 1)
+            if (Valuechanges._ValueChange[193] < 0f)
                 keyboardkeyF(input, Keys.NumpadEnter, keyboard_id);
-            valchanged(194, SendNumpadPlus);
-            if (wd[194] == 1)
+            ValueChange[194] = SendNumpadPlus ? 1 : 0;
+            if (Valuechanges._ValueChange[194] > 0f)
                 keyboardkey(input, Keys.NumpadPlus, keyboard_id);
-            if (wu[194] == 1)
+            if (Valuechanges._ValueChange[194] < 0f)
                 keyboardkeyF(input, Keys.NumpadPlus, keyboard_id);
-            valchanged(195, SendNumpadMinus);
-            if (wd[195] == 1)
+            ValueChange[195] = SendNumpadMinus ? 1 : 0;
+            if (Valuechanges._ValueChange[195] > 0f)
                 keyboardkey(input, Keys.NumpadMinus, keyboard_id);
-            if (wu[195] == 1)
+            if (Valuechanges._ValueChange[195] < 0f)
                 keyboardkeyF(input, Keys.NumpadMinus, keyboard_id);
         }
         public static void mouseclickleft(Input input, int mouse_id)
