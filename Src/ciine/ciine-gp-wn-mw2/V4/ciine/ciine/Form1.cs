@@ -98,7 +98,7 @@ namespace ciine
                                 wd[n] = 0;
                             }
                         }
-                        public static void Main()
+                        public static void Load()
                         {
                             TimeBeginPeriod(1);
                             NtSetTimerResolution(1, true, ref CurrentResolution);
@@ -198,7 +198,7 @@ namespace ciine
                                 WiimoteNunchuckStateRawValuesZ = aBuffer[20] - 125f;
                                 WiimoteNunchuckStateC = (aBuffer[21] & 0x02) == 0;
                                 WiimoteNunchuckStateZ = (aBuffer[21] & 0x01) == 0;
-                                controller1_send_rightstick   = WiimoteNunchuckStateRawValuesY > 33f;
+                                controller1_send_rightstick   = WiimoteNunchuckStateRawValuesY > 60f;
                                 controller1_send_leftstick    = WiimoteNunchuckStateZ;
                                 controller1_send_A            = WiimoteNunchuckStateC;
                                 controller1_send_back         = WiimoteButtonStateOne;
@@ -402,8 +402,8 @@ namespace ciine
         private void Form1_Load(object sender, EventArgs e)
         {
             parameters = new System.CodeDom.Compiler.CompilerParameters();
-            parameters.GenerateExecutable = true;
-            parameters.GenerateInMemory = false;
+            parameters.GenerateExecutable = false;
+            parameters.GenerateInMemory = true;
             parameters.IncludeDebugInformation = false;
             parameters.CompilerOptions = "/optimize";
             parameters.ReferencedAssemblies.Add("System.dll");
@@ -415,11 +415,11 @@ namespace ciine
             assembly = results.CompiledAssembly;
             program = assembly.GetType("StringToCode.FooClass");
             obj = Activator.CreateInstance(program);
-            program.InvokeMember("Main", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
+            program.InvokeMember("Load", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            program.InvokeMember("Close", BindingFlags.IgnoreReturn | BindingFlags.InvokeMethod, null, obj, new object[] { });
+            program.InvokeMember("Close", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, new object[] { });
         }
     }
 }
