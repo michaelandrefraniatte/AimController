@@ -1,0 +1,6 @@
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\bin\x64\Release\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\bin\x64\Release\controllers.pdb
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\obj\x64\Release\controllers.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\obj\x64\Release\controllers.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\obj\x64\Release\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wa-fh4\ciine\controllers\obj\x64\Release\controllers.pdb
