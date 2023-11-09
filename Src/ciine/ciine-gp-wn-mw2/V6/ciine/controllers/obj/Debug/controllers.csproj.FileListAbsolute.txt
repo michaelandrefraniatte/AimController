@@ -1,0 +1,6 @@
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\bin\Debug\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\bin\Debug\controllers.pdb
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\obj\Debug\controllers.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\obj\Debug\controllers.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\obj\Debug\controllers.dll
+C:\Users\micha\Documents\github\AimController\Src\ciine\ciine-gp-wn-mw2\V6\ciine\controllers\obj\Debug\controllers.pdb

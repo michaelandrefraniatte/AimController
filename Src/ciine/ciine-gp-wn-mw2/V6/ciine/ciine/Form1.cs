@@ -9,23 +9,6 @@ using System.Diagnostics;
 using controllers;
 namespace ciine
 {
-    public class Valuechange
-    {
-        public static double[] _valuechange = { 0 };
-        public static double[] _ValueChange = { 0 };
-        public double this[int index]
-        {
-            get { return _ValueChange[index]; }
-            set
-            {
-                if (_valuechange[index] != value)
-                    _ValueChange[index] = value - _valuechange[index];
-                else
-                    _ValueChange[index] = 0;
-                _valuechange[index] = value;
-            }
-        }
-    }
     public partial class Form1 : Form
     {
         public Form1()
@@ -58,7 +41,7 @@ namespace ciine
         private static double controller1_send_leftstickx, controller1_send_leftsticky, controller1_send_rightstickx, controller1_send_rightsticky, controller1_send_lefttriggerposition, controller1_send_righttriggerposition;
         private const double REGISTER_IR = 0x04b00030, REGISTER_EXTENSION_INIT_1 = 0x04a400f0, REGISTER_EXTENSION_INIT_2 = 0x04a400fb, REGISTER_EXTENSION_TYPE = 0x04a400fa, REGISTER_EXTENSION_CALIBRATION = 0x04a40020, REGISTER_MOTIONPLUS_INIT = 0x04a600fe;
         private static double irx2, iry2, irx3, iry3, irx, iry, tempirx, tempiry, WiimoteIRSensors0X, WiimoteIRSensors0Y, WiimoteIRSensors1X, WiimoteIRSensors1Y, WiimoteRawValuesX, WiimoteRawValuesY, WiimoteRawValuesZ, calibrationinit, WiimoteIRSensors0Xcam, WiimoteIRSensors0Ycam, WiimoteIRSensors1Xcam, WiimoteIRSensors1Ycam, WiimoteIRSensorsXcam, WiimoteIRSensorsYcam;
-        private static bool WiimoteIR0foundcam, WiimoteIR1foundcam, WiimoteIRswitch, WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, ISWIIMOTE, running, reconnectingwiimotebool, WiimoteNunchuckStateC, WiimoteNunchuckStateZ;
+        private static bool WiimoteIR0foundcam, WiimoteIR1foundcam, WiimoteIRswitch, WiimoteIR1found, WiimoteIR0found, WiimoteButtonStateA, WiimoteButtonStateB, WiimoteButtonStateMinus, WiimoteButtonStateHome, WiimoteButtonStatePlus, WiimoteButtonStateOne, WiimoteButtonStateTwo, WiimoteButtonStateUp, WiimoteButtonStateDown, WiimoteButtonStateLeft, WiimoteButtonStateRight, running, reconnectingwiimotebool, WiimoteNunchuckStateC, WiimoteNunchuckStateZ;
         private static double WiimoteIR0notfound, reconnectingwiimotecount, stickviewxinit, stickviewyinit, WiimoteNunchuckStateRawValuesX, WiimoteNunchuckStateRawValuesY, WiimoteNunchuckStateRawValuesZ, WiimoteNunchuckStateRawJoystickX, WiimoteNunchuckStateRawJoystickY;
         private static string path;
         private static byte[] mBuff = new byte[22], aBuffer = new byte[22];
@@ -335,7 +318,7 @@ namespace ciine
                 catch { }
             }
         }
-        private const string vendor_id = "57e", vendor_id_ = "057e", product_r1 = "0330", product_r2 = "0306", product_l = "2006";
+        private const string vendor_id = "57e", vendor_id_ = "057e", product_r1 = "0330", product_r2 = "0306";
         private enum EFileAttributes : uint
         {
             Overlapped = 0x40000000,
@@ -430,6 +413,23 @@ namespace ciine
             mBuff[5] = (byte)size;
             Array.Copy(buff, 0, mBuff, 6, 1);
             HidD_SetOutputReport(_hFile.DangerousGetHandle(), mBuff, 22);
+        }
+    }
+    public class Valuechange
+    {
+        public static double[] _valuechange = { 0 };
+        public static double[] _ValueChange = { 0 };
+        public double this[int index]
+        {
+            get { return _ValueChange[index]; }
+            set
+            {
+                if (_valuechange[index] != value)
+                    _ValueChange[index] = value - _valuechange[index];
+                else
+                    _ValueChange[index] = 0;
+                _valuechange[index] = value;
+            }
         }
     }
 }
