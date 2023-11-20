@@ -39,3 +39,10 @@ C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualshock4\
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualshock4\obj\Release\Dualshock4.csproj.CopyComplete
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualshock4\obj\Release\Dualshock4.dll
 C:\Users\micha\Documents\Perso\StandardInGamingInputLowing\Src\SIGIL\Dualshock4\obj\Release\Dualshock4.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\bin\Release\Dualshock4.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\bin\Release\Dualshock4.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\obj\Release\Dualshock4.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\obj\Release\Dualshock4.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\obj\Release\Dualshock4.csproj.CopyComplete
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\obj\Release\Dualshock4.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Dualshock4\obj\Release\Dualshock4.pdb

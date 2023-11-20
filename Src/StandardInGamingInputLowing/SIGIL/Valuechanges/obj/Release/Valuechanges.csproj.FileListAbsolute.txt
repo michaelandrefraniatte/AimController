@@ -16,3 +16,9 @@ C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Value
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.csproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.dll
 C:\Users\micha\Documents\tool\Controller\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\bin\Release\Valuechanges.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\bin\Release\Valuechanges.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\Valuechanges\obj\Release\Valuechanges.pdb

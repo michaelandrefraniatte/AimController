@@ -22,3 +22,9 @@ C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\mouses\obj\Release\mouses.csproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\mouses\obj\Release\mouses.dll
 C:\Users\micha\Documents\Perso\File\perso\StandardInGamingInputLowing\Src\SIGIL\mouses\obj\Release\mouses.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\bin\Release\mouses.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\bin\Release\mouses.pdb
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\obj\Release\mouses.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\obj\Release\mouses.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\obj\Release\mouses.dll
+C:\Users\micha\Documents\github\AimController\Src\StandardInGamingInputLowing\SIGIL\mouses\obj\Release\mouses.pdb
