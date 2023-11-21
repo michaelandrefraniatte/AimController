@@ -1,8 +1,0 @@
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Debug\InterceptionTest.exe.config
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Debug\InterceptionTest.exe
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Debug\InterceptionTest.pdb
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Debug\InterceptionTest.Form1.resources
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Debug\InterceptionTest.Properties.Resources.resources
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Debug\InterceptionTest.csproj.GenerateResource.Cache
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Debug\InterceptionTest.exe
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Debug\InterceptionTest.pdb

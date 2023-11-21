@@ -1,9 +1,0 @@
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Release\InterceptionTest.exe.config
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Release\InterceptionTest.exe
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\bin\x86\Release\InterceptionTest.pdb
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.Form1.resources
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.Properties.Resources.resources
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.csproj.GenerateResource.Cache
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.exe
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.pdb
-C:\Users\mic\Documents\Visual Studio 2012\Projects\InterceptionTest\InterceptionTest\obj\x86\Release\InterceptionTest.csprojResolveAssemblyReference.cache
