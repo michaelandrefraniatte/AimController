@@ -1,0 +1,550 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1 {\f0\fs22\lang12{\field{\*\fldinst{HYPERLINK https://www.unknowncheats.me/forum/c-/304403-arduino-keyboard-mouse-control.html }}{\fldrslt{https://www.unknowncheats.me/forum/c-/304403-arduino-keyboard-mouse-control.html\ul0\cf0}}}}\f0\fs22\par
+I have been working on an Overwatch pixelbot for a while and keep getting screen locked lol. I have a teensy 3.2 lying around so I decided to turn it in to a mouse/keyboard simulator.\par
+\par
+Basically this allows you to send commands to the teensy (or whatever arduino compatibles) and it will simulate the keypress/mouse movement for you. I've been using this for a while now and haven't have issue with screenlocking yet.\par
+\par
+So here's the code\par
+Arduino:\par
+Code:\par
+//Message_t magic number\par
+#define MESSAGE_MAGIC 0xBEEF\par
+typedef unsigned short ushort;\par
+ \par
+//Command/Response\par
+enum Command_t: byte \{\par
+  InvalidMessage = 0,\par
+    InvalidRequest,\par
+    Ping,\par
+    Pong,\par
+    KeyboardPress,\par
+    KeyboardRelease,\par
+    MouseSetScreenSize,\par
+    MouseMove,\par
+    MouseMoveTo,\par
+    MouseSetButtons,\par
+    MouseScroll\par
+\};\par
+ \par
+struct Data_t \{\par
+  int d1;\par
+  int d2;\par
+  int d3;\par
+\};\par
+ \par
+struct Message_t \{\par
+  ushort Magic;\par
+  Command_t Command;\par
+  //byte Parameter;\par
+  union \{ //Payload\par
+    Data_t Data;\par
+  \};\par
+\}\par
+msgIn, msgOut;\par
+ \par
+bool MessageReady() \{\par
+  //Are there enough packets available to craft a message from?\par
+  return Serial.available() >= sizeof(Message_t);\par
+\}\par
+ \par
+void ReadMessage() \{\par
+  byte * pdata = (byte * ) & msgIn;\par
+ \par
+  //Read message from serial one byte at a time\par
+  for (int i = 0; i < sizeof(Message_t); i++)\par
+    pdata[i] = (byte) Serial.read();\par
+\}\par
+ \par
+void SendMessage() \{\par
+  byte * pdata = (byte * ) & msgOut;\par
+ \par
+  //Write message to serial one byte at a time\par
+  for (int i = 0; i < sizeof(Message_t); i++)\par
+    Serial.write(pdata[i]);\par
+\}\par
+ \par
+//Clear serial input in case we ran into any problems\par
+void ClearSerial() \{\par
+  while (Serial.available()) Serial.read();\par
+\}\par
+ \par
+const int led = LED_BUILTIN;\par
+void Blink(int d) \{\par
+  digitalWrite(led, HIGH);\par
+  delay(d);\par
+  digitalWrite(led, LOW);\par
+\}\par
+ \par
+void setup() \{\par
+  msgOut.Magic = MESSAGE_MAGIC;\par
+  Serial.begin(9600);\par
+  pinMode(led, OUTPUT);\par
+  Blink(300);\par
+\}\par
+ \par
+void loop() \{\par
+  //Did we receive enough bytes to read a message?\par
+  if (MessageReady()) \{\par
+    ReadMessage();\par
+    //Is this message valid? (=> the other computer assigned the correct magic number)\par
+    if (msgIn.Magic == MESSAGE_MAGIC) \{\par
+      Blink(10);\par
+      switch (msgIn.Command) \{\par
+      case Command_t::Ping:\par
+        //Send a pong in case we received a ping\par
+        msgOut.Command = Command_t::Pong;\par
+        break;\par
+      case Command_t::KeyboardPress:\par
+        Keyboard.press(msgIn.Data.d1);\par
+        break;\par
+      case Command_t::KeyboardRelease:\par
+        Keyboard.release(msgIn.Data.d1);\par
+        break;\par
+      case Command_t::MouseSetScreenSize:\par
+        Mouse.screenSize(msgIn.Data.d1, msgIn.Data.d2);\par
+        break;\par
+      case Command_t::MouseMove:\par
+        Mouse.move(msgIn.Data.d1, msgIn.Data.d2);\par
+        break;\par
+      case Command_t::MouseMoveTo:\par
+        Mouse.moveTo(msgIn.Data.d1, msgIn.Data.d2);\par
+        break;\par
+      case Command_t::MouseSetButtons:\par
+        Mouse.set_buttons(msgIn.Data.d1, msgIn.Data.d2, msgIn.Data.d3);\par
+        break;\par
+      case Command_t::MouseScroll:\par
+        Mouse.scroll(msgIn.Data.d1);\par
+        break;\par
+      default:\par
+        //Other commands were not implemented yet => this request is invalid\par
+        msgOut.Command = Command_t::InvalidRequest;\par
+        break;\par
+      \}\par
+    \} else \{\par
+      ClearSerial();\par
+      //Magic number didn't match => this message is invalid\par
+      msgOut.Command = Command_t::InvalidMessage;\par
+    \}\par
+    SendMessage();\par
+  \}\par
+\}\par
+C#:\par
+Message_t.cs:\par
+Code:\par
+using System;\par
+using System.Collections.Generic;\par
+using System.IO.Ports;\par
+using System.Linq;\par
+using System.Runtime.InteropServices;\par
+using System.Text;\par
+using System.Threading.Tasks;\par
+ \par
+namespace SerialCommunication\par
+\{\par
+    public enum Command_t : byte\par
+    \{\par
+        InvalidMessage = 0,\par
+        InvalidRequest,\par
+        Ping,\par
+        Pong,\par
+        KeyboardPress,\par
+        KeyboardRelease,\par
+        MouseSetScreenSize,\par
+        MouseMove,\par
+        MouseMoveTo,\par
+        MouseSetButtons,\par
+        MouseScroll\par
+    \};\par
+ \par
+    [StructLayout(LayoutKind.Sequential)]\par
+    public struct Data_t\par
+    \{\par
+        public int d1;\par
+        public int d2;\par
+        public int d3;\par
+    \}\par
+ \par
+    [StructLayout(LayoutKind.Explicit)]\par
+    unsafe struct Message_t\par
+    \{\par
+        public static ushort MESSAGE_MAGIC = 0xBEEF;\par
+ \par
+        [FieldOffset(0)]\par
+        public ushort Magic;\par
+ \par
+        [FieldOffset(2)]\par
+        public Command_t Command;\par
+ \par
+        [FieldOffset(4)]\par
+        public Data_t Data;\par
+ \par
+        public static bool MessageReady(SerialPort port)\par
+        \{\par
+            return port.BytesToRead >= Marshal.SizeOf(typeof(Message_t));\par
+        \}\par
+ \par
+        public unsafe static void ReadMessage(SerialPort port, ref Message_t msg)\par
+        \{\par
+            byte[] data = new byte[Marshal.SizeOf(typeof(Message_t))];\par
+            for (int i = 0; i < data.Length; i++)\par
+                data[i] = (byte)port.ReadByte();\par
+ \par
+            fixed (byte* b = data)\par
+                msg = (Message_t)Marshal.PtrToStructure((IntPtr)b, typeof(Message_t));\par
+        \}\par
+ \par
+        public unsafe static void WriteMessage(SerialPort port, ref Message_t msg)\par
+        \{\par
+            byte[] data = new byte[Marshal.SizeOf(typeof(Message_t))];\par
+ \par
+            fixed (byte* b = data)\par
+                Marshal.StructureToPtr(msg, (IntPtr)b, true);\par
+ \par
+            port.Write(data, 0, data.Length);\par
+        \}\par
+    \}\par
+\}\par
+Teensy.cs:\par
+Code:\par
+using System;\par
+using System.Collections.Generic;\par
+using System.IO.Ports;\par
+using System.Linq;\par
+using System.Text;\par
+using System.Threading;\par
+using System.Threading.Tasks;\par
+ \par
+namespace SerialCommunication\par
+\{\par
+    class Teensy\par
+    \{\par
+        public ushort Magic;\par
+        public SerialPort Port;\par
+ \par
+        public Teensy(SerialPort port, ushort magic)\par
+        \{\par
+            Port = port;\par
+            Magic = magic;\par
+        \}\par
+ \par
+        public Teensy(ushort magic)\par
+        \{\par
+            Port = GetArduinoPort();\par
+            Magic = magic;\par
+        \}\par
+ \par
+        private unsafe static SerialPort GetArduinoPort()\par
+        \{\par
+            string[] ports = SerialPort.GetPortNames();\par
+            foreach (var port in ports)\par
+            \{\par
+                SerialPort p = new SerialPort(port, 9600);\par
+                //Prepare messages\par
+                Message_t msgIn = new Message_t(), msgOut = new Message_t();\par
+                msgOut.Magic = Message_t.MESSAGE_MAGIC;\par
+                msgOut.Command = Command_t.Ping;\par
+ \par
+                try\par
+                \{\par
+                    p.Open();\par
+                    //Write ping-message\par
+                    Message_t.WriteMessage(p, ref msgOut);\par
+ \par
+                    //Wait about a second for the arduino to reply\par
+                    Thread.Sleep(100);\par
+ \par
+                    //No response within a second, go check the next port\par
+                    if (!Message_t.MessageReady(p))\par
+                        continue;\par
+ \par
+                    //Read message from serial, check for valid magic and reponse\par
+                    Message_t.ReadMessage(p, ref msgIn);\par
+                    if (msgIn.Magic != Message_t.MESSAGE_MAGIC)\par
+                        continue;\par
+ \par
+                    if (msgIn.Command != Command_t.Pong)\par
+                        continue;\par
+ \par
+                    return p;\par
+                \}\par
+                catch\par
+                \{\par
+                    //Close port in case we ran into any exception (should never happen though)\par
+                    p.Close();\par
+                \}\par
+            \}\par
+            return null;\par
+        \}\par
+ \par
+        private void sendCommand(Command_t command, int d1, int d2, int d3)\par
+        \{\par
+            Message_t msgOut = new Message_t();\par
+            msgOut.Magic = Magic;\par
+            msgOut.Command = command;\par
+            msgOut.Data.d1 = d1;\par
+            msgOut.Data.d2 = d2;\par
+            msgOut.Data.d3 = d3;\par
+            Message_t.WriteMessage(Port, ref msgOut);\par
+        \}\par
+ \par
+        public void KeyboardPress(int key)\par
+        \{\par
+            sendCommand(Command_t.KeyboardPress, key, 0, 0);\par
+        \}\par
+ \par
+        public void KeyboardRelease(int key)\par
+        \{\par
+            sendCommand(Command_t.KeyboardRelease, key, 0, 0);\par
+        \}\par
+ \par
+        public void KeyboardPressAndRelease(int key, int delay = 0)\par
+        \{\par
+            KeyboardPress(key);\par
+            Thread.Sleep(delay);\par
+            KeyboardRelease(key);\par
+        \}\par
+ \par
+        public void MouseSetScreenSize(int width, int height)\par
+        \{\par
+            sendCommand(Command_t.MouseSetScreenSize, width, height, 0);\par
+ \par
+        \}\par
+ \par
+        public void MouseMove(int x, int y)\par
+        \{\par
+            sendCommand(Command_t.MouseMove, x, y, 0);\par
+        \}\par
+ \par
+        public void MouseMoveTo(int x, int y)\par
+        \{\par
+            sendCommand(Command_t.MouseMoveTo, x, y, 0);\par
+        \}\par
+ \par
+        public void MouseSetButtons(int left, int mid, int right)\par
+        \{\par
+            sendCommand(Command_t.MouseSetButtons, left, mid, right);\par
+        \}\par
+ \par
+        public void MouseClickButtons(int left, int mid, int right, int delay = 0)\par
+        \{\par
+            MouseSetButtons(left, mid, right);\par
+            Thread.Sleep(delay);\par
+            MouseSetButtons(0, 0, 0);\par
+        \}\par
+ \par
+        public void MouseScroll(int scroll)\par
+        \{\par
+            sendCommand(Command_t.MouseScroll, scroll, 0, 0);\par
+        \}\par
+    \}\par
+\}\par
+Keylayout.cs:\par
+Code:\par
+using System;\par
+using System.Collections.Generic;\par
+using System.Linq;\par
+using System.Text;\par
+using System.Threading.Tasks;\par
+ \par
+namespace SerialCommunication\par
+\{\par
+    public class Keylayout\par
+    \{\par
+        public const int MODIFIERKEY_CTRL = 0x01 + 0xE000;\par
+        public const int MODIFIERKEY_SHIFT = 0x02 + 0xE000;\par
+        public const int MODIFIERKEY_ALT = 0x04 + 0xE000;\par
+        public const int MODIFIERKEY_GUI = 0x08 + 0xE000;\par
+        public const int MODIFIERKEY_LEFT_CTRL = 0x01 + 0xE000;\par
+        public const int MODIFIERKEY_LEFT_SHIFT = 0x02 + 0xE000;\par
+        public const int MODIFIERKEY_LEFT_ALT = 0x04 + 0xE000;\par
+        public const int MODIFIERKEY_LEFT_GUI = 0x08 + 0xE000;\par
+        public const int MODIFIERKEY_RIGHT_CTRL = 0x10 + 0xE000;\par
+        public const int MODIFIERKEY_RIGHT_SHIFT = 0x20 + 0xE000;\par
+        public const int MODIFIERKEY_RIGHT_ALT = 0x40 + 0xE000;\par
+        public const int MODIFIERKEY_RIGHT_GUI = 0x80 + 0xE000;\par
+ \par
+        public const int KEY_SYSTEM_POWER_DOWN = 0x81 + 0xE200;\par
+        public const int KEY_SYSTEM_SLEEP = 0x82 + 0xE200;\par
+        public const int KEY_SYSTEM_WAKE_UP = 0x83 + 0xE200;\par
+ \par
+        public const int KEY_MEDIA_PLAY = 0xB0 + 0xE400;\par
+        public const int KEY_MEDIA_PAUSE = 0xB1 + 0xE400;\par
+        public const int KEY_MEDIA_RECORD = 0xB2 + 0xE400;\par
+        public const int KEY_MEDIA_FAST_FORWARD = 0xB3 + 0xE400;\par
+        public const int KEY_MEDIA_REWIND = 0xB4 + 0xE400;\par
+        public const int KEY_MEDIA_NEXT_TRACK = 0xB5 + 0xE400;\par
+        public const int KEY_MEDIA_PREV_TRACK = 0xB6 + 0xE400;\par
+        public const int KEY_MEDIA_STOP = 0xB7 + 0xE400;\par
+        public const int KEY_MEDIA_EJECT = 0xB8 + 0xE400;\par
+        public const int KEY_MEDIA_RANDOM_PLAY = 0xB9 + 0xE400;\par
+        public const int KEY_MEDIA_PLAY_PAUSE = 0xCD + 0xE400;\par
+        public const int KEY_MEDIA_PLAY_SKIP = 0xCE + 0xE400;\par
+        public const int KEY_MEDIA_MUTE = 0xE2 + 0xE400;\par
+        public const int KEY_MEDIA_VOLUME_INC = 0xE9 + 0xE400;\par
+        public const int KEY_MEDIA_VOLUME_DEC = 0xEA + 0xE400;\par
+ \par
+        public const int KEY_A = 4 + 0xF000;\par
+        public const int KEY_B = 5 + 0xF000;\par
+        public const int KEY_C = 6 + 0xF000;\par
+        public const int KEY_D = 7 + 0xF000;\par
+        public const int KEY_E = 8 + 0xF000;\par
+        public const int KEY_F = 9 + 0xF000;\par
+        public const int KEY_G = 10 + 0xF000;\par
+        public const int KEY_H = 11 + 0xF000;\par
+        public const int KEY_I = 12 + 0xF000;\par
+        public const int KEY_J = 13 + 0xF000;\par
+        public const int KEY_K = 14 + 0xF000;\par
+        public const int KEY_L = 15 + 0xF000;\par
+        public const int KEY_M = 16 + 0xF000;\par
+        public const int KEY_N = 17 + 0xF000;\par
+        public const int KEY_O = 18 + 0xF000;\par
+        public const int KEY_P = 19 + 0xF000;\par
+        public const int KEY_Q = 20 + 0xF000;\par
+        public const int KEY_R = 21 + 0xF000;\par
+        public const int KEY_S = 22 + 0xF000;\par
+        public const int KEY_T = 23 + 0xF000;\par
+        public const int KEY_U = 24 + 0xF000;\par
+        public const int KEY_V = 25 + 0xF000;\par
+        public const int KEY_W = 26 + 0xF000;\par
+        public const int KEY_X = 27 + 0xF000;\par
+        public const int KEY_Y = 28 + 0xF000;\par
+        public const int KEY_Z = 29 + 0xF000;\par
+        public const int KEY_1 = 30 + 0xF000;\par
+        public const int KEY_2 = 31 + 0xF000;\par
+        public const int KEY_3 = 32 + 0xF000;\par
+        public const int KEY_4 = 33 + 0xF000;\par
+        public const int KEY_5 = 34 + 0xF000;\par
+        public const int KEY_6 = 35 + 0xF000;\par
+        public const int KEY_7 = 36 + 0xF000;\par
+        public const int KEY_8 = 37 + 0xF000;\par
+        public const int KEY_9 = 38 + 0xF000;\par
+        public const int KEY_0 = 39 + 0xF000;\par
+        public const int KEY_ENTER = 40 + 0xF000;\par
+        public const int KEY_ESC = 41 + 0xF000;\par
+        public const int KEY_BACKSPACE = 42 + 0xF000;\par
+        public const int KEY_TAB = 43 + 0xF000;\par
+        public const int KEY_SPACE = 44 + 0xF000;\par
+        public const int KEY_MINUS = 45 + 0xF000;\par
+        public const int KEY_EQUAL = 46 + 0xF000;\par
+        public const int KEY_LEFT_BRACE = 47 + 0xF000;\par
+        public const int KEY_RIGHT_BRACE = 48 + 0xF000;\par
+        public const int KEY_BACKSLASH = 49 + 0xF000;\par
+        public const int KEY_NON_US_NUM = 50 + 0xF000;\par
+        public const int KEY_SEMICOLON = 51 + 0xF000;\par
+        public const int KEY_QUOTE = 52 + 0xF000;\par
+        public const int KEY_TILDE = 53 + 0xF000;\par
+        public const int KEY_COMMA = 54 + 0xF000;\par
+        public const int KEY_PERIOD = 55 + 0xF000;\par
+        public const int KEY_SLASH = 56 + 0xF000;\par
+        public const int KEY_CAPS_LOCK = 57 + 0xF000;\par
+        public const int KEY_F1 = 58 + 0xF000;\par
+        public const int KEY_F2 = 59 + 0xF000;\par
+        public const int KEY_F3 = 60 + 0xF000;\par
+        public const int KEY_F4 = 61 + 0xF000;\par
+        public const int KEY_F5 = 62 + 0xF000;\par
+        public const int KEY_F6 = 63 + 0xF000;\par
+        public const int KEY_F7 = 64 + 0xF000;\par
+        public const int KEY_F8 = 65 + 0xF000;\par
+        public const int KEY_F9 = 66 + 0xF000;\par
+        public const int KEY_F10 = 67 + 0xF000;\par
+        public const int KEY_F11 = 68 + 0xF000;\par
+        public const int KEY_F12 = 69 + 0xF000;\par
+        public const int KEY_PRINTSCREEN = 70 + 0xF000;\par
+        public const int KEY_SCROLL_LOCK = 71 + 0xF000;\par
+        public const int KEY_PAUSE = 72 + 0xF000;\par
+        public const int KEY_INSERT = 73 + 0xF000;\par
+        public const int KEY_HOME = 74 + 0xF000;\par
+        public const int KEY_PAGE_UP = 75 + 0xF000;\par
+        public const int KEY_DELETE = 76 + 0xF000;\par
+        public const int KEY_END = 77 + 0xF000;\par
+        public const int KEY_PAGE_DOWN = 78 + 0xF000;\par
+        public const int KEY_RIGHT = 79 + 0xF000;\par
+        public const int KEY_LEFT = 80 + 0xF000;\par
+        public const int KEY_DOWN = 81 + 0xF000;\par
+        public const int KEY_UP = 82 + 0xF000;\par
+        public const int KEY_NUM_LOCK = 83 + 0xF000;\par
+        public const int KEYPAD_SLASH = 84 + 0xF000;\par
+        public const int KEYPAD_ASTERIX = 85 + 0xF000;\par
+        public const int KEYPAD_MINUS = 86 + 0xF000;\par
+        public const int KEYPAD_PLUS = 87 + 0xF000;\par
+        public const int KEYPAD_ENTER = 88 + 0xF000;\par
+        public const int KEYPAD_1 = 89 + 0xF000;\par
+        public const int KEYPAD_2 = 90 + 0xF000;\par
+        public const int KEYPAD_3 = 91 + 0xF000;\par
+        public const int KEYPAD_4 = 92 + 0xF000;\par
+        public const int KEYPAD_5 = 93 + 0xF000;\par
+        public const int KEYPAD_6 = 94 + 0xF000;\par
+        public const int KEYPAD_7 = 95 + 0xF000;\par
+        public const int KEYPAD_8 = 96 + 0xF000;\par
+        public const int KEYPAD_9 = 97 + 0xF000;\par
+        public const int KEYPAD_0 = 98 + 0xF000;\par
+        public const int KEYPAD_PERIOD = 99 + 0xF000;\par
+        public const int KEY_NON_US_BS = 100 + 0xF000;\par
+        public const int KEY_MENU = 101 + 0xF000;\par
+        public const int KEY_F13 = 104 + 0xF000;\par
+        public const int KEY_F14 = 105 + 0xF000;\par
+        public const int KEY_F15 = 106 + 0xF000;\par
+        public const int KEY_F16 = 107 + 0xF000;\par
+        public const int KEY_F17 = 108 + 0xF000;\par
+        public const int KEY_F18 = 109 + 0xF000;\par
+        public const int KEY_F19 = 110 + 0xF000;\par
+        public const int KEY_F20 = 111 + 0xF000;\par
+        public const int KEY_F21 = 112 + 0xF000;\par
+        public const int KEY_F22 = 113 + 0xF000;\par
+        public const int KEY_F23 = 114 + 0xF000;\par
+        public const int KEY_F24 = 115 + 0xF000;\par
+    \}\par
+    \par
+\}\par
+Program.cs:\par
+Code:\par
+using System;\par
+using System.Collections.Generic;\par
+using System.Diagnostics;\par
+using System.IO.Ports;\par
+using System.Linq;\par
+using System.Runtime.InteropServices;\par
+using System.Text;\par
+using System.Threading;\par
+using System.Threading.Tasks;\par
+ \par
+namespace SerialCommunication\par
+\{\par
+    class Program\par
+    \{\par
+        static void Main(string[] args)\par
+        \{\par
+            Teensy teensy = new Teensy(Message_t.MESSAGE_MAGIC);\par
+ \par
+            if (teensy.Port == null)\par
+            \{\par
+                Console.WriteLine("Unable to find any teensy device.");\par
+                Console.WriteLine("Press any key to exit...");\par
+                Console.Read();\par
+                return;\par
+            \}\par
+            else\par
+            \{\par
+                Console.WriteLine("Found teensy at port " + teensy.Port.PortName);\par
+            \}\par
+            Thread.Sleep(1000);\par
+ \par
+            teensy.MouseSetScreenSize(1920, 1080);\par
+            teensy.MouseMoveTo(0, 0);\par
+            for (int i = 0; i < 1000; i++)\par
+            \{\par
+                teensy.MouseMove(1, 1);\par
+                Thread.Sleep(10);\par
+            \}\par
+ \par
+            Console.WriteLine("Done");\par
+ \par
+            Console.ReadLine();\par
+        \}\par
+    \}\par
+\}\par
+credit: [Arduino / CSharp] Simple Serial communication protocol\par
+}
+ 

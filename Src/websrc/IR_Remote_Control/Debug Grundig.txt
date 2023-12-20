@@ -1,0 +1,82 @@
+Lo:   588 us short --> Len:  1 --> Char: 'a'
+Hi:  2489 us       --> Len:  6 --> Char: 'X'
+Lo:   558 us short --> Len:  1 --> Char: 'a'
+Hi:   436 us short --> Len:  1 --> Char: 'A'
+Lo:   583 us short --> Len:  1 --> Char: 'a'
+Hi:   431 us short --> Len:  1 --> Char: 'A'
+Lo:   584 us short --> Len:  1 --> Char: 'a'
+Hi:   458 us short --> Len:  1 --> Char: 'A'
+Lo:   558 us short --> Len:  1 --> Char: 'a'
+Hi:   431 us short --> Len:  1 --> Char: 'A'
+Lo:   584 us short --> Len:  1 --> Char: 'a'
+Hi:   462 us short --> Len:  1 --> Char: 'A'
+Lo:   583 us short --> Len:  1 --> Char: 'a'
+Hi:   427 us short --> Len:  1 --> Char: 'A'
+Lo:   562 us short --> Len:  1 --> Char: 'a'
+Hi:   454 us short --> Len:  1 --> Char: 'A'
+Lo:   558 us short --> Len:  1 --> Char: 'a'
+Hi:   457 us short --> Len:  1 --> Char: 'A'
+Lo:   589 us short --> Len:  1 --> Char: 'a'
+Hi:   405 us short --> Len:  1 --> Char: 'A'
+Lo:   583 us short --> Len:  1 --> Char: 'a'
+Lo: Shortest:  558 us, Limit:  837 us, Average over 11 short intervals:  575 us
+Hi: Shortest:  405 us, Limit:  607 us, Average over  9 short intervals:  440 us
+Decoded: aXaAaAaAaAaAaAaAaAaAa
+CRC:     0x7229581B
+Button:  Not recognized
+--------------------------
+
+Lo:   585 us short --> Len:  1 --> Char: 'a'
+Hi:  2487 us       --> Len:  6 --> Char: 'X'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   559 us short --> Len:  1 --> Char: 'a'
+Hi:   944 us       --> Len:  2 --> Char: 'B'
+Lo:  1112 us       --> Len:  2 --> Char: 'b'
+Hi:   408 us short --> Len:  1 --> Char: 'A'
+Lo:   586 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   585 us short --> Len:  1 --> Char: 'a'
+Hi:   430 us short --> Len:  1 --> Char: 'A'
+Lo:   559 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   556 us short --> Len:  1 --> Char: 'a'
+Hi:   460 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Lo: Shortest:  556 us, Limit:  834 us, Average over  9 short intervals:  567 us
+Hi: Shortest:  408 us, Limit:  612 us, Average over  7 short intervals:  446 us
+Decoded: aXaAaBbAaAaAaAaAaAa
+CRC:     0x4A386F29
+Button:  Not recognized
+--------------------------
+
+Lo:   586 us short --> Len:  1 --> Char: 'a'
+Hi:  2487 us       --> Len:  5 --> Char: 'X'
+Lo:   559 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   559 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   456 us short --> Len:  1 --> Char: 'A'
+Lo:   560 us short --> Len:  1 --> Char: 'a'
+Hi:   460 us short --> Len:  1 --> Char: 'A'
+Lo:   555 us short --> Len:  1 --> Char: 'a'
+Hi:   461 us short --> Len:  1 --> Char: 'A'
+Lo:   555 us short --> Len:  1 --> Char: 'a'
+Hi:   434 us short --> Len:  1 --> Char: 'A'
+Lo:   581 us short --> Len:  1 --> Char: 'a'
+Lo: Shortest:  555 us, Limit:  832 us, Average over 11 short intervals:  563 us
+Hi: Shortest:  434 us, Limit:  651 us, Average over  9 short intervals:  454 us
+Decoded: aXaAaAaAaAaAaAaAaAaAa
+CRC:     0x7229581B
+Button:  Not recognized
+--------------------------
+

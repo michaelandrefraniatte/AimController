@@ -1,0 +1,14 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\overwatch\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\Src\Wiimote\SerialCommunication\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.pdb

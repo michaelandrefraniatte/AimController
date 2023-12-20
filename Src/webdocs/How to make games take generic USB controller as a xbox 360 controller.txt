@@ -1,0 +1,17 @@
+https://www.reddit.com/
+
+Start big picture mode
+
+Navigate to the gear icon
+
+Go to controller settings
+
+Enable Generic Controller Configuration Support
+
+Plug in your controller, Steam should now see your controller
+
+Click on the controller in the list
+
+Bind the buttons according to how you want them to be in the profiler
+
+Click on the Save button

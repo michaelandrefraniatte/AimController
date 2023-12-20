@@ -1,0 +1,7 @@
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\bin\Debug\ArduinoCommunication.exe.config
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\bin\Debug\ArduinoCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\bin\Debug\ArduinoCommunication.pdb
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\obj\Debug\ArduinoCommunication.csprojAssemblyReference.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\obj\Debug\ArduinoCommunication.csproj.CoreCompileInputs.cache
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\obj\Debug\ArduinoCommunication.exe
+C:\Users\mic\Documents\GitHub\Aim-Controller-Project\websrc\communicate\ArduinoCommunication\ArduinoCommunication\obj\Debug\ArduinoCommunication.pdb

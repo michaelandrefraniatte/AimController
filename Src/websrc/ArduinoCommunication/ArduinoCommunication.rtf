@@ -1,0 +1,322 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1 {\f0\fs22\lang12{\field{\*\fldinst{HYPERLINK https://www.unknowncheats.me/forum/c-and-c-/176501-arduino-csharp-simple-serial-communication-protocol.html }}{\fldrslt{https://www.unknowncheats.me/forum/c-and-c-/176501-arduino-csharp-simple-serial-communication-protocol.html\ul0\cf0}}}}\f0\fs22\par
+Hello there!\par
+\par
+Since I really love tinkering with arduinos and .NET I thought about implementing a simple protocol that allows my arduino and desktop PC to communicate with each other.\par
+The general idea is sharing a struct that contains a command (or request-command and response), parameter/flags specific to this command and 12 bytes of payload (byte-buffer/vec3 of floats and ints).\par
+\par
+Arduino\par
+Program.ino:\par
+Code:\par
+//Message_t magic number\par
+#define MESSAGE_MAGIC 0xBEEF\par
+typedef unsigned short ushort;\par
+ \par
+//Command/Response\par
+enum Command_t : byte \{\par
+  InvalidMessage = 0,\par
+  InvalidRequest,\par
+  Ping,\par
+  Pong,\par
+  CalcResult,\par
+  CalcPlusF\par
+\};\par
+ \par
+struct Vec3f_t \{\par
+  float X;\par
+  float Y;\par
+  float Z;\par
+\};\par
+ \par
+struct Vec3i_t \{\par
+  int X;\par
+  int Y;\par
+  int Z;\par
+\};\par
+ \par
+struct Message_t \{\par
+  ushort Magic;\par
+  Command_t Command;\par
+  byte Parameter;\par
+  union \{ //Payload\par
+    byte Data[12];\par
+    Vec3f_t Vec3f;\par
+    Vec3i_t Vec3i;\par
+  \};\par
+\} msgIn, msgOut;\par
+ \par
+bool MessageReady() \{\par
+  //Are there enough packets available to craft a message from?\par
+  return Serial.available() >= sizeof(Message_t);\par
+\}\par
+ \par
+void ReadMessage() \{\par
+  byte *pdata = (byte*)&msgIn;\par
+ \par
+  //Read message from serial one byte at a time\par
+  for (int i = 0; i < sizeof(Message_t); i++)\par
+    pdata[i] = (byte)Serial.read();\par
+\}\par
+ \par
+void SendMessage() \{\par
+  byte *pdata = (byte*)&msgOut;\par
+ \par
+  //Write message to serial one byte at a time\par
+  for (int i = 0; i < sizeof(Message_t); i++)\par
+    Serial.write(pdata[i]);\par
+\}\par
+ \par
+//Clear serial input in case we ran into any problems\par
+void ClearSerial() \{\par
+  while (Serial.available()) Serial.read();\par
+\}\par
+ \par
+void setup() \{\par
+  msgOut.Magic = MESSAGE_MAGIC;\par
+  Serial.begin(9600);\par
+\}\par
+ \par
+void loop() \{\par
+  //Did we receive enough bytes to read a message?\par
+  if (MessageReady()) \{\par
+    ReadMessage();\par
+    //Is this message valid? (=> the other computer assigned the correct magic number)\par
+    if (msgIn.Magic == MESSAGE_MAGIC) \{\par
+      switch (msgIn.Command) \{\par
+        case Command_t::Ping:\par
+          //Send a pong in case we received a ping\par
+          msgOut.Command = Command_t::Pong;\par
+          break;\par
+        case Command_t::CalcPlusF:\par
+          //Perform a simple calvulation\par
+          msgOut.Command = Command_t::CalcResult;\par
+          msgOut.Vec3f.X = msgIn.Vec3f.X;\par
+          msgOut.Vec3f.Y = msgIn.Vec3f.Y;\par
+          msgOut.Vec3f.Z = msgIn.Vec3f.X + msgIn.Vec3f.Y;\par
+          break;\par
+        default:\par
+          //Other commands were not implemented yet => this request is invalid\par
+          msgOut.Command = Command_t::InvalidRequest;\par
+          break;\par
+      \}\par
+    \} else \{\par
+      ClearSerial();\par
+      //Magic number didn't match => this message is invalid\par
+      msgOut.Command = Command_t::InvalidMessage;\par
+    \}\par
+    SendMessage();\par
+  \}\par
+\}\par
+CSharp (enable "Allow unsafe code" in build options!)\par
+Message_t.cs:\par
+Code:\par
+using System;\par
+using System.IO.Ports;\par
+using System.Runtime.InteropServices;\par
+ \par
+namespace ArduinoCommunication\par
+\{\par
+    public enum Command_t : byte\par
+    \{\par
+        InvalidMessage = 0,\par
+        InvalidRequest,\par
+        Ping,\par
+        Pong,\par
+        CalcResult,\par
+        CalcPlusF\par
+    \};\par
+ \par
+    [StructLayout(LayoutKind.Sequential)]\par
+    public struct Vec3f_t\par
+    \{\par
+        public float X;\par
+        public float Y;\par
+        public float Z;\par
+    \}\par
+ \par
+    [StructLayout(LayoutKind.Sequential)]\par
+    public struct Vec3i_t\par
+    \{\par
+        public int X;\par
+        public int Y;\par
+        public int Z;\par
+    \}\par
+ \par
+    [StructLayout(LayoutKind.Explicit)]\par
+    unsafe struct Message_t\par
+    \{\par
+        public static ushort MESSAGE_MAGIC = 0xBEEF;\par
+ \par
+        [FieldOffset(0)]\par
+        public ushort Magic;\par
+ \par
+        [FieldOffset(2)]\par
+        public Command_t Command;\par
+ \par
+        [FieldOffset(3)]\par
+        public byte Parameter;\par
+        \par
+        [FieldOffset(4)]\par
+        public fixed byte Data[12];\par
+ \par
+        [FieldOffset(4)]\par
+        public Vec3f_t Vec3f;\par
+ \par
+        [FieldOffset(4)]\par
+        public Vec3i_t Vec3i;\par
+ \par
+        public static bool MessageReady(SerialPort port)\par
+        \{\par
+            return port.BytesToRead >= Marshal.SizeOf(typeof(Message_t));\par
+        \}\par
+ \par
+        public unsafe static void ReadMessage(SerialPort port, ref Message_t msg)\par
+        \{\par
+            byte[] data = new byte[Marshal.SizeOf(typeof(Message_t))];\par
+            for (int i = 0; i < data.Length; i++)\par
+                data[i] = (byte)port.ReadByte();\par
+ \par
+            fixed (byte* b = data)\par
+                msg = (Message_t)Marshal.PtrToStructure((IntPtr)b, typeof(Message_t));\par
+        \}\par
+ \par
+        public unsafe static void WriteMessage(SerialPort port, ref Message_t msg)\par
+        \{\par
+            byte[] data = new byte[Marshal.SizeOf(typeof(Message_t))];\par
+ \par
+            fixed (byte* b = data)\par
+            Marshal.StructureToPtr(msg, (IntPtr)b, true);\par
+ \par
+            port.Write(data, 0, data.Length);\par
+        \}\par
+    \}\par
+\}\par
+Program.cs:\par
+Code:\par
+using System;\par
+using System.Diagnostics;\par
+using System.IO.Ports;\par
+using System.Runtime.InteropServices;\par
+using System.Threading;\par
+ \par
+namespace ArduinoCommunication\par
+\{\par
+    class Program\par
+    \{\par
+        static void Main(string[] args)\par
+        \{\par
+            SerialPort port = GetArduinoPort();\par
+            if (port == null)\par
+            \{\par
+                Console.WriteLine("Couldn't find Arduino!");\par
+                Console.ReadLine();\par
+                return;\par
+            \}\par
+            else\par
+            \{\par
+                Console.WriteLine("Arduino found at \\"\{0\}\\"", port.PortName);\par
+            \}\par
+ \par
+            Random ran = new Random();\par
+            Stopwatch w = new Stopwatch();\par
+            w.Start();\par
+            int fails = 0;\par
+            int runs = 1000;\par
+ \par
+            //Instruct the arduino to perform some calculations!\par
+            for (int i = 0; i < runs; i++)\par
+            \{\par
+                Message_t msgIn = new Message_t(), msgOut = new Message_t();\par
+                msgOut.Magic = Message_t.MESSAGE_MAGIC;\par
+                msgOut.Command = Command_t.CalcPlusF;\par
+ \par
+                msgOut.Vec3f.X = 100 + (runs % 100) + 0.7f;\par
+                msgOut.Vec3f.Y = 100 + (runs % 15) + 0.5f;\par
+                \par
+                Message_t.WriteMessage(port, ref msgOut);\par
+                //Wait for the arduino to respond, shouldn't take too long\par
+                while (!Message_t.MessageReady(port)) ;\par
+                Message_t.ReadMessage(port, ref msgIn);\par
+ \par
+                //Check for valid magic and response\par
+                if (msgIn.Magic != Message_t.MESSAGE_MAGIC)\par
+                \{\par
+                    fails++;\par
+                    continue;\par
+                \}\par
+                if (msgIn.Command != Command_t.CalcResult)\par
+                \{\par
+                    fails++;\par
+                    continue;\par
+                \} else\par
+                \{\par
+                    //Check whether the result is correct!\par
+                    if (msgIn.Vec3f.Z != msgOut.Vec3f.X + msgOut.Vec3f.Y)\par
+                    \{\par
+                        fails++;\par
+                        continue;\par
+                    \}\par
+                \}\par
+            \}\par
+            w.Stop();\par
+            Console.WriteLine("Calculating stuff \{3\} times took \{0\}s, \{1\} fails, exchanging \{2\} bytes in total", \par
+                Math.Round(TimeSpan.FromMilliseconds(w.ElapsedMilliseconds).TotalSeconds, 2), \par
+                fails,\par
+                runs * Marshal.SizeOf(typeof(Message_t)),\par
+                runs);\par
+            Console.ReadLine();\par
+        \}\par
+ \par
+        private unsafe static SerialPort GetArduinoPort()\par
+        \{\par
+            string[] ports = SerialPort.GetPortNames();\par
+            foreach (var port in ports)\par
+            \{\par
+                SerialPort p = new SerialPort(port, 9600);\par
+                //Prepare messages\par
+                Message_t msgIn = new Message_t(), msgOut = new Message_t();\par
+                msgOut.Magic = Message_t.MESSAGE_MAGIC;\par
+                msgOut.Command = Command_t.Ping;\par
+ \par
+                try \{\par
+                    p.Open();\par
+                    //Write ping-message\par
+                    Message_t.WriteMessage(p, ref msgOut);\par
+ \par
+                    //Wait about a second for the arduino to reply\par
+                    Thread.Sleep(1000);\par
+ \par
+                    //No response within a second, go check the next port\par
+                    if (!Message_t.MessageReady(p))\par
+                        continue;\par
+ \par
+                    //Read message from serial, check for valid magic and reponse\par
+                    Message_t.ReadMessage(p, ref msgIn);\par
+                    if (msgIn.Magic != Message_t.MESSAGE_MAGIC)\par
+                        continue;\par
+ \par
+                    if (msgIn.Command != Command_t.Pong)\par
+                        continue;\par
+ \par
+                    return p;\par
+                \} catch\par
+                \{\par
+                    //Close port in case we ran into any exception (should never happen though)\par
+                    p.Close();\par
+                \}\par
+            \}\par
+            return null;\par
+        \}\par
+    \}\par
+\}\par
+\tab This image has been resized. Click this bar to view the full image. The original image is sized 643x50.\par
+\par
+\par
+Maybe this helps anyone getting started with communication between desktop and arduino!\par
+\par
+Regards,\par
+Zat\par
+}
+ 
