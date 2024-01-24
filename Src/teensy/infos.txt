@@ -55,3 +55,6 @@ switch weapon = X
 marker = Left Ctrl
 streaks = &, é, ", ', (
 - You can easy use two microcontrollers connected with pins, one simulating a joystick or a xbox controller to console adaptative controllers or Cronus or Titan, and one sending to the first one and receiving infos to program in real time for remove deadzone or change bindings, connected to your PC, and with sensors
+- It's possible to connect a new gen Xbox controller to retro consoles via bluetooth with microcontrollers and libraries like shown in the following videos
+https://www.tiktok.com/@handiarcade/video/7309233126801263905
+https://www.tiktok.com/@handiarcade/video/7303676609930824993
