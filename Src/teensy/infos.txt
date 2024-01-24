@@ -54,3 +54,4 @@ crouch = C
 switch weapon = X
 marker = Left Ctrl
 streaks = &, é, ", ', (
+- You can easy use two microcontrollers connected with pins, one simulating a joystick or a xbox controller to console adaptative controllers or Cronus or Titan, and one sending to the first one and receiving infos to program in real time for remove deadzone or change bindings, connected to your PC, and with sensors
