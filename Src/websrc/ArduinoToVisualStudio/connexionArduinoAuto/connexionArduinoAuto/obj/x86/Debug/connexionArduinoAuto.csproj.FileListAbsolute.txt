@@ -1,0 +1,8 @@
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\bin\Debug\connexionArduinoAuto.exe
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\bin\Debug\connexionArduinoAuto.pdb
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\connexionArduinoAuto.csproj.GenerateResource.Cache
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\connexionArduinoAuto.exe
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\connexionArduinoAuto.pdb
+C:\Users\Utilisateur\Documents\Visual Studio 2010\Projects\connexionArduinoAuto\connexionArduinoAuto\obj\x86\Debug\connexionArduinoAuto.csprojResolveAssemblyReference.cache
