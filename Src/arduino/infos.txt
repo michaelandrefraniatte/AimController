@@ -45,3 +45,7 @@ Console.WriteLine(substring);
 // The example displays the following output: is
 send analogic ->
 with * 1000 and +=
+- Joycon instead of Wiimote :
+A nice idea for recycling broken Wiimote still able to connect on a PC, is to tranfer the IR cam, by rewelded it, at the end of a rail of a Joycon to aim with Joycon like with Wiimote in FPS or rail shooter games 
+- Any HID on any console :
+I made a program receiving datas from Arduino and Teensy, I also already simulated Keyboard/Mouse and Joystick inputs with Teensy and Arduino receiving datas from a program. To play on consoles, it's possible to simulate a Xbox Controller with Arduino or Teensy, and sending datas to another Arduino or Teensy, connected to pins together for finally connecting it to an simple adapter on the market already existing 
